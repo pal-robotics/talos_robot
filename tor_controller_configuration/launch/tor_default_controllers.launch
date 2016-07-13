@@ -1,0 +1,17 @@
+<launch>
+  <!-- Joint state controller -->
+  <rosparam command="load" file="$(find joint_state_controller)/joint_state_controller.yaml" />
+
+  <!-- Force-torque sensors controller -->
+  <rosparam command="load" file="$(find force_torque_sensor_controller)/force_torque_sensor_controller.yaml" />
+
+  <!-- IMU sensors controller -->
+  <rosparam command="load" file="$(find imu_sensor_controller)/imu_sensor_controller.yaml" />
+
+  <!-- Controllers that come up started -->
+  <node name="bringup_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="force_torque_sensor_controller
+              imu_sensor_controller
+              joint_state_controller" />
+</launch>

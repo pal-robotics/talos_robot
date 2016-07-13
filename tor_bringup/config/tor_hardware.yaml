@@ -16,13 +16,13 @@ force_torque:
   left_ft:
     frame: leg_left_6_link
     raw_data:
-      force_port: force_left
-      torque_port: torque_left
+      force_port: force_ankle_left
+      torque_port: torque_ankle_left
   right_ft:
     frame: leg_right_6_link
     raw_data:
-      force_port: force_right
-      torque_port: torque_right
+      force_port: force_ankle_right
+      torque_port: torque_ankle_right
 
 #imu:
 #  base_imu:

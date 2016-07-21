@@ -13,13 +13,19 @@ e_stop:
     e_stop_port: emergency_stop_state
 
 force_torque:
-  left_ft:
+  left_ankle_ft:
     frame: leg_left_6_link
+    transformation:
+      force: [x,-y,-z]
+      torque: [x,-y,-z]
     raw_data:
       force_port: force_ankle_left
       torque_port: torque_ankle_left
-  right_ft:
+  right_ankle_ft:
     frame: leg_right_6_link
+    transformation:
+      force: [x,-y,-z]
+      torque: [x,-y,-z]
     raw_data:
       force_port: force_ankle_right
       torque_port: torque_ankle_right

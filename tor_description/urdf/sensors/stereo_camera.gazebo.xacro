@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- this macro is used for creating wide and narrow double stereo camera in simulation -->
+  <xacro:macro name="stereo_camera_gazebo_v0" params="name focal_length_left hfov_left focal_length_right hfov_right image_width image_height">
+
+    <gazebo reference="${name}_link">
+       <material value="White"/>
+       <gravity  value="false"/>
+    </gazebo>
+
+    <gazebo reference="${name}_optical_frame">
+       <material value="White"/>
+       <gravity  value="false"/>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

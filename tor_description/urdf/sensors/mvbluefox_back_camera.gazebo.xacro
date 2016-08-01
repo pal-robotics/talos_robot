@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2013, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot name="reemc" xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="mvbluefox_back_camera_gazebo" params="name image_format hfov focal_length frame_id image_width image_height">
+
+    <gazebo reference="${name}_link">
+
+      <sensor type="camera" name="gazebo_${name}_camera">
+        <update_rate>15.0</update_rate>
+        <camera>
+          <horizontal_fov>${ hfov }</horizontal_fov>
+          <image>
+            <width>${image_width} </width>
+            <height> ${image_height}</height>
+            <format>${image_format}</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+       <plugin name="monocular_camera_controller" filename="libgazebo_ros_camera.so">
+         <alwaysOn>true</alwaysOn>
+         <updateRate>15.0</updateRate>
+         <cameraName>${name}</cameraName>
+         <imageTopicName>image</imageTopicName>
+         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+         <frameName>${frame_id}</frameName>
+         <hackBaseline>0</hackBaseline>
+         <CxPrime>${(image_width+1)/2}</CxPrime>
+         <Cx>${(image_width+1)/2}</Cx>
+         <Cy>${(image_height+1)/2}</Cy>
+         <focalLength>${focal_length}</focalLength> <!-- image_width / (2*tan(hfov_radian /2)) -->
+         <distortionK1>0.0</distortionK1>
+         <distortionK2>0.0</distortionK2>
+         <distortionK3>0.0</distortionK3>
+         <distortionT1>0.0</distortionT1>
+         <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+      
+  </gazebo>
+  </xacro:macro>
+
+</robot>
+
+
+ 

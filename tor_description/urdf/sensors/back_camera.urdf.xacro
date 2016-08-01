@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2013, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- back camera macro uses stingrayf033c_camera macros -->
+  <xacro:include filename="$(find reemc_description)/urdf/sensors/mvbluefox_back_camera.gazebo.xacro" />
+  <xacro:include filename="$(find reemc_description)/urdf/sensors/mvbluefox_camera.urdf.xacro" />
+
+  <!-- this macro is used for creating wide and narrow double back camera links -->
+  <xacro:macro name="reemc_back_camera" params="name parent focal_length hfov image_format image_width image_height *origin">
+
+    <joint name="${name}_frame_joint" type="fixed">
+      <insert_block name="origin" />
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+    </joint>
+    <!-- camera link is at center of the optical frame, but in x-forward, z-upwards and y-leftwards notation (required by gazebo to simulate a camera) -->
+    <link name="${name}_link">      
+      <inertial>
+        <mass value="0.05" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01"  iyz="0"  izz="0.01" /> <!-- this inertia is made up for now. -->
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+        
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+      
+    </link>
+
+    <!-- attach optical frame to the camera link -->
+    <joint name="${name}_optical_frame_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->      
+      <parent link="${name}_link"/>
+      <child link="${name}_optical_frame"/>
+    </joint>
+    <!-- optical frame for the back camera, with z-forward notation, this is the frame back camera images users should refer to -->
+    <link name="${name}_optical_frame" type="camera">
+      <inertial>
+        <mass value="0.05" />
+        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0"  iyz="0"  izz="0" />
+      </inertial>
+    </link>
+
+    <!-- back camera -->
+    <xacro:mvbluefox_camera name="${name}_gazebo_back_camera" parent="${name}_link">
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+    </xacro:mvbluefox_camera>
+
+    <!-- Back camera Gazebo simulation -->
+    <xacro:mvbluefox_back_camera_gazebo name="${name}" image_format="${image_format}" 
+                                   hfov="${hfov}" focal_length="${focal_length}"                                   
+                                   frame_id="${name}_optical_frame"
+                                   image_width="${image_width}" image_height="${image_height}"/>
+
+  </xacro:macro>
+</robot>

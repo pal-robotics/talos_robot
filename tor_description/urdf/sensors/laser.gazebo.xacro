@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="reemc_laser_gazebo" params="name ros_topic update_rate min_angle max_angle nrays">
+  <gazebo reference="${name}_link">
+    <sensor type="ray" name="${name}_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>${update_rate}</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>${nrays}</samples>
+            <resolution>1</resolution>
+            <min_angle>${min_angle}</min_angle>
+            <max_angle>${max_angle}</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.02</min>
+          <max>5.6</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_laser" >
+        <frameName>/${name}_link</frameName>
+        <topicName>${ros_topic}</topicName>
+        <gaussianNoise>0.03</gaussianNoise>
+        <hokuyoMinIntensity>101</hokuyoMinIntensity>
+        <updateRate>${update_rate}</updateRate>
+        <alwaysOn>true</alwaysOn>
+      </plugin>
+    </sensor>
+  </gazebo>
+</xacro:macro>
+
+
+</robot>

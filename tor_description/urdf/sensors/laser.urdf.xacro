@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find reemc_description)/urdf/sensors/laser.gazebo.xacro" />
+
+  <xacro:macro name="reemc_laser" params="name parent *origin ros_topic update_rate min_angle max_angle nrays">
+
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <mass value="0.001" />
+        <inertia iyy="4.2412E-05" ixy="4.9927E-08" iyz="-9.8165E-09" ixx="3.7174E-05" ixz="1.1015E-05" izz="4.167E-05" />
+      </inertial>
+  <!--    <visual>
+         <origin xyz="0.0 0 0.05" rpy="0 0 ${90.0*deg_to_rad}" />
+        <geometry>
+          <mesh filename="package://reemc_description/meshes/sensors/urg-04lx-ug01.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      <material name="DarkGrey" />
+      </visual>
+  -->
+   </link>
+
+    <joint name="${name}_joint" type="fixed">
+      <axis xyz="0 1 0" />
+      <insert_block name="origin" />
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+      <dynamics friction="1.0" damping="1"/>
+      <limit lower="0" upper="0" effort="60" velocity="20" />
+    </joint>
+
+    <!-- gazebo extensions -->
+    <xacro:reemc_laser_gazebo name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" min_angle="${min_angle}" max_angle="${max_angle}" nrays="${nrays}"/>
+
+  </xacro:macro>
+
+</robot>

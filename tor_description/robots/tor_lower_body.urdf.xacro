@@ -47,5 +47,13 @@
   <xacro:include filename="$(find tor_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->
   <xacro:include filename="$(find tor_description)/urdf/materials.urdf.xacro" />
+  
+  
+  <xacro:include filename="$(find tor_description)/urdf/sensors/imu.urdf.xacro" />
+  
+    <!-- imu -->
+  <xacro:tor_imu name="imu" parent="base_link" update_rate="100.0">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:tor_imu>
 
 </robot>

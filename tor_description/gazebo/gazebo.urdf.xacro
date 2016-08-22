@@ -13,7 +13,7 @@
   <gazebo>
     <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_force">
       <frameName>base_link</frameName>
-      <topicName>floating_base_configuration</topicName>
+      <topicName>floating_base_pose</topicName>
     </plugin>
   </gazebo>
 

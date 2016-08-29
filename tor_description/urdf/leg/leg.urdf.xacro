@@ -168,7 +168,12 @@
       <!-- nominal -->
       <!-- <limit lower="-0.5236" upper="1.571" effort="49" velocity="3.87" /> -->
       <!-- peak -->   
-      <limit lower="-0.5236" upper="1.571" effort="100" velocity="3.87" />
+      <xacro:if value="${reflect == 1}">
+        <limit lower="-0.5236" upper="1.571" effort="100" velocity="3.87" />
+      </xacro:if>
+      <xacro:if value="${reflect == -1}">
+        <limit lower="-1.571" upper="0.5236" effort="100" velocity="3.87" />
+      </xacro:if>
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
      </joint>
 

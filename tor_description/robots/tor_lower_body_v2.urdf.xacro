@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2014, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot name="tor" xmlns:xacro="http://www.ros.org/wiki/xacro"
+        xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+  <xacro:include filename="$(find tor_description)/urdf/leg/leg_v2.urdf.xacro" />
+    <link name="base_link">
+      <inertial>
+        <origin xyz="-0.06071 0.00861 0.06368" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="13.34865"/>
+        <inertia ixx="0.06652900000" ixy="-0.00035700000" ixz="0.00027600000"
+                 iyy="0.03746500000" iyz="-0.00125400000"
+                 izz="0.07895100000"/>
+      </inertial>
+
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://tor_description/meshes/v2/base_link_lo_res.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://tor_description/meshes/v2/base_link_collision.stl" scale="1 1 1"/>
+        </geometry>
+      </collision>  
+    </link>
+     
+     
+   <xacro:tor_leg prefix="left"  reflect="1" />
+   <xacro:tor_leg prefix="right" reflect="-1" />
+
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find tor_description)/gazebo/gazebo.urdf.xacro" />
+  <!-- Materials for visualization -->
+  <xacro:include filename="$(find tor_description)/urdf/materials.urdf.xacro" />
+
+</robot>

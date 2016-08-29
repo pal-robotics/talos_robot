@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="robot" default="titanium"/>
+
+  <!-- Robot description -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find tor_description)/robots/tor_lower_body_v2.urdf.xacro'" />
+
+</launch>

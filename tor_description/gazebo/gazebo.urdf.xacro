@@ -11,7 +11,7 @@
   </gazebo>
 
   <gazebo>
-    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_force">
+    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
       <frameName>base_link</frameName>
       <topicName>floating_base_pose</topicName>
     </plugin>
@@ -46,7 +46,7 @@
                bias means and stddevs to produce biases close to the provided
                data. -->
                
-          <!--
+          
           <rate>
             <mean>0.0</mean>
             <stddev>2e-4</stddev>
@@ -59,22 +59,22 @@
             <bias_mean>0.1</bias_mean>
             <bias_stddev>0.001</bias_stddev>
           </accel>
-          -->
           
           
+          <!--
           <rate>
             <mean>0.0</mean>
-            <stddev>2e-3</stddev>
+            <stddev>0.0</stddev>
             <bias_mean>0.000000</bias_mean>
             <bias_stddev>0.0000008</bias_stddev>
           </rate>
           <accel>
             <mean>0.0</mean>
-            <stddev>1.7e-1</stddev>
+            <stddev>0.0</stddev>
             <bias_mean>0.0</bias_mean>
             <bias_stddev>0.000</bias_stddev>
           </accel>
-          
+          -->
           
         </noise>
       </imu>

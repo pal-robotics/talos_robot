@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2016, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <xacro:include filename="$(find tor_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find tor_description)/urdf/arm/wrist.transmission.xacro" />
+
+  <!--Constant parameters-->
+  <xacro:property name="wrist_friction"       value="1.0" />
+  <xacro:property name="wrist_damping"        value="1.0" />
+  <xacro:property name="wrist_1_max_vel"      value="1.95" />
+  <xacro:property name="wrist_2_max_vel"      value="1.76" />
+  <xacro:property name="wrist_3_max_vel"      value="1.76" />
+  <xacro:property name="wrist_1_max_effort"   value="3" />
+  <xacro:property name="wrist_2_max_effort"   value="6.6" />
+  <xacro:property name="wrist_3_max_effort"   value="6.6" />
+  <xacro:property name="wrist_eps"          value="0.02" />
+
+
+  <xacro:macro name="tor_wrist" params="name parent side reflect">
+
+    <!--************************-->
+    <!--        WRIST           -->
+    <!--************************-->
+    <link name="${name}_${side}_5_link">
+      <inertial>
+        <origin xyz="-0.00006 0.00326 0.07963" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.87792"/>
+        <inertia ixx="0.00349500000" ixy="-0.00001300000" ixz="-0.00001000000"
+                 iyy="0.00436800000" iyz="0.00009700000"
+                 izz="0.00228300000"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_5.STL" scale="1 1 1"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_5_collision.STL" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_${side}_5_joint" type="revolute">
+      <parent link="${parent}" />
+      <child link="${name}_${side}_5_link" />
+      <xacro:if value="${reflect == 1}">
+        <origin xyz="-0.02000 0.00000 -0.26430" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      </xacro:if>
+      <xacro:if value="${reflect == -1}">
+        <origin xyz="-0.02000 0.00000 -0.26430" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
+      </xacro:if>
+      <axis xyz="0 0 1" />
+      <limit lower="${-145.0 * deg_to_rad}" upper="${145.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+<!--       <safety_controller k_position="20"
+                          k_velocity="20"
+                          soft_lower_limit="${-145.00000 * deg_to_rad + wrist_eps}"
+                          soft_upper_limit="${145.00000 * deg_to_rad - wrist_eps}" /> -->
+
+    </joint>
+
+    <link name="${name}_${side}_6_link">
+      <inertial>
+        <origin xyz="0.00002 -0.00197 -0.00059" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="0.40931"/>
+        <inertia ixx="0.00010700000" ixy="0.00000000000" ixz="0.00000000000"
+                 iyy="0.00014100000" iyz="-0.00000000000"
+                 izz="0.00015400000"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_6.STL" scale="1 ${reflect} 1"/>
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_6_collision.STL" scale="1 ${reflect} 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_${side}_6_joint" type="revolute">
+      <parent link="${name}_${side}_5_link" />
+      <child link="${name}_${side}_6_link" />
+      <origin xyz="0.00000 0.00000 0.00000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="1 0 0" />
+      <limit lower="${-80.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+<!--       <safety_controller k_position="20"
+                          k_velocity="20"
+                          soft_lower_limit="${-80.00000 * deg_to_rad + eps_radians}"
+                          soft_upper_limit="${80.00000 * deg_to_rad - eps_radians}" /> -->
+
+    </joint>
+
+    <link name="${name}_${side}_7_link">
+      <inertial>
+        <origin xyz="-0.00089 0.00365 -0.07824" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.02604"/>
+        <inertia ixx="0.00151400000" ixy="0.00000600000" ixz="0.00006600000"
+                 iyy="0.00146400000" iyz="0.00001200000"
+                 izz="0.00090300000"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_7.STL" scale="1 1 1"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tor_description/meshes/arm/arm_7_collision.STL" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_${side}_7_joint" type="revolute">
+      <parent link="${name}_${side}_6_link" />
+      <child link="${name}_${side}_7_link" />
+      <origin xyz="0.0 0.0 0.0" 
+                rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
+      <axis xyz="0 1 0" />
+      <limit lower="${-40.0 * deg_to_rad}" upper="${40.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}"/>
+      <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
+<!--       <safety_controller k_position="20"
+                          k_velocity="20"
+                          soft_lower_limit="${-40.00000 * deg_to_rad + eps_radians}"
+                          soft_upper_limit="${40.00000 * deg_to_rad - eps_radians}" /> -->
+
+
+    </joint>
+
+    <gazebo reference="${name}_${side}_5_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="${name}_${side}_6_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="${name}_${side}_7_link">
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+
+    <gazebo reference="${name}_${side}_5_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${name}_${side}_6_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${name}_${side}_7_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+        <provideFeedback>1</provideFeedback>
+    </gazebo>
+
+    <!-- extensions -->
+    <xacro:tor_wrist_simple_transmission name="${name}" side="${side}" number="5" reduction="1.0" />
+    <xacro:tor_wrist_differential_transmission name="${name}" side="${side}" number_1="6" number_2="7"
+                                                act_reduction_1="-1.0" act_reduction_2="1.0"
+                                                jnt_reduction_1="-1.0" jnt_reduction_2="${-reflect}" />
+
+  </xacro:macro>
+
+</robot>

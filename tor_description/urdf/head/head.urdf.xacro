@@ -39,7 +39,7 @@
         <geometry>
           <mesh filename="package://tor_description/meshes/head/head_1.stl" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey" />
+        <material name="DarkGrey" />
       </visual>
 
       <collision>

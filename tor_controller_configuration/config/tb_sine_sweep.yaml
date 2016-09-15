@@ -1,0 +1,7 @@
+tb_torque:
+  type: "ModuleTestbenchTorqueControl"
+
+  dt: 0.001
+
+  joints:
+    - leg_1_joint

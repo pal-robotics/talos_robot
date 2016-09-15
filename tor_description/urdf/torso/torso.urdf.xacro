@@ -22,7 +22,7 @@
 
   <xacro:macro name="tor_torso" params="name">
     <!--************************-->
-    <!--        TORSO_2         -->
+    <!--        TORSO_2  (TILT) -->
     <!--************************-->
     <link name="${name}_2_link">
       <inertial>
@@ -51,7 +51,7 @@
 
 
     <!--************************-->
-    <!--        TORSO_1         -->
+    <!--        TORSO_1  (PAN)  -->
     <!--************************-->
     <link name="${name}_1_link">
       <inertial>
@@ -97,17 +97,17 @@
     <!--************************-->
     <link name="base_link">
       <inertial>
-        <origin xyz="-0.06071 0.00861 0.06368" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="13.34865"/>
-        <inertia ixx="0.06652900000" ixy="-0.00035700000" ixz="0.00027600000"
-                 iyy="0.03746500000" iyz="-0.00125400000"
-                 izz="0.07895100000"/>
+        <origin xyz="-0.08222 0.00838 -0.07261" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="13.53810"/>
+        <inertia ixx="0.06989000000" ixy="-0.00011700000" ixz="0.00023000000"
+                 iyy="0.03998200000" iyz="-0.00132500000"
+                 izz="0.08234500000"/>
       </inertial>
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://tor_description/meshes/torso/base_link_2.STL" scale="1 1 1"/>
+          <mesh filename="package://tor_description/meshes/torso/base_link.STL" scale="1 1 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
@@ -123,7 +123,7 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link"/>
       <child link="base_link"/>
-      <origin xyz="0.0 0.0 -0.2012" 
+      <origin xyz="0.0 0.0 -0.0722" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-75.00000 * deg_to_rad}" upper="${75.00000 * deg_to_rad}" 

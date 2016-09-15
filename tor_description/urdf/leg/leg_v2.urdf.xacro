@@ -43,7 +43,7 @@
     <joint name="leg_${prefix}_1_joint" type="revolute">
       <parent link="base_link"/>
       <child link="leg_${prefix}_1_link"/>
-      <origin xyz="0.00000 ${reflect*0.08500} -0.14200" 
+      <origin xyz="-0.02 ${reflect*0.08500} -0.27105" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
      <xacro:if value="${reflect == 1}">

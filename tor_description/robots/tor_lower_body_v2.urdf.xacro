@@ -16,17 +16,17 @@
   <xacro:include filename="$(find tor_description)/urdf/leg/leg_v2.urdf.xacro" />
     <link name="base_link">
       <inertial>
-        <origin xyz="-0.06071 0.00861 0.06368" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="13.34865"/>
-        <inertia ixx="0.06652900000" ixy="-0.00035700000" ixz="0.00027600000"
-                 iyy="0.03746500000" iyz="-0.00125400000"
-                 izz="0.07895100000"/>
+        <origin xyz="-0.08222 0.00838 -0.07261" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="13.53810"/>
+        <inertia ixx="0.06989000000" ixy="-0.00011700000" ixz="0.00023000000"
+                 iyy="0.03998200000" iyz="-0.00132500000"
+                 izz="0.08234500000"/>
       </inertial>
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://tor_description/meshes/v2/base_link_lo_res.stl" scale="1 1 1"/>
+          <mesh filename="package://tor_description/meshes/torso/base_link.STL" scale="1 1 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -34,7 +34,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://tor_description/meshes/v2/base_link_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://tor_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
         </geometry>
       </collision>  
     </link>

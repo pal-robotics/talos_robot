@@ -50,9 +50,9 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://tor_description/meshes/sensors/xtion_pro_live/xtion_pro_live.dae" />
+          <mesh filename="package://tor_description/meshes/sensors/orbbec/orbbec.STL" />
         </geometry>
-        <material name="Grey">
+        <material name="DarkGrey">
           <color rgba="0.5 0.5 0.5 1"/>
         </material>
       </visual>

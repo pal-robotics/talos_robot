@@ -1,11 +1,13 @@
 actuators:
   raw_data:
     position_port: act_position
+    velocity_port: act_velocity
     effort_port: act_current
     mode_port: act_control_mode
     position_cmd_port: ref_position
     effort_cmd_port: ref_current
     mode_cmd_port: ref_control_mode
+    absolute_encoder_position_port: act_abs_position
     torque_sensor_port: act_torque
 
 e_stop:
@@ -30,11 +32,13 @@ force_torque:
       force_port: force_ankle_right
       torque_port: torque_ankle_right
 
-#imu:
-#  base_imu:
-#    frame: base_link
-#    raw_data:
-#      orientation_port: orientation_base
+imu:
+  base_imu:
+    frame: base_link
+    raw_data:
+      orientation_port: orientation_base
+      linear_acceleration_port: linear_acceleration_base
+      angular_velocity_port: angular_velocity_base
 
 #ros_control_component:
 #  ignore_read_errors: true

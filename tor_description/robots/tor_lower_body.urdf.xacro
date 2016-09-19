@@ -16,6 +16,7 @@
 
   <xacro:include filename="$(find tor_description)/urdf/leg/leg.urdf.xacro" />
 
+    
     <link name="base_link">
       <inertial>
         <origin xyz="0.0 0.0 0.36" rpy="0 0 0"/>
@@ -39,7 +40,33 @@
 
      </link>
      
+ 
      
+     <!--
+     
+      <link name="base_link">
+      <inertial>
+        <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+        <mass value="5.0" />
+         <inertia ixx="0.01"  ixy="0.0"  ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
+      </inertial>
+   
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://tor_description/meshes/torso_dummy.stl" scale="1 1 1"/>
+        </geometry>
+      </visual>
+      
+      <collision>
+       <origin rpy="0 0 0" xyz="0 0 0.05"/>
+	    <geometry>
+           <box size="0.1 0.3 0.1"/>
+        </geometry>
+      </collision>  
+
+     </link>
+   -->
    <xacro:tor_leg prefix="left"  reflect="1" />
    <xacro:tor_leg prefix="right" reflect="-1" />
 
@@ -53,7 +80,7 @@
   
     <!-- imu -->
   <xacro:tor_imu name="imu" parent="base_link" update_rate="100.0">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0.069 0 0.14647" rpy="3.14 0.0 1.57"/>
   </xacro:tor_imu>
 
 </robot>

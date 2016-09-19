@@ -16,6 +16,7 @@
   <xacro:include filename="$(find tor_description)/urdf/torso/torso.urdf.xacro" />
   <xacro:include filename="$(find tor_description)/urdf/head/head.urdf.xacro" />
   <xacro:include filename="$(find tor_description)/urdf/arm/arm.urdf.xacro" />
+  <xacro:include filename="$(find tor_description)/urdf/sensors/ftsensor.urdf.xacro" />
   <xacro:include filename="$(find tor_description)/urdf/gripper/gripper.urdf.xacro" />
   <xacro:include filename="$(find tor_description)/urdf/leg/leg_v2.urdf.xacro" />
 
@@ -26,8 +27,11 @@
   <xacro:tor_arm name="arm" parent="torso_2_link" side="left" reflect="1"/>
   <xacro:tor_arm name="arm" parent="torso_2_link" side="right" reflect="-1"/>
 
-  <xacro:tor_gripper name="left_gripper" parent="arm_left_7_link"/>
-  <xacro:tor_gripper name="right_gripper" parent="arm_right_7_link"/>
+  <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1"  />
+  <xacro:ft_sensor name="wrist" parent="arm_left_7_link"  side="left"  reflect="-1" />
+
+  <xacro:tor_gripper name="left_gripper" parent="wrist_left_ft_tool_link"/>
+  <xacro:tor_gripper name="right_gripper" parent="wrist_right_ft_tool_link"/>
 
   <xacro:tor_leg prefix="left"  reflect="1" />
   <xacro:tor_leg prefix="right" reflect="-1" />

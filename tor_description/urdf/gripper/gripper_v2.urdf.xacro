@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!--File includes-->
+  <!-- <xacro:include filename="$(find tor_description)/urdf/deg_to_rad.urdf.xacro" />
+  <xacro:include filename="$(find tor_description)/urdf/gripper.transmission.xacro" />
+  <xacro:include filename="$(find tor_description)/urdf/gripper.gazebo.xacro" /> -->
+
+
+  <xacro:macro name="tor_gripper" params="name parent">
+
+           <link name="${name}_base_link">
+              <inertial>
+                <origin xyz="-0.00534 0.00362 -0.02357" rpy="0.00000 0.00000 0.00000"/>
+                <mass value="0.61585"/>
+                <inertia ixx="0.00047200000" ixy="-0.00000800000" ixz="0.00003500000"
+                         iyy="0.00052100000" iyz="0.00000000000"
+                         izz="0.00069000000"/>
+              </inertial>
+
+              <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/base_link.STL" scale="1 1 1"/>
+                </geometry>
+              </visual>
+
+              <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/base_link_collision.STL" scale="1 1 1"/>
+                </geometry>
+              </collision>
+            </link>
+
+            <joint name="${name}_base_link_joint" type="fixed">
+              <parent link="${parent}"/>
+              <child link="${name}_base_link"/>
+              <origin xyz="0.00000 0.00000 -0.02875" 
+                      rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${90.00000 * deg_to_rad}"/>
+              <axis xyz="0 0 0" />
+            </joint>
+
+            <!-- Joint gripper_motor_double (None) : child link -- -> parent link gripper_base_link -->
+            
+
+            <link name="${name}_motor_double_link">
+              <inertial>
+                <origin xyz="0.02270 0.01781 -0.00977" rpy="0.00000 0.00000 0.00000"/>
+                <mass value="0.16889"/>
+                <inertia ixx="0.00015900000" ixy="-0.00007000000" ixz="0.00003800000"
+                         iyy="0.00022100000" iyz="-0.00005300000"
+                         izz="0.00026800000"/>
+              </inertial>
+
+              <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/gripper_motor_double.STL" scale="1 1 1"/>
+                </geometry>
+              </visual>
+
+              <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/gripper_motor_double_collision.STL" scale="1 1 1"/>
+                </geometry>
+              </collision>
+            </link>
+
+            <joint name="${name}_motor_double_joint" type="revolute">
+              <parent link="${name}_base_link"/>
+              <child link="${name}_motor_double_link"/>
+              <origin xyz="0.00000 0.02025 -0.03000" 
+                      rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+              <!-- You may want to change axis -->
+              <axis xyz="0 0 1" />
+              <limit lower="${0.00000 * deg_to_rad}" upper="${60.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <dynamics friction="1.0" damping="1.0"/>
+            </joint>
+
+
+            <link name="${name}_inner_double_link">
+              <inertial>
+                <origin xyz="-0.00056 0.03358 -0.01741" rpy="0.00000 0.00000 0.00000"/>
+                <mass value="0.11922"/>
+                <inertia ixx="0.00009100000" ixy="0.00000100000" ixz="-0.00000100000"
+                         iyy="0.00015600000" iyz="-0.00003200000"
+                         izz="0.00012600000"/>
+              </inertial>
+
+              <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/inner_double.STL" scale="1 1 1"/>
+                </geometry>
+              </visual>
+
+              <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                  <mesh filename="package://tor_description/meshes/gripper/inner_double_collision.STL" scale="1 1 1"/>
+                </geometry>
+              </collision>
+            </link>
+
+            <joint name="${name}_inner_double_joint" type="revolute">
+              <parent link="${name}_base_link"/>
+              <child link="${name}_inner_double_link"/>
+              <origin xyz="0.00000 0.00525 -0.05598" 
+                      rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+              <!-- You may want to change axis -->
+              <axis xyz="0 0 1" />
+              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <mimic joint="${name}_motor_double_joint" multiplier="${1.0}" offset="0.0" />
+
+            </joint>
+
+
+ </xacro:macro>
+
+</robot>

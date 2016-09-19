@@ -37,7 +37,7 @@
     <link name="${name}_${side}_1_link">
       <!-- TODO: Missing reflects of inertias -->
       <inertial>
-        <origin xyz="-0.01346 0.09130 0.04812" rpy="0.00000 0.00000 0.00000"/>
+        <origin xyz="-0.01346 ${reflect*0.09130} 0.04812" rpy="0.00000 0.00000 0.00000"/>
         <mass value="1.52896"/>
         <inertia ixx="0.00555100000" ixy="-0.00073100000" ixz="0.00000800000"
                  iyy="0.00167300000" iyz="-0.00006000000"

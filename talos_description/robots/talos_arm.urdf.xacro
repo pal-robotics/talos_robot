@@ -14,7 +14,7 @@
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
   <xacro:include filename="$(find talos_description)/urdf/arm/arm.urdf.xacro" />
-  <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/gripper/gripper_v2.urdf.xacro" />
 
  <link name="talos_2_link">
     <inertial>

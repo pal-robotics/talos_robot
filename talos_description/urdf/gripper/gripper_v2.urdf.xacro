@@ -144,7 +144,7 @@
             </link>
 
 
-            <joint name="fingertip_1_joint" type="revolute">
+            <joint name="${name}_fingertip_1_joint" type="revolute">
               <parent link="${name}_inner_double_link"/>
               <child link="${name}_fingertip_1_link"/>
               <origin xyz="0.03200 0.04589 -0.06553" 

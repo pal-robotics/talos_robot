@@ -13,7 +13,7 @@
         xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
-  <xacro:include filename="$(find talos_description)/urdf/talos/talos.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/torso/torso.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/head/head.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/arm/arm.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.urdf.xacro" />
@@ -22,10 +22,10 @@
 
   <xacro:talos_talos name="talos" />
 
-  <xacro:talos_head name="head" parent="talos_2_link"/>
+  <xacro:talos_head name="head" parent="torso_2_link"/>
 
-  <xacro:talos_arm name="arm" parent="talos_2_link" side="left" reflect="1"/>
-  <xacro:talos_arm name="arm" parent="talos_2_link" side="right" reflect="-1"/>
+  <xacro:talos_arm name="arm" parent="torso_2_link" side="left" reflect="1"/>
+  <xacro:talos_arm name="arm" parent="torso_2_link" side="right" reflect="-1"/>
 
   <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1"  />
   <xacro:ft_sensor name="wrist" parent="arm_left_7_link"  side="left"  reflect="-1" />

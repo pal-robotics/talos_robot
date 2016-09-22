@@ -13,9 +13,9 @@
   <xacro:macro name="talos_arm_simple_transmission" params="name side number reduction" >
     <transmission name="${name}_${side}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <actuatalos name="${name}_${side}_${number}_motalos" >
+      <actuator name="${name}_${side}_${number}_motor" >
         <mechanicalReduction>${reduction}</mechanicalReduction>
-      </actuatalos>
+      </actuator>
       <joint name="${name}_${side}_${number}_joint">
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>

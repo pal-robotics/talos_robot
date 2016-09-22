@@ -14,14 +14,14 @@
                params="name number1 number2 act_reduction1 act_reduction2 jnt_reduction1 jnt_reduction2" >
     <transmission name="talos_trans">
       <type>transmission_interface/DifferentialTransmission</type>
-      <actuatalos name="${name}_${number1}_motalos">
-        <role>actuatalos1</role>
+      <actuator name="${name}_${number1}_motor">
+        <role>actuator1</role>
         <mechanicalReduction>${act_reduction1}</mechanicalReduction>
-      </actuatalos>
-      <actuatalos name="${name}_${number2}_motalos">
-        <role>actuatalos2</role>
+      </actuator>
+      <actuator name="${name}_${number2}_motor">
+        <role>actuator2</role>
         <mechanicalReduction>${act_reduction2}</mechanicalReduction>
-      </actuatalos>
+      </actuator>
       <joint name="${name}_${number1}_joint">
         <role>joint1</role>
         <offset>0.0</offset>

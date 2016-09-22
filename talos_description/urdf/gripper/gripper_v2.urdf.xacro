@@ -42,10 +42,10 @@
               <axis xyz="0 0 0" />
             </joint>
 
-            <!-- Joint gripper_motalos_double (None) : child link -- -> parent link gripper_base_link -->
+            <!-- Joint gripper_motor_double (None) : child link -- -> parent link gripper_base_link -->
             
 
-            <link name="${name}_motalos_double_link">
+            <link name="${name}_motor_double_link">
               <inertial>
                 <origin xyz="0.02270 0.01781 -0.00977" rpy="0.00000 0.00000 0.00000"/>
                 <mass value="0.16889"/>
@@ -57,21 +57,21 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/gripper_motalos_double.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double.STL" scale="1 1 1"/>
                 </geometry>
               </visual>
 
               <collision>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/gripper_motalos_double_collision.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double_collision.STL" scale="1 1 1"/>
                 </geometry>
               </collision>
             </link>
 
-            <joint name="${name}_motalos_double_joint" type="revolute">
+            <joint name="${name}_motor_double_joint" type="revolute">
               <parent link="${name}_base_link"/>
-              <child link="${name}_motalos_double_link"/>
+              <child link="${name}_motor_double_link"/>
               <origin xyz="0.00000 0.02025 -0.03000" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <!-- You may want to change axis -->
@@ -113,7 +113,7 @@
               <!-- You may want to change axis -->
               <axis xyz="0 0 1" />
               <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
-              <mimic joint="${name}_motalos_double_joint" multiplier="${1.0}" offset="0.0" />
+              <mimic joint="${name}_motor_double_joint" multiplier="${1.0}" offset="0.0" />
 
             </joint>
 

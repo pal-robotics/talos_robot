@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>talos_robot</name>
+  <version>0.0.0</version>
+  <description>Description and launch files for the TOR robot</description>
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>
+  <license>Propietary</license>
+  <author email="hilario.tome@pal-robotics.com">Hilario Tomé</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>talos_description</run_depend>
+  <run_depend>talos_bringup</run_depend>
+  <run_depend>talos_controller_configuration</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
+

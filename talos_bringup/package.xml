@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>talos_bringup</name>
+  <version>0.0.0</version>
+  <description>The talos_bringup package</description>
+
+  <maintainer email="hilario@todo.todo">hilario</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+  
+</package>

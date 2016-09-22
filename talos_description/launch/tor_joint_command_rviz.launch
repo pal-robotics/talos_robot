@@ -1,0 +1,9 @@
+
+roslaunch talos_description upload_legs.launch
+
+rosrun joint_state_publisher joint_state_publisher _use_gui:=True
+
+rosrun robot_state_publisher robot_state_publisher 
+
+rosrun rviz rviz 
+

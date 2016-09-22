@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>talos_description</name>
+  <version>0.0.0</version>
+  <description>The talos_description package</description>
+
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+  
+</package>

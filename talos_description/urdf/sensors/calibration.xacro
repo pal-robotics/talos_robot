@@ -13,18 +13,18 @@
 -->
 <robot>
 
-  <property name="M_PI" value="3.1415926535897931" />
+  <xacro:property name="M_PI" value="3.1415926535897931" />
 
   <!-- Head-mounted ASUS Xtion Pro Live -->
   <!-- These calibration values affect 2 frames:
          (name)_xtion_ir_optical_frame
          (name)_xtion_rgb_optical_frame              -->
-  <property name="cal_head_mount_xtion_x"     value="0.0" />
-  <property name="cal_head_mount_xtion_y"     value="0.0" />
-  <property name="cal_head_mount_xtion_z"     value="0.0" />
-  <property name="cal_head_mount_xtion_roll"  value="0.0" />
-  <property name="cal_head_mount_xtion_pitch" value="0.0" />
-  <property name="cal_head_mount_xtion_yaw"   value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_x"     value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_y"     value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_z"     value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_roll"  value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_pitch" value="0.0" />
+  <xacro:property name="cal_head_mount_xtion_yaw"   value="0.0" />
 
 </robot>
 

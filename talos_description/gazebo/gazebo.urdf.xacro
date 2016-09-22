@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<robot name="starleth">
+<robot name="talos">
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
@@ -12,7 +12,7 @@
 
   <gazebo>
     <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
-      <frameName>talos_2_link</frameName>
+      <frameName>torso_2_link</frameName>
       <topicName>floating_base_pose</topicName>
     </plugin>
   </gazebo>
@@ -82,7 +82,7 @@
   </gazebo>
 
   <!-- define global properties -->
-  <property name="M_PI" value="3.1415926535897931" />
+  <!-- <xacro:property name="M_PI" value="3.1415926535897931" /> -->
 
 </robot>
 

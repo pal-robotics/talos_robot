@@ -9,7 +9,7 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <!-- XML namespaces -->
-<robot name="reemc" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:macro name="prosilicaGC655C_camera" params="name parent *origin">
 
     <joint name="${name}_frame_joint" type="fixed">

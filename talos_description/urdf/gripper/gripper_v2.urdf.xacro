@@ -308,12 +308,12 @@
         <xacro:gripper_transmission name="${name}" reduction="1.0" />
 
         <!-- virtual mimic joints -->
-        <xacro:gripper_virtual_transmission name="${name}_inner_double" reduction="1.0"/>
+<!--         <xacro:gripper_virtual_transmission name="${name}_inner_double" reduction="1.0"/>
         <xacro:gripper_virtual_transmission name="${name}_fingertip_1" reduction="1.0"/>
         <xacro:gripper_virtual_transmission name="${name}_fingertip_2" reduction="1.0"/>
         <xacro:gripper_virtual_transmission name="${name}_inner_single" reduction="1.0"/>
         <xacro:gripper_virtual_transmission name="${name}_motor_single" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/> -->
 
  </xacro:macro>
 

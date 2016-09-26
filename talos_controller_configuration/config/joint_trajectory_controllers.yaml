@@ -1,3 +1,122 @@
+torso_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - torso_1_joint
+    - torso_2_joint
+
+  constraints:
+    goal_time: &goal_time_constraint 0.6
+    stopped_velocity_tolerance: &stopped_velocity_constraint 0.05
+    torso_1_joint:
+      goal: &goal_pos_constraint 0.02
+    torso_2_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+head_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - head_1_joint
+    - head_2_joint
+
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    head_1_joint:
+      goal: *goal_pos_constraint
+    head_2_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+left_arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - arm_left_1_joint
+    - arm_left_2_joint
+    - arm_left_3_joint
+    - arm_left_4_joint
+    - arm_left_5_joint
+    - arm_left_6_joint
+    - arm_left_7_joint
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    arm_left_1_joint:
+      goal: *goal_pos_constraint
+    arm_left_2_joint:
+      goal: *goal_pos_constraint
+    arm_left_3_joint:
+      goal: *goal_pos_constraint
+    arm_left_4_joint:
+      goal: *goal_pos_constraint
+    arm_left_5_joint:
+      goal: *goal_pos_constraint
+    arm_left_6_joint:
+      goal: *goal_pos_constraint
+    arm_left_7_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+right_arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - arm_right_1_joint
+    - arm_right_2_joint
+    - arm_right_3_joint
+    - arm_right_4_joint
+    - arm_right_5_joint
+    - arm_right_6_joint
+    - arm_right_7_joint
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    arm_right_1_joint:
+      goal: *goal_pos_constraint
+    arm_right_2_joint:
+      goal: *goal_pos_constraint
+    arm_right_3_joint:
+      goal: *goal_pos_constraint
+    arm_right_4_joint:
+      goal: *goal_pos_constraint
+    arm_right_5_joint:
+      goal: *goal_pos_constraint
+    arm_right_6_joint:
+      goal: *goal_pos_constraint
+    arm_right_7_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+right_gripper_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - right_gripper_joint
+
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    right_gripper_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+left_gripper_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - left_gripper_joint
+
+  constraints:
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
+    left_gripper_joint:
+      goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
+
+
 left_leg_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -8,10 +127,10 @@ left_leg_controller:
     - leg_left_5_joint
     - leg_left_6_joint
   constraints:
-    goal_time: &goal_time_constraint 0.6
-    stopped_velocity_tolerance: &stopped_velocity_constraint 0.05
+    goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     arm_left_1_joint:
-      goal: &goal_pos_constraint 0.02
+      goal: *goal_pos_constraint
     arm_left_2_joint:
       goal: *goal_pos_constraint
     arm_left_3_joint:

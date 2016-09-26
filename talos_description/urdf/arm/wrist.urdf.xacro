@@ -167,6 +167,7 @@
     <gazebo reference="${name}_${side}_7_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
+      <material>Gazebo/FlatBlack</material>
     </gazebo>
 
     <gazebo reference="${name}_${side}_5_joint">

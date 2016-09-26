@@ -72,7 +72,14 @@
     <gazebo reference="${name}_joint">
        <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
+
+    <gazebo reference="${name}_link">
+      <material>Gazebo/FlatBlack</material>
+    </gazebo>
+
   </xacro:macro>
+
+  
 
   <!--************************-->
   <!--      HEAD_2 (PAN)      -->
@@ -124,6 +131,11 @@
 
     <gazebo reference="${name}_joint">
        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+
+    <gazebo reference="${name}_link">
+      <material>Gazebo/White</material>
     </gazebo>
 
 

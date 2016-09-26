@@ -113,7 +113,7 @@
               <origin xyz="0.00000 0.00525 -0.05598" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${-60.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${1.0}" offset="0.0" />
 
             </joint> 
@@ -152,9 +152,9 @@
               <origin xyz="0.03200 0.04589 -0.06553" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-            </joint>
+           </joint>
 
 
             <link name="${name}_fingertip_2_link">
@@ -188,12 +188,12 @@
               <origin xyz="-0.03200 0.04589 -0.06553" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-            </joint>
+           </joint>
 
 
-             <link name="${name}_motor_single_link">
+            <link name="${name}_motor_single_link">
               <inertial>
                 <origin xyz="0.02589 -0.01284 -0.00640" rpy="0.00000 0.00000 0.00000"/>
                 <mass value="0.14765"/>
@@ -224,13 +224,13 @@
               <origin xyz="0.00000 -0.02025 -0.03000" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-            </joint>
+           </joint>
 
 
 
-          <link name="${name}_inner_single_link">
+            <link name="${name}_inner_single_link">
               <inertial>
                 <origin xyz="0.00000 -0.03253 -0.01883" rpy="0.00000 0.00000 0.00000"/>
                 <mass value="0.05356"/>
@@ -261,10 +261,10 @@
               <origin xyz="0.00000 -0.00525 -0.05598" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
 
-            </joint> 
+           </joint> 
 
 
             <link name="${name}_fingertip_3_link">
@@ -298,13 +298,22 @@
               <origin xyz="0.00000 -0.04589 -0.06553" 
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
-              <limit lower="${0.00000 * deg_to_rad}" upper="${0.00000 * deg_to_rad}" effort="1.0" velocity="1.0" />
+              <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-            </joint>
+           </joint> 
+         
 
 
-        <xacro:finger_mimics name="${name}" />
+        <xacro:virtual_joints name="${name}" />
         <xacro:gripper_transmission name="${name}" reduction="1.0" />
+
+        <!-- virtual mimic joints -->
+        <xacro:gripper_virtual_transmission name="${name}_inner_double" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_fingertip_1" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_fingertip_2" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_inner_single" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_motor_single" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/>
 
  </xacro:macro>
 

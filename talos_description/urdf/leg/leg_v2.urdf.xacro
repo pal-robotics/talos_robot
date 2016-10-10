@@ -330,6 +330,25 @@
      <provideFeedback>1</provideFeedback>
    </gazebo>
 
+  <gazebo reference="leg_${prefix}_1_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_2_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_3_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_4_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_5_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_6_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
  </xacro:macro>
    
 </robot>

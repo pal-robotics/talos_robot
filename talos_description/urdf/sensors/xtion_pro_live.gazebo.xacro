@@ -90,6 +90,8 @@
           <distalostionT2>0.00000001</distalostionT2>
         </plugin>
       </sensor>
+
+      <material>Gazebo/FlatBlack</material>
     </gazebo>
   </xacro:macro>
 </robot>

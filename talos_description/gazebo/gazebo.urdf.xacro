@@ -17,6 +17,13 @@
     </plugin>
   </gazebo>
 
+  <gazebo>
+    <plugin filename="libgazebo_ros_force.so" name="gazebo_ros_force">
+      <bodyName>base_link</bodyName>
+      <topicName>wrench</topicName>
+    </plugin>
+  </gazebo>
+  
 
   <gazebo reference="imu_link">
     <!-- this is expected to be reparented to pelvis with appropriate offset

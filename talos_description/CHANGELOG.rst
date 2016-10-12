@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2016-10-12)
+------------------
 * Clean up
 * Added missing foot mesh and changed default topic for state estimator
 * Removing joint state publication of virtual joints

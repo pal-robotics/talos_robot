@@ -240,7 +240,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-    <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" />
+     <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" />
 
     <!--***********************-->
     <!--        TOOL           -->

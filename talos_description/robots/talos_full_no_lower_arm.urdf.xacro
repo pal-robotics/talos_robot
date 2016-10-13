@@ -20,34 +20,13 @@
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper_v2.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/leg_v2.urdf.xacro" />
 
+  <xacro:talos_torso name="torso" />
 
-    <!--************************-->
-    <!--        BASE_LINK       -->
-    <!--************************-->
-    <link name="base_link">
-      <inertial>
-        <origin xyz="-0.08222 0.00838 -0.07261" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="13.53810"/>
-        <inertia ixx="0.06989000000" ixy="-0.00011700000" ixz="0.00023000000"
-                 iyy="0.03998200000" iyz="-0.00132500000"
-                 izz="0.08234500000"/>
-      </inertial>
+  <xacro:talos_head name="head" parent="torso_2_link"/>
 
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/torso/base_link.STL" scale="1 1 1"/>
-        </geometry>
-        <material name="LightGrey" />
-      </visual>
+  <xacro:talos_arm name="arm" parent="torso_2_link" side="left" reflect="1"/>
+  <xacro:talos_arm name="arm" parent="torso_2_link" side="right" reflect="-1"/>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
-        </geometry>
-      </collision>
-    </link>
 
   <xacro:talos_leg prefix="left"  reflect="1" />
   <xacro:talos_leg prefix="right" reflect="-1" />
@@ -57,12 +36,4 @@
   <!-- Materials for visualization -->
   <xacro:include filename="$(find talos_description)/urdf/materials.urdf.xacro" />
 
-  
-  <xacro:include filename="$(find talos_description)/urdf/sensors/imu.urdf.xacro" />
-  
-    <!-- imu -->
-  <xacro:talos_imu name="imu" parent="base_link" update_rate="100.0">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </xacro:talos_imu>
-  
 </robot>

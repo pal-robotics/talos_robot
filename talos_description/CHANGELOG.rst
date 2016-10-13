@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added sub models to debug gazebo and added implicit tag simulation to 1.0
+* Contributors: Hilario Tome
+
 0.0.1 (2016-10-12)
 ------------------
 * Clean up

@@ -1,13 +1,21 @@
 <launch>
-  <arg name="robot" default="full_ft_hey5"/>
+  <arg name="robot" default="full"/>
 
+  <!-- Hardware configuration -->
+  <rosparam command="load" file="$(find talos_bringup)/config/talos_$(arg robot)_hardware.yaml" />
+  
   <!-- Load default controllers -->
   <include file="$(find talos_controller_configuration)/launch/talos_default_controllers.launch" />
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
-    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="publish_frequency" type="double" value="100.0" />
     <param name="tf_prefix" type="string" value="" />
   </node>
+  
+  <!-- Robot model -->
+  <include file="$(find talos_description)/robots/upload_talos.launch" >
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
 </launch>

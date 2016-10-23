@@ -6,7 +6,7 @@
 
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>
 
-  <license>TODO</license>
+  <license>Proprietary</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

@@ -4,9 +4,9 @@
   <version>0.0.2</version>
   <description>The talos_bringup package</description>
 
-  <maintainer email="hilario@todo.todo">hilario</maintainer>
+  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
 
-  <license>TODO</license>
+  <license>Proprietary</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

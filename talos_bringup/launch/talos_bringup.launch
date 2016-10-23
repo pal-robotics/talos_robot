@@ -18,4 +18,10 @@
      <arg name="robot" value="$(arg robot)"/>
   </include>
 
+  <!-- Twist mux -->
+  <include file="$(find talos_bringup)/launch/twist_mux.launch" />
+
+  <!-- Joystick controller -->
+  <include file="$(find talos_bringup)/launch/joystick_teleop.launch" />
+
 </launch>

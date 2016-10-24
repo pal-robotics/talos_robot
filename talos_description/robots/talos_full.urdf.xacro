@@ -30,8 +30,8 @@
   <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1"  />
   <xacro:ft_sensor name="wrist" parent="arm_left_7_link"  side="left"  reflect="-1" />
 
-  <xacro:talos_gripper name="left_gripper" parent="wrist_left_ft_tool_link"/>
-  <xacro:talos_gripper name="right_gripper" parent="wrist_right_ft_tool_link"/>
+  <xacro:talos_gripper name="gripper_left" parent="wrist_left_ft_tool_link"/>
+  <xacro:talos_gripper name="gripper_right" parent="wrist_right_ft_tool_link"/>
 
   <xacro:talos_leg prefix="left"  reflect="1" />
   <xacro:talos_leg prefix="right" reflect="-1" />

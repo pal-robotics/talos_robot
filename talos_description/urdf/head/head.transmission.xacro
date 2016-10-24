@@ -13,7 +13,7 @@
   <xacro:macro name="talos_head_differential_transmission"
                params="name number1 number2 act_reduction1 act_reduction2 jnt_reduction1 jnt_reduction2" >
     <transmission name="talos_trans">
-      <type>transmission_interface/DifferentialTransmission</type>
+      <type>transmission_interface/HalfDifferentialTransmission</type>
       <actuator name="${name}_${number1}_motor">
         <role>actuator1</role>
         <mechanicalReduction>${act_reduction1}</mechanicalReduction>

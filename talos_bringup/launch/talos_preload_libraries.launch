@@ -1,0 +1,10 @@
+<launch>
+
+  <include file="$(find talos_controller_configuration)/launch/talos_default_controllers.launch" />
+
+  <include file="$(find talos_controller_configuration)/launch/full_body_position_controllers.launch" />
+  
+  <include file="$(find talos_walking)/launch/walking_controller.launch" />
+
+</launch>
+

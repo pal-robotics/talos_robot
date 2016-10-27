@@ -53,7 +53,7 @@
                bias means and stddevs to produce biases close to the provided
                data. -->
                
-          
+          <!--
           <rate>
             <mean>0.0</mean>
             <stddev>2e-4</stddev>
@@ -66,9 +66,9 @@
             <bias_mean>0.1</bias_mean>
             <bias_stddev>0.001</bias_stddev>
           </accel>
+          -->
           
           
-          <!--
           <rate>
             <mean>0.0</mean>
             <stddev>0.0</stddev>
@@ -81,7 +81,7 @@
             <bias_mean>0.0</bias_mean>
             <bias_stddev>0.000</bias_stddev>
           </accel>
-          -->
+          
           
         </noise>
       </imu>

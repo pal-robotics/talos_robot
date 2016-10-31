@@ -26,4 +26,7 @@
   
   <include file="$(find talos_moveit_config)/launch/move_group.launch" />
   
+    <!-- Pre-recorded motions executor -->
+  <include file="$(find talos_bringup)/launch/play_motion.launch" />
+
 </launch>

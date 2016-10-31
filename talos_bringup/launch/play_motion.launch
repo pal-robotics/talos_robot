@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <arg name="robot" default="full_ft_hey5"/>
+
+  <!-- execute pre-recorded motions -->
+  <node pkg="talos_bringup" type="motions_loader.py" name="motions_loader" args="robot=$(arg robot)"/>
+  <node pkg="play_motion" type="play_motion" name="play_motion">
+    <rosparam file="$(find talos_bringup)/config/approach_planner_$(arg robot).yaml" command="load" />
+  </node>
+  <node pkg="play_motion" type="is_already_there.py" name="is_already_there" />
+</launch>

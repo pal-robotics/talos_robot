@@ -93,12 +93,12 @@ right_arm_controller:
 right_gripper_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
-    - right_gripper_joint
+    - gripper_right_joint
 
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
-    right_gripper_joint:
+    gripper_right_joint:
       goal: *goal_pos_constraint
 
   stop_trajectory_duration: 0.0
@@ -106,12 +106,12 @@ right_gripper_controller:
 left_gripper_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
-    - left_gripper_joint
+    - gripper_left_joint
 
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
-    left_gripper_joint:
+    gripper_left_joint:
       goal: *goal_pos_constraint
 
   stop_trajectory_duration: 0.0

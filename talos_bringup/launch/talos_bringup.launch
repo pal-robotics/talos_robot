@@ -5,7 +5,7 @@
   <rosparam command="load" file="$(find talos_bringup)/config/talos_$(arg robot)_hardware.yaml" />
   
   <!-- Load default controllers -->
-  <include file="$(find talos_controller_configuration)/launch/talos_default_controllers.launch" />
+  <include file="$(find talos_controller_configuration)/launch/bringup_controllers.launch" />
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
@@ -23,5 +23,7 @@
 
   <!-- Joystick controller -->
   <include file="$(find talos_bringup)/launch/joystick_teleop.launch" />
-
+  
+  <include file="$(find talos_moveit_config)/launch/move_group.launch" />
+  
 </launch>

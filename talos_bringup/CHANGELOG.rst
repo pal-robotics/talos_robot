@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2016-10-31)
+------------------
 * Changed head differential, default controllers stopped
 * Succesfull walking in talos, added talos teleop
 * Added missing depends and completed bringup

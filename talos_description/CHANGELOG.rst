@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2016-10-31)
+------------------
 * Added default 0 noise to simulated imu
 * Temporaly fixed arm dynamics
 * Changed head differential, default controllers stopped

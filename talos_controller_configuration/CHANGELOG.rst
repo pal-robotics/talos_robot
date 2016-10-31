@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added joint torque control
+* Changed head differential, default controllers stopped
+* Succesfull walking in talos, added talos teleop
+* Added missing depends and completed bringup
+* Contributors: Hilario Tome
+
 0.0.2 (2016-10-13)
 ------------------
 

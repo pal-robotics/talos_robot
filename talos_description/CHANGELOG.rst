@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added default 0 noise to simulated imu
+* Temporaly fixed arm dynamics
+* Changed head differential, default controllers stopped
+* Succesfull walking in talos, added talos teleop
+* Contributors: Hilario Tome
+
 0.0.2 (2016-10-13)
 ------------------
 * Added sub models to debug gazebo and added implicit tag simulation to 1.0

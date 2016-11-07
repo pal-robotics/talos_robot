@@ -1,0 +1,6 @@
+<launch>
+
+    <include file="$(find talos_bringup)/launch/talos_bringup.launch" />
+
+</launch>
+

@@ -44,14 +44,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_5.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_5.STL" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_5_collision.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_5_collision.STL" scale="1 ${reflect} 1"/>
         </geometry>
       </collision>
     </link>
@@ -59,14 +59,8 @@
     <joint name="${name}_${side}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_${side}_5_link" />
-      <xacro:if value="${reflect == 1}">
-        <origin xyz="-0.02000 0.00000 -0.26430" 
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
-      </xacro:if>
-      <xacro:if value="${reflect == -1}">
-        <origin xyz="-0.02000 0.00000 -0.26430" 
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
-      </xacro:if>
+      <origin xyz="-0.02000 0.00000 -0.26430" 
+                rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-145.0 * deg_to_rad}" upper="${145.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -140,7 +134,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_7.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_7.STL" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -148,7 +142,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_7_collision.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_7_collision.STL" scale="1 ${reflect} 1"/>
         </geometry>
       </collision>
     </link>

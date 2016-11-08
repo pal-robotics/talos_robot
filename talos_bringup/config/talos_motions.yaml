@@ -3,19 +3,19 @@ play_motion:
     head_controller, torso_controller, gripper_left_controller, gripper_right_controller]
   motions:
     hands_front:
-      joints: [arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, 
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, 
                arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,  arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,  arm_left_7_joint]
       points:
-      - positions: [0.0, -0.252, 0.285, -1.591, 0.0, 0.0, 0.0, 0.0, 0.252, -0.285, -1.591, 0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, -0.252, 0.285, -1.591, -1.57, 0.0, 0.0, 0.0, 0.252, -0.285, -1.591, 1.57, 0.0, 0.0]
         time_from_start: 0.0
     hands_up:
-      joints: [torso_2_joint, arm_right_6_joint, arm_right_5_joint, arm_left_5_joint,
-        torso_1_joint, arm_left_4_joint, head_2_joint, arm_right_2_joint, arm_left_3_joint,
-        head_1_joint, arm_right_7_joint, arm_right_3_joint, arm_right_4_joint, arm_right_1_joint,
-        arm_left_1_joint, arm_left_2_joint]
+      joints: [torso_1_joint, torso_2_joint, 
+        arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, 
+        arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
       points:
-      - positions: [0.0, 0.0, -0.5, -0.5, 0.0, 1.3, 0.34, 0.0, -1.6, 0.0, 0.0, -1.6,
-          1.4, 1.2, 0.9, 0.2]
+      - positions: [0.0, 0.0, -0.0, -1.57, -1.57, -1.57, 0.0, -0.0, 0.0, 0.0, 1.57, 1.57, -1.57, 0.0, 0.0, 0.0]
         time_from_start: 0.0
     home: # NOTE: arm_*_2_joint is nonzero!
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
@@ -59,33 +59,158 @@ play_motion:
       points:
       - positions: [1.0, -0.5, -0.5, -0.5, 1.0, -0.5]
         time_from_start: 0.0
-    test_motion:
-      joints: [torso_2_joint, arm_right_6_joint, arm_right_5_joint, arm_left_5_joint,
-        torso_1_joint, arm_left_4_joint, head_2_joint, arm_right_2_joint, arm_left_3_joint,
-        head_1_joint, arm_right_7_joint, arm_right_3_joint, arm_right_4_joint, arm_right_1_joint,
-        arm_left_1_joint, arm_left_2_joint]
-      points:
-      - positions: [0.0, 0.0, -0.5, -0.5, 0.0, 1.3, 0.34, 0.0, -1.6, 0.0, 0.0, -1.6,
-          1.4, 1.2, 0.9, 0.2]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 1.65, 0.0, 0.2, -1.0, 0.0, 0.0, -1.0,
-          1.65, 1.2, 1.2, 0.3]
-        velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.5, 0.5, 0.0, 0.0, 0.5,
-          0.5, 0.5, 0.5, 0.5]
-        time_from_start: 3.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-          0.0, 0.0, 0.0, 0.0]
-        time_from_start: 6.0
     squat:
-      joints: [arm_left_7_joint, leg_left_1_joint, arm_right_6_joint, torso_2_joint,
-        arm_right_5_joint, arm_left_5_joint, arm_left_6_joint, arm_left_1_joint, torso_1_joint,
-        arm_left_4_joint, head_2_joint, leg_right_3_joint, leg_left_2_joint, arm_right_2_joint,
-        leg_left_6_joint, head_1_joint, leg_right_6_joint, arm_right_7_joint, arm_right_3_joint,
-        leg_left_5_joint, leg_right_4_joint, arm_right_4_joint, arm_left_3_joint,
-        leg_right_1_joint, leg_left_4_joint, leg_right_5_joint, arm_left_2_joint,
-        arm_right_1_joint, leg_right_2_joint, leg_left_3_joint]
+      joints: [head_1_joint, head_2_joint, torso_1_joint, torso_2_joint, 
+      arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint,
+      arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, 
+      arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, 
+      arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, 
+      leg_right_1_joint, leg_right_2_joint, leg_right_3_joint, 
+      leg_right_4_joint, leg_right_5_joint, leg_right_6_joint, 
+      leg_left_1_joint, leg_left_2_joint, leg_left_3_joint, 
+      leg_left_4_joint, leg_left_5_joint, leg_left_6_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.9, 0.25, -1.35,
-          0.0, 1.3, 0.0, 0.0, 0.0, 0.0, 0.0, -1.3, 2.6, 0.9, 0.0, 0.0, 2.6, -1.3,
-          1.3, 0.0, 0.0, -1.35]
+      - positions: [0.0,0.0, 0.0, -0.15,
+        -0.21, -0.60, 0.637, -1.598, -0.3, 0.00, 0.0, 
+         0.21, 0.60, -0.637, -1.598, 0.3, 0.0, 0.0, 
+         0.0, 0.0, -1.3, 2.4, -1.2, 0.0, 
+         0.0, 0.0, -1.3, 2.4, -1.2, 0.0]
         time_from_start: 0.0
+    wave:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [-0.0, -0.001, 0.0, -0.148, -0.0, 0.0, 0.0, 0.001, -0.0, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, -0.0, 0.002, -0.001, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0.0, -0.001, -0.314, -1.174, -0.927, -1.741, -0.0, 0.002, 0.001, 0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, -0.7, 0.0]
+        time_from_start: 4.0
+      - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, -0.0, 0.002, -0.001, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+        time_from_start: 5.0
+      - positions: [-0.0, -0.001, 0.0, -0.148, -0.0, 0.0, 0.0, 0.001, -0.0, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+        time_from_start: 8.0
+    lift_weights:
+      joints: [head_1_joint, head_2_joint, torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [-0.0, -0.0, 0.0, 0.002, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, -0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
+        time_from_start: 0.0
+      - positions: [-0.0, -0.0, 0.0, 0.001, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, 0.0, 0.249, 0.097, -2.307, 1.57, 0.002, 0.001, -0.7, -0.7]
+        time_from_start: 2.0
+      - positions: [-0.0, -0.0, 0.0, 0.002, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, -0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
+        time_from_start: 4.0
+      - positions: [-0.0, 0.0, -0.0, 0.001, 0.0, -0.249, -0.042, -2.306, -1.57, -0.003, 0.001, 0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
+        time_from_start: 6.0
+      - positions: [-0.0, -0.0, 0.0, 0.002, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, -0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
+        time_from_start: 8.0
+    close_right_gripper:
+      joints: [gripper_right_joint]
+      points:
+      - positions: [-0.7]
+        time_from_start: 0.0
+    open_right_gripper:
+      joints: [gripper_right_joint]
+      points:
+      - positions: [0.0]
+        time_from_start: 0.0
+    close_lef_gripper:
+      joints: [gripper_left_joint]
+      points:
+      - positions: [-0.7]
+        time_from_start: 0.0
+    open_left_gripper:
+      joints: [gripper_left_joint]
+      points:
+      - positions: [0.0]
+        time_from_start: 0.0
+    wave_left:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [-0.0, -0.001, 0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.0, 0.148, -0.0, -0.2, 0.0, 0.001, -0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, -0.001, -0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.314, 1.175, 0.927, -2.214, -0.0, 0.002, -0.001, 0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0.0, -0.001, 0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.314, 1.174, 0.927, -1.741, -0.0, 0.002, 0.001, 0.0, -0.7]
+        time_from_start: 4.0
+      - positions: [0.0, -0.001, -0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.314, 1.175, 0.927, -2.214, -0.0, 0.002, -0.001, 0.0, 0.0]
+        time_from_start: 5.0
+      - positions: [-0.0, -0.001, -0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.0, 0.148, -0.0, -0.2, 0.0, 0.001, -0.0, 0.0, 0.0]
+        time_from_start: 8.0
+
+    wave_both_arms:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [-0.0, -0.001, 0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.0, 0.148, -0.0, -0.2, 0.0, 0.001, -0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, 0.0, 0.0, 0.0, 0.314, 1.175, 0.927, -2.214, -0.0, 0.002, -0.001, 0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0.0, -0.001, -0.314, -1.174, -0.927, -1.741, 0.0, 0.0, 0.0, 0.314, 1.174, 0.927, -1.741, -0.0, 0.002, 0.001, -0.7, -0.7]
+        time_from_start: 4.0
+      - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, 0.0, 0.0, 0.0, 0.314, 1.175, 0.927, -2.214, -0.0, 0.002, -0.001, 0.0, 0.0]
+        time_from_start: 5.0
+      - positions: [-0.0, -0.001, 0.0, -0.15, -0.0, -0.2, 0.0, 0.0, 0.0, 0.0, 0.148, -0.0, -0.2, 0.0, 0.001, -0.0, 0.0, 0.0]
+        time_from_start: 8.0
+    test_arm_right:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [-0.0, -0.002, -0.464, -0.343, -0.0, -0.0, -0.0, 0.001, -0.0, -0.0, 0.148, 0.0, -0.0, 0.0, -0.001, 0.0, 0.001, -0.0]
+        time_from_start: 4.0
+      - positions: [-0.0, 0.001, 1.508, -0.343, -0.0, -0.0, -0.0, 0.001, -0.0, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, -0.0, 0.001]
+        time_from_start: 7.0
+      - positions: [-0.0, 0.001, 1.508, -0.343, 2.238, -0.002, 0.0, -0.001, -0.001, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, -0.0, -0.0]
+        time_from_start: 10.0
+      - positions: [-0.0, 0.001, 1.508, -0.343, -2.339, 0.0, 0.0, -0.001, 0.001, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, -0.0, -0.001, -0.0]
+        time_from_start: 13.0
+      - positions: [-0.0, 0.001, 1.508, -0.343, -2.347, -2.305, -0.0, -0.001, 0.002, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, -0.0, -0.0, -0.0]
+        time_from_start: 16.0
+      - positions: [-0.0, -0.001, 0.482, -2.728, 1.247, -1.842, 0.0, -0.001, -0.003, 0.0, 0.148, 0.0, -0.0, 0.0, -0.001, 0.0, -0.0, -0.0]
+        time_from_start: 19.0
+      - positions: [-0.0, 0.001, 0.482, -0.286, -0.437, -1.835, -0.0, 0.001, 0.003, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, -0.0, -0.0]
+        time_from_start: 22.0
+      - positions: [-0.0, 0.001, 0.482, -0.285, -0.439, -1.835, -2.382, 1.313, -0.653, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, 0.0, 0.0]
+        time_from_start: 26.0
+      - positions: [-0.0, 0.001, 0.482, -0.286, -0.439, -1.836, 2.422, -1.303, 0.646, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, 0.0, -0.0]
+        time_from_start: 30.0
+      - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 33.0 
+    test_arm_left:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [-0.0, -0.002, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.464, 0.343, -0.0, -0.0, -0.0, 0.001, -0.0, 0.001, -0.0]
+        time_from_start: 4.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, -0.0, -0.0, -0.0, 0.001, -0.0, -0.0, 0.001]
+        time_from_start: 7.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, -2.238, -0.002, 0.0, -0.001, -0.001, -0.0, -0.0]
+        time_from_start: 10.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, 2.339, 0.0, 0.0, -0.001, 0.001, -0.001, -0.0]
+        time_from_start: 13.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, 2.347, -2.305, -0.0, -0.001, 0.002, -0.0, -0.0]
+        time_from_start: 16.0
+      - positions: [-0.0, -0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 2.728, -1.247, -1.842, 0.0, -0.001, -0.003, -0.0, -0.0]
+        time_from_start: 19.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.286, 0.437, -1.835, -0.0, 0.001, 0.003, -0.0, -0.0]
+        time_from_start: 22.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.285, 0.439, -1.835, 2.382, -1.313, -0.653, 0.0, 0.0]
+        time_from_start: 26.0
+      - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.286, 0.439, -1.836, -2.422, 1.303, 0.646, 0.0, -0.0]
+        time_from_start: 30.0
+      - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 33.0
+    test_head:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [-0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [-0.24, 0.0]
+        time_from_start: 2.0
+      - positions: [0.77, 0.0]
+        time_from_start: 4.0
+      - positions: [-0.0, -1.20]
+        time_from_start: 6.0
+      - positions: [-0.0, 1.20]
+        time_from_start: 10.0
+      - positions: [-0.0, 0.0]
+        time_from_start: 12.0

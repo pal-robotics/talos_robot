@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2016-11-09)
+------------------
 * Head talos finally working hardware, added wrists ft to pal hardware
 * MoveIt and play_motion config files
 * modified talos bringu

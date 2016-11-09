@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2016-11-09)
+------------------
 * Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel
 * Head talos finally working hardware, added wrists ft to pal hardware
 * MoveIt and play_motion config files

@@ -12,7 +12,7 @@
               left_gripper_controller
               right_gripper_controller
               left_leg_controller
-              right_leg_controller --stopped" />
+              right_leg_controller" />
 
   <!-- Point head action -->
   <group ns="head_controller">

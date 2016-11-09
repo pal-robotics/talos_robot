@@ -24,8 +24,8 @@ play_motion:
         arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
         gripper_left_joint, gripper_right_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.15,
-          0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 
+                                        0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
       meta:
         name: Home
@@ -161,17 +161,17 @@ play_motion:
       - positions: [-0.0, 0.001, 1.508, -0.343, 2.238, -0.002, 0.0, -0.001, -0.001, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, -0.0, -0.0]
         time_from_start: 10.0
       - positions: [-0.0, 0.001, 1.508, -0.343, -2.339, 0.0, 0.0, -0.001, 0.001, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, -0.0, -0.001, -0.0]
-        time_from_start: 13.0
+        time_from_start: 14.0
       - positions: [-0.0, 0.001, 1.508, -0.343, -2.347, -2.305, -0.0, -0.001, 0.002, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, -0.0, -0.0, -0.0]
-        time_from_start: 16.0
+        time_from_start: 17.0
       - positions: [-0.0, -0.001, 0.482, -2.728, 1.247, -1.842, 0.0, -0.001, -0.003, 0.0, 0.148, 0.0, -0.0, 0.0, -0.001, 0.0, -0.0, -0.0]
-        time_from_start: 19.0
+        time_from_start: 21.0
       - positions: [-0.0, 0.001, 0.482, -0.286, -0.437, -1.835, -0.0, 0.001, 0.003, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, -0.0, -0.0]
-        time_from_start: 22.0
+        time_from_start: 23.0
       - positions: [-0.0, 0.001, 0.482, -0.285, -0.439, -1.835, -2.382, 1.313, -0.653, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, 0.0, 0.0]
         time_from_start: 26.0
       - positions: [-0.0, 0.001, 0.482, -0.286, -0.439, -1.836, 2.422, -1.303, 0.646, -0.0, 0.148, 0.0, -0.001, 0.0, -0.001, 0.0, 0.0, -0.0]
-        time_from_start: 30.0
+        time_from_start: 29.0
       - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 33.0 
     test_arm_left:
@@ -186,17 +186,17 @@ play_motion:
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, -2.238, -0.002, 0.0, -0.001, -0.001, -0.0, -0.0]
         time_from_start: 10.0
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, 2.339, 0.0, 0.0, -0.001, 0.001, -0.001, -0.0]
-        time_from_start: 13.0
+        time_from_start: 14.0
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -1.508, 0.343, 2.347, -2.305, -0.0, -0.001, 0.002, -0.0, -0.0]
-        time_from_start: 16.0
+        time_from_start: 17.0
       - positions: [-0.0, -0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 2.728, -1.247, -1.842, 0.0, -0.001, -0.003, -0.0, -0.0]
-        time_from_start: 19.0
+        time_from_start: 21.0
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.286, 0.437, -1.835, -0.0, 0.001, 0.003, -0.0, -0.0]
-        time_from_start: 22.0
+        time_from_start: 23.0
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.285, 0.439, -1.835, 2.382, -1.313, -0.653, 0.0, 0.0]
         time_from_start: 26.0
       - positions: [-0.0, 0.001, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, -0.482, 0.286, 0.439, -1.836, -2.422, 1.303, 0.646, 0.0, -0.0]
-        time_from_start: 30.0
+        time_from_start: 29.0
       - positions: [0.0, 0.0, 0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 33.0
     test_head:
@@ -214,3 +214,62 @@ play_motion:
         time_from_start: 10.0
       - positions: [-0.0, 0.0]
         time_from_start: 12.0
+    bow:
+      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.25, -0.2, -0.6109, 0.0, 0.0, 0.0, 
+                                       -0.1, -0.25, 0.2, -0.6109, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.4, 0.3, 0.0, 0.25, 0.15, -0.0, -0.6109, 0.0, 0.0, 0.0,
+                                       -0.25, -0.15, 0.0, -0.6109, 0.0, 0.0, 0.0]
+        time_from_start: 1.5
+      - positions: [0.0, 0.4, 0.3, 0.0,  0.25, 0.15, -0.0, -0.6109, 0.0, 0.0, 0.0, 
+                                        -0.25, -0.15, 0.0, -0.6109, 0.0, 0.0, 0.0]
+        time_from_start: 2.0
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.25, -0.2, -0.6109, 0.0, 0.0, 0.0, 
+                                       -0.1, -0.25, 0.2, -0.6109, 0.0, 0.0, 0.0]
+        time_from_start: 3.25
+      meta:
+        name: Bow
+        usage: greet
+        description: Makes a short reverence with both arms back.
+    center_head:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0.0, 0.0]
+        time_from_start: 0.0
+      meta:
+        name: Center Head
+        usage: posture
+        description: Moves only head to a centered posture.
+    look_around:
+      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.35, -0.2, -1.4109, 0.0, 0.0, 0.0, 
+                                       -0.1, -0.35, 0.2, -1.4109, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.2, -0.2, 0.0, 0.25, 0.35, -0.0, -1.4109, 0.0, 0.0, 0.0,
+                                       -0.25, -0.35, 0.0, -1.4109, 0.0, 0.0, 0.0]
+        time_from_start: 1.5
+      - positions: [0.7, 0.2, -0.2, 0.0,  0.15, 0.35, -0.0, -1.2109, 0.0, 0.0, 0.0, 
+                                        -0.35, -0.35, 0.0, -1.6109, 0.0, 0.0, 0.0]
+        time_from_start: 3.5
+      - positions: [0.0, 0.2, 0.2, 0.0,  0.2, 0.35, -0.0, -1.0109, 0.0, 0.0, 0.0, 
+                                        -0.2, -0.35, 0.0, -1.0109, 0.0, 0.0, 0.0]
+        time_from_start: 5.0
+      - positions: [-0.7, 0.2, -0.2, 0.0, 0.35, 0.35, 0.0, -1.6109, 0.0, 0.0, 0.0, 
+                                       -0.15, -0.35, 0.0, -1.2109, 0.0, 0.0, 0.0]
+        time_from_start: 6.5
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.25, -0.2, -0.6109, 0.0, 0.0, 0.0, 
+                                       -0.1, -0.25, 0.2, -0.6109, 0.0, 0.0, 0.0]
+        time_from_start: 8.5
+      meta:
+        name: look_around
+        usage: demonstration
+        description: turn torso and head from left to right.

@@ -1,6 +1,9 @@
 <launch>
 
-    <include file="$(find talos_bringup)/launch/talos_bringup.launch" />
+  <!-- Hardware configuration -->
+  <rosparam command="load" file="$(find talos_bringup)/config/talos_full_hardware.yaml" />
+  
+  <include file="$(find talos_bringup)/launch/talos_bringup.launch" />
 
 </launch>
 

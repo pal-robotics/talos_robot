@@ -1,9 +1,6 @@
 <launch>
   <arg name="robot" default="full"/>
 
-  <!-- Hardware configuration -->
-  <rosparam command="load" file="$(find talos_bringup)/config/talos_full_hardware.yaml" />
-  
   <!-- Load default controllers -->
   <include file="$(find talos_controller_configuration)/launch/bringup_controllers.launch" />
 

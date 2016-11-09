@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Modified bringup
+* Contributors: Hilario Tome
+
 0.0.3 (2016-10-31)
 ------------------
 * Added joint torque control

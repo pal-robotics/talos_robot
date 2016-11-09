@@ -2,6 +2,17 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel
+* Head talos finally working hardware, added wrists ft to pal hardware
+* MoveIt and play_motion config files
+* Fixed head differential
+* Changed gazebo feedback to base_link
+* Fix right wrist and gripper rotations
+* Invert torso joints order. Check base_link
+* Contributors: Hilario Tome, Luca
+
 0.0.3 (2016-10-31)
 ------------------
 * Added default 0 noise to simulated imu

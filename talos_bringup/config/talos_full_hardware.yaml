@@ -9,6 +9,8 @@ actuators:
     mode_cmd_port: ref_control_mode
     absolute_encoder_position_port: act_abs_position
     torque_sensor_port: act_torque
+    temperature_sensor_port: act_temperature
+
 
 e_stop:
   raw_data:
@@ -31,6 +33,22 @@ force_torque:
     raw_data:
       force_port: force_ankle_right
       torque_port: torque_ankle_right
+  left_wrist_ft:
+    frame: wrist_left_ft_link
+    transformation:
+      force: [x, y, z]
+      torque: [x, y, z]
+    raw_data:
+      force_port: force_wrist_left
+      torque_port: torque_wrist_left
+  right_wrist_ft:
+    frame: wrist_right_ft_link
+    transformation:
+      force: [x, y, z]
+      torque: [x, y, z]
+    raw_data:
+      force_port: force_wrist_right
+      torque_port: torque_wrist_right
 
 imu:
   base_imu:

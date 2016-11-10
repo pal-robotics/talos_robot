@@ -1,5 +1,5 @@
-init_offset_controller:
-  type: reemc_controllers/ReemcInitOffsetController 
+walking_controller:
+  type: walking_controller/ReemcControl
   joints:
     - leg_left_1_joint
     - leg_left_2_joint
@@ -16,14 +16,18 @@ init_offset_controller:
   left_ft_sensor: left_ankle_ft
   right_ft_sensor: right_ankle_ft
   base_imu_sensor: base_imu
+  check_mode: True
 
-  hip_spacing_x: -0.03
-  hip_spacing_y: 0.08
-  hip_spacing_z: 0.0
-
-  femur_length: 0.380
-  tibia_length: 0.320
-  foot_height: 0.107
-  ft_sensor_z: 0.02
-
-  config_folder: "$HOME/.pal/init_offset_controller/config"
+  actuators:
+    - leg_left_1_motor
+    - leg_left_2_motor
+    - leg_left_3_motor
+    - leg_left_4_motor
+    - leg_left_5_motor
+    - leg_left_6_motor
+    - leg_right_1_motor
+    - leg_right_2_motor
+    - leg_right_3_motor
+    - leg_right_4_motor
+    - leg_right_5_motor
+    - leg_right_6_motor

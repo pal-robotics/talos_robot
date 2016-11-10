@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>talos_bringup</name>
-  <version>0.0.5</version>
+  <version>0.0.7</version>
   <description>The talos_bringup package</description>
 
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
@@ -10,6 +10,16 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <run_depend>talos_controller_configuration</run_depend>
+  <run_depend>talos_description</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>tf_lookup</run_depend>
+  <run_depend>twist_mux</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>joy_teleop</run_depend>
+  <run_depend>play_motion</run_depend>
+  <run_depend>talos_moveit_config</run_depend>
+  
   <export>
   </export>
   

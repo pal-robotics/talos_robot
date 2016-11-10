@@ -15,7 +15,7 @@
   <run_depend>joint_trajectory_controller</run_depend>
   <run_depend>controller_manager</run_depend>
   <run_depend>joint_state_controller</run_depend>
-  <run_depend>point_head_action</run_depend>
+  <run_depend>head_action</run_depend>
   
   <export>
   </export>

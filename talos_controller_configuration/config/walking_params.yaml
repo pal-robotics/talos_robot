@@ -1,0 +1,39 @@
+loop_counter_factor: -1
+debug_backdoor: true
+
+odometry:
+   enabled        : false
+   vel_window_size: 10
+   use_imu_yaw    : false
+   publish_rate   : 100.0
+
+   pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+   twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
+
+biped_controller:
+   delta_T: 0.001
+   ft_sensor_z: 0.02
+   variable_joint_offset_hip: -0.6
+   variable_joint_offset_ankle: -0.6
+   swing_foot_z: 0.03
+   z_lipm: 0.86
+
+com_stabilizer:
+   ds_x_p: 0.6
+   ds_y_p: 0.6
+   ss_x_p: 0.4
+   ss_y_p: 0.4
+   dead_zone: 0.01
+   foot_offset_clamp: 0.05
+   hip_offset_x_clamp: 0.05
+   hip_offset_y_clamp: 0.05
+   hip_offset_decay: 0.995
+
+hip_spacing_x: -0.03
+hip_spacing_y: 0.08
+hip_spacing_z: 0.0
+femur_length: 0.380
+tibia_length: 0.320
+foot_height: 0.107
+
+read_absolute_encoders: False

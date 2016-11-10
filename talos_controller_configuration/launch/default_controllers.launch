@@ -1,6 +1,6 @@
 <launch>
   
-  <include file="$(find talos_walking)/launch/walking_controller.launch" />
+  <include file="$(find talos_controller_configuration)/launch/walking_controller.launch" />
   
   <include file="$(find talos_controller_configuration)/launch/upper_body_position_controllers.launch" />
   

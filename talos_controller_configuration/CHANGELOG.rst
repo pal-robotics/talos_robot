@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.7 (2016-11-10)
+------------------
 * Fixed bug package depend head action
 * Contributors: Hilario Tome
 

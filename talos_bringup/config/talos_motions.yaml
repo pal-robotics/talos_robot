@@ -26,7 +26,7 @@ play_motion:
       points:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 
                                         0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
+        time_from_start: 4.0
       meta:
         name: Home
         usage: posture
@@ -273,3 +273,15 @@ play_motion:
         name: look_around
         usage: demonstration
         description: turn torso and head from left to right.
+    reset_ft_wrist_pose:
+      joints: ['torso_1_joint', 'torso_2_joint', 'arm_right_1_joint', 'arm_right_2_joint', 'arm_right_3_joint', 'arm_right_4_joint', 'arm_right_5_joint', 'arm_right_6_joint', 'arm_right_7_joint', 'arm_left_1_joint', 'arm_left_2_joint', 'arm_left_3_joint', 'arm_left_4_joint', 'arm_left_5_joint', 'arm_left_6_joint', 'arm_left_7_joint']
+      points:
+      - positions: [0.0, 0.0, -0.0, -1.571, 1.571, -1.571, 0.0, 0.0, 0.0, -0.0, 1.571, -1.571, -1.571, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      - positions: [0.0, 0.0, -0.0, -1.571, 1.571, -1.571, 0.0, 0.0, 0.0, -0.0, 1.571, -1.571, -1.571, 0.0, 0.0, 0.0]
+        time_from_start: 4.0
+    arms_t:
+      joints: ['torso_1_joint', 'torso_2_joint', 'arm_right_1_joint', 'arm_right_2_joint', 'arm_right_3_joint', 'arm_right_4_joint', 'arm_right_5_joint', 'arm_right_6_joint', 'arm_right_7_joint', 'arm_left_1_joint', 'arm_left_2_joint', 'arm_left_3_joint', 'arm_left_4_joint', 'arm_left_5_joint', 'arm_left_6_joint', 'arm_left_7_joint']
+      points:
+      - positions: [0.0, 0.0, -0.0, -1.571, 1.571, 0.0, 0.0, 0.0, 0.0, -0.0, 1.571, -1.571, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0

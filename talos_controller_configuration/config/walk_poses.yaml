@@ -36,6 +36,6 @@ walk_pose:
     - arm_right_1_joint: -1.0
     - arm_right_3_joint: 1.0
     - arm_right_4_joint: 1.0
-    - torso_2_joint: 0.5
+    - torso_1_joint: 0.5
     - head_2_joint: 0.5
 

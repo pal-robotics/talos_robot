@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.5 (2016-11-10)
+------------------
 * Moved talos hardware out of bringup
 * motions for talos, tested on robot
 * Contributors: Hilario Tome, Luca

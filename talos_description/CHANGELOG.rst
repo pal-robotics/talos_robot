@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix frame for wrist ft sensors
+* Contributors: Luca
+
 0.0.4 (2016-11-09)
 ------------------
 * Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel

@@ -2,6 +2,12 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Moved talos hardware out of bringup
+* motions for talos, tested on robot
+* Contributors: Hilario Tome, Luca
+
 0.0.4 (2016-11-09)
 ------------------
 * Head talos finally working hardware, added wrists ft to pal hardware

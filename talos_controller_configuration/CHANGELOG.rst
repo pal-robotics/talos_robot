@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fixed bug package depend head action
+* Contributors: Hilario Tome
+
 0.0.6 (2016-11-10)
 ------------------
 * Moved the files from talos walking to talos controller configuration

@@ -2,6 +2,11 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Moved the files from talos walking to talos controller configuration
+* Contributors: Hilario Tome
+
 0.0.5 (2016-11-10)
 ------------------
 * Moved talos hardware out of bringup

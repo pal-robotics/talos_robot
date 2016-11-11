@@ -2,22 +2,32 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.7 (2016-11-10)
-------------------
+Forthcoming
+-----------
+* Added motions, and ft sensor signs fixed
+* Contributors: Luca
 
-0.0.6 (2016-11-10)
-------------------
+0.0.7 (2016-11-10 18:45)
+------------------------
+* Updated changelog
+* Contributors: Hilario Tome
+
+0.0.6 (2016-11-10 18:16)
+------------------------
+* Updated changelog
 * Moved the files from talos walking to talos controller configuration
 * Contributors: Hilario Tome
 
-0.0.5 (2016-11-10)
-------------------
+0.0.5 (2016-11-10 12:06)
+------------------------
+* Updated changelog
 * Moved talos hardware out of bringup
 * motions for talos, tested on robot
 * Contributors: Hilario Tome, Luca
 
 0.0.4 (2016-11-09)
 ------------------
+* Updated changelog
 * Head talos finally working hardware, added wrists ft to pal hardware
 * MoveIt and play_motion config files
 * modified talos bringu
@@ -29,6 +39,7 @@ Changelog for package talos_bringup
 
 0.0.3 (2016-10-31)
 ------------------
+* Updated changelog
 * Changed head differential, default controllers stopped
 * Succesfull walking in talos, added talos teleop
 * Added missing depends and completed bringup
@@ -36,9 +47,12 @@ Changelog for package talos_bringup
 
 0.0.2 (2016-10-13)
 ------------------
+* Updated changelog
+* Contributors: Hilario Tome
 
 0.0.1 (2016-10-12)
 ------------------
+* Created intial changelog
 * Fixing
 * Renamed tor to talos
 * Contributors: Hilario Tome

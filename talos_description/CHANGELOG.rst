@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.8 (2016-11-11)
+------------------
 * Removed xacro if
 * Added motions, and ft sensor signs fixed
 * Contributors: Luca

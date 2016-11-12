@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.10 (2016-11-12)
+-------------------
 * Add missing dependencies to talos_controller_configuration
 * Contributors: Victor Lopez
 

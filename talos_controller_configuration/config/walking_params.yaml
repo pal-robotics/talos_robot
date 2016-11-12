@@ -13,24 +13,24 @@ odometry:
 biped_controller:
    delta_T: 0.001
    ft_sensor_z: 0.02
-   variable_joint_offset_hip: -0.6
-   variable_joint_offset_ankle: -0.6
+   variable_joint_offset_hip: -0.7
+   variable_joint_offset_ankle: -0.7
    swing_foot_z: 0.03
-   z_lipm: 0.86
+   z_lipm: 0.95
 
 com_stabilizer:
-   ds_x_p: 0.6
+   ds_x_p: 0.8
    ds_y_p: 0.6
-   ss_x_p: 0.4
-   ss_y_p: 0.4
+   ss_x_p: 0.7
+   ss_y_p: 0.5
    dead_zone: 0.01
    foot_offset_clamp: 0.05
    hip_offset_x_clamp: 0.05
    hip_offset_y_clamp: 0.05
-   hip_offset_decay: 0.995
+   hip_offset_decay: 0.997
 
 hip_spacing_x: -0.03
-hip_spacing_y: 0.08
+hip_spacing_y: 0.085
 hip_spacing_z: 0.0
 femur_length: 0.380
 tibia_length: 0.320

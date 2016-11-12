@@ -52,7 +52,7 @@ force_torque:
 
 imu:
   base_imu:
-    frame: base_link
+    frame: imu_link
     raw_data:
       orientation_port: orientation_base
       linear_acceleration_port: linear_acceleration_base

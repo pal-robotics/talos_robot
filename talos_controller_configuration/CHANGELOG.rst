@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Talos offsets for walking and tuning params
+* Contributors: Luca
+
 0.0.8 (2016-11-11)
 ------------------
 * Changed torso joint to Z

@@ -2,6 +2,9 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.8 (2016-11-11)
 ------------------
 * Added motions, and ft sensor signs fixed

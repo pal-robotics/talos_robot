@@ -112,7 +112,7 @@ play_motion:
       points:
       - positions: [0.0]
         time_from_start: 0.0
-    close_lef_gripper:
+    close_left_gripper:
       joints: [gripper_left_joint]
       points:
       - positions: [-0.7]

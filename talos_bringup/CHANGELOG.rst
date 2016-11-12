@@ -2,6 +2,11 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix close left gripper motion typo
+* Contributors: Luca
+
 0.0.9 (2016-11-12)
 ------------------
 

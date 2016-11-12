@@ -2,14 +2,24 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.10 (2016-11-12)
--------------------
+Forthcoming
+-----------
+* Fix imu tf and frame
+* Contributors: Luca
 
-0.0.9 (2016-11-12)
-------------------
+0.0.10 (2016-11-12 12:48)
+-------------------------
+* Update changelog
+* Contributors: Victor Lopez
+
+0.0.9 (2016-11-12 11:14)
+------------------------
+* Add changelog
+* Contributors: Luca
 
 0.0.8 (2016-11-11)
 ------------------
+* Add changelog
 * Removed xacro if
 * Added motions, and ft sensor signs fixed
 * Contributors: Luca

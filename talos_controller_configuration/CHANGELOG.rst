@@ -2,18 +2,24 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.10 (2016-11-12)
--------------------
+Forthcoming
+-----------
+
+0.0.10 (2016-11-12 12:48)
+-------------------------
+* Update changelog
 * Add missing dependencies to talos_controller_configuration
 * Contributors: Victor Lopez
 
-0.0.9 (2016-11-12)
-------------------
+0.0.9 (2016-11-12 11:14)
+------------------------
+* Add changelog
 * Talos offsets for walking and tuning params
 * Contributors: Luca
 
 0.0.8 (2016-11-11)
 ------------------
+* Add changelog
 * Changed torso joint to Z
 * Contributors: Luca
 

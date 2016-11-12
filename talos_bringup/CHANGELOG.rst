@@ -2,16 +2,25 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.10 (2016-11-12)
--------------------
-* Fix close left gripper motion typo
+Forthcoming
+-----------
+* Fix imu tf and frame
 * Contributors: Luca
 
-0.0.9 (2016-11-12)
-------------------
+0.0.10 (2016-11-12 12:48)
+-------------------------
+* Update changelog
+* Fix close left gripper motion typo
+* Contributors: Luca, Victor Lopez
+
+0.0.9 (2016-11-12 11:14)
+------------------------
+* Add changelog
+* Contributors: Luca
 
 0.0.8 (2016-11-11)
 ------------------
+* Add changelog
 * Added motions, and ft sensor signs fixed
 * Contributors: Luca
 

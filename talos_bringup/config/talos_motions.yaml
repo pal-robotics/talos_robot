@@ -24,9 +24,9 @@ play_motion:
         arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
         gripper_left_joint, gripper_right_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 
-                                        0.0, -0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 
+                                        0.0, -0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
       meta:
         name: Home
         usage: posture
@@ -39,6 +39,20 @@ play_motion:
       points:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
+    walk_pose: 
+      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
+        gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.31, 0.32, -0.3, -0.80, 0.0, 0.0, 0.0, 
+                                        -0.31, -0.32, 0.3, -0.80, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.0
+      meta:
+        name: Home
+        usage: posture
+        description: Both arms down and completely stretched.
     interact:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -79,7 +93,7 @@ play_motion:
     wave:
       joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
       points:
-      - positions: [-0.0, -0.001, 0.0, -0.148, -0.0, 0.0, 0.0, 0.001, -0.0, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, -0.25, -0.0, 0.0, 0.0, 0.00, -0.0, -0.0, 0.25, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
         time_from_start: 0.0
       - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, -0.0, 0.002, -0.001, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
         time_from_start: 3.0
@@ -87,7 +101,7 @@ play_motion:
         time_from_start: 4.0
       - positions: [0.0, -0.001, -0.314, -1.175, -0.927, -2.214, -0.0, 0.002, -0.001, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
         time_from_start: 5.0
-      - positions: [-0.0, -0.001, 0.0, -0.148, -0.0, 0.0, 0.0, 0.001, -0.0, -0.0, 0.15, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, -0.25, -0.0, 0.0, 0.0, 0.0, -0.0, -0.0, 0.25, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
         time_from_start: 8.0
     lift_weights:
       joints: [head_1_joint, head_2_joint, torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
@@ -102,6 +116,8 @@ play_motion:
         time_from_start: 6.0
       - positions: [-0.0, -0.0, 0.0, 0.002, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, -0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
         time_from_start: 8.0
+      - positions: [0.0, 0.0, 0.0, -0.25, -0.0, 0.0, 0.0, 0.0, -0.0, -0.0, 0.25, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+        time_from_start: 10.0
     close_right_gripper:
       joints: [gripper_right_joint]
       points:

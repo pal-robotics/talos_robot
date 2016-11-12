@@ -35,7 +35,7 @@ teleop:
     type: action
     action_name: play_motion
     action_goal:
-      motion_name: hands_walk
+      motion_name: walk_pose
     buttons: [8, 2]
 
   # documented motions, with right upper button and right trigger
@@ -58,19 +58,13 @@ teleop:
     type: action
     action_name: play_motion
     action_goal:
-      motion_name: open_arms
+      motion_name: wave_both_arms
     buttons: [5, 3]
 
   shake_hand:
     type: action
     action_name: play_motion
     action_goal:
-      motion_name: shake_right
+      motion_name: lift_weights
     buttons: [5, 2]
 
-  point_front_left:
-    type: action
-    action_name: play_motion
-    action_goal:
-      motion_name: point_front_left
-    buttons: [7, 0]

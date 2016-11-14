@@ -1,7 +1,5 @@
 <launch>
 
-  <arg name="robot" default="titanium"/>
-
   <!-- Robot description -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find talos_description)/robots/talos_lower_body.urdf.xacro'" />
 

@@ -1,157 +1,255 @@
 <?xml version="1.0"?>
-<robot name="talos" xmlns:xacro="http://ros.org/wiki/xacro" >
 
-   <xacro:include filename="$(find talos_description)/urdf/leg/leg.transmission.xacro" />
-   <xacro:property name="leg_reduction"      value="1.0" />
-   <xacro:property name="leg_friction"       value="0.0" />
-   <xacro:property name="leg_damping"        value="0.0" />
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="talos">
 
-   <xacro:macro name="talos_leg" params="prefix reflect">
-  
+  <xacro:include filename="$(find talos_description)/urdf/leg/leg.transmission.xacro" />
+
+  <xacro:property name="deg_to_rad"       value="0.01745329251994329577" />
+  <xacro:property name="eps_radians"      value="0.008" /> <!-- 0.45deg -->
+  <xacro:property name="eps_meters"       value="0.005" />
+  <xacro:property name="leg_reduction"    value="1.0" />
+  <xacro:property name="leg_friction"     value="0.0" />
+  <xacro:property name="leg_damping"      value="0.0" />
+
+
+  <xacro:macro name="talos_leg" params="prefix reflect">
+    <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
+
     <link name="leg_${prefix}_1_link">
       <inertial>
-        <origin xyz="0.033   0.0   -0.112" rpy="0 0 0"/>
-        <mass value="1.3" />
-         <inertia ixx="0.003"  ixy="0.0"  ixz="0.0" iyy="0.004" iyz="0.0" izz="0.002" />
-      </inertial>
-    
-      <visual>
-        <origin rpy="0 0 3.14" xyz="0 0 0"/>
-        <geometry>
-          <mesh filename="package://talos_description/meshes/hipZ.STL" scale="1 ${reflect*1} 1"/>
-        </geometry>
-        <!-- <material name="LightGrey" /> -->
-      </visual>
-      
-      <collision>
-        <origin rpy="0 0 0" xyz="0 0 -0.02"/>
-	    <geometry>
-           <box size="0.1 0.1 0.1"/>
-        </geometry>
-      </collision>  
-      
-    </link>
-
-    <link name="leg_${prefix}_2_link">
-      <inertial>
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-        <mass value="1.2" />
-         <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <origin xyz="0.02320 -0.00009 0.04949" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.88569"/>
+        <inertia ixx="0.00384800000" ixy="0.00003200000" ixz="-0.00082600000"
+                 iyy="0.00599400000" iyz="0.00007800000"
+                 izz="0.00322200000"/>
       </inertial>
 
       <visual>
-        <origin xyz="0 0 0.0" rpy="1.57  0  0" />
+        <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <cylinder radius="0.05" length="0.15"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
 
       <collision>
-	    <origin xyz="0 0 0.0" rpy="1.57  0  0" />
-        <geometry>
-          <cylinder radius="0.05" length="0.15"/>
-        </geometry>
-      </collision>  
-
-     </link>
-  
-    <link name="leg_${prefix}_3_link">
-      <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/femur.STL" scale="1 ${reflect*1} 1"/>
+           <mesh filename="package://talos_description/meshes/v2/hip_z_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <!-- <material name="LightGrey" /> -->
+      </collision>  
+    </link>
+
+    <joint name="leg_${prefix}_1_joint" type="revolute">
+      <parent link="base_link"/>
+      <child link="leg_${prefix}_1_link"/>
+      <origin xyz="-0.02 ${reflect*0.08500} -0.27105" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="0 0 1" />
+      <limit lower="${(-55.0 + 35.0*reflect)*deg_to_rad}" upper="${(55.0 + 35.0*reflect)*deg_to_rad}" effort="100" velocity="3.87" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+
+
+    <!-- Joint hip_x (mesh link) : child link hip_y -> parent link hip_z -->
+
+    <link name="leg_${prefix}_2_link">
+      <inertial>
+        <origin xyz="0.01583 -0.00021 0.00619" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="2.37607"/>
+        <inertia ixx="0.00342100000" ixy="-0.00011300000" ixz="-0.00022500000"
+                 iyy="0.00402400000" iyz="-0.00003100000"
+                 izz="0.00416400000"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0.0" rpy="0  0  0" />
+        <geometry>
+          <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res.stl" scale="1 ${reflect*1} 1"/>
+        </geometry>
+        <material name="DarkGrey" />
       </visual>
 
       <collision>
-		<origin rpy="0 0 0" xyz="0 0 -0.2"/>
+      <origin xyz="0 0 0.0" rpy="0  0  0" />
         <geometry>
-           <box size="0.1 0.15 0.25"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_x_collision.stl" scale="1 ${reflect*1} 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="leg_${prefix}_2_joint" type="revolute">
+      <parent link="leg_${prefix}_1_link"/>
+      <child link="leg_${prefix}_2_link"/>
+      <origin xyz="0.00000 0.00000 0.00000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="1 0 0" />
+      <limit lower="-0.5236" upper="0.5236" effort="160" velocity="5.8" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+
+    <!-- Joint hip_y (mesh link) : child link knee -> parent link hip_x -->
+
+    <link name="leg_${prefix}_3_link">
+      <inertial>
+        <origin xyz="0.00658 ${reflect*0.06563} -0.17278" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="6.82734"/>
+        <inertia ixx="0.12390600000" ixy="${reflect*-0.00041200000}" ixz="-0.00205900000"
+                 iyy="0.10844700000" iyz="${reflect*0.01672500000}"
+                 izz="0.02781200000"/>
+      </inertial>
+
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res.stl" scale="1 ${reflect*1} 1"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+           <mesh filename="package://talos_description/meshes/v2/hip_y_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>  
+    </link>
 
-      <inertial>
-        <origin xyz="0.005 ${reflect*0.057} -0.195" rpy="0 0 0"/>
-        <mass value="6.4" />
-         <inertia ixx="0.117"  ixy="${reflect*-0.001}"  ixz="0.001" iyy="0.106" iyz="${reflect*0.018}" izz="0.021" />
-      </inertial>
-     </link>
+    <joint name="leg_${prefix}_3_joint" type="revolute">
+      <parent link="leg_${prefix}_2_link"/>
+      <child link="leg_${prefix}_3_link"/>
+      <origin xyz="0.00000 0.00000 0.00000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="0 1 0" />
+      <limit lower="-2.095" upper="0.7" effort="160" velocity="5.8" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+
+    <!-- Joint knee (mesh link) : child link ankle_y -> parent link hip_y -->
 
     <link name="leg_${prefix}_4_link">
-		
       <inertial>
-        <origin xyz="0.008 ${reflect*0.033} -0.139" rpy="0 0 0"/>
-        <mass value="3.6" />
-         <inertia ixx="0.033"  ixy="${reflect*-0.001}"  ixz="0.001" iyy="0.028" iyz="0.0" izz="0.011" />
+        <origin xyz="0.01520 ${reflect*0.02331} -0.12063" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="3.63668"/>
+        <inertia ixx="0.03531500000" ixy="${reflect*0.00002900000}" ixz="-0.00016600000"
+                 iyy="0.02933600000" iyz="${reflect*-0.00130500000}"
+                 izz="0.01174000000"/>
       </inertial>
-      
-     <visual>
+
+      <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/tibia.STL" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/knee_lo_res.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <!-- <material name="LightGrey" /> -->
+        <material name="DarkGrey" />
       </visual>
 
       <collision>
-	    <origin rpy="0 0 0" xyz="0 0 -0.175"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-           <box size="0.1 0.15 0.3"/>
+           <mesh filename="package://talos_description/meshes/v2/knee_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>  
+    </link>
+
+    <joint name="leg_${prefix}_4_joint" type="revolute">
+      <parent link="leg_${prefix}_3_link"/>
+      <child link="leg_${prefix}_4_link"/>
       
-     </link>
+      <origin xyz="0.00000 0.00000 -0.38000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/> 
+      <axis xyz="0 1 0" />
+      <limit lower="0" upper="2.618" effort="300" velocity="7" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+
+    <!-- Joint ankle_y (mesh link) : child link ankle_x -> parent link knee -->
 
     <link name="leg_${prefix}_5_link">
-		
       <inertial>
-        <origin xyz="-0.003 ${reflect*0.007} -0.005" rpy="0 0 0"/>
-        <mass value="1.1" />
-         <inertia ixx="0.001"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <origin xyz="-0.01106 ${reflect*0.04708} 0.05271" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.24433"/>
+        <inertia ixx="0.01148700000" ixy="${reflect*-0.00068600000}" ixz="-0.00052600000"
+                 iyy="0.00952600000" iyz="${reflect*0.00263300000}"
+                 izz="0.00390800000"/>
       </inertial>
-      
+
       <visual>
-        <origin xyz="0 0 0.0" rpy="1.57 0 0" />
-       <geometry>
-          <cylinder radius="0.01" length="0.14"/>
+        <origin xyz="0 0 0.0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
         <material name="Grey" />
       </visual>
       
       <collision>
-	   <origin xyz="0 0 0.0" rpy="1.57 0 0" />
-       <geometry>
-          <cylinder radius="0.01" length="0.14"/>
+        <origin xyz="0 0 0.0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>  
-      
-     </link>
-     
-     <link name="leg_${prefix}_6_link">
+    </link>
+
+    <joint name="leg_${prefix}_5_joint" type="revolute">
+      <parent link="leg_${prefix}_4_link"/>
+      <child link="leg_${prefix}_5_link"/>
+      <origin xyz="0.00000 0.00000 -0.32500" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="0 1 0" />
+      <limit lower="-1.309" upper="0.768" effort="160" velocity="5.8" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+
+    <!-- Joint ankle_x (mesh link) : child link None -> parent link ankle_y -->
+
+    <link name="leg_${prefix}_6_link">
       <inertial>
-        <origin xyz="-0.008 0.0 -0.097" rpy="0 0 0"/>
-        <mass value="0.9" />
-         <inertia ixx="0.002"  ixy="0.0"  ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <origin xyz="-0.02087 -0.00019 -0.06059" rpy="0.00000 0.00000 0.00000"/>
+        <mass value="1.59457"/>
+        <inertia ixx="0.00383800000" ixy="0.00001600000" ixz="-0.00104100000"
+                 iyy="0.00657200000" iyz="-0.00001700000"
+                 izz="0.00504400000"/>
       </inertial>
+
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/foot.STL" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <!-- <material name="LightGrey" /> -->
+        <material name="Grey" />
       </visual>
+
+      <!--
       <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://talos_description/meshes/v2/ankle_X_collision.stl" scale="1 ${reflect*1} 1"/>
+        </geometry>
+      </collision> 
+      
+      -->
+      
+       <collision>
         <origin xyz="0 0 -0.1" rpy="0 0 0" />
         <geometry>
            <box size="0.21 0.13 0.02"/>
         </geometry>
       </collision> 
+      
+    </link>
 
-     </link>
-     
-     
+    <joint name="leg_${prefix}_6_joint" type="revolute">
+      <parent link="leg_${prefix}_5_link"/>
+      <child link="leg_${prefix}_6_link"/>
+      <origin xyz="0.00000 0.00000 0.00000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <axis xyz="1 0 0" />
+      <limit lower="-0.5236" upper="0.5236" effort="100" velocity="4.8" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+ 
+  <!-- from here is copy paste -->
+
     <link name="${prefix}_sole_link">
       <inertial>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
@@ -160,85 +258,6 @@
       </inertial>
      </link> 
 
-    <joint name="leg_${prefix}_1_joint" type="revolute">
-      <parent link="base_link" />
-      <child link="leg_${prefix}_1_link" />
-      <origin xyz="0.0 ${reflect*0.08} 0.0" rpy="0 0 0" />
-      <axis xyz="0 0 1" />
-      <!-- nominal -->
-      <!-- <limit lower="-0.5236" upper="1.571" effort="49" velocity="3.87" /> -->
-      <!-- peak -->   
-      <xacro:if value="${reflect == 1}">
-        <limit lower="-0.5236" upper="1.571" effort="100" velocity="3.87" />
-      </xacro:if>
-      <xacro:if value="${reflect == -1}">
-        <limit lower="-1.571" upper="0.5236" effort="100" velocity="3.87" />
-      </xacro:if>
-      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-     </joint>
-
-   <joint name="leg_${prefix}_2_joint" type="revolute">
-      <parent link="leg_${prefix}_1_link" />
-      <child link="leg_${prefix}_2_link" />
-      <origin xyz="0.0 0.0 -0.10" rpy="0 0 0" />
-      <axis xyz="1 0 0" />
-      <!-- nominal -->
-      <!-- <limit lower="-0.524" upper="0.5236" effort="90" velocity="5.8" /> -->
-      <!--peak -->
-      <limit lower="-0.524" upper="0.5236" effort="160" velocity="5.8" />
-      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-     </joint>
-
-    <joint name="leg_${prefix}_3_joint" type="revolute">
-      <parent link="leg_${prefix}_2_link" />
-      <child link="leg_${prefix}_3_link" />
-      <origin xyz="0.0 0.0 -0.0" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <!-- nomial -->
-      <!-- <limit lower="-2.095" upper="0.7" effort="90" velocity="5.8" /> -->
-      <!-- peak -->
-      <limit lower="-2.095" upper="0.7" effort="160" velocity="5.8" />
-      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-     </joint>
-   
-   
-    <joint name="leg_${prefix}_4_joint" type="revolute">
-      <parent link="leg_${prefix}_3_link" />
-      <child link="leg_${prefix}_4_link" />
-      <origin xyz="0.00 -0.0 -0.38" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <!-- nominal -->
-      <!-- <limit lower="0" upper="2.618" effort="145" velocity="7" /> -->
-      <!-- peak -->
-      <limit lower="0" upper="2.618" effort="300" velocity="7" />
-      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-     </joint>
-  
-     
-    <joint name="leg_${prefix}_5_joint" type="revolute">
-      <parent link="leg_${prefix}_4_link" />
-      <child link="leg_${prefix}_5_link" />
-      <origin xyz="0.00 0.00 -0.32" rpy="0 0 0" />
-      <axis xyz="0 1 0" />
-      <!-- nominal -->
-      <!-- <limit lower="-1.309" upper="0.768" effort="90" velocity="5.8" /> -->
-      <!-- peak -->
-      <limit lower="-1.309" upper="0.768" effort="160" velocity="5.8" />
-      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-     </joint>
-     
-    <joint name="leg_${prefix}_6_joint" type="revolute">
-      <parent link="leg_${prefix}_5_link" />
-      <child link="leg_${prefix}_6_link" />
-      <origin xyz="0.00 0.00 -0.0" rpy="0 0 0" />
-      <axis xyz="1 0 0" />
-      <!-- nominal -->
-      <!-- <limit lower="-0.524" upper="0.524" effort="62" velocity="4.8" /> -->
-      <!-- peak -->
-      <limit lower="-0.524" upper="0.524" effort="100" velocity="4.8" />
-    </joint>
-    
-   
      <joint name="leg_${prefix}_sole_fix_joint" type="fixed">
       <parent link="leg_${prefix}_6_link" />
       <child link="${prefix}_sole_link" />
@@ -275,52 +294,57 @@
      <mu2>0.9</mu2>
    </gazebo>
    
-   <!--
-
-   <gazebo reference="leg_${prefix}_6_link">
-     <kp>1000000.0</kp>
-     <kd>100.0</kd>
-     <mu1>1.0</mu1>
-     <mu2>1.0</mu2>
-     <fdir1>0 0 1</fdir1>
-     <maxVel>1.0</maxVel>
-     <minDepth>0.003</minDepth>
-     <implicitSpringDamper>1</implicitSpringDamper>
-   </gazebo>
-   
-   -->
-   
+   <!-- contact model for foot surface -->
    <gazebo reference="leg_${prefix}_6_link">
     <kp>1000000.0</kp>
     <kd>100.0</kd>
-    <mu1>1.5</mu1>
-    <mu2>1.5</mu2>
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
     <fdir1>1 0 0</fdir1>
     <maxVel>1.0</maxVel>
     <minDepth>0.00</minDepth>
+    <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
 
    <gazebo reference="leg_${prefix}_1_joint">
-      <implicitSpringDamper>0.1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${prefix}_2_joint">
-      <implicitSpringDamper>0.1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${prefix}_3_joint">
-      <implicitSpringDamper>0.1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${prefix}_4_joint">
-      <implicitSpringDamper>0.1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${prefix}_5_joint">
-      <implicitSpringDamper>0.1</implicitSpringDamper>
+      <implicitSpringDamper>1</implicitSpringDamper>
    </gazebo>
    <gazebo reference="leg_${prefix}_6_joint">
-     <implicitSpringDamper>0.1</implicitSpringDamper>
+     <implicitSpringDamper>1</implicitSpringDamper>
      <provideFeedback>1</provideFeedback>
    </gazebo>
-        
+
+  <gazebo reference="leg_${prefix}_1_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_2_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_3_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_4_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_5_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_6_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
  </xacro:macro>
-   
    
 </robot>

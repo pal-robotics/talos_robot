@@ -2,6 +2,12 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Safe range of motion for upper body
+* Fix right wrist differential transmission sign
+* Contributors: Luca
+
 0.0.14 (2016-11-15)
 -------------------
 

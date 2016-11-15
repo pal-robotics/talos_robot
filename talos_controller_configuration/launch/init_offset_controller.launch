@@ -6,7 +6,7 @@
   <!-- Spawn init offset controller -->
   <node name="init_offset_controller_spawner"
         pkg="controller_manager" type="spawner" output="screen"
-        args="init_offset_controller --stopped" />
+        args="init_offset_controller" />
 
 </launch>
 

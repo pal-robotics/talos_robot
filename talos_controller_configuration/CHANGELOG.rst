@@ -2,6 +2,12 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Params tuning and motions
+* Added hardware bringup controllers
+* Contributors: Hilario Tome, Luca
+
 0.0.13 (2016-11-15)
 -------------------
 * Lipm z higher because of covers

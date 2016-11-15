@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.12 (2016-11-15)
+-------------------
 * Button from joystick for play_motion
 * Contributors: Luca
 

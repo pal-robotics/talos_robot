@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.12 (2016-11-15)
+-------------------
 * Remove --stopped param from init_offset_controller
 * Cleaninng and renaming v2 to default
 * Contributors: Luca

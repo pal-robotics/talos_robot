@@ -2,6 +2,12 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Lipm z higher because of covers
+* Add missing dependency. Walking params and fixed talos motion
+* Contributors: Luca
+
 0.0.12 (2016-11-15)
 -------------------
 * Remove --stopped param from init_offset_controller

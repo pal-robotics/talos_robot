@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.13 (2016-11-15)
+-------------------
 * Lipm z higher because of covers
 * Add missing dependency. Walking params and fixed talos motion
 * Contributors: Luca

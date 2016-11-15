@@ -19,9 +19,9 @@ biped_controller:
    z_lipm: 0.95
 
 com_stabilizer:
-   ds_x_p: 0.8
+   ds_x_p: 0.7
    ds_y_p: 0.6
-   ss_x_p: 0.7
+   ss_x_p: 0.6
    ss_y_p: 0.5
    dead_zone: 0.01
    foot_offset_clamp: 0.05
@@ -29,7 +29,7 @@ com_stabilizer:
    hip_offset_y_clamp: 0.05
    hip_offset_decay: 0.997
 
-hip_spacing_x: -0.03
+hip_spacing_x: -0.02
 hip_spacing_y: 0.085
 hip_spacing_z: 0.0
 femur_length: 0.380

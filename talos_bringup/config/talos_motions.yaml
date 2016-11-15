@@ -46,7 +46,7 @@ play_motion:
         arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
         gripper_left_joint, gripper_right_joint]
       points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.31, 0.32, -0.3, -0.80, 0.0, 0.0, 0.0, 
+      - positions: [0.0, 0.06, 0.0, 0.0, 0.31, 0.32, -0.3, -0.80, 0.0, 0.0, 0.0, 
                                         -0.31, -0.32, 0.3, -0.80, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
       meta:
@@ -116,7 +116,7 @@ play_motion:
         time_from_start: 6.0
       - positions: [-0.0, -0.0, 0.0, 0.002, -0.0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, -0.0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, -0.7, -0.7]
         time_from_start: 8.0
-      - positions: [0.0, 0.0, 0.0, -0.25, -0.0, 0.0, 0.0, 0.0, -0.0, -0.0, 0.25, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, -0.25, -0.0, 0.0, 0.0, 0.0, -0.0, -0.0, 0.25, 0.0, 0.0, -0.0, -0.0, -0.0, 0.0, 0.0]
         time_from_start: 10.0
     close_right_gripper:
       joints: [gripper_right_joint]

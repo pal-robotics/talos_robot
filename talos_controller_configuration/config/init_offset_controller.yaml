@@ -17,8 +17,8 @@ init_offset_controller:
   right_ft_sensor: right_ankle_ft
   base_imu_sensor: base_imu
 
-  hip_spacing_x: -0.03
-  hip_spacing_y: 0.08
+  hip_spacing_x: -0.02
+  hip_spacing_y: 0.085
   hip_spacing_z: 0.0
 
   femur_length: 0.380

@@ -8,7 +8,7 @@
 
   <!-- IMU sensors controller -->
   <rosparam command="load" file="$(find imu_sensor_controller)/imu_sensor_controller.yaml" />
-
+  
   <!-- Controllers that come up started -->
   <node name="bringup_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"

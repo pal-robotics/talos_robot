@@ -16,7 +16,7 @@ biped_controller:
    variable_joint_offset_hip: -0.7
    variable_joint_offset_ankle: -0.7
    swing_foot_z: 0.03
-   z_lipm: 0.95
+   z_lipm: 1.05
 
 com_stabilizer:
    ds_x_p: 0.7

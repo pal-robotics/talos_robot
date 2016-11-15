@@ -2,6 +2,12 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Cleaninng and renaming v2 to default
+* Update hip z link meshes
+* Contributors: Luca
+
 0.0.11 (2016-11-12)
 -------------------
 * Fix imu tf and frame

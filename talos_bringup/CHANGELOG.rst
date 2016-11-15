@@ -2,6 +2,11 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Button from joystick for play_motion
+* Contributors: Luca
+
 0.0.11 (2016-11-12)
 -------------------
 * Fix imu tf and frame

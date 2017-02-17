@@ -1,8 +1,12 @@
 torso_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - torso_1_joint
     - torso_2_joint
+  actuators:
+    - torso_1_motor
+    - torso_2_motor
 
   constraints:
     goal_time: &goal_time_constraint 0.6
@@ -16,9 +20,13 @@ torso_controller:
 
 head_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - head_1_joint
     - head_2_joint
+  actuators:
+    - head_1_motor
+    - head_2_motor
 
   constraints:
     goal_time: *goal_time_constraint
@@ -32,6 +40,7 @@ head_controller:
 
 left_arm_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - arm_left_1_joint
     - arm_left_2_joint
@@ -40,6 +49,14 @@ left_arm_controller:
     - arm_left_5_joint
     - arm_left_6_joint
     - arm_left_7_joint
+  actuators:
+    - arm_left_1_motor
+    - arm_left_2_motor
+    - arm_left_3_motor
+    - arm_left_4_motor
+    - arm_left_5_motor
+    - arm_left_6_motor
+    - arm_left_7_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
@@ -62,6 +79,7 @@ left_arm_controller:
 
 right_arm_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - arm_right_1_joint
     - arm_right_2_joint
@@ -70,6 +88,14 @@ right_arm_controller:
     - arm_right_5_joint
     - arm_right_6_joint
     - arm_right_7_joint
+  actuators:
+    - arm_right_1_motor
+    - arm_right_2_motor
+    - arm_right_3_motor
+    - arm_right_4_motor
+    - arm_right_5_motor
+    - arm_right_6_motor
+    - arm_right_7_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
@@ -92,9 +118,11 @@ right_arm_controller:
 
 right_gripper_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - gripper_right_joint
-
+  actuators:
+    - gripper_right_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
@@ -105,9 +133,11 @@ right_gripper_controller:
 
 left_gripper_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - gripper_left_joint
-
+  actuators:
+    - gripper_left_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
@@ -119,6 +149,7 @@ left_gripper_controller:
 
 left_leg_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - leg_left_1_joint
     - leg_left_2_joint
@@ -126,6 +157,13 @@ left_leg_controller:
     - leg_left_4_joint
     - leg_left_5_joint
     - leg_left_6_joint
+  actuators:
+    - leg_left_1_motor
+    - leg_left_2_motor
+    - leg_left_3_motor
+    - leg_left_4_motor
+    - leg_left_5_motor
+    - leg_left_6_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint
@@ -146,6 +184,7 @@ left_leg_controller:
 
 right_leg_controller:
   type: "position_controllers/JointTrajectoryController"
+  check_mode: True
   joints:
     - leg_right_1_joint
     - leg_right_2_joint
@@ -153,6 +192,13 @@ right_leg_controller:
     - leg_right_4_joint
     - leg_right_5_joint
     - leg_right_6_joint
+  actuators:
+    - leg_right_1_motor
+    - leg_right_2_motor
+    - leg_right_3_motor
+    - leg_right_4_motor
+    - leg_right_5_motor
+    - leg_right_6_motor
   constraints:
     goal_time: *goal_time_constraint
     stopped_velocity_tolerance: *stopped_velocity_constraint

@@ -11,8 +11,8 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+0.0.16 (2017-02-17)
+-------------------
 * added use safe mode to joint trajectory controllers
 * 0.0.15
 * Add changelog

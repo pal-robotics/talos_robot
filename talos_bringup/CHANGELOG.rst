@@ -2,6 +2,15 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.15 (2016-11-16)
+-------------------
+
+0.0.14 (2016-11-15)
+-------------------
+* Params tuning and motions
+* Added hardware bringup controllers
+* Contributors: Hilario Tome, Luca
+
 0.0.13 (2016-11-15)
 -------------------
 * Add missing dependency. Walking params and fixed talos motion

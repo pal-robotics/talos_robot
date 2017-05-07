@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2014, PAL Robotics, S.L.
+  Copyright (c) 2016, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -13,7 +13,15 @@
         xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
+  <xacro:include filename="$(find talos_description)/urdf/torso/torso.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/head/head.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/arm/arm.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/leg.urdf.xacro" />
+
+    <!--************************-->
+    <!--        BASE_LINK       -->
+    <!--************************-->
     <link name="base_link">
       <inertial>
         <origin xyz="-0.08222 0.00838 -0.07261" rpy="0.00000 0.00000 0.00000"/>
@@ -24,24 +32,24 @@
       </inertial>
 
       <visual>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/talos/base_link.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/base_link.STL" scale="1 1 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="LightGrey" />
       </visual>
-      
+
       <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/talos/base_link_collision.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
         </geometry>
-      </collision>  
+      </collision>
     </link>
-     
-     
-   <xacro:talos_leg prefix="left"  reflect="1" />
-   <xacro:talos_leg prefix="right" reflect="-1" />
+
+
+  <xacro:talos_leg prefix="left"  reflect="1" />
+  <xacro:talos_leg prefix="right" reflect="-1" />
 
   <!-- Generic simulatalos_gazebo plugins -->
   <xacro:include filename="$(find talos_description)/gazebo/gazebo.urdf.xacro" />

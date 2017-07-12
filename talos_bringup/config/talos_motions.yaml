@@ -62,8 +62,8 @@ play_motion:
         arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
         gripper_left_joint, gripper_right_joint]
       points:
-      - positions: [0.0, 0.06, 0.0, 0.0, 0.31, 0.32, -0.3, -0.80, 0.0, 0.0, 0.0, 
-                                        -0.31, -0.32, 0.3, -0.80, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - positions: [0.0, 0.0, 0.0, 0.0, 0.48, 0.24, -0.73, -1.45, 0.0, 0.0, 0.0, 
+                                        -0.48, -0.24, 0.73, -1.45, 0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
       meta:
         name: Home

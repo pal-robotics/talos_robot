@@ -1,6 +1,7 @@
 <launch>
 
-  <arg name="robot" default="full"/>
+  <!-- arg could be v1 (Pyerene) or v2 (IJS/PAL) -->
+  <arg name="robot" default="full_v2"/> 
   
   <!-- Robot description -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'" />

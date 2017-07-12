@@ -3,5 +3,6 @@
   <include file="$(find talos_controller_configuration)/launch/walking_controller.launch" />
   
   <include file="$(find talos_controller_configuration)/launch/upper_body_position_controllers.launch" />
-  
+
+  <include file="$(find talos_controller_configuration)/launch/walk_pose.launch" />  
 </launch>

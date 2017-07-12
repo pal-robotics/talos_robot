@@ -1,0 +1,47 @@
+walk_pose:
+  controllers:
+    - right_arm_controller
+    - left_arm_controller
+    - head_controller
+    - torso_controller
+    - right_gripper_controller
+    - left_gripper_controller
+  joints_rest_pos:
+    - arm_left_1_joint : 0.40
+    - arm_left_2_joint : 0.24
+    - arm_left_3_joint : -0.6
+    - arm_left_4_joint : -1.45
+    - arm_left_5_joint : 0.0
+    - arm_left_6_joint : 0.0
+    - arm_left_7_joint : 0.0
+
+    - arm_right_1_joint: -0.40
+    - arm_right_2_joint: -0.24
+    - arm_right_3_joint: 0.6
+    - arm_right_4_joint: -1.45
+    - arm_right_5_joint: 0.0
+    - arm_right_6_joint: 0.0
+    - arm_right_7_joint: 0.0
+
+    - torso_1_joint: 0.0
+    - torso_2_joint: 0.05
+
+    - head_1_joint: 0.0
+    - head_2_joint: 0.0
+
+    - gripper_right_joint: 0.0
+    - gripper_left_joint: 0.0
+    
+  joints_to_move:
+    - arm_left_1_joint: -1.0
+    - arm_left_3_joint: 0.5
+    - arm_left_4_joint: -2.0
+    - arm_right_1_joint: -1.0
+    - arm_right_3_joint: 0.5
+    - arm_right_4_joint: 2.0
+    - torso_1_joint: -1.0
+    - head_2_joint: 1.0
+
+  joints_to_move_asymmetrical:
+    - torso_2_joint: 0.5
+    - head_1_joint: -0.5

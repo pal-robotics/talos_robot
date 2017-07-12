@@ -1,6 +1,0 @@
-<launch>
-
-  <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find talos_description)/robots/talos_gripper.urdf.xacro'" />
-
-</launch>

@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full"/>
+  <arg name="robot" default="full_v2"/> <!--full_v1, full_v2, lower_body-->
 
   <!-- Load default controllers -->
   <include file="$(find talos_controller_configuration)/launch/bringup_controllers.launch" />

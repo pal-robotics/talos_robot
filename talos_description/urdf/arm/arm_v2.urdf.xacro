@@ -69,7 +69,7 @@
 
       <!-- v1 TALOS has 1st arm left joint (-90,30) and right joint (-30,90) -->
       <!-- v2 TALOS has 1st arm left joint (-90,50) and right joint (-50,90) -->
-      <limit lower="${((-70.0 - 20.0*reflect)* deg_to_rad}" upper="${(70.0 - 20.0*reflect)* deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+      <limit lower="${(-70.0 - 20.0*reflect)* deg_to_rad}" upper="${(70.0 - 20.0*reflect)* deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 <!--        <safety_controller k_position="20"
                           k_velocity="20"

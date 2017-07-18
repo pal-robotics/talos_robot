@@ -11,6 +11,11 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Added version v1, v2 for urdf and restored walk_pose
+* Contributors: luca
+
 0.0.16 (2017-02-17)
 -------------------
 * added use safe mode to joint trajectory controllers

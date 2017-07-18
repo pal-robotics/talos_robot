@@ -11,6 +11,15 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Fix type in arm_v2 and rename arm_v1 urdf
+* remove file with no version for arm
+* Added version v1, v2 for urdf and restored walk_pose
+* cleanup
+* fixed lower body model
+* Contributors: Hilario Tome, luca
+
 0.0.16 (2017-02-17)
 -------------------
 * 0.0.15

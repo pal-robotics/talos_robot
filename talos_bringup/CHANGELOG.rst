@@ -11,8 +11,8 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+0.0.17 (2017-07-18)
+-------------------
 * Add v2 as default param for robot
 * Added version v1, v2 for urdf and restored walk_pose
 * Contributors: luca

@@ -16,6 +16,7 @@
   <run_depend>controller_manager</run_depend>
   <run_depend>joint_state_controller</run_depend>
   <run_depend>walking_controller</run_depend>
+  <run_depend>walking_utils</run_depend>
   <run_depend>head_action</run_depend>
   <run_depend>pal_transmissions</run_depend>
   <run_depend>reemc_init_offset_controller</run_depend>

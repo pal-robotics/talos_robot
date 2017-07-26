@@ -11,6 +11,11 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* added missing depend walk utils
+* Contributors: Hilario Tomé
+
 0.0.17 (2017-07-18)
 -------------------
 * Added version v1, v2 for urdf and restored walk_pose

@@ -15,3 +15,12 @@ foreach(dir config gazebo meshes robots urdf)
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
 
+#############
+## Testing ##
+#############
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(test/test_talos_v1.test)
+  add_rostest(test/test_talos_v2.test)
+endif()

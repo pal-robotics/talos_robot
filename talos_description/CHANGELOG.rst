@@ -11,6 +11,16 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* modified limits of gripper, leg 5 joint,  and arm v2 1 joint
+* clenaed lower body model
+* Merge branch 'test_urdf' into 'dubnium-devel'
+  Test urdf files
+  See merge request !3
+* Test urdf files
+* Contributors: Hilario Tome, Hilario Tomé, davidfernandez
+
 0.0.18 (2017-07-26)
 -------------------
 

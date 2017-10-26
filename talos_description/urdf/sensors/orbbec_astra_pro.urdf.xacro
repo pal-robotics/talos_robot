@@ -24,10 +24,10 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find talos_description)/urdf/sensors/xtion_pro_live.gazebo.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/sensors/orbbec_astra_pro.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="xtion_pro_live" params="name parent *origin *optical_origin">
+  <xacro:macro name="orbbec_astra_pro" params="name parent *origin *optical_origin">
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
@@ -115,7 +115,7 @@
     <link name="${name}_rgb_optical_frame"/>
 
     <!-- extensions -->
-    <xacro:xtion_pro_live_rgbd_camera_gazebo name="${name}" />
+    <xacro:orbbec_astra_pro_rgbd_camera_gazebo name="${name}" />
 
   </xacro:macro>
 

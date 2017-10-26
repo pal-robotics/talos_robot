@@ -53,7 +53,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.00000 0.00000 0.31600" 
+      <origin xyz="0.00000 0.00000 0.31600"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
       <limit lower="${-12.00000 * deg_to_rad}" upper="${45.00000 * deg_to_rad}" effort="8.0" velocity="1.0" />
@@ -79,7 +79,7 @@
 
   </xacro:macro>
 
-  
+
 
   <!--************************-->
   <!--      HEAD_2 (PAN)      -->
@@ -113,7 +113,7 @@
     <joint name="${name}_joint" type="revolute">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0.00000 0.00000 0.00000" 
+      <origin xyz="0.00000 0.00000 0.00000"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-75.00000 * deg_to_rad}" upper="${75.00000 * deg_to_rad}" effort="4.0" velocity="1.0" />
@@ -144,12 +144,12 @@
   <xacro:macro name="talos_head" params="name parent">
     <xacro:talos_head_1 name="${name}_1" parent="${parent}" />
     <xacro:talos_head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:xtion_pro_live name="rgbd" parent="${name}_2">
+    <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2">
       <!-- Pose of sensor frame wrt to base -->
       <origin xyz="0.066 0.0 0.1982" rpy="0 0 0"/>
       <!-- Pose of optical frame wrt to sensor -->
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-    </xacro:xtion_pro_live>
+    </xacro:orbbec_astra_pro>
     <xacro:talos_head_differential_transmission name="${name}" number1="1" number2="2"
                                                 act_reduction1="1.0" act_reduction2="1.0"
                                                 jnt_reduction1="1.0" jnt_reduction2="2.0" />

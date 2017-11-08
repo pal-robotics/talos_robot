@@ -1,0 +1,99 @@
+play_motion:
+  motions:
+    lift_weights_start:
+      joints: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, gripper_left_joint, gripper_right_joint, head_1_joint, head_2_joint, torso_1_joint, torso_2_joint]
+      points:
+        - time_from_start: 0
+          positions: [0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, 0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, 0, 0, 0, 0, 0, 0]
+      meta:
+        name: lift_weights_start
+        usage: ""
+        description: Start position to then perform weight lifting with both arms
+    grasp_weight_right:
+      joints: [gripper_right_joint]
+      points:
+        - time_from_start: 0
+          positions: [-0.7]
+      meta:
+        name: grasp_weight_right
+        usage: ""
+        description: Close the right gripper to grasp the weight
+    grasp_weight_left:
+      joints: [gripper_left_joint]
+      points:
+        - time_from_start: 0
+          positions: [-0.7]
+      meta:
+        name: grasp_weight_left
+        usage: ""
+        description: Close the left gripper to grasp the weight
+    release_weight_right:
+      joints: [gripper_right_joint]
+      points:
+        - time_from_start: 0
+          positions: [0.0]
+      meta:
+        name: grasp_weight_right
+        usage: ""
+        description: Close the right gripper to grasp the weight
+    release_weight_left:
+      joints: [gripper_left_joint]
+      points:
+        - time_from_start: 0
+          positions: [0.0]
+      meta:
+        name: grasp_weight_left
+        usage: ""
+        description: Close the left gripper to grasp the weight
+   lift_weights_move:
+      joints: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, head_1_joint, head_2_joint, torso_1_joint, torso_2_joint]
+      points:
+        - time_from_start: 0
+          positions: [0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, 0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, 0, 0, 0, 0]
+        - time_from_start: 1.5
+          positions: [0.0001, 0.2499, -0.2901, -1.2716, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -2.0996, -1.6587, -0.0006, 0, 0.1, 0.1, -0.1, 0]
+        - time_from_start: 4.5
+          positions: [0.0001, 0.2499, -0.2901, -2.0996, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -1.2716, -1.6587, -0.0006, 0, 0, -0.1, 0.1, 0]
+        - time_from_start: 7.5
+          positions: [0.0001, 0.2499, -0.2901, -1.2716, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -2.0996, -1.6587, -0.0006, 0, 0.1, 0.1, -0.1, 0]
+        - time_from_start: 10.5
+          positions: [0.0001, 0.2499, -0.2901, -2.0996, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -1.2716, -1.6587, -0.0006, 0, 0, -0.1, 0.1, 0]
+        - time_from_start: 13.5
+          positions: [0.0001, 0.2499, -0.2901, -1.2716, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -2.0996, -1.6587, -0.0006, 0, 0.1, 0.1, -0.1, 0]
+        - time_from_start: 16.5
+          positions: [0.0001, 0.2499, -0.2901, -2.0996, 1.6589, 0.0008, 0, -0.0001, -0.25, 0.2901, -1.2716, -1.6587, -0.0006, 0, 0.2, -0.1, 0.1, 0]
+        - time_from_start: 18
+          positions: [0, 0.252, -0.286, -1.588, 1.57, 0.003, 0.001, 0, -0.252, 0.286, -1.588, -1.57, -0.003, 0.001, 0, 0, 0, 0]
+      meta:
+        name: lift_weights_move
+        usage: ""
+        description: Move both arms for weight lifting up and down 3 times
+    lateral_lift_weights_start:
+      joints: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, gripper_left_joint, gripper_right_joint, head_1_joint, head_2_joint, torso_1_joint, torso_2_joint]
+      points:
+        - time_from_start: 2
+          positions: [0, 0.25, 1.57, -1.57, 1.57, 0, 0, 0, -0.25, -1.57, -1.57, -1.57, 0, 0, 0, 0, 0, 0, 0, 0]
+      meta:
+        name: lateral_lift_weights_start
+        usage: ""
+        description: Move both arms laterally for weight lifting
+    lateral_lift_weights_move:
+      joints: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, head_1_joint, head_2_joint, torso_1_joint, torso_2_joint]
+      points:
+        - time_from_start: 0
+          positions: [0, 0.25, 1.57, -1.57, 1.57, 0, 0, 0, -0.25, -1.57, -1.57, -1.57, 0, 0, 0, 0, 0, 0]
+        - time_from_start: 3
+          positions: [0.0001, 0.2495, 1.5704, -0.6234, 1.57, 0.8194, -0.0005, 0, -0.2495, -1.5704, -2.1, -1.5699, 0.8026, -0.0006, -0.0001, -0.1, 0.1, -0.0032]
+        - time_from_start: 6
+          positions: [0.0001, 0.2495, 1.5704, -2.1, 1.57, -0.8194, -0.0005, 0, -0.2495, -1.5704, -0.6234, -1.5699, -0.8026, -0.0006, -0.0001, 0.1, -0.1, -0.0032]
+        - time_from_start: 9
+          positions: [0.0001, 0.2495, 1.5704, -0.6234, 1.57, 0.8194, -0.0005, 0, -0.2495, -1.5704, -2.1, -1.5699, 0.8026, -0.0006, -0.0001, -0.1, 0.1, -0.0032]
+        - time_from_start: 12
+          positions: [0.0001, 0.2495, 1.5704, -2.1, 1.57, -0.8194, -0.0005, 0, -0.2495, -1.5704, -0.6234, -1.5699, -0.8026, -0.0006, -0.0001, 0.1, -0.1, -0.0032]
+        - time_from_start: 14
+          positions: [0, 0.25, 1.57, -1.57, 1.57, 0, 0, 0, -0.25, -1.57, -1.57, -1.57, 0, 0, 0, 0, 0, 0]
+      meta:
+        name: lateral_lift_weights_move
+        usage: ""
+        description: Move both arms laterally for weight lifting
+

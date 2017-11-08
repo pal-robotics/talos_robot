@@ -1,0 +1,13 @@
+play_leg_motion:
+  controllers: [walking_controller]
+  motions:
+    move_hip_right:
+      end_effectors: [ com, right_foot, left_foot]
+      points:
+      # Postions relative to default walking config: legs with bent kees and foot centered
+      - poses: [ [x,y,z,r,p,yaw], [x,y,z,r,p,yaw], [x,y,z,r,p,yaw] ]
+        time_from_start: 1.0
+      - poses: [ [x,y,z,r,p,yaw], [x,y,z,r,p,yaw], [x,y,z,r,p,yaw] ]
+        time_from_start: 1.5
+      - poses: [ [x,y,z,r,p,yaw], [x,y,z,r,p,yaw], [x,y,z,r,p,yaw] ]
+        time_from_start: 2.0

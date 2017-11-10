@@ -11,6 +11,13 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Move demo_motions to talos_3_specifics
+* Add weight lifting moves
+* Add leg motion yaml template
+* Contributors: Victor Lopez, luca
+
 0.0.20 (2017-08-10)
 -------------------
 

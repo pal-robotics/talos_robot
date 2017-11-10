@@ -11,6 +11,13 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Use orbbec pro with correct resolution in simulation
+* Collisions that better match the real shape of the gripper
+* changed gripper plugin to use PID instead of position API
+* Contributors: Hilario Tomé, Victor Lopez
+
 0.0.20 (2017-08-10)
 -------------------
 * fixed type in urdf model

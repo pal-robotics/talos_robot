@@ -58,7 +58,7 @@
       </sensor>
 
       <!-- RGB -->
-     <sensor type="camera" name="camera1">
+     <sensor type="camera" name="${name}_rgb_sensor">
       <update_rate>6.0</update_rate>
       <camera name="${name}">
         <horizontal_fov>${60.0 * deg_to_rad}</horizontal_fov>

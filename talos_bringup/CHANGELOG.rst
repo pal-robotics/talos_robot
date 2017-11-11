@@ -11,8 +11,8 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+0.0.22 (2017-11-11)
+-------------------
 * Merge branch 'humanoids_motions' into 'dubnium-devel'
   Motions for autopresentation and alive
   See merge request robots/talos_robot!6

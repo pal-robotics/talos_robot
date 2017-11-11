@@ -126,21 +126,37 @@ play_motion:
       points:
       - positions: [-0.7]
         time_from_start: 0.0
+      meta:
+        name: Close Right Gripper
+        usage: action
+        description: Closes right gripper
     open_right_gripper:
       joints: [gripper_right_joint]
       points:
       - positions: [0.0]
         time_from_start: 0.0
+      meta:
+        name: Open Right Gripper
+        usage: action
+        description: Opens right gripper
     close_left_gripper:
       joints: [gripper_left_joint]
       points:
       - positions: [-0.7]
         time_from_start: 0.0
+      meta:
+        name: Close Left Gripper
+        usage: action
+        description: Closes right gripper
     open_left_gripper:
       joints: [gripper_left_joint]
       points:
       - positions: [0.0]
         time_from_start: 0.0
+      meta:
+        name: Open Left Gripper
+        usage: action
+        description: Opens left gripper
     wave_left:
       joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
       points:

@@ -11,6 +11,9 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+
 0.0.21 (2017-11-10)
 -------------------
 * Use orbbec pro with correct resolution in simulation

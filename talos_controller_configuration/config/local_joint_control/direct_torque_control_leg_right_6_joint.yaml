@@ -1,0 +1,4 @@
+leg_right_6_joint:
+      type: pal_local_joint_control::DirectTorqueControl
+
+

@@ -1,0 +1,4 @@
+leg_right_3_joint:
+      type: pal_local_joint_control::DirectTorqueControl
+
+

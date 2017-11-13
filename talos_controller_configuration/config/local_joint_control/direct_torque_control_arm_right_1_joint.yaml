@@ -1,0 +1,4 @@
+arm_right_1_joint:
+      type: pal_local_joint_control::DirectTorqueControl
+
+

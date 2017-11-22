@@ -1,4 +1,4 @@
 gripper_left_joint:
-      type: pal_local_joint_control::DirectPositionControl
+      type: pal_local_joint_control::DirectTorqueControl
 
 

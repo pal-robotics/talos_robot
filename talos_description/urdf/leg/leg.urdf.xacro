@@ -37,13 +37,13 @@
         <geometry>
            <mesh filename="package://talos_description/meshes/v2/hip_z_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-      </collision>
+      </collision>  
     </link>
 
     <joint name="leg_${prefix}_1_joint" type="revolute">
       <parent link="base_link"/>
       <child link="leg_${prefix}_1_link"/>
-      <origin xyz="-0.02 ${reflect*0.08500} -0.27105"
+      <origin xyz="-0.02 ${reflect*0.08500} -0.27105" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${(-55.0 + 35.0*reflect)*deg_to_rad}" upper="${(55.0 + 35.0*reflect)*deg_to_rad}" effort="100" velocity="3.87" />
@@ -81,7 +81,7 @@
     <joint name="leg_${prefix}_2_joint" type="revolute">
       <parent link="leg_${prefix}_1_link"/>
       <child link="leg_${prefix}_2_link"/>
-      <origin xyz="0.00000 0.00000 0.00000"
+      <origin xyz="0.00000 0.00000 0.00000" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="1 0 0" />
       <limit lower="-0.5236" upper="0.5236" effort="160" velocity="5.8" />
@@ -112,13 +112,13 @@
         <geometry>
            <mesh filename="package://talos_description/meshes/v2/hip_y_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-      </collision>
+      </collision>  
     </link>
 
     <joint name="leg_${prefix}_3_joint" type="revolute">
       <parent link="leg_${prefix}_2_link"/>
       <child link="leg_${prefix}_3_link"/>
-      <origin xyz="0.00000 0.00000 0.00000"
+      <origin xyz="0.00000 0.00000 0.00000" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
       <limit lower="-2.095" upper="0.7" effort="160" velocity="5.8" />
@@ -149,15 +149,15 @@
         <geometry>
            <mesh filename="package://talos_description/meshes/v2/knee_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-      </collision>
+      </collision>  
     </link>
 
     <joint name="leg_${prefix}_4_joint" type="revolute">
       <parent link="leg_${prefix}_3_link"/>
       <child link="leg_${prefix}_4_link"/>
-
-      <origin xyz="0.00000 0.00000 -0.38000"
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      
+      <origin xyz="0.00000 0.00000 -0.38000" 
+              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/> 
       <axis xyz="0 1 0" />
       <limit lower="0" upper="2.618" effort="300" velocity="7" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
@@ -181,19 +181,19 @@
         </geometry>
         <material name="Grey" />
       </visual>
-
+      
       <collision>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-      </collision>
+      </collision>  
     </link>
 
     <joint name="leg_${prefix}_5_joint" type="revolute">
       <parent link="leg_${prefix}_4_link"/>
       <child link="leg_${prefix}_5_link"/>
-      <origin xyz="0.00000 0.00000 -0.32500"
+      <origin xyz="0.00000 0.00000 -0.32500" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
       <limit lower="-1.27" upper="0.68" effort="160" velocity="5.8" />
@@ -219,34 +219,35 @@
         <material name="Grey" />
       </visual>
 
+      <!--
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://talos_description/meshes/v2/ankle_X_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>
-      </collision>
-
-      <!--
+      </collision> 
+      
+      -->
+      
        <collision>
         <origin xyz="0 0 -0.1" rpy="0 0 0" />
         <geometry>
            <box size="0.21 0.13 0.02"/>
         </geometry>
-      </collision>
-      -->
-
+      </collision> 
+      
     </link>
 
     <joint name="leg_${prefix}_6_joint" type="revolute">
       <parent link="leg_${prefix}_5_link"/>
       <child link="leg_${prefix}_6_link"/>
-      <origin xyz="0.00000 0.00000 0.00000"
+      <origin xyz="0.00000 0.00000 0.00000" 
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="1 0 0" />
       <limit lower="-0.5236" upper="0.5236" effort="100" velocity="4.8" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
-
+ 
   <!-- from here is copy paste -->
 
     <link name="${prefix}_sole_link">
@@ -255,7 +256,7 @@
         <mass value="0.01" />
          <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
       </inertial>
-     </link>
+     </link> 
 
      <joint name="leg_${prefix}_sole_fix_joint" type="fixed">
       <parent link="leg_${prefix}_6_link" />
@@ -263,15 +264,15 @@
       <origin xyz="0.00 0.00 -0.107" rpy="0 0 0" />
       <axis xyz="1 0 0" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
-    </joint>
-
+    </joint> 
+    
     <xacro:talos_leg_simple_transmission side="${prefix}" number="1" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="2" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="3" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="4" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="5" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="6" reduction="${leg_reduction}" />
-
+    
    <gazebo reference="leg_${prefix}_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
@@ -292,7 +293,7 @@
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
    </gazebo>
-
+   
    <!-- contact model for foot surface -->
    <gazebo reference="leg_${prefix}_6_link">
     <kp>1000000.0</kp>
@@ -345,5 +346,5 @@
   </gazebo>
 
  </xacro:macro>
-
+   
 </robot>

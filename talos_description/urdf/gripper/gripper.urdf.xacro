@@ -38,11 +38,11 @@
             <joint name="${name}_base_link_joint" type="fixed">
               <parent link="${parent}"/>
               <child link="${name}_base_link"/>
-              <origin xyz="0.00000 0.00000 -0.02875" 
+              <origin xyz="0.00000 0.00000 -0.02875"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="0 0 0" />
             </joint>
-            
+
 
             <link name="${name}_motor_double_link">
               <inertial>
@@ -74,7 +74,7 @@
              <joint name="${name}_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_motor_double_link"/>
-              <origin xyz="0.0 0.02025 -0.03" 
+              <origin xyz="0.0 0.02025 -0.03"
                       rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${-55.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="1.0" velocity="1.0" />
@@ -110,13 +110,13 @@
             <joint name="${name}_inner_double_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_inner_double_link"/>
-              <origin xyz="0.00000 0.00525 -0.05598" 
+              <origin xyz="0.00000 0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${-60.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${1.0}" offset="0.0" />
 
-            </joint> 
+            </joint>
 
 
 
@@ -149,7 +149,7 @@
             <joint name="${name}_fingertip_1_joint" type="revolute">
               <parent link="${name}_inner_double_link"/>
               <child link="${name}_fingertip_1_link"/>
-              <origin xyz="0.03200 0.04589 -0.06553" 
+              <origin xyz="0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
@@ -185,7 +185,7 @@
             <joint name="${name}_fingertip_2_joint" type="revolute">
               <parent link="${name}_inner_double_link"/>
               <child link="${name}_fingertip_2_link"/>
-              <origin xyz="-0.03200 0.04589 -0.06553" 
+              <origin xyz="-0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
@@ -221,7 +221,7 @@
             <joint name="${name}_motor_single_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_motor_single_link"/>
-              <origin xyz="0.00000 -0.02025 -0.03000" 
+              <origin xyz="0.00000 -0.02025 -0.03000"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
@@ -258,13 +258,13 @@
             <joint name="${name}_inner_single_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_inner_single_link"/>
-              <origin xyz="0.00000 -0.00525 -0.05598" 
+              <origin xyz="0.00000 -0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
 
-           </joint> 
+           </joint>
 
 
             <link name="${name}_fingertip_3_link">
@@ -295,13 +295,13 @@
             <joint name="${name}_fingertip_3_joint" type="revolute">
               <parent link="${name}_inner_single_link"/>
               <child link="${name}_fingertip_3_link"/>
-              <origin xyz="0.00000 -0.04589 -0.06553" 
+              <origin xyz="0.00000 -0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint> 
-         
+           </joint>
+
 
 
         <xacro:virtual_joints name="${name}" />

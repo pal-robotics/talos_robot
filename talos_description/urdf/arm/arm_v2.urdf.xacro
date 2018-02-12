@@ -37,13 +37,13 @@
     <link name="${name}_${side}_1_link">
       <!-- TODO: Missing reflects of inertias -->
       <inertial>
-        <origin xyz="-0.01346 ${reflect*0.09130} 0.04812" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.52896"/> -->
-        <mass value="1.42896"/>
-        <inertia ixx="0.00555100000" ixy="-0.00073100000" ixz="0.00000800000"
-                 iyy="0.00167300000" iyz="-0.00006000000"
-                 izz="0.00582200000"/>
+        <origin xyz="-0.00064789000 ${reflect*0.10043599000} 0.04424260000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="2.73980200000"/>
+        <inertia ixx="0.01265548000" ixy="${reflect*0.00000054000}" ixz="-0.00007347000"
+                 iyy="0.00414615000" iyz="${reflect*0.00027675000}"
+                 izz="0.01365466000"/>
       </inertial>
+
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -108,7 +108,7 @@
       <origin xyz="0.00493 ${0.13650*reflect} 0.04673"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="1 0 0" />
-      <limit lower="${(-82.0000 + 82.5000*reflect)* deg_to_rad}" upper="${(82.50000 + 82.0000*reflect)* deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <limit lower="${(-82.0000 + 82.5000*reflect)* deg_to_rad}" upper="${(82.50000*reflect + 82.0000)* deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 <!--        <safety_controller k_position="20"
                           k_velocity="20"
@@ -162,7 +162,7 @@
     <!--************************-->
     <link name="${name}_${side}_4_link">
       <inertial>
-        <origin xyz="-0.00655 -0.02107 -0.02612" rpy="0.00000 0.00000 0.00000"/>
+        <origin xyz="-0.00655 ${reflect*-0.02107} -0.02612" rpy="0.00000 0.00000 0.00000"/>
         <!-- <mass value="1.20216"/> -->
         <mass value="1.10216"/>
         <inertia ixx="0.00221700000" ixy="-0.00010100000" ixz="0.00028800000"

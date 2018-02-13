@@ -37,11 +37,11 @@
     <link name="${name}_${side}_1_link">
       <!-- TODO: Missing reflects of inertias -->
       <inertial>
-        <origin xyz="-0.00064789000 ${reflect*0.10043599000} 0.04424260000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="2.73980200000"/>
-        <inertia ixx="0.01265548000" ixy="${reflect*0.00000054000}" ixz="-0.00007347000"
-                 iyy="0.00414615000" iyz="${reflect*0.00027675000}"
-                 izz="0.01365466000"/>
+        <origin xyz="-0.00027620000 ${reflect*0.10060223000} 0.04437419000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="2.71456700000"/>
+        <inertia ixx="0.01237819000" ixy="${reflect*0.00003626000}" ixz="-0.00007145000"
+                 iyy="0.00419138000" iyz="${reflect*0.00023639000}"
+                 izz="0.01358161000"/>
       </inertial>
 
 
@@ -77,14 +77,14 @@
                           soft_upper_limit="${30.00000 * deg_to_rad - arm_eps}" /> -->
     </joint>
 
-   <link name="${name}_${side}_2_link">
+
+    <link name="${name}_${side}_2_link">
       <inertial>
-        <origin xyz="0.02607 0.00049 -0.05209" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.77729"/> -->
-        <mass value="1.67729"/>
-        <inertia ixx="0.00708700000" ixy="-0.00001400000" ixz="0.00214200000"
-                 iyy="0.00793600000" iyz="0.00003000000"
-                 izz="0.00378800000"/>
+        <origin xyz="0.01438831000 0.00092938000 -0.08684268000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="2.42508600000"/>
+        <inertia ixx="0.01297822000" ixy="-0.00001209000" ixz="0.00320371000"
+                 iyy="0.01380870000" iyz="0.00012770000"
+                 izz="0.00478857000"/>
       </inertial>
 
       <visual>
@@ -116,6 +116,7 @@
                           soft_upper_limit="${165.00000 * deg_to_rad - arm_eps}" /> -->
 
     </joint>
+
 
     <link name="${name}_${side}_3_link">
       <inertial>

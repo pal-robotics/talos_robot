@@ -1,9 +1,15 @@
 <launch>
 
   <!-- arg could be v1 (Pyerene) or v2 (IJS/PAL) -->
-  <arg name="robot" default="full_v2"/> 
-  
+  <arg name="robot" default="full_v2"/>
+  <arg name="foot_collision" default="default"/>
+
   <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'" />
+  <param
+      name="robot_description"
+      command=" $(find xacro)/xacro.py --inorder
+                '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'
+                foot_collision:=$(arg foot_collision)"
+      />
 
 </launch>

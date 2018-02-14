@@ -35,15 +35,13 @@
     <!--        SHOULDER        -->
     <!--************************-->
     <link name="${name}_${side}_1_link">
-      <!-- TODO: Missing reflects of inertias -->
       <inertial>
         <origin xyz="-0.00027620000 ${reflect*0.10060223000} 0.04437419000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
         <mass value="2.71456700000"/>
-        <inertia ixx="0.01237819000" ixy="${reflect*0.00003626000}" ixz="-0.00007145000"
-                 iyy="0.00419138000" iyz="${reflect*0.00023639000}"
-                 izz="0.01358161000"/>
+        <inertia ixx="0.01237818683" ixy="${reflect*-0.00003625571}" ixz="0.00007144720"
+                 iyy="0.00419137200" iyz="${reflect*-0.00023639064}"
+                 izz="0.01358161109"/>
       </inertial>
-
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -52,6 +50,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -80,11 +79,11 @@
 
     <link name="${name}_${side}_2_link">
       <inertial>
-        <origin xyz="0.01438831000 0.00092938000 -0.08684268000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <origin xyz="0.01438831000 ${reflect*0.00092938000} -0.08684268000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
         <mass value="2.42508600000"/>
-        <inertia ixx="0.01297822000" ixy="-0.00001209000" ixz="0.00320371000"
-                 iyy="0.01380870000" iyz="0.00012770000"
-                 izz="0.00478857000"/>
+        <inertia ixx="0.01297822101" ixy="${reflect*0.00001208791}" ixz="-0.00320370433"
+                 iyy="0.01380870278" iyz="${reflect*-0.00012770059}"
+                 izz="0.00478856621"/>
       </inertial>
 
       <visual>
@@ -94,6 +93,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -120,12 +120,11 @@
 
     <link name="${name}_${side}_3_link">
       <inertial>
-        <origin xyz="0.00841 0.01428 -0.22291" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.57029"/> -->
-        <mass value="1.47029"/>
-        <inertia ixx="0.00433200000" ixy="0.00015300000" ixz="-0.00049600000"
-                 iyy="0.00434000000" iyz="-0.00060900000"
-                 izz="0.00254300000"/>
+        <origin xyz="0.01360840000 ${reflect*0.01241619000} -0.24990040000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="2.20874100000"/>
+        <inertia ixx="0.00718831493" ixy="${reflect*-0.00011563551}" ixz="0.00075969733"
+                 iyy="0.00693528503" iyz="${reflect*0.00042134743}"
+                 izz="0.00388359007"/>
       </inertial>
 
       <visual>
@@ -135,6 +134,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -163,12 +163,11 @@
     <!--************************-->
     <link name="${name}_${side}_4_link">
       <inertial>
-        <origin xyz="-0.00655 ${reflect*-0.02107} -0.02612" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.20216"/> -->
-        <mass value="1.10216"/>
-        <inertia ixx="0.00221700000" ixy="-0.00010100000" ixz="0.00028800000"
-                 iyy="0.00241800000" iyz="-0.00039300000"
-                 izz="0.00111500000"/>
+        <origin xyz="-0.00742138000 ${reflect*-0.02138950000} -0.03312656000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="0.87734600000"/>
+        <inertia ixx="0.00251207716" ixy="${reflect*0.00010070062}" ixz="-0.00032788214"
+            iyy="0.00275869324" iyz="${reflect*0.00040022227}"
+                 izz="0.00120735959"/>
       </inertial>
 
       <visual>
@@ -178,6 +177,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>

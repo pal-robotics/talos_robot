@@ -11,6 +11,22 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Increase home and walk_pose to 2.0 seconds
+* Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel
+* Merge branch 'revert-5e7a81e4' into 'dubnium-devel'
+  Revert "Merge branch 'fix-motions' into 'dubnium-devel'"
+  See merge request robots/talos_robot!8
+* Revert "Merge branch 'fix-motions' into 'dubnium-devel'"
+  This reverts merge request !7
+* Merge branch 'fix-motions' into 'dubnium-devel'
+  Remove talos-3 specific motions
+  See merge request robots/talos_robot!7
+* Remove talos-3 specific motions
+* Add meta information so motions are displayed on web commander
+* Contributors: Hilario Tome, Jordan Palacios, Victor Lopez, davidfernandez
+
 0.0.22 (2017-11-11)
 -------------------
 * Merge branch 'humanoids_motions' into 'dubnium-devel'

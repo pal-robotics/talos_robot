@@ -11,6 +11,14 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Revert "increased effort limit in torso joint, use mesh collision for the feet."
+  This reverts commit 79da15cf0422f552dae87f6bb7ccacd83059989f.
+* increased effort limit in torso joint, use mesh collision for the feet.
+* Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel
+* Contributors: Hilario Tome, alexandersherikov
+
 0.0.22 (2017-11-11)
 -------------------
 

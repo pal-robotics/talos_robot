@@ -11,6 +11,13 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* changed grippers to effort control for now
+* Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel
+* added local joint control
+* Contributors: Hilario Tome
+
 0.0.22 (2017-11-11)
 -------------------
 

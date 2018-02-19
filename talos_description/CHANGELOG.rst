@@ -11,8 +11,8 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
-Forthcoming
------------
+0.0.23 (2018-02-19)
+-------------------
 * Revert "increased effort limit in torso joint, use mesh collision for the feet."
   This reverts commit 79da15cf0422f552dae87f6bb7ccacd83059989f.
 * increased effort limit in torso joint, use mesh collision for the feet.

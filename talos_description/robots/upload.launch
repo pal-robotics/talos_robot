@@ -1,17 +1,17 @@
 <launch>
-
   <!-- arg could be v1 (Pyerene) or v2 (IJS/PAL) -->
   <arg name="robot" default="full_v2"/>
   <arg name="foot_collision" default="default"/> <!-- default / thinbox / tallbox -->
   <arg name="enable_crane" default="false"/> <!-- crude adhoc approximation of the crane for collision avoidance -->
+  <arg name="parameter_name" default="robot_description"/>
+
 
   <!-- Robot description -->
   <param
-      name="robot_description"
+      name="$(arg parameter_name)"
       command=" $(find xacro)/xacro.py
                 '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'
                 foot_collision:=$(arg foot_collision)
                 enable_crane:=$(arg enable_crane)"
       />
-
 </launch>

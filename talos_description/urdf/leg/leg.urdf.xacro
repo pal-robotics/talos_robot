@@ -17,11 +17,11 @@
 
     <link name="leg_${prefix}_1_link">
       <inertial>
-        <origin xyz="0.02320 ${reflect*-0.00009} 0.04949" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.88569"/>
-        <inertia ixx="0.00384800000" ixy="${reflect*0.00003200000}" ixz="-0.00082600000"
-                 iyy="0.00599400000" iyz="${reflect*0.00007800000}"
-                 izz="0.00322200000"/>
+        <origin xyz="0.02247868000 ${reflect*0.00106736000} 0.03130665000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="1.84559100000"/>
+        <inertia ixx="0.00541533521" ixy="${reflect*-0.00015428714}" ixz="0.00131612622"
+                 iyy="0.00848624936" iyz="${reflect*-0.00001906103}"
+                 izz="0.00474512541"/>
       </inertial>
 
       <visual>
@@ -55,11 +55,11 @@
 
     <link name="leg_${prefix}_2_link">
       <inertial>
-        <origin xyz="0.01583 -0.00021 0.00619" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="2.37607"/>
-        <inertia ixx="0.00342100000" ixy="${reflect*-0.00011300000}" ixz="-0.00022500000"
-                 iyy="0.00402400000" iyz="${reflect*-0.00003100000}"
-                 izz="0.00416400000"/>
+        <origin xyz="-0.00704703000 ${reflect*0.02592659000} 0.00273385000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="1.49095200000"/>
+        <inertia ixx="0.00497152259" ixy="${reflect*-0.00013113580}" ixz="-0.00000486648"
+                 iyy="0.00190550993" iyz="${reflect*0.00004585381}"
+                 izz="0.00474289754"/>
       </inertial>
 
       <visual>
@@ -92,11 +92,11 @@
 
     <link name="leg_${prefix}_3_link">
       <inertial>
-        <origin xyz="0.00658 ${reflect*0.06563} -0.17278" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="6.82734"/>
-        <inertia ixx="0.12390600000" ixy="${reflect*-0.00041200000}" ixz="-0.00205900000"
-                 iyy="0.10844700000" iyz="${reflect*0.01672500000}"
-                 izz="0.02781200000"/>
+        <origin xyz="0.00585230000 ${reflect*0.06369670000} -0.18339564000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="6.23987100000"/>
+        <inertia ixx="0.15337403915" ixy="${reflect*0.00068913396}" ixz="0.00168034366"
+                 iyy="0.13648139346" iyz="${reflect*-0.02187635445}"
+                 izz="0.03001594885"/>
       </inertial>
 
       <visual>
@@ -129,11 +129,11 @@
 
     <link name="leg_${prefix}_4_link">
       <inertial>
-        <origin xyz="0.01520 ${reflect*0.02331} -0.12063" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="3.63668"/>
-        <inertia ixx="0.03531500000" ixy="${reflect*0.00002900000}" ixz="-0.00016600000"
-                 iyy="0.02933600000" iyz="${reflect*-0.00130500000}"
-                 izz="0.01174000000"/>
+        <origin xyz="0.01317717000 ${reflect*0.02917508000} -0.11594602000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="3.75995100000"/>
+        <inertia ixx="0.04287677484" ixy="${reflect*0.00043705397}" ixz="0.00078292368"
+                 iyy="0.03598906971" iyz="${reflect*0.00037717694i}"
+                 izz="0.01364791564"/>
       </inertial>
 
       <visual>
@@ -166,12 +166,13 @@
     <!-- Joint ankle_y (mesh link) : child link ankle_x -> parent link knee -->
 
     <link name="leg_${prefix}_5_link">
+      <!-- XXX AS: this link has moving lever and inertial parameters should slightly vary depending on configuration. XXX -->
       <inertial>
-        <origin xyz="-0.01106 ${reflect*0.04708} 0.05271" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.24433"/>
-        <inertia ixx="0.01148700000" ixy="${reflect*-0.00068600000}" ixz="-0.00052600000"
-                 iyy="0.00952600000" iyz="${reflect*0.00263300000}"
-                 izz="0.00390800000"/>
+        <origin xyz="-0.01400838000 ${reflect*0.04180064000} 0.03820186000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="1.29096000000"/>
+        <inertia ixx="0.01143430819" ixy="${reflect*0.00096978273}" ixz="0.00039976581"
+                 iyy="0.00888974312" iyz="${reflect*-0.00277808667}"
+                 izz="0.00506373875"/>
       </inertial>
 
       <visual>
@@ -204,11 +205,11 @@
 
     <link name="leg_${prefix}_6_link">
       <inertial>
-        <origin xyz="-0.02087 ${reflect*-0.00019} -0.06059" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.59457"/>
-        <inertia ixx="0.00383800000" ixy="${reflect*0.00001600000}" ixz="-0.00104100000"
-                 iyy="0.00657200000" iyz="${reflect*-0.00001700000}"
-                 izz="0.00504400000"/>
+        <origin xyz="-0.02034668000 ${reflect*-0.00051514000} -0.05987428000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="1.59777300000"/>
+        <inertia ixx="0.00439027267" ixy="${reflect*-0.00006743674}" ixz="0.00113816363"
+                 iyy="0.00743063029" iyz="${reflect*0.00003943143}"
+                 izz="0.00550906699"/>
       </inertial>
 
       <visual>
@@ -238,11 +239,11 @@
       <inertial>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
         <mass value="0.01" />
-         <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+        <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
       </inertial>
-     </link>
+    </link>
 
-     <joint name="leg_${prefix}_sole_fix_joint" type="fixed">
+    <joint name="leg_${prefix}_sole_fix_joint" type="fixed">
       <parent link="leg_${prefix}_6_link" />
       <child link="${prefix}_sole_link" />
       <origin xyz="0.00 0.00 -0.107" rpy="0 0 0" />

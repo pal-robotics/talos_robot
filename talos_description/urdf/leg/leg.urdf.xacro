@@ -71,7 +71,7 @@
       </visual>
 
       <collision>
-      <origin xyz="0 0 0.0" rpy="0  0  0" />
+        <origin xyz="0 0 0.0" rpy="0  0  0" />
         <geometry>
           <mesh filename="package://talos_description/meshes/v2/hip_x_collision.stl" scale="1 ${reflect*1} 1"/>
         </geometry>

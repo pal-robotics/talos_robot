@@ -81,6 +81,7 @@
     <joint name="${name}_1_joint" type="revolute">
       <parent link="base_link"/>
       <child link="${name}_1_link"/>
+      <!-- XXX AS: The kinematic chain order for the torso was reversed manually. This value does not match the CAD model. XXX -->
       <origin xyz="0.0 0.0 0.0722"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
@@ -139,31 +140,33 @@
 
     </joint>
 
-  <xacro:talos_imu name="imu" parent="${name}_2_link" update_rate="100.0">
-    <origin xyz="0.04925 0 0.078" rpy="${180.0*deg_to_rad} 0 ${-90.0*deg_to_rad}"/>
-  </xacro:talos_imu>
+    <xacro:talos_imu name="imu" parent="${name}_2_link" update_rate="100.0">
+        <!-- TODO AS: match model & sensor -->
+        <!-- <origin xyz="0.04925 0 0.078" rpy="${180.0*deg_to_rad} 0 ${-90.0*deg_to_rad}"/>-->
+        <origin xyz="0.04925 0 0.078" rpy="${180.0*deg_to_rad} 0 ${0.0*deg_to_rad}"/>
+    </xacro:talos_imu>
 
 
-  <gazebo reference="${name}_1_link">
-     <mu1>0.9</mu1>
-     <mu2>0.9</mu2>
-   </gazebo>
-   <gazebo reference="${name}_2_link">
-     <mu1>0.9</mu1>
-     <mu2>0.9</mu2>
-   </gazebo>
-   <gazebo reference="base_link">
-     <mu1>0.9</mu1>
-     <mu2>0.9</mu2>
-   </gazebo>
+    <gazebo reference="${name}_1_link">
+        <mu1>0.9</mu1>
+        <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="${name}_2_link">
+        <mu1>0.9</mu1>
+        <mu2>0.9</mu2>
+    </gazebo>
+    <gazebo reference="base_link">
+        <mu1>0.9</mu1>
+        <mu2>0.9</mu2>
+    </gazebo>
 
-   <gazebo reference="${name}_1_joint">
-      <implicitSpringDamper>1</implicitSpringDamper>
-   </gazebo>
-   <gazebo reference="${name}_2_joint">
-     <implicitSpringDamper>1</implicitSpringDamper>
-     <provideFeedback>1</provideFeedback>
-   </gazebo>
+    <gazebo reference="${name}_1_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${name}_2_joint">
+        <implicitSpringDamper>1</implicitSpringDamper>
+        <provideFeedback>1</provideFeedback>
+    </gazebo>
 
 
     <!-- extensions -->

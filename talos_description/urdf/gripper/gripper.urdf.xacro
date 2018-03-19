@@ -12,11 +12,11 @@
 
            <link name="${name}_base_link">
               <inertial>
-                <origin xyz="-0.00534 0.00362 -0.02357" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.61585"/>
-                <inertia ixx="0.00047200000" ixy="-0.00000800000" ixz="0.00003500000"
-                         iyy="0.00052100000" iyz="0.00000000000"
-                         izz="0.00069000000"/>
+                <origin xyz="0.00002800000 0.00539400000 -0.02365400000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.63753400000"/>
+                <inertia ixx="0.00058496920" ixy="0.00000437159" ixz="-0.00001258900"
+                         iyy="0.00067076439" iyz="0.00002824361"
+                         izz="0.00085526645"/>
               </inertial>
 
               <visual>
@@ -46,13 +46,11 @@
 
             <link name="${name}_motor_double_link">
               <inertial>
-                <origin xyz="0.02270 0.01781 -0.00977" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.16889"/>
-                <!-- In order for Gazebo not to explode we needed to add these 0.001 values to the diagonal,
-                also the tool pal_dynamics InertiaMassVisualization gave NaN on the computation of the inertia box -->
-                <inertia ixx="${0.00015900000 + 0.001}" ixy="-0.00007000000" ixz="0.00003800000"
-                         iyy="${0.00022100000 + 0.001}" iyz="-0.00005300000"
-                         izz="${0.00026800000 + 0.001}"/>
+                <origin xyz="0.01965400000 0.01857200000 -0.01199800000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.13435600000"/>
+                <inertia ixx="0.00013479919" ixy="0.00006184429" ixz="-0.00003079800"
+                         iyy="0.00019602207" iyz="0.00004707722"
+                         izz="0.00024217879"/>
               </inertial>
 
               <visual>
@@ -71,7 +69,7 @@
               </collision>
             </link>
 
-             <joint name="${name}_joint" type="revolute">
+            <joint name="${name}_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_motor_double_link"/>
               <origin xyz="0.0 0.02025 -0.03"
@@ -84,11 +82,11 @@
 
             <link name="${name}_inner_double_link">
               <inertial>
-                <origin xyz="-0.00056 0.03358 -0.01741" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.11922"/>
-                <inertia ixx="0.00009100000" ixy="0.00000100000" ixz="-0.00000100000"
-                         iyy="0.00015600000" iyz="-0.00003200000"
-                         izz="0.00012600000"/>
+                <origin xyz="-0.01328300000 0.03685200000 -0.02315300000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.08798600000"/>
+                <inertia ixx="0.00007410642" ixy="-0.00000074773" ixz="0.00000101536"
+                         iyy="0.00012794180" iyz="0.00002504083"
+                         izz="0.00010495175"/>
               </inertial>
 
               <visual>
@@ -115,18 +113,17 @@
               <axis xyz="1 0 0" />
               <limit lower="${-60.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${1.0}" offset="0.0" />
-
             </joint>
 
 
 
             <link name="${name}_fingertip_1_link">
               <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
+                <origin xyz="0.00000000000 0.00460400000 -0.00253700000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.02630100000"/>
                 <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
+                         iyy="0.00000869179" iyz="-0.00000143612"
+                         izz="0.00000230820"/>
               </inertial>
 
               <visual>
@@ -154,16 +151,16 @@
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
             <link name="${name}_fingertip_2_link">
               <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
+                <origin xyz="0.00000000000 0.00460400000 -0.00253700000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.02630100000"/>
                 <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
+                         iyy="0.00000869179" iyz="-0.00000143612"
+                         izz="0.00000230820"/>
               </inertial>
 
               <visual>
@@ -190,16 +187,16 @@
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
             <link name="${name}_motor_single_link">
               <inertial>
-                <origin xyz="0.02589 -0.01284 -0.00640" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.14765"/>
-                <inertia ixx="0.00011500000" ixy="0.00005200000" ixz="0.00002500000"
-                         iyy="0.00015300000" iyz="0.00003400000"
-                         izz="0.00019000000"/>
+                <origin xyz="0.02523700000 -0.01123100000 -0.00815800000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.10792300000"/>
+                <inertia ixx="0.00008973662" ixy="-0.00004082027" ixz="-0.00001927099"
+                         iyy="0.00011957255" iyz="-0.00002873284"
+                         izz="0.00015469079"/>
               </inertial>
 
               <visual>
@@ -226,17 +223,17 @@
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
 
             <link name="${name}_inner_single_link">
               <inertial>
-                <origin xyz="0.00000 -0.03253 -0.01883" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.05356"/>
-                <inertia ixx="0.00004700000" ixy="-0.00000000000" ixz="-0.00000000000"
-                         iyy="0.00003500000" iyz="0.00001700000"
-                         izz="0.00002400000"/>
+                <origin xyz="0.00000000000 -0.03456500000 -0.02141200000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.04717700000"/>
+                <inertia ixx="0.00004199818" ixy="0.00000013418" ixz="0.00000019358"
+                         iyy="0.00003231338" iyz="-0.00001509136"
+                         izz="0.00002168842"/>
               </inertial>
 
               <visual>
@@ -263,17 +260,16 @@
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-
-           </joint>
+            </joint>
 
 
             <link name="${name}_fingertip_3_link">
               <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
+                <origin xyz="0.00000000000 0.00460400000 -0.00253700000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+                <mass value="0.02630100000"/>
                 <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
+                         iyy="0.00000869179" iyz="-0.00000143612"
+                         izz="0.00000230820"/>
               </inertial>
 
               <visual>
@@ -300,7 +296,7 @@
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
 

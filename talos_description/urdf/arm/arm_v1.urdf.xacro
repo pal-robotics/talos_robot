@@ -35,7 +35,6 @@
     <!--        SHOULDER        -->
     <!--************************-->
     <link name="${name}_${side}_1_link">
-      <!-- TODO: Missing reflects of inertias -->
       <inertial>
         <origin xyz="-0.01346 ${reflect*0.09130} 0.04812" rpy="0.00000 0.00000 0.00000"/>
         <!-- <mass value="1.52896"/> -->

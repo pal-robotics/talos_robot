@@ -37,11 +37,11 @@
           <pointCloudTopicName>/${camera_name}/depth/points</pointCloudTopicName>
           <frameName>${frame_name}</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
-          <distalostionK1>0.00000001</distalostionK1>
-          <distalostionK2>0.00000001</distalostionK2>
-          <distalostionK3>0.00000001</distalostionK3>
-          <distalostionT1>0.00000001</distalostionT1>
-          <distalostionT2>0.00000001</distalostionT2>
+          <distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2>
         </controller:gazebo_ros_openni_kinect>
       </sensor:camera>
     </gazebo>
@@ -66,11 +66,11 @@
           <pointCloudTopicName>/${camera_name}/depth_registered/points</pointCloudTopicName>
           <frameName>${frame_name}</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
-          <distalostionK1>0.00000001</distalostionK1>
-          <distalostionK2>0.00000001</distalostionK2>
-          <distalostionK3>0.00000001</distalostionK3>
-          <distalostionT1>0.00000001</distalostionT1>
-          <distalostionT2>0.00000001</distalostionT2>
+          <distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2>
         </controller:gazebo_ros_openni_kinect>
       </sensor:camera>
     </gazebo>

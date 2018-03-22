@@ -10,7 +10,7 @@
 
 <robot name="reemc" xmlns:xacro="http://ros.org/wiki/xacro">
 
-<xacro:macro name="reemc_force_talosque_sensor" params="name update_rate">
+<xacro:macro name="reemc_force_torque_sensor" params="name update_rate">
   <gazebo reference="${name}">
     <sensor name="${name}_contact_sensor" type="contact">
       <pose>0.105 0.071 0 0 0 0</pose>

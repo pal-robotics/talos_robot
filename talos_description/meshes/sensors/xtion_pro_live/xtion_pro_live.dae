@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
     <asset>
-        <contributalos>
+        <contributor>
             <author>VCGLab</author>
             <authoring_tool>VCGLib | MeshLab</authoring_tool>
-        </contributalos>
+        </contributor>
         <up_axis>Y_UP</up_axis>
         <created>Wed Jan 16 14:35:13 2013</created>
         <modified>Wed Jan 16 14:35:13 2013</modified>

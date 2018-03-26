@@ -49,11 +49,11 @@
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.45</pointCloudCutoff>
           <rangeMax>10.0</rangeMax>
-          <distalostionK1>0.00000001</distalostionK1>
-          <distalostionK2>0.00000001</distalostionK2>
-          <distalostionK3>0.00000001</distalostionK3>
-          <distalostionT1>0.00000001</distalostionT1>
-          <distalostionT2>0.00000001</distalostionT2>
+          <distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2>
         </plugin>
       </sensor>
 
@@ -83,11 +83,11 @@
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.45</pointCloudCutoff>
           <rangeMax>10.0</rangeMax>
-          <distalostionK1>0.00000001</distalostionK1>
-          <distalostionK2>0.00000001</distalostionK2>
-          <distalostionK3>0.00000001</distalostionK3>
-          <distalostionT1>0.00000001</distalostionT1>
-          <distalostionT2>0.00000001</distalostionT2>
+          <distortionK1>0.00000001</distortionK1>
+          <distortionK2>0.00000001</distortionK2>
+          <distortionK3>0.00000001</distortionK3>
+          <distortionT1>0.00000001</distortionT1>
+          <distortionT2>0.00000001</distortionT2>
         </plugin>
       </sensor>
 

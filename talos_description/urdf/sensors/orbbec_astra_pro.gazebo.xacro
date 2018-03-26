@@ -80,7 +80,8 @@
         </camera>
         <plugin name="${name}_high_res_frame_controller" filename="libgazebo_ros_camera.so">
           <alwaysOn>true</alwaysOn>
-          <updateRate>30.0</updateRate>
+          <!-- Patch to publish at 30 Hz -->
+          <updateRate>45.0</updateRate>
           <cameraName>${name}/high_res</cameraName>
           <imageTopicName>/${name}/rgb/high_res/image_raw</imageTopicName>
           <cameraInfoTopicName>/${name}/rgb/high_res/camera_info</cameraInfoTopicName>

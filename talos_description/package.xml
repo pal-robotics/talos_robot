@@ -10,7 +10,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>talos_description_calibration</run_depend>
+  <exec_depend>talos_description_calibration</exec_depend>
+  <exec_depend>talos_description_inertial</exec_depend>
+
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
 

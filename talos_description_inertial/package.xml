@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>talos_description_inertial</name>
+  <version>0.0.0</version>
+  <description>Inertial parameters of talos</description>
+  <maintainer email="alexander.sherikov@pal-robotics.com">Alexander Sherikov</maintainer>
+  <license>Creative Commons BY-NC-ND 3.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+    <pal_configuration_pkg/>
+  </export>
+</package>

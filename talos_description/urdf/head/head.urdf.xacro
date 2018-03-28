@@ -27,13 +27,7 @@
   <!--************************-->
   <xacro:macro name="talos_head_1" params="name parent">
     <link name="${name}_link">
-      <inertial>
-        <origin xyz="-0.00157211000 -0.00157919000 0.02175767000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="0.73746000000"/>
-        <inertia ixx="0.00224878584" ixy="0.00000469375" ixz="0.00008555570"
-                 iyy="0.00111158492" iyz="-0.00004132536"
-                 izz="0.00205225921"/>
-      </inertial>
+      <xacro:call macro="${name}_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -87,13 +81,7 @@
   <!--************************-->
   <xacro:macro name="talos_head_2" params="name parent">
     <link name="${name}_link">
-      <inertial>
-        <origin xyz="0.01002657000 0.00005218000 0.14136068000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.44395400000"/>
-        <inertia ixx="0.01084624339" ixy="0.00001050889" ixz="0.00041594252"
-                 iyy="0.01095691760" iyz="0.00002367831"
-                 izz="0.00571698895"/>
-      </inertial>
+      <xacro:call macro="${name}_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />

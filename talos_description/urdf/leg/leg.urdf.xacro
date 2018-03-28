@@ -16,13 +16,7 @@
     <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
 
     <link name="leg_${prefix}_1_link">
-      <inertial>
-        <origin xyz="0.02247868000 ${reflect*0.00106736000} 0.03130665000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.84559100000"/>
-        <inertia ixx="0.00541533521" ixy="${reflect*-0.00015428714}" ixz="0.00131612622"
-                 iyy="0.00848624936" iyz="${reflect*-0.00001906103}"
-                 izz="0.00474512541"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_1_link_inertial" />
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -54,13 +48,7 @@
     <!-- Joint hip_x (mesh link) : child link hip_y -> parent link hip_z -->
 
     <link name="leg_${prefix}_2_link">
-      <inertial>
-        <origin xyz="-0.00704703000 ${reflect*0.02592659000} 0.00273385000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.49095200000"/>
-        <inertia ixx="0.00497152259" ixy="${reflect*-0.00013113580}" ixz="-0.00000486648"
-                 iyy="0.00190550993" iyz="${reflect*0.00004585381}"
-                 izz="0.00474289754"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_2_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0.0" rpy="0  0  0" />
@@ -91,13 +79,7 @@
     <!-- Joint hip_y (mesh link) : child link knee -> parent link hip_x -->
 
     <link name="leg_${prefix}_3_link">
-      <inertial>
-        <origin xyz="0.00585230000 ${reflect*0.06369670000} -0.18339564000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="6.23987100000"/>
-        <inertia ixx="0.15337403915" ixy="${reflect*0.00068913396}" ixz="0.00168034366"
-                 iyy="0.13648139346" iyz="${reflect*-0.02187635445}"
-                 izz="0.03001594885"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_3_link_inertial" />
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -128,13 +110,7 @@
     <!-- Joint knee (mesh link) : child link ankle_y -> parent link hip_y -->
 
     <link name="leg_${prefix}_4_link">
-      <inertial>
-        <origin xyz="0.01317717000 ${reflect*0.02917508000} -0.11594602000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="3.75995100000"/>
-        <inertia ixx="0.04287677484" ixy="${reflect*0.00043705397}" ixz="0.00078292368"
-                 iyy="0.03598906971" iyz="${reflect*0.00037717694}"
-                 izz="0.01364791564"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_4_link_inertial" />
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -167,13 +143,7 @@
 
     <link name="leg_${prefix}_5_link">
       <!-- XXX AS: this link has moving lever and inertial parameters should slightly vary depending on configuration. XXX -->
-      <inertial>
-        <origin xyz="-0.01400838000 ${reflect*0.04180064000} 0.03820186000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.29096000000"/>
-        <inertia ixx="0.01143430819" ixy="${reflect*0.00096978273}" ixz="0.00039976581"
-                 iyy="0.00888974312" iyz="${reflect*-0.00277808667}"
-                 izz="0.00506373875"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_5_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
@@ -204,13 +174,7 @@
     <!-- Joint ankle_x (mesh link) : child link None -> parent link ankle_y -->
 
     <link name="leg_${prefix}_6_link">
-      <inertial>
-        <origin xyz="-0.02034668000 ${reflect*-0.00051514000} -0.05987428000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.59777300000"/>
-        <inertia ixx="0.00439027267" ixy="${reflect*-0.00006743674}" ixz="0.00113816363"
-                 iyy="0.00743063029" iyz="${reflect*0.00003943143}"
-                 izz="0.00550906699"/>
-      </inertial>
+      <xacro:call macro="leg_${prefix}_6_link_inertial" />
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -236,11 +200,7 @@
   <!-- from here is copy paste -->
 
     <link name="${prefix}_sole_link">
-      <inertial>
-        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-        <mass value="0.01" />
-        <inertia ixx="0.0001"  ixy="0.0"  ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
-      </inertial>
+      <xacro:call macro="${prefix}_sole_link_inertial" />
     </link>
 
     <joint name="leg_${prefix}_sole_fix_joint" type="fixed">

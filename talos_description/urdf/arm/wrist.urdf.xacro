@@ -32,13 +32,7 @@
     <!--        WRIST           -->
     <!--************************-->
     <link name="${name}_${side}_5_link">
-      <inertial>
-        <origin xyz="-0.00006000000 ${reflect*0.00326200000} 0.07962500000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="1.87792300000"/>
-        <inertia ixx="0.00349507283" ixy="${reflect*0.00001265489}" ixz="0.00001038286"
-                 iyy="0.00436830072" iyz="${reflect*-0.00009736042}"
-                 izz="0.00228263370"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_5_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -72,13 +66,7 @@
     </joint>
 
     <link name="${name}_${side}_6_link">
-      <inertial>
-        <origin xyz="0.00002100000 ${reflect*-0.00196500000} -0.00059100000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="0.40931000000"/>
-        <inertia ixx="0.00010700023" ixy="${reflect*-0.00000008899}" ixz="-0.00000004392"
-                 iyy="0.00014101316" iyz="${reflect*0.00000041702}"
-                 izz="0.00015398658"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_6_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -112,13 +100,7 @@
     </joint>
 
     <link name="${name}_${side}_7_link">
-      <inertial>
-        <origin xyz="0.00752500000 ${reflect*0.00137800000} -0.02463000000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
-        <mass value="0.30844100000"/>
-        <inertia ixx="0.00030894317" ixy="${reflect*-0.00000158687}" ixz="0.00000173418"
-                 iyy="0.00021886181" iyz="${reflect*-0.00001221167}"
-                 izz="0.00017519492"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_7_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />

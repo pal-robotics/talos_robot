@@ -39,13 +39,13 @@
     </joint>
 
     <link name="${name}_link">
+      <!-- inertia tensor computed analytically for a solid cuboid -->
       <inertial>
         <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <!-- inertia tensor computed analytically for a solid cuboid -->
+        <origin xyz="-0.01 0.0025 0" rpy="0 0 0"/>
         <inertia ixx="0.000030"  ixy="0.0"  ixz="0.0"
-                 iyy="0.000030"  iyz="0.0"
-                 izz="0.000002" />
+                 iyy="0.000002"  iyz="0.0"
+                 izz="0.000030" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>

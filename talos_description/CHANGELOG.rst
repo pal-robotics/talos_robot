@@ -11,8 +11,8 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
-Forthcoming
------------
+0.0.24 (2018-04-04)
+-------------------
 * Remove baseline and reduce clipping of orbbec_astra_pro
 * Merge branch 'fix-tor-talos-naming-issues' into 'dubnium-devel'
   Fix issues when replacing tor with talos

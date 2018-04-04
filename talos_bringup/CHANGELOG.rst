@@ -11,6 +11,9 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+
 0.0.23 (2018-02-19)
 -------------------
 * Increase home and walk_pose to 2.0 seconds

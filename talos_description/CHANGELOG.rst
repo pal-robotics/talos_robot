@@ -11,6 +11,23 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Remove baseline and reduce clipping of orbbec_astra_pro
+* Merge branch 'fix-tor-talos-naming-issues' into 'dubnium-devel'
+  Fix issues when replacing tor with talos
+  See merge request robots/talos_robot!9
+* Merge branch 'high-res-framerate' into 'dubnium-devel'
+  Fix HR camera framerate
+  See merge request robots/talos_robot!11
+* Fix HR camera framerate
+* Fix issues when replacing tor with talos
+* Merge branch 'camera-fixes' into 'dubnium-devel'
+  Add high_res camera and remove IR which was just rgb
+  See merge request robots/talos_robot!10
+* Add high_res camera and remove IR which was just rgb
+* Contributors: Hilario Tome, Victor Lopez, davidfernandez
+
 0.0.23 (2018-02-19)
 -------------------
 * Revert "increased effort limit in torso joint, use mesh collision for the feet."

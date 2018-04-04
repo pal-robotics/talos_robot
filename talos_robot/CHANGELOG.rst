@@ -8,6 +8,9 @@ Changelog for package talos_robot
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+
 0.0.23 (2018-02-19)
 -------------------
 * Merge branch 'dubnium-devel' of gitlab:robots/talos_robot into dubnium-devel

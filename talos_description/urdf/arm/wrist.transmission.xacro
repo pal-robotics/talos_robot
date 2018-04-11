@@ -10,13 +10,14 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="talos_wrist_simple_transmission" params="name side number reduction" >
+  <xacro:macro name="talos_wrist_simple_transmission" params="name side number reduction offset_value" >
     <transmission name="${name}_${side}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <actuator name="${name}_${side}_${number}_motor" >
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${side}_${number}_joint">
+        <offset>${offset_value}</offset>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
@@ -24,7 +25,7 @@
   </xacro:macro>
 
   <xacro:macro name="talos_wrist_differential_transmission"
-               params="name side number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2" >
+               params="name side number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 offset_value_1 offset_value_2" >
     <transmission name="wrist_${side}_trans">
       <type>transmission_interface/DifferentialTransmission</type>
       <actuator name="${name}_${side}_${number_1}_motor">
@@ -37,14 +38,14 @@
       </actuator>
       <joint name="${name}_${side}_${number_1}_joint">
         <role>joint1</role>
-        <offset>0.0</offset>
+        <offset>${offset_value_1}</offset>
         <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <joint name="${name}_${side}_${number_2}_joint">
         <role>joint2</role>
-        <offset>0.0</offset>
+        <offset>${offset_value_2}</offset>
         <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>

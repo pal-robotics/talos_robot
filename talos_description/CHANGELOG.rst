@@ -11,8 +11,8 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
-Forthcoming
------------
+1.0.0 (2018-04-12)
+------------------
 * Merge branch 'as_identification' into 'erbium-devel'
   revised inertial parameters + other fixes)
   See merge request robots/talos_robot!12

@@ -2,8 +2,8 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2018-04-12)
+------------------
 * updated changelog
 * fixed talos_description_inertial package version
 * Merge branch 'as_identification' into 'erbium-devel'

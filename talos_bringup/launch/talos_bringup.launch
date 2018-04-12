@@ -1,5 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
   <arg name="robot" default="full_v2"/> <!--full_v1, full_v2, lower_body-->
+  <arg name="foot_collision" default="default"/>
 
   <!-- Load default controllers -->
   <include file="$(find talos_controller_configuration)/launch/bringup_controllers.launch" />
@@ -11,8 +14,9 @@
   </node>
   
   <!-- Robot model -->
-  <include file="$(find talos_description)/robots/upload_talos.launch" >
+  <include file="$(find talos_description)/robots/upload.launch" >
      <arg name="robot" value="$(arg robot)"/>
+     <arg name="foot_collision" default="$(arg foot_collision)"/>
   </include>
 
   <!-- Twist mux -->

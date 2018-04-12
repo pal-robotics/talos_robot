@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>talos_description</name>
   <version>0.0.24</version>
   <description>The talos_description package</description>
@@ -10,7 +10,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>talos_description_calibration</run_depend>
+  <exec_depend>talos_description_calibration</exec_depend>
+  <exec_depend>talos_description_inertial</exec_depend>
+
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
 

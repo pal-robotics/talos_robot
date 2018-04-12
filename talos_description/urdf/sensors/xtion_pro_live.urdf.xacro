@@ -33,7 +33,7 @@
   <xacro:macro name="xtion_pro_live" params="name parent *origin *calibration_origin">
     <!-- base link -->
     <joint name="${name}_joint" type="fixed">
-      <xacro:insert_block name="origin" />
+      <xacro:call macro="origin" />
       <parent link="${parent}"/>
       <child link="${name}_link"/>
     </joint>
@@ -82,7 +82,7 @@
     </link>
     <!-- Xtion IR sensor frame -->
     <joint name="${name}_ir_optical_frame_joint" type="fixed">
-      <xacro:insert_block name="calibration_origin" /> <!-- macro argument -->
+      <xacro:call macro="calibration_origin" /> <!-- macro argument -->
       <parent link="${name}_ir_link"/>
       <child link="${name}_ir_optical_frame"/>
     </joint>
@@ -117,7 +117,7 @@
     </link>
     <!-- Xtion RGB sensor frame -->
     <joint name="${name}_rgb_optical_frame_joint" type="fixed">
-      <xacro:insert_block name="calibration_origin" /> <!-- macro argument -->
+      <xacro:call macro="calibration_origin" /> <!-- macro argument -->
       <parent link="${name}_rgb_link"/>
       <child link="${name}_rgb_optical_frame"/>
     </joint>

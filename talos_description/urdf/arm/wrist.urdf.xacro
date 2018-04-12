@@ -32,14 +32,7 @@
     <!--        WRIST           -->
     <!--************************-->
     <link name="${name}_${side}_5_link">
-      <inertial>
-        <origin xyz="-0.00006 0.00326 0.07963" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.87792"/> -->
-        <mass value="1.77792"/>
-        <inertia ixx="0.00349500000" ixy="-0.00001300000" ixz="-0.00001000000"
-                 iyy="0.00436800000" iyz="0.00009700000"
-                 izz="0.00228300000"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_5_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -48,6 +41,7 @@
         </geometry>
         <material name="LightGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -59,7 +53,7 @@
     <joint name="${name}_${side}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_${side}_5_link" />
-      <origin xyz="-0.02000 0.00000 -0.26430" 
+      <origin xyz="-0.02000 0.00000 -0.26430"
                 rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-144.0 * deg_to_rad}" upper="${144.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
@@ -72,14 +66,7 @@
     </joint>
 
     <link name="${name}_${side}_6_link">
-      <inertial>
-        <origin xyz="0.00002 -0.00197 -0.00059" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="0.40931"/> -->
-        <mass value="0.30931"/>
-        <inertia ixx="0.00010700000" ixy="0.00000000000" ixz="0.00000000000"
-                 iyy="0.00014100000" iyz="-0.00000000000"
-                 izz="0.00015400000"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_6_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -88,6 +75,7 @@
         </geometry>
         <material name="LightGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -99,7 +87,7 @@
     <joint name="${name}_${side}_6_joint" type="revolute">
       <parent link="${name}_${side}_5_link" />
       <child link="${name}_${side}_6_link" />
-      <origin xyz="0.00000 0.00000 0.00000" 
+      <origin xyz="0.00000 0.00000 0.00000"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="1 0 0" />
       <limit lower="${-78.5 * deg_to_rad}" upper="${78.5 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
@@ -112,24 +100,7 @@
     </joint>
 
     <link name="${name}_${side}_7_link">
-    
-      <!-- WRONG VALUES
-      <inertial>
-        <origin xyz="-0.00089 0.00365 -0.07824" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="1.02604"/>
-        <inertia ixx="0.00151400000" ixy="0.00000600000" ixz="0.00006600000"
-                 iyy="0.00146400000" iyz="0.00001200000"
-                 izz="0.00090300000"/>
-      </inertial>
-      -->
-      
-      <inertial>
-        <origin xyz="0.007525 0.001378 -0.024630" rpy="0.00000 0.00000 0.00000"/>
-        <mass value="0.308441"/>
-        <inertia ixx="0.000309" ixy="0.000002" ixz="-0.000002"
-                 iyy="0.000219" iyz="0.000012"
-                 izz="0.000176"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_7_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -150,7 +121,7 @@
     <joint name="${name}_${side}_7_joint" type="revolute">
       <parent link="${name}_${side}_6_link" />
       <child link="${name}_${side}_7_link" />
-      <origin xyz="0.0 0.0 0.0" 
+      <origin xyz="0.0 0.0 0.0"
                 rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
       <limit lower="${-39.0 * deg_to_rad}" upper="${39.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}"/>

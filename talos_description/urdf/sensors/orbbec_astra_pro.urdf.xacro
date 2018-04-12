@@ -39,14 +39,8 @@
     </joint>
 
     <link name="${name}_link">
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <!-- inertia tensor computed analytically for a solid cuboid -->
-        <inertia ixx="0.000030"  ixy="0.0"  ixz="0.0"
-                 iyy="0.000030"  iyz="0.0"
-                 izz="0.000002" />
-      </inertial>
+      <!-- inertia tensor computed analytically for a solid cuboid -->
+      <xacro:call macro="${name}_link_inertial" />
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -71,13 +65,7 @@
     </joint>
 
     <link name="${name}_optical_frame">
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
-                 iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
-      </inertial>
+      <xacro:call macro="${name}_optical_frame_inertial" />
     </link>
 
     <!-- frames of the depth sensor -->

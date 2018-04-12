@@ -1,9 +1,11 @@
-<launch>
+<launch deprecated="Please use 'upload.lauch' instead.">
+    <arg name="robot" default="full_v2"/>
+    <arg name="foot_collision" default="default"/>
+    <arg name="enable_crane" default="false"/>
 
-  <!-- arg could be v1 (Pyerene) or v2 (IJS/PAL) -->
-  <arg name="robot" default="full_v2"/> 
-  
-  <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'" />
-
+    <include file="$(find talos_description)/robots/upload.launch">
+        <arg name="robot" value="$(arg robot)"/>
+        <arg name="foot_collision" value="$(arg foot_collision)"/>
+        <arg name="enable_crane" value="$(arg enable_crane)"/>
+    </include>
 </launch>

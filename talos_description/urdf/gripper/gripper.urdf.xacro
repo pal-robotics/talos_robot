@@ -10,14 +10,8 @@
 
   <xacro:macro name="talos_gripper" params="name parent reflect">
 
-           <link name="${name}_base_link">
-              <inertial>
-                <origin xyz="-0.00534 0.00362 -0.02357" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.61585"/>
-                <inertia ixx="0.00047200000" ixy="-0.00000800000" ixz="0.00003500000"
-                         iyy="0.00052100000" iyz="0.00000000000"
-                         izz="0.00069000000"/>
-              </inertial>
+            <link name="${name}_base_link">
+              <xacro:call macro="${name}_base_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -38,22 +32,14 @@
             <joint name="${name}_base_link_joint" type="fixed">
               <parent link="${parent}"/>
               <child link="${name}_base_link"/>
-              <origin xyz="0.00000 0.00000 -0.02875" 
+              <origin xyz="0.00000 0.00000 -0.02875"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="0 0 0" />
             </joint>
-            
+
 
             <link name="${name}_motor_double_link">
-              <inertial>
-                <origin xyz="0.02270 0.01781 -0.00977" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.16889"/>
-                <!-- In order for Gazebo not to explode we needed to add these 0.001 values to the diagonal,
-                also the tool pal_dynamics InertiaMassVisualization gave NaN on the computation of the inertia box -->
-                <inertia ixx="${0.00015900000 + 0.001}" ixy="-0.00007000000" ixz="0.00003800000"
-                         iyy="${0.00022100000 + 0.001}" iyz="-0.00005300000"
-                         izz="${0.00026800000 + 0.001}"/>
-              </inertial>
+              <xacro:call macro="${name}_motor_double_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -71,10 +57,10 @@
               </collision>
             </link>
 
-             <joint name="${name}_joint" type="revolute">
+            <joint name="${name}_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_motor_double_link"/>
-              <origin xyz="0.0 0.02025 -0.03" 
+              <origin xyz="0.0 0.02025 -0.03"
                       rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${-55.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="1.0" velocity="1.0" />
@@ -83,13 +69,7 @@
 
 
             <link name="${name}_inner_double_link">
-              <inertial>
-                <origin xyz="-0.00056 0.03358 -0.01741" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.11922"/>
-                <inertia ixx="0.00009100000" ixy="0.00000100000" ixz="-0.00000100000"
-                         iyy="0.00015600000" iyz="-0.00003200000"
-                         izz="0.00012600000"/>
-              </inertial>
+              <xacro:call macro="${name}_inner_double_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -110,24 +90,17 @@
             <joint name="${name}_inner_double_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_inner_double_link"/>
-              <origin xyz="0.00000 0.00525 -0.05598" 
+              <origin xyz="0.00000 0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${-60.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${1.0}" offset="0.0" />
-
-            </joint> 
+            </joint>
 
 
 
             <link name="${name}_fingertip_1_link">
-              <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
-                <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
-              </inertial>
+              <xacro:call macro="${name}_fingertip_1_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -149,22 +122,16 @@
             <joint name="${name}_fingertip_1_joint" type="revolute">
               <parent link="${name}_inner_double_link"/>
               <child link="${name}_fingertip_1_link"/>
-              <origin xyz="0.03200 0.04589 -0.06553" 
+              <origin xyz="0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
             <link name="${name}_fingertip_2_link">
-              <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
-                <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
-              </inertial>
+              <xacro:call macro="${name}_fingertip_2_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -185,22 +152,16 @@
             <joint name="${name}_fingertip_2_joint" type="revolute">
               <parent link="${name}_inner_double_link"/>
               <child link="${name}_fingertip_2_link"/>
-              <origin xyz="-0.03200 0.04589 -0.06553" 
+              <origin xyz="-0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
             <link name="${name}_motor_single_link">
-              <inertial>
-                <origin xyz="0.02589 -0.01284 -0.00640" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.14765"/>
-                <inertia ixx="0.00011500000" ixy="0.00005200000" ixz="0.00002500000"
-                         iyy="0.00015300000" iyz="0.00003400000"
-                         izz="0.00019000000"/>
-              </inertial>
+              <xacro:call macro="${name}_motor_single_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -221,23 +182,17 @@
             <joint name="${name}_motor_single_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_motor_single_link"/>
-              <origin xyz="0.00000 -0.02025 -0.03000" 
+              <origin xyz="0.00000 -0.02025 -0.03000"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint>
+            </joint>
 
 
 
             <link name="${name}_inner_single_link">
-              <inertial>
-                <origin xyz="0.00000 -0.03253 -0.01883" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.05356"/>
-                <inertia ixx="0.00004700000" ixy="-0.00000000000" ixz="-0.00000000000"
-                         iyy="0.00003500000" iyz="0.00001700000"
-                         izz="0.00002400000"/>
-              </inertial>
+              <xacro:call macro="${name}_inner_single_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -258,23 +213,16 @@
             <joint name="${name}_inner_single_joint" type="revolute">
               <parent link="${name}_base_link"/>
               <child link="${name}_inner_single_link"/>
-              <origin xyz="0.00000 -0.00525 -0.05598" 
+              <origin xyz="0.00000 -0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-
-           </joint> 
+            </joint>
 
 
             <link name="${name}_fingertip_3_link">
-              <inertial>
-                <origin xyz="0.00000 0.00460 -0.00254" rpy="0.00000 0.00000 0.00000"/>
-                <mass value="0.02630"/>
-                <inertia ixx="0.00000800000" ixy="0.00000000000" ixz="0.00000000000"
-                         iyy="0.00000900000" iyz="0.00000100000"
-                         izz="0.00000200000"/>
-              </inertial>
+              <xacro:call macro="${name}_fingertip_3_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -295,13 +243,13 @@
             <joint name="${name}_fingertip_3_joint" type="revolute">
               <parent link="${name}_inner_single_link"/>
               <child link="${name}_fingertip_3_link"/>
-              <origin xyz="0.00000 -0.04589 -0.06553" 
+              <origin xyz="0.00000 -0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
               <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
-           </joint> 
-         
+            </joint>
+
 
 
         <xacro:virtual_joints name="${name}" />
@@ -315,6 +263,6 @@
         <xacro:gripper_virtual_transmission name="${name}_motor_single" reduction="1.0"/>
         <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/> -->
 
- </xacro:macro>
+  </xacro:macro>
 
 </robot>

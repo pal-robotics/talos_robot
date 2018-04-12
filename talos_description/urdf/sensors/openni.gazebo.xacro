@@ -12,7 +12,7 @@
    * Publishes MONO8 format "depth" image & PointCloud
    * Publishes RGB8 format color image & 2nd copy of PointCloud (for registered)
 
-  Sensor parameters are from PR2 description.  
+  Sensor parameters are from PR2 description.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 

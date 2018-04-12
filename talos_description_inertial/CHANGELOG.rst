@@ -4,6 +4,14 @@ Changelog for package talos_description_inertial
 
 Forthcoming
 -----------
+* updated changelog
+* fixed talos_description_inertial package version
+* Merge branch 'as_identification' into 'erbium-devel'
+  revised inertial parameters + other fixes)
+  See merge request robots/talos_robot!12
+* Inertials in a separate package. [dubnium compatibility is lost!]
+* Contributors: Hilario Tome, alexandersherikov
+
 * fixed talos_description_inertial package version
 * Merge branch 'as_identification' into 'erbium-devel'
   revised inertial parameters + other fixes)

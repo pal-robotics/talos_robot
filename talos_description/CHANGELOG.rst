@@ -11,6 +11,45 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_identification' into 'erbium-devel'
+  revised inertial parameters + other fixes)
+  See merge request robots/talos_robot!12
+* upload.launch: added --inorder flag
+* Inertials in a separate package. [dubnium compatibility is lost!]
+* Minor fix in inertial parameters of orbbec_astra_pro.
+* Mark 'upload_talos.launch' as deprecated.
+* Fix IMU orientation (again)
+* Fix orientation of IMU, delete TODO comments.
+* Updated dynamic parameters of the grippers.
+  Note: sensor between the wrist and gripper is split into two links, I
+  set inertial parameters of the first one, considering the second one
+  negligible. This must be reviewed.
+* Fixed typo in leg URDF.
+* Indentation & comments.
+* Updated meshes for link_2 of leg.
+* Leg urdf: updated inertial parameters
+* Added upload.launch which should be used instead of upload_talos.launch
+* Clean fake crane link, fix imu orientation.
+* Deleted ftsensor.gazebo.xacro (copied from Reem-C and not used)
+* New inertials of the torso (incorrectly generated earlier) & head.
+* torso_link_1 inertial parameters (now ok)
+* Updated dynamic parameters of the torso.
+* Updated inertial parameters of the arms (they look ok now)
+* New inertial parameters of links 1 and 2 in the arm (2 seems to be wrong).
+* Added optional fake crane link.
+* Foot collision object can now be specified as an option.
+* Various fixes in the model.
+* Deleted trailing whitespaces in xacro files.
+* Merge branch 'add-talos-description-calibration' into 'erbium-devel'
+  Add talos description calibration
+  See merge request robots/talos_robot!13
+* Add head and camera calibration offsets
+* Use xacro --inorder to substitute properties in a filename
+* Talos arms will use description_calibration
+* Contributors: Hilario Tome, Victor Lopez, alexandersherikov
+
 0.0.24 (2018-04-04)
 -------------------
 * Remove baseline and reduce clipping of orbbec_astra_pro

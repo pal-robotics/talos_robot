@@ -11,6 +11,14 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Merge branch 'as_imu_orientation_to_enu' into 'erbium-devel'
+  bringup config: added orientation_to_enu_frame parameter
+  See merge request robots/talos_robot!15
+* bringup config: added orientation_to_enu_frame parameter
+* Contributors: Hilario Tome, alexandersherikov
+
 1.0.0 (2018-04-12)
 ------------------
 

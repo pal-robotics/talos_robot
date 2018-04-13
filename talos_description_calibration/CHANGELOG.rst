@@ -2,8 +2,8 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.1 (2018-04-13)
+------------------
 * Update version and maintainers of talos_description_calibration
 * Merge branch 'add-talos-description-calibration-pkg' into 'erbium-devel'
   Move talos_description_calibration to talos_robot repo

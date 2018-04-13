@@ -2,10 +2,9 @@
 <package>
 
   <name>talos_description_calibration</name>
-  <version>0.0.24</version>
+  <version>1.0.0</version>
   <description>This package contains the description of the hand-eye calibration of the TALOS robot.  The files in this package are used also from the talos_description package.</description>
-  <maintainer email="alessandro.difava@pal-robotics.com">Alessandro Di Fava</maintainer>
-  <maintainer email="jordi.pages@pal-robotics.com">Jordi Pages</maintainer>
+  <maintainer email="victor.lopez@pal-robotics.com">Victor Lopez</maintainer>
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
   <license>Creative Commons BY-NC-ND 3.0</license>
 

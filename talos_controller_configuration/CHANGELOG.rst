@@ -11,6 +11,15 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Merge branch 'fix_simulation' into 'erbium-devel'
+  fixed gripper command mode:
+  See merge request robots/talos_robot!16
+* fixed merge
+* fixed gripper command mode:
+* Contributors: Hilario Tome
+
 1.0.1 (2018-04-13)
 ------------------
 

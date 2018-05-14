@@ -170,7 +170,24 @@ play_motion:
         time_from_start: 5.0
       - positions: [-0.0, -0.001, -0.0, -0.15, 0.0, -0.2, -0.0, -0.0, -0.0, 0.0, 0.148, -0.0, -0.2, 0.0, 0.001, -0.0, 0.0, 0.0]
         time_from_start: 8.0
-
+    close_both_grippers:
+      joints: [gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [-0.7, -0.7]
+        time_from_start: 0.0
+      meta:
+        name: Close Both Grippers
+        usage: action
+        description: Closes both grippers
+    open_both_grippers:
+      joints: [gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0.0, 0.0]
+        time_from_start: 0.0
+      meta:
+        name: Open Both Grippers
+        usage: action
+        description: Open both grippers
     wave_both_arms:
       joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, gripper_right_joint, gripper_left_joint]
       points:

@@ -19,21 +19,23 @@ biped_controller:
    z_lipm: 1.05
 
 com_stabilizer:
-   ds_x_p: 0.6
-   ds_y_p: 0.6
-   ss_x_p: 0.6
+   ds_x_p: 0.5
+   ds_y_p: 0.5
+   ss_x_p: 0.5
    ss_y_p: 0.5
-   dead_zone: 0.01
-   foot_offset_clamp: 0.05
+   dead_zone: 0.005
+   foot_offset_clamp: 0.03
    hip_offset_x_clamp: 0.04
    hip_offset_y_clamp: 0.04
    hip_offset_decay: 0.997
+   ss_min_weight: 150
 
-hip_spacing_x: -0.02
+hip_spacing_x: -0.04
 hip_spacing_y: 0.085
 hip_spacing_z: 0.0
 femur_length: 0.380
 tibia_length: 0.320
 foot_height: 0.107
+hip_down_default: 0.04
 
 read_absolute_encoders: False

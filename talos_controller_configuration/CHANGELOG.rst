@@ -11,8 +11,8 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+1.0.3 (2018-05-29)
+------------------
 * Parameters tuning for default robot
 * Contributors: Luca Marchionni
 

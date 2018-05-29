@@ -11,8 +11,8 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+1.0.3 (2018-05-29)
+------------------
 * Fix and merge conflit
 * Fix duplicated Home motions
 * Parameters tuning for default robot

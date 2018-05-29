@@ -11,6 +11,9 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+
 1.0.2 (2018-04-18)
 ------------------
 * Merge branch 'fix_simulation' into 'erbium-devel'

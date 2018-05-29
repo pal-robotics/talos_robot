@@ -11,6 +11,11 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Parameters tuning for default robot
+* Contributors: Luca Marchionni
+
 1.0.2 (2018-04-18)
 ------------------
 * Merge branch 'fix_simulation' into 'erbium-devel'

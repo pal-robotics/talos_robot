@@ -11,6 +11,13 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Fix and merge conflit
+* Fix duplicated Home motions
+* Parameters tuning for default robot
+* Contributors: Luca Marchionni, Victor Lopez
+
 1.0.2 (2018-04-18)
 ------------------
 * Merge branch 'fix_simulation' into 'erbium-devel'

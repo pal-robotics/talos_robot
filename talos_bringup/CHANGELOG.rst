@@ -11,8 +11,8 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+1.0.4 (2018-06-12)
+------------------
 
 1.0.3 (2018-05-29)
 ------------------

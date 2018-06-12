@@ -20,9 +20,9 @@
   <xacro:property name="wrist_1_max_vel"      value="1.95" />
   <xacro:property name="wrist_2_max_vel"      value="1.76" />
   <xacro:property name="wrist_3_max_vel"      value="1.76" />
-  <xacro:property name="wrist_1_max_effort"   value="3" />
-  <xacro:property name="wrist_2_max_effort"   value="6.6" />
-  <xacro:property name="wrist_3_max_effort"   value="6.6" />
+  <xacro:property name="wrist_1_max_effort"   value="20.0" />
+  <xacro:property name="wrist_2_max_effort"   value="8.0" />
+  <xacro:property name="wrist_3_max_effort"   value="8.0" />
   <xacro:property name="wrist_eps"          value="0.02" />
 
 

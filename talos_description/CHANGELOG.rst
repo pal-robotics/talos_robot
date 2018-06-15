@@ -11,8 +11,8 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
-Forthcoming
------------
+1.0.5 (2018-06-15)
+------------------
 * Merge branch 'as_merge_talos_versions' into 'erbium-devel'
   merge talos versions, add tests.
   See merge request robots/talos_robot!20

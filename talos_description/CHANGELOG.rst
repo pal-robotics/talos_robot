@@ -11,6 +11,14 @@ Changelog for package talos_description
 0.0.14 (2016-11-15)
 -------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_merge_talos_versions' into 'erbium-devel'
+  merge talos versions, add tests.
+  See merge request robots/talos_robot!20
+* merge talos versions, add tests.
+* Contributors: Hilario Tome, alexandersherikov
+
 1.0.4 (2018-06-12)
 ------------------
 * Merge branch 'new-arm-pids' into 'erbium-devel'

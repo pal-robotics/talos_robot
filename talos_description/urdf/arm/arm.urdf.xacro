@@ -35,14 +35,7 @@
     <!--        SHOULDER        -->
     <!--************************-->
     <link name="${name}_${side}_1_link">
-      <inertial>
-        <origin xyz="-0.01346 ${reflect*0.09130} 0.04812" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.52896"/> -->
-        <mass value="1.42896"/>
-        <inertia ixx="0.00555100000" ixy="-0.00073100000" ixz="0.00000800000"
-                 iyy="0.00167300000" iyz="-0.00006000000"
-                 izz="0.00582200000"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_1_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -51,6 +44,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -65,7 +59,8 @@
       <origin xyz="0.00000 ${0.15750*reflect} 0.23200"
               rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${(-60.0 - 30.0*reflect)* deg_to_rad}" upper="${(60.0 - 30.0*reflect)* deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+
+      <xacro:arm_1_joint_limits reflect="${reflect}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 <!--        <safety_controller k_position="20"
                           k_velocity="20"
@@ -73,15 +68,9 @@
                           soft_upper_limit="${30.00000 * deg_to_rad - arm_eps}" /> -->
     </joint>
 
-   <link name="${name}_${side}_2_link">
-      <inertial>
-        <origin xyz="0.02607 0.00049 -0.05209" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.77729"/> -->
-        <mass value="1.67729"/>
-        <inertia ixx="0.00708700000" ixy="-0.00001400000" ixz="0.00214200000"
-                 iyy="0.00793600000" iyz="0.00003000000"
-                 izz="0.00378800000"/>
-      </inertial>
+
+    <link name="${name}_${side}_2_link">
+      <xacro:call macro="${name}_${side}_2_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -90,6 +79,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -104,7 +94,7 @@
       <origin xyz="0.00493 ${0.13650*reflect} 0.04673"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="1 0 0" />
-      <limit lower="${(-82.0000 + 82.5000*reflect)* deg_to_rad}" upper="${(82.50000 + 82.0000*reflect)* deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
+      <limit lower="${(-82.0000 + 82.5000*reflect)* deg_to_rad}" upper="${(82.50000*reflect + 82.0000)* deg_to_rad}" effort="${arm_2_max_effort}" velocity="${arm_2_max_vel}" />
       <dynamics friction="${arm_friction}" damping="${arm_damping}"/>
 <!--        <safety_controller k_position="20"
                           k_velocity="20"
@@ -113,15 +103,9 @@
 
     </joint>
 
+
     <link name="${name}_${side}_3_link">
-      <inertial>
-        <origin xyz="0.00841 0.01428 -0.22291" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.57029"/> -->
-        <mass value="1.47029"/>
-        <inertia ixx="0.00433200000" ixy="0.00015300000" ixz="-0.00049600000"
-                 iyy="0.00434000000" iyz="-0.00060900000"
-                 izz="0.00254300000"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_3_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -130,6 +114,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -157,14 +142,7 @@
     <!--        ELBOW           -->
     <!--************************-->
     <link name="${name}_${side}_4_link">
-      <inertial>
-        <origin xyz="-0.00655 -0.02107 -0.02612" rpy="0.00000 0.00000 0.00000"/>
-        <!-- <mass value="1.20216"/> -->
-        <mass value="1.10216"/>
-        <inertia ixx="0.00221700000" ixy="-0.00010100000" ixz="0.00028800000"
-                 iyy="0.00241800000" iyz="-0.00039300000"
-                 izz="0.00111500000"/>
-      </inertial>
+      <xacro:call macro="${name}_${side}_4_link_inertial" />
 
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -173,6 +151,7 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>

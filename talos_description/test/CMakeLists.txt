@@ -1,0 +1,5 @@
+find_package(rostest REQUIRED)
+add_rostest(test_model_load.test ARGS robot:=full_v1)
+add_rostest(test_model_load.test ARGS robot:=full_v2)
+add_rostest(test_model_load.test ARGS robot:=full_no_grippers)
+add_rostest(test_model_load.test ARGS robot:=lower_body)

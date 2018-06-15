@@ -11,7 +11,7 @@
   <!-- Robot description -->
   <param
       name="$(arg parameter_name)"
-      command=" $(find xacro)/xacro.py --inorder
+      command=" $(find xacro)/xacro --inorder
 
                 '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'
                 foot_collision:=$(arg foot_collision)

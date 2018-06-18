@@ -1,0 +1,7 @@
+motor_torque_constant: 0.09699321048
+torque_sensor_offset: 0.0
+reduction_ratio: 100
+actuator_names:
+  - leg_left_3_motor
+check_mode: false
+dt: 0.001

@@ -11,8 +11,8 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
-Forthcoming
------------
+1.0.6 (2018-06-19)
+------------------
 * Merge branch 'tunning_hardware' into 'erbium-devel'
   started adding local joint control parameters
   See merge request robots/talos_robot!17

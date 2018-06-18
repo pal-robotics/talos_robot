@@ -3,92 +3,91 @@
 
   <arg name="local_joint_control_type" default=""/>
   <arg name="ns" default=""/>
-  <arg name="local_joint_control" default="direct_position_control"/>
   <arg name="controller_pkg_name" default="talos_controller_configuration"/>
 
   <!-- Load controlled joint list configuration-->
   <!-- right arm -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_1_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_2_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_3_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_4_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_5_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_6_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_right_7_joint"/>
   </include> 
 
   <!-- lef arm -->
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_1_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_2_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_3_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_4_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_5_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_6_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="arm_left_7_joint"/>
@@ -96,37 +95,37 @@
 
   <!-- right leg -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_1_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_2_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_3_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_4_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_5_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_right_6_joint"/>
@@ -134,37 +133,37 @@
   
   <!-- left leg -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_1_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_2_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_3_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_4_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_5_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="leg_left_6_joint"/>
@@ -172,13 +171,13 @@
 
   <!-- head -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="head_1_joint"/>
   </include> 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="head_2_joint"/>
@@ -186,14 +185,14 @@
 
   <!-- torso -->
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="torso_1_joint"/>
   </include> 
 
 
-  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control).launch" >
+  <include file="$(find pal_local_joint_control)/launch/$(arg local_joint_control_type).launch" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="torso_2_joint"/>

@@ -11,6 +11,14 @@ Changelog for package talos_bringup
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Merge branch 'both_grippers_motions' into 'erbium-devel'
+  Add open/close both grippers motions
+  See merge request robots/talos_robot!19
+* Add open/close both grippers motions
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.6 (2018-06-19)
 ------------------
 

@@ -11,6 +11,14 @@ Changelog for package talos_controller_configuration
 * Added hardware bringup controllers
 * Contributors: Hilario Tome, Luca
 
+Forthcoming
+-----------
+* Merge branch 'as_fixes' into 'erbium-devel'
+  As fixes
+  See merge request robots/talos_robot!21
+* full_body_position_controllers: parametrize controllers
+* Contributors: Hilario Tome, alexandersherikov
+
 1.0.7 (2018-06-19)
 ------------------
 

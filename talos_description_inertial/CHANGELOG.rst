@@ -2,6 +2,14 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_fixes' into 'erbium-devel'
+  As fixes
+  See merge request robots/talos_robot!21
+* Fix typo in rgbd_link_inertial
+* Contributors: Hilario Tome, alexandersherikov
+
 1.0.7 (2018-06-19)
 ------------------
 

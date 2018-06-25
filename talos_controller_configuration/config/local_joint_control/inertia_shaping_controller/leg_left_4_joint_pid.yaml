@@ -1,0 +1,6 @@
+p: 0.3
+i: 2
+d: 0.0
+i_clamp_min: -40.0
+i_clamp_max: 40.0
+antiwindup: true

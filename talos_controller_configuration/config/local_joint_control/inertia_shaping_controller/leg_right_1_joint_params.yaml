@@ -1,8 +1,8 @@
-motor_inertia: 0.000191658
-static_friction_gain: 0.1
-viscous_friction_gain: 0.3
-global_friction_gain: 0.7
-inertia_compensation_gain: 1.0
+motor_inertia: 4.16171e-05
+static_friction_gain: 0.0
+viscous_friction_gain: 0.6
+global_friction_gain: 0.8
+inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0
 
 ripple_phase_offset: 0.0
@@ -56,7 +56,7 @@ torque_derivative_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 50.0
+      cutoff1: 100.0
       cutoff2: 0.0
 
 use_filtered_torque_sensor: true

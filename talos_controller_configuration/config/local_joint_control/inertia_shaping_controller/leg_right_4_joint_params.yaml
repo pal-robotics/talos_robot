@@ -1,7 +1,7 @@
 motor_inertia: 0.000195461
-static_friction_gain: 0.394703
-viscous_friction_gain: 0.29472
-global_friction_gain: 0.5
+static_friction_gain: 0.0
+viscous_friction_gain: 1.0
+global_friction_gain: 0.8
 inertia_compensation_gain: 0.2
 torque_derivative_feedback_gain: 0.0
 
@@ -47,7 +47,7 @@ command_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 30.0
+      cutoff1: 100.0
       cutoff2: 0.0
 
 torque_derivative_filter:

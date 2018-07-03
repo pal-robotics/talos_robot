@@ -1,0 +1,63 @@
+<launch>
+  <arg name="robot" default="full_v2" />
+
+  <arg name="controllers" default="" />
+
+  <include file="$(find talos_controller_configuration)/launch/selective_rosparam_loader.launch">
+    <arg name="robot" value="$(arg robot)" />
+    <arg name="prefix" value="$(find talos_controller_configuration)/config/joint_trajectory_controllers/" />
+  </include>
+
+
+  <!-- Spawn upper-body joint trajectory controllers -->
+  <group if="$(eval arg('controllers') == '')">
+    <arg if="$(eval arg('robot') == 'full_v2')"
+        name="controllers_default"
+        value="torso_controller
+            head_controller
+            left_arm_controller
+            right_arm_controller
+            left_gripper_controller
+            right_gripper_controller
+            left_leg_controller
+            right_leg_controller" />
+
+    <arg if="$(eval arg('robot') == 'lower_body_with_torso')"
+        name="controllers_default"
+        value="torso_controller
+            left_leg_controller
+            right_leg_controller" />
+
+    <arg if="$(eval arg('robot') == 'upper_body')"
+        name="controllers_default"
+        value="torso_controller
+            head_controller
+            left_arm_controller
+            right_arm_controller
+            left_gripper_controller
+            right_gripper_controller" />
+
+    <node name="body_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="$(arg controllers_default)" />
+
+    <!-- Point head action -->
+    <group if="$(eval 'head' in arg('controllers_default'))"
+           ns="head_controller">
+      <node name="point_head_action" pkg="head_action" type="head_action" output="screen" />
+    </group>
+  </group>
+
+  <group unless="$(eval arg('controllers') == '')">
+    <node name="body_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="$(arg controllers)" />
+
+    <!-- Point head action -->
+    <group if="$(eval 'head' in arg('controllers'))"
+           ns="head_controller">
+      <node name="point_head_action" pkg="head_action" type="head_action" output="screen" />
+    </group>
+  </group>
+
+</launch>

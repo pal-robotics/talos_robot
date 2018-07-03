@@ -1,0 +1,32 @@
+<launch>
+  <arg name="prefix" />
+  <arg name="suffix" value=".yaml" />
+  <arg name="robot" default="full_v2" />
+
+  <group if="$(eval arg('robot') == 'full_v2')" >
+    <rosparam command="load" file="$(arg prefix)arm_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)arm_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'lower_body_with_torso')" >
+    <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'upper_body')" >
+    <rosparam command="load" file="$(arg prefix)arm_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)arm_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
+  </group>
+
+</launch>

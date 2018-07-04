@@ -51,7 +51,7 @@
       <origin xyz="0.02000 0.00000 0.32100"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
-      <limit lower="${-12.00000 * deg_to_rad}" upper="${45.00000 * deg_to_rad}" effort="8.0" velocity="1.0" />
+      <limit lower="${-12.00000 * deg_to_rad}" upper="${45.00000 * deg_to_rad}" effort="8.0" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
        <!-- <safety_controller k_position="20"
                           k_velocity="20"
@@ -105,7 +105,7 @@
       <origin xyz="0.00000 0.00000 0.00000"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 0 1" />
-      <limit lower="${-75.00000 * deg_to_rad}" upper="${75.00000 * deg_to_rad}" effort="4.0" velocity="1.0" />
+      <limit lower="${-75.00000 * deg_to_rad}" upper="${75.00000 * deg_to_rad}" effort="4.0" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
        <!-- <safety_controller k_position="20"
                           k_velocity="20"

@@ -17,7 +17,9 @@
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_joint" >
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
@@ -33,6 +35,5 @@
       </joint>
     </transmission>
   </xacro:macro>
-
 
 </robot>

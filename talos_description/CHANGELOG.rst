@@ -20,6 +20,17 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'as_selective_loading' into 'erbium-devel'
+  Refactoring to allow partial robot loading.
+  See merge request robots/talos_robot!26
+* Add default locomotion state, fix controller configs
+* partial models: launch file renames & refactoring
+* Fix typo in upload_talos.launch
+* Refactoring to allow partial robot loading.
+* Contributors: alexandersherikov
+
 1.0.11 (2018-07-04)
 -------------------
 * Merge branch 'fix_head_vel' into 'erbium-devel'

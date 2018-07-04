@@ -14,6 +14,17 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_selective_loading' into 'erbium-devel'
+  Refactoring to allow partial robot loading.
+  See merge request robots/talos_robot!26
+* Add default locomotion state, fix controller configs
+* Fixed typo in default_controllers.launch
+* partial models: launch file renames & refactoring
+* Refactoring to allow partial robot loading.
+* Contributors: alexandersherikov
+
 1.0.11 (2018-07-04)
 -------------------
 

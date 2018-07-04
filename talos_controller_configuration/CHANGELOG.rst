@@ -14,6 +14,9 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+
 1.0.10 (2018-07-04)
 -------------------
 * 1.0.9

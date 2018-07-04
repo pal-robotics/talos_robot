@@ -20,8 +20,8 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+1.0.11 (2018-07-04)
+-------------------
 * Merge branch 'fix_head_vel' into 'erbium-devel'
   fixed head velocity
   See merge request robots/talos_robot!28

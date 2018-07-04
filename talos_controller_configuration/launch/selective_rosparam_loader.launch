@@ -14,6 +14,15 @@
     <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
   </group>
 
+  <group if="$(eval arg('robot') == 'full_no_grippers')" >
+    <rosparam command="load" file="$(arg prefix)arm_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)arm_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
+  </group>
+
   <group if="$(eval arg('robot') == 'lower_body_torso')" >
     <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
     <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />

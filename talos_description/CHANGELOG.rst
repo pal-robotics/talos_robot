@@ -20,8 +20,8 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+1.0.12 (2018-07-04)
+-------------------
 * Merge branch 'as_selective_loading' into 'erbium-devel'
   Refactoring to allow partial robot loading.
   See merge request robots/talos_robot!26

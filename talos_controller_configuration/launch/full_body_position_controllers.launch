@@ -1,31 +1,9 @@
-<launch>
+<launch deprecated="Use 'position_controllers.launch' instead.">
+  <arg name="robot" default="full_v2" />
+  <arg name="controllers" default="" />
 
-  <arg  name="controllers"
-        default="torso_controller
-                 head_controller
-                 left_arm_controller
-                 right_arm_controller
-                 left_gripper_controller
-                 right_gripper_controller
-                 left_leg_controller
-                 right_leg_controller" />
-
-  <rosparam command="load" file="$(find talos_controller_configuration)/config/joint_trajectory_controllers.yaml" />
-
-  <!-- Spawn upper-body joint trajectory controllers -->
-  <node name="upper_body_controllers_spawner"
-        pkg="controller_manager" type="spawner" output="screen"
-        args="$(arg controllers)" />
-
-  <!-- Point head action -->
-  <group ns="head_controller">
-    <node name="point_head_action" pkg="head_action" type="head_action" output="screen" >
-      <rosparam>
-        pan_link:  head_1_link
-        tilt_link: head_2_link
-        success_angle_threshold: 0.01
-      </rosparam>
-    </node>
-  </group>
-
+  <include file="$(find talos_controller_configuration)/launch/position_controllers.launch">
+    <arg name="robot" value="$(arg robot)" />
+    <arg name="controllers" value="$(arg controllers)" />
+  </include>
 </launch>

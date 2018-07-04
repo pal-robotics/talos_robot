@@ -1,0 +1,74 @@
+<launch>
+  <arg name="robot" default="full_v2" />
+
+  <arg name="controllers" default="" /> <!-- override default controllers -->
+
+  <include file="$(find talos_controller_configuration)/launch/selective_rosparam_loader.launch">
+    <arg name="robot" value="$(arg robot)" />
+    <arg name="prefix" value="$(find talos_controller_configuration)/config/joint_trajectory_controllers/" />
+  </include>
+
+
+  <arg name="upper_body_controllers"
+      value="torso_controller
+          head_controller
+          left_arm_controller
+          right_arm_controller
+          left_gripper_controller
+          right_gripper_controller" />
+
+
+  <!-- Spawn upper-body joint trajectory controllers -->
+  <arg if="$(eval arg('robot') == 'full_v2')"
+      name="controllers_to_load"
+      value="$(arg upper_body_controllers)
+          left_leg_controller
+          right_leg_controller" />
+
+  <arg if="$(eval arg('robot') == 'lower_body_torso')"
+      name="controllers_to_load"
+      value="torso_controller
+          left_leg_controller
+          right_leg_controller" />
+
+  <arg if="$(eval arg('robot') == 'torso_leg_right')"
+      name="controllers_to_load"
+      value="torso_controller
+          right_leg_controller" />
+
+  <arg if="$(eval arg('robot') == 'torso_leg_left')"
+      name="controllers_to_load"
+      value="torso_controller
+          left_leg_controller" />
+
+  <arg if="$(eval arg('robot') == 'upper_body')"
+      name="controllers_to_load"
+      value="$(arg upper_body_controllers)" />
+
+  <arg if="$(eval arg('robot') == 'upper_body_leg_left')"
+      name="controllers_to_load"
+      value="$(arg upper_body_controllers)
+            left_leg_controller" />
+
+  <arg if="$(eval arg('robot') == 'upper_body_leg_right')"
+      name="controllers_to_load"
+      value="$(arg upper_body_controllers)
+          right_leg_controller" />
+
+
+  <arg unless="$(eval arg('controllers') == '')"
+      name="controllers_to_load"
+      value="$(arg controllers)" />
+
+
+  <node name="body_controllers_spawner"
+      pkg="controller_manager" type="spawner" output="screen"
+      args="$(arg controllers_to_load)" />
+
+  <!-- Point head action -->
+  <group if="$(eval 'head' in arg('controllers_to_load'))"
+         ns="head_controller">
+    <node name="point_head_action" pkg="head_action" type="head_action" output="screen" />
+  </group>
+
+</launch>

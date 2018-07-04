@@ -14,6 +14,12 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* 1.0.9
+* Updated changelog
+* Contributors: alexandersherikov
+
 1.0.8 (2018-06-20)
 ------------------
 * Merge branch 'as_fixes' into 'erbium-devel'

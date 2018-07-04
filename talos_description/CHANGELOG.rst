@@ -20,6 +20,21 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'gripper_effort' into 'erbium-devel'
+  added gripper effort support
+  See merge request robots/talos_robot!27
+* added gripper effort support
+* 1.0.9
+* Updated changelog
+* Merge branch 'as_default_configuration' into 'erbium-devel'
+  Added default configuration.
+  See merge request robots/talos_robot!22
+* support different default configuration types.
+* Added default configuration.
+* Contributors: Hilario Tome, alexandersherikov
+
 1.0.8 (2018-06-20)
 ------------------
 

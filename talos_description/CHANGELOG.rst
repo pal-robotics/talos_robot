@@ -20,6 +20,14 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'new_estimator' into 'erbium-devel'
+  Unloader of position controllers, default base pose
+  See merge request robots/talos_robot!29
+* upload: load default floating base poses.
+* Contributors: alexandersherikov
+
 1.0.12 (2018-07-04)
 -------------------
 * Merge branch 'as_selective_loading' into 'erbium-devel'

@@ -43,3 +43,12 @@ zeros:
   leg_right_4_joint:                  0.0
   leg_right_5_joint:                  0.0
   leg_right_6_joint:                  0.0
+
+
+default_floating_base_pose:
+  orientation:
+    x: 0.
+    y: 0.
+    z: 0.
+    w: 1.
+  position: [0., 0., 1.2]

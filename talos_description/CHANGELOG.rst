@@ -20,6 +20,14 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'as_plus_head' into 'erbium-devel'
+  Add head to arm-less configuration
+  See merge request robots/talos_robot!30
+* Add head to arm-less configuration
+* Contributors: alexandersherikov
+
 1.0.13 (2018-07-09)
 -------------------
 * Merge branch 'new_estimator' into 'erbium-devel'

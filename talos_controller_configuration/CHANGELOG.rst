@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_plus_head' into 'erbium-devel'
+  Add head to arm-less configuration
+  See merge request robots/talos_robot!30
+* Add head to arm-less configuration
+* Contributors: alexandersherikov
+
 1.0.13 (2018-07-09)
 -------------------
 

@@ -1,0 +1,29 @@
+<launch>
+    <!-- a subtree, "legs", "arms", "all" -->
+    <arg name="subtree" />
+
+    <arg name="joint_commands_sender" value="$(find talos_controller_configuration)/launch/send_joint_commands.launch" />
+
+    <group unless="$(eval arg('subtree') == 'all' or arg('subtree') == 'arms' or arg('subtree') == 'legs')">
+        <node name="joint_command_sender_$(arg subtree)" pkg="rostopic" type="rostopic" output="screen" required="true"
+            args="pub /$(arg subtree)_controller/command trajectory_msgs/JointTrajectory
+                -1 -f $(find talos_controller_configuration)/utils/$(arg subtree).msg" />
+    </group>
+
+    <group if="$(eval arg('subtree') == 'arms')">
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="right_arm" /> </include>
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="left_arm" /> </include>
+    </group>
+
+    <group if="$(eval arg('subtree') == 'legs')">
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="right_leg" /> </include>
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="left_leg" /> </include>
+    </group>
+
+    <group if="$(eval arg('subtree') == 'all')">
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="arms" /> </include>
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="legs" /> </include>
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="torso" /> </include>
+        <include file="$(arg joint_commands_sender)"> <arg name="subtree" value="head" /> </include>
+    </group>
+</launch>

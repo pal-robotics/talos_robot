@@ -1,7 +1,7 @@
 zeros:
   torso_1_joint:                      0.0
   torso_2_joint:                      0.0
-  head_1_joint:                       0.0
+  head_1_joint:                       0.7
   head_2_joint:                       0.0
   arm_left_1_joint:                     0.3
   arm_left_2_joint:                     0.4

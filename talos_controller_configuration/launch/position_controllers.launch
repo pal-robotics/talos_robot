@@ -31,6 +31,13 @@
           left_leg_controller
           right_leg_controller" />
 
+  <arg if="$(eval arg('robot') == 'lower_body_torso_head')"
+      name="controllers_to_load"
+      value="torso_controller
+          head_controller
+          left_leg_controller
+          right_leg_controller" />
+
   <arg if="$(eval arg('robot') == 'torso_leg_right')"
       name="controllers_to_load"
       value="torso_controller

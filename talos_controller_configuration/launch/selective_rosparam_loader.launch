@@ -23,10 +23,15 @@
     <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
   </group>
 
-  <group if="$(eval arg('robot') == 'lower_body_torso')" >
+  <group if="$(eval arg('robot') == 'lower_body_torso_head')" >
     <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
     <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
     <rosparam command="load" file="$(arg prefix)torso$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'head')" >
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
   </group>
 
   <group if="$(eval arg('robot') == 'torso_leg_right')" >

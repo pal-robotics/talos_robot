@@ -20,6 +20,9 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+
 1.0.14 (2018-07-10)
 -------------------
 * Merge branch 'as_plus_head' into 'erbium-devel'

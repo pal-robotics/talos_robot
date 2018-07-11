@@ -14,6 +14,15 @@ Changelog for package talos_bringup
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'hardware_config' into 'erbium-devel'
+  added hardware config for no arms
+  See merge request robots/talos_robot!31
+* renamed file
+* added hardware config for no arms
+* Contributors: Hilario Tome
+
 1.0.14 (2018-07-10)
 -------------------
 

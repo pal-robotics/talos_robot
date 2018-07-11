@@ -1,9 +1,13 @@
 <launch>
 
+  <arg name="robot" default="full_v2"/> <!--full_v1, full_v2, lower_body-->
+
   <!-- Hardware configuration -->
-  <rosparam command="load" file="$(find talos_bringup)/config/talos_full_hardware.yaml" />
+  <rosparam command="load" file="$(find talos_bringup)/config/talos_$(arg robot)_hardware.yaml" />
   
-  <include file="$(find talos_bringup)/launch/talos_bringup.launch" />
+  <include file="$(find talos_bringup)/launch/talos_bringup.launch">
+     <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Hardware specific bringup -->
   <include file="$(find talos_controller_configuration)/launch/bringup_controllers_hardware.launch" />

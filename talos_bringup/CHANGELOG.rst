@@ -14,6 +14,14 @@ Changelog for package talos_bringup
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_extra_model_loading' into 'erbium-devel'
+  Avoid multiple model loading, split hardware config files.
+  See merge request robots/talos_robot!33
+* Avoid multiple model loading, split hardware config files.
+* Contributors: alexandersherikov
+
 1.0.15 (2018-07-11)
 -------------------
 * Merge branch 'hardware_config' into 'erbium-devel'

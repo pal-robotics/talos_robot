@@ -1,0 +1,10 @@
+imu:
+  base_imu:
+    frame: imu_link
+    raw_data:
+      orientation_port: orientation_base
+      linear_acceleration_port: linear_acceleration_base
+      angular_velocity_port: angular_velocity_base
+    transformation:
+      # [pi, 0, pi/2] (NED -> ENU)
+      orientation_to_enu_frame: [3.14159265358979, 0, 1.57079632679490]

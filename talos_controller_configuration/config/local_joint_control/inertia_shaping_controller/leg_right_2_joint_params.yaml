@@ -11,7 +11,7 @@ ripple_compensation_gain: 0.0
 
 acceleration_differentiator:
   initial_value: 0.
-  order: 5
+  order: 11
   dt: 0.001
   differentiator_type: OneSide
   differentiator_order: FirstOrder
@@ -47,8 +47,21 @@ command_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 100.0
+      cutoff1: 50.0
       cutoff2: 0.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 16.0
+      cutoff2: 21.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 35.0
+      cutoff2: 37.0
+
 
 torque_derivative_filter:
   filter_parameters:

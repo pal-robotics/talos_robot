@@ -14,6 +14,19 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'hardware_tunning' into 'erbium-devel'
+  Hardware tunning
+  See merge request robots/talos_robot!23
+* added parameters for left leg
+* added ripple filter cancelation, and inertia compensation to zero
+* added pid leg 1 joint
+* right leg full initial tunning done
+* right leg 3 5 6 joint tunned
+* added safety parameters
+* Contributors: Hilario Tome
+
 1.0.16 (2018-07-12)
 -------------------
 

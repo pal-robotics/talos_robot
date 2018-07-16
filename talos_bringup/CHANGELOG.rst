@@ -14,6 +14,9 @@ Changelog for package talos_bringup
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+
 1.0.16 (2018-07-12)
 -------------------
 * Merge branch 'as_extra_model_loading' into 'erbium-devel'

@@ -14,8 +14,8 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
-Forthcoming
------------
+1.0.17 (2018-07-16)
+-------------------
 * Merge branch 'hardware_tunning' into 'erbium-devel'
   Hardware tunning
   See merge request robots/talos_robot!23

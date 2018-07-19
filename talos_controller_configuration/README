@@ -1,0 +1,16 @@
+Initialization of joint configurations
+======================================
+
+This package provides some low-level utilities for initialization of joint
+configurations. `utils` subdirectory contains several preformed messages
+`<subtree>.msg` which can be directly sent to the controller of the
+corresponding subtree. These messages can be edited manually as needed for
+specific cases. The messages can be sent in three ways:
+
+1. Using `rostopic` from the command line.
+
+2. Using Makefile in `utils` subfolder: type `make <subtree>` to send commands
+to a subtree, or `make arms`, `make legs`, `make all`.
+
+3. Using `send_joint_commands.launch` launch script, which requires `subtree`
+argument to be set to a certain <subtree>, or any of 'arms', 'legs', 'all'.

@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'moving_support' into 'erbium-devel'
+  Allow no control for head and torso.
+  See merge request robots/talos_robot!34
+* Allow no control for head and torso.
+* Contributors: alexandersherikov
+
 1.0.17 (2018-07-16)
 -------------------
 * Merge branch 'hardware_tunning' into 'erbium-devel'

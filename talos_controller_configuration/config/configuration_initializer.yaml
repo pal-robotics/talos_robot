@@ -1,0 +1,61 @@
+ConfigurationInitializerParameters:
+  control_interval: 0.001
+  max_joint_velocity_factor: 0.05
+  initialize_fixed_joints: true
+  joint_states_topic: /joint_states
+  goal_tolerance:
+    position: 0.1
+    velocity: 0.2
+    acceleration: 2
+    name: ""
+    time_sec: 10
+
+URDFModelParameters:
+  default_configuration_paramserver_prefix: "/zeros"
+  robot_description_parameter: "robot_description"
+  robot_description_parameter_override: "urdf_xml_model"
+  omit_links: []
+  fix_joints: []
+  fix_links_recursive: []
+  kinematic_root_override: ""
+  kinematic_root_override_transform:
+    cols: 4
+    rows: 4
+    data: [1, 0, 0, 0,
+           0, 1, 0, 0,
+           0, 0, 1, 0,
+           0, 0, 0, 0]
+  joint_limit_safety_margin: 0.1
+  joints_reflection: []
+
+CollisionModelParameters:
+  padding: 0
+  links_with_padding: []
+  blacklist:
+    - first: crane_link
+      second: rgbd_link
+    - first: crane_link
+      second: head_2_link
+    - first: crane_link
+      second: head_1_link
+    - first: crane_link
+      second: arm_right_1_link
+    - first: crane_link
+      second: arm_left_1_link
+    - first: crane_link
+      second: arm_right_2_link
+    - first: crane_link
+      second: arm_left_2_link
+    - first: arm_left_5_link
+      second: wrist_left_ft_link
+    - first: arm_right_5_link
+      second: wrist_right_ft_link
+    - first: gripper_right_inner_double_link
+      second: gripper_right_inner_single_link
+    - first: gripper_left_inner_double_link
+      second: gripper_left_inner_single_link
+
+PlanningModelParameters:
+  planning_time_limit: 10.0
+  simplification_time_limit: 0.0
+  validity_checking_resolution: 0.005

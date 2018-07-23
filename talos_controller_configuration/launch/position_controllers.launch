@@ -1,6 +1,13 @@
 <launch>
   <arg name="robot" default="full_v2" />
 
+  <!--
+    If true, shutdown timeout for spawner is set to 1.0 due to this issue:
+      https://github.com/ros-controls/ros_control/issues/195
+  -->
+  <arg name="enable_unloading_workaround" default="false" />
+
+
   <arg name="controllers" default="" /> <!-- override default controllers -->
 
   <include file="$(find talos_controller_configuration)/launch/selective_rosparam_loader.launch">
@@ -19,6 +26,15 @@
 
 
   <!-- Spawn upper-body joint trajectory controllers -->
+  <arg if="$(eval arg('robot') == 'full_no_grippers')"
+      name="controllers_to_load"
+      value="torso_controller
+          head_controller
+          left_arm_controller
+          right_arm_controller
+          left_leg_controller
+          right_leg_controller" />
+
   <arg if="$(eval arg('robot') == 'full_v2')"
       name="controllers_to_load"
       value="$(arg upper_body_controllers)
@@ -68,9 +84,17 @@
       value="$(arg controllers)" />
 
 
+  <arg if="$(arg enable_unloading_workaround)"
+      name="extra_args"
+      value="--shutdown-timeout 1.0" />
+  <arg unless="$(arg enable_unloading_workaround)"
+      name="extra_args"
+      value="" />
+
+
   <node name="body_controllers_spawner"
       pkg="controller_manager" type="spawner" output="screen"
-      args="$(arg controllers_to_load)" />
+      args="$(arg extra_args) $(arg controllers_to_load)" />
 
   <!-- Point head action -->
   <group if="$(eval 'head' in arg('controllers_to_load'))"

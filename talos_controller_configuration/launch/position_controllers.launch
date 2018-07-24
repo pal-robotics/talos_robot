@@ -35,6 +35,11 @@
           left_leg_controller
           right_leg_controller" />
 
+  <arg if="$(eval arg('robot') == 'arm_right')"
+      name="controllers_to_load"
+      value="right_arm_controller
+             right_gripper_controller" />
+
   <arg if="$(eval arg('robot') == 'full_v2')"
       name="controllers_to_load"
       value="$(arg upper_body_controllers)

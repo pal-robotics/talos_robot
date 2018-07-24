@@ -25,7 +25,7 @@ URDFModelParameters:
            0, 1, 0, 0,
            0, 0, 1, 0,
            0, 0, 0, 0]
-  joint_limit_safety_margin: 0.1
+  joint_limit_safety_margin: 0.05
   joints_reflection: []
 
 CollisionModelParameters:

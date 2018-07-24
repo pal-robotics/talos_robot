@@ -20,8 +20,8 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+1.0.20 (2018-07-24)
+-------------------
 * Merge branch 'as_arm_testbench' into 'erbium-devel'
   Configuration files for separate arm_right
   See merge request robots/talos_robot!36

@@ -33,6 +33,11 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
   </group>
 
+  <group if="$(eval arg('robot') == 'arm_right')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
+  </group>
+
   <group if="$(eval arg('robot') == 'lower_body_torso')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />

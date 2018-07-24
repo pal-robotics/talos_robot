@@ -14,6 +14,19 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* configuration_initializer.yaml: adjust safety margin
+* Merge branch 'as_controller_utils' into 'erbium-devel'
+  Added utils/: Makefile to send joint commands
+  See merge request robots/talos_robot!24
+* Workaround for a delay issue in controller spawner.
+* Add configuration_initializer.yaml
+* Added README
+* Add send_joint_commands.launch, install utils
+* Added utils/: Makefile to send joint commands
+* Contributors: alexandersherikov
+
 1.0.18 (2018-07-19)
 -------------------
 * Merge branch 'moving_support' into 'erbium-devel'

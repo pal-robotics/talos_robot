@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_arm_testbench' into 'erbium-devel'
+  Configuration files for separate arm_right
+  See merge request robots/talos_robot!36
+* Configuration files for separate arm_right
+* Contributors: alexandersherikov
+
 1.0.19 (2018-07-24)
 -------------------
 * configuration_initializer.yaml: adjust safety margin

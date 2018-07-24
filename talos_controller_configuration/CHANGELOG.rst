@@ -14,8 +14,8 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
-Forthcoming
------------
+1.0.19 (2018-07-24)
+-------------------
 * configuration_initializer.yaml: adjust safety margin
 * Merge branch 'as_controller_utils' into 'erbium-devel'
   Added utils/: Makefile to send joint commands

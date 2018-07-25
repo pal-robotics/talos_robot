@@ -14,8 +14,8 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
-Forthcoming
------------
+1.0.22 (2018-07-25)
+-------------------
 * Merge branch 'as_configuration_initializer_yaml' into 'erbium-devel'
   configuration_initializer.yaml: additional parameters
   See merge request robots/talos_robot!38

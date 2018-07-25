@@ -9,6 +9,10 @@ ConfigurationInitializerParameters:
     acceleration: 2
     name: ""
     time_sec: 10
+  dispatcher_parameters:
+    dispatcher_waiting_time_sec: 5.0
+    ignore_controller_failure: false
+    wait_joint_not_found: 5.0
 
 URDFModelParameters:
   default_configuration_paramserver_prefix: "/zeros"

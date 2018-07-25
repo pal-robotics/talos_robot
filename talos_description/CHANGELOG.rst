@@ -20,6 +20,14 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'as_limit_fix' into 'erbium-devel'
+  Fix upper limit for arm\_*_4_joint.
+  See merge request robots/talos_robot!37
+* Fix upper limit for arm\_*_4_joint.
+* Contributors: alexandersherikov
+
 1.0.20 (2018-07-24)
 -------------------
 * Merge branch 'as_arm_testbench' into 'erbium-devel'

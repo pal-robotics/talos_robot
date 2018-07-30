@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'wbc_grasp_demo' into 'erbium-devel'
+  Fix local_joint_control no control missing gripers
+  See merge request robots/talos_robot!39
+* Fix local_joint_control no control missing gripers
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.22 (2018-07-25)
 -------------------
 * Merge branch 'as_configuration_initializer_yaml' into 'erbium-devel'

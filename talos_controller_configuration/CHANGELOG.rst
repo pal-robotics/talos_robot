@@ -14,8 +14,8 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
-Forthcoming
------------
+1.0.24 (2018-08-01)
+-------------------
 * Merge branch 'default_controllers' into 'erbium-devel'
   Fix upper_body launch file
   See merge request robots/talos_robot!42

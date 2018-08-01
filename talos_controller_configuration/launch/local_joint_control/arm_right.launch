@@ -32,22 +32,4 @@
     <arg name="joint_name" value="arm_right_4_joint"/>
   </include>
 
-  <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_right_5_joint"/>
-  </include>
-
-  <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_right_6_joint"/>
-  </include>
-
-  <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
-    <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
-    <arg name="ns" value="$(arg ns)"/>
-    <arg name="joint_name" value="arm_right_7_joint"/>
-  </include>
-
 </launch>

@@ -10,7 +10,9 @@
 
   <group if="$(eval arg('robot') == 'full_v2')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
@@ -26,7 +28,9 @@
 
   <group if="$(eval arg('robot') == 'full_no_grippers')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
@@ -35,8 +39,22 @@
 
   <group if="$(eval arg('robot') == 'arm_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
   </group>
+
+  <group if="$(eval arg('robot') == 'upper_arm_right')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'wrist_right')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'gripper_right')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
+  </group>
+
 
   <group if="$(eval arg('robot') == 'lower_body_torso')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
@@ -76,7 +94,9 @@
 
   <group if="$(eval arg('robot') == 'upper_body')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wirst_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />

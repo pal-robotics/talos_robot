@@ -53,15 +53,8 @@ command_filter:
       type: BandReject
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 16.0
-      cutoff2: 21.0
-    - order: 5
-      type: BandReject
-      composition_type: Sequence
-      freq: 1000.0
-      cutoff1: 35.0
-      cutoff2: 37.0
-
+      cutoff1: 7.0
+      cutoff2: 10.0
 
 torque_derivative_filter:
   filter_parameters:

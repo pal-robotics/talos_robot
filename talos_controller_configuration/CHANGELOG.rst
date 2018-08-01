@@ -14,6 +14,23 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'default_controllers' into 'erbium-devel'
+  Fix upper_body launch file
+  See merge request robots/talos_robot!42
+* Merge branch 'arm_hardware' into 'erbium-devel'
+  Arm hardware
+  See merge request robots/talos_robot!41
+* removed shaking but modifing the cutoff filter for joint 1 and 2 of the arm
+* added segmented controllers for wrist
+* added missing params for left arm
+* added gripper safety parameters
+* added safety parameters for right amr
+* Fix upper_body launch file
+* fixed arm and torso actuator parameters
+* Contributors: Adrià Roig, Hilario Tome
+
 1.0.23 (2018-07-30)
 -------------------
 * Merge branch 'wbc_grasp_demo' into 'erbium-devel'

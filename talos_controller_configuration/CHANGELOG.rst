@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'moving_support' into 'erbium-devel'
+  added effort controller configuration
+  See merge request robots/talos_robot!40
+* added effort controller configuration
+* Contributors: Hilario Tome
+
 1.0.24 (2018-08-01)
 -------------------
 * Merge branch 'default_controllers' into 'erbium-devel'

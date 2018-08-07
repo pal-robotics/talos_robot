@@ -1,0 +1,4 @@
+bias_evolution_covariance: 1e-8
+integration_evolution_covariance: 0.1
+velocity_measurement_covariance: 0.5
+dob_bias_gain: 0.8

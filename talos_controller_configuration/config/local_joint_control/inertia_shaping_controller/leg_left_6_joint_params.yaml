@@ -1,6 +1,6 @@
 motor_inertia: 8.45828e-05
 static_friction_gain: 0.0
-viscous_friction_gain: 0.9
+viscous_friction_gain: 0.2
 global_friction_gain: 0.8
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0

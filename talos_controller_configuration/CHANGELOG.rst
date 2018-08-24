@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'tunned_dob' into 'erbium-devel'
+  Tunned dob
+  See merge request robots/talos_robot!44
+* set of parameters working for balancing on real robot
+* Contributors: Hilario Tome
+
 1.0.25 (2018-08-01)
 -------------------
 * Merge branch 'moving_support' into 'erbium-devel'

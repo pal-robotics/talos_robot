@@ -14,8 +14,8 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
-Forthcoming
------------
+1.0.26 (2018-08-24)
+-------------------
 * Merge branch 'tunned_dob' into 'erbium-devel'
   Tunned dob
   See merge request robots/talos_robot!44

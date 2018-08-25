@@ -1,4 +1,4 @@
-motor_inertia: 6.71249e-05
+motor_inertia: 0.000149069
 static_friction_gain: 0.0 #0.1
 viscous_friction_gain: 0.1
 global_friction_gain: 0.9

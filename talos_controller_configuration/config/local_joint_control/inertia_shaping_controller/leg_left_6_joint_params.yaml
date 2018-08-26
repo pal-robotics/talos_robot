@@ -4,6 +4,7 @@ viscous_friction_gain: 0.2
 global_friction_gain: 0.8
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0
+velocity_friction_compensation_tolerance: 1e-2
 
 ripple_phase_offset: 0.0
 ripple_amplitude: 0.0

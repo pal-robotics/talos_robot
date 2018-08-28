@@ -14,6 +14,18 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'dob_on' into 'erbium-devel'
+  Dob on
+  See merge request robots/talos_robot!45
+* changed torque sensor offsets and added dob
+* added velocity tolerance parametes
+* Merge branch 'more_params' of gitlab:robots/talos_robot into tunning
+* modified motor inertias
+* added velocity filtering params
+* Contributors: Hilario Tome
+
 1.0.26 (2018-08-24)
 -------------------
 * Merge branch 'tunned_dob' into 'erbium-devel'

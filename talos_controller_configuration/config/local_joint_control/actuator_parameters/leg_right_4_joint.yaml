@@ -1,5 +1,5 @@
 motor_torque_constant: 0.065
-torque_sensor_offset: 0.0
+torque_sensor_offset: 3.5
 reduction_ratio: 144
 actuator_names:
   - leg_right_4_motor

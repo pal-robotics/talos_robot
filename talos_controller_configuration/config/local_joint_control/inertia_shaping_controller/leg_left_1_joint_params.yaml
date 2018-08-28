@@ -1,9 +1,10 @@
-motor_inertia: 3.16171e-05
+motor_inertia: 8.60398e-05
 static_friction_gain: 0.1
 viscous_friction_gain: 0.3
 global_friction_gain: 0.8
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0
+velocity_friction_compensation_tolerance: 1e-2
 
 ripple_phase_offset: 0.0
 ripple_amplitude: 0.0

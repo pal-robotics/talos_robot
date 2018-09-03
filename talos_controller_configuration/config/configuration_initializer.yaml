@@ -63,3 +63,4 @@ PlanningModelParameters:
   planning_time_limit: 10.0
   simplification_time_limit: 0.0
   validity_checking_resolution: 0.005
+  dist_invalid_start: 0.0

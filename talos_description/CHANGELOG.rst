@@ -20,8 +20,8 @@ Changelog for package talos_description
 * Added default configuration.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+1.0.28 (2018-09-03)
+-------------------
 
 1.0.27 (2018-08-28)
 -------------------

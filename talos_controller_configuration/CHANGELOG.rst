@@ -14,6 +14,14 @@ Changelog for package talos_controller_configuration
 1.0.9 (2018-06-21)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'add-planner-wrapper' into 'erbium-devel'
+  Add new PlanningModelParameters field
+  See merge request robots/talos_robot!46
+* Add new PlanningModelParameters field
+* Contributors: Victor Lopez, alexandersherikov
+
 1.0.27 (2018-08-28)
 -------------------
 * Merge branch 'dob_on' into 'erbium-devel'

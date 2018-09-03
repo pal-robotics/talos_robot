@@ -17,8 +17,8 @@ Changelog for package talos_bringup
 1.0.28 (2018-09-03)
 -------------------
 
-Forthcoming
------------
+1.0.29 (2018-09-03)
+-------------------
 * 1.0.28
 * Updated changelog
 * Contributors: alexandersherikov

@@ -22,6 +22,20 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'tunnin_dob' into 'erbium-devel'
+  increased dob gains
+  See merge request robots/talos_robot!47
+* increased dob gains
+* 1.0.28
+* Updated changelog
+* Merge branch 'add-planner-wrapper' into 'erbium-devel'
+  Add new PlanningModelParameters field
+  See merge request robots/talos_robot!46
+* Add new PlanningModelParameters field
+* Contributors: Hilario Tome, Victor Lopez, alexandersherikov
+
 1.0.27 (2018-08-28)
 -------------------
 * Merge branch 'dob_on' into 'erbium-devel'

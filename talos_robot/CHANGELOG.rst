@@ -14,6 +14,12 @@ Changelog for package talos_robot
 1.0.28 (2018-09-03)
 -------------------
 
+Forthcoming
+-----------
+* 1.0.28
+* Updated changelog
+* Contributors: alexandersherikov
+
 1.0.27 (2018-08-28)
 -------------------
 

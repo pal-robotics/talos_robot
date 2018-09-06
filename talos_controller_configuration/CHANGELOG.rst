@@ -22,8 +22,8 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
-Forthcoming
------------
+1.0.30 (2018-09-06)
+-------------------
 * Merge branch 'as_torso_torque_control' into 'erbium-devel'
   Support for position control for all joints but torso
   See merge request robots/talos_robot!50

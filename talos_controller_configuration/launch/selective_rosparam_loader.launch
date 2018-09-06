@@ -78,4 +78,20 @@
     <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
   </group>
 
+  <group if="$(eval arg('robot') == 'lower_body_head_arms')" >
+    <rosparam command="load" file="$(arg prefix)arm_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)arm_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)gripper_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'lower_body_head')" >
+    <rosparam command="load" file="$(arg prefix)leg_left$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)leg_right$(arg suffix)" />
+    <rosparam command="load" file="$(arg prefix)head$(arg suffix)" />
+  </group>
+
 </launch>

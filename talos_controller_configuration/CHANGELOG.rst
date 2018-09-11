@@ -22,8 +22,8 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
-Forthcoming
------------
+1.0.31 (2018-09-12)
+-------------------
 * Merge branch 'more_params' into 'erbium-devel'
   filter factory
   See merge request robots/talos_robot!51

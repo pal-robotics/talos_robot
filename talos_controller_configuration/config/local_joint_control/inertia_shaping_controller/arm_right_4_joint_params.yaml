@@ -1,7 +1,7 @@
 motor_inertia: 8.60398e-05
 static_friction_gain: 0.0 # 0.5
 viscous_friction_gain: 0.2 # 0.27
-global_friction_gain: 0.8
+global_friction_gain: 1.0
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0
 velocity_friction_compensation_tolerance: 1e-2
@@ -17,13 +17,7 @@ acceleration_differentiator:
   differentiator_type: OneSide
   differentiator_order: FirstOrder
 
-torque_differentiator:
-  initial_value: 0.
-  order: 5
-  dt: 0.001
-  differentiator_type: OneSide
-  differentiator_order: FirstOrder
-
+acceleration_filter_type: ButterworthFilterd
 acceleration_filter:
   filter_parameters:
     - order: 5
@@ -33,6 +27,7 @@ acceleration_filter:
       cutoff1: 50.0
       cutoff2: 0.0
 
+torque_sensor_filter_type: ButterworthFilterd
 torque_sensor_filter:
   filter_parameters:
     - order: 5
@@ -42,6 +37,7 @@ torque_sensor_filter:
       cutoff1: 50.0
       cutoff2: 0.0
 
+command_filter_type: ButterworthFilterd
 command_filter:
   filter_parameters:
     - order: 5
@@ -62,25 +58,6 @@ command_filter:
       freq: 1000.0
       cutoff1: 35.0
       cutoff2: 37.0
-
-
-torque_derivative_filter:
-  filter_parameters:
-    - order: 5
-      type: LowPass
-      composition_type: Sequence
-      freq: 1000.0
-      cutoff1: 100.0
-      cutoff2: 0.0
-
-joint_velocity_filter:
-  filter_parameters:
-    - order: 5
-      type: LowPass
-      composition_type: Sequence
-      freq: 1000.0
-      cutoff1: 100.0
-      cutoff2: 0.0
 
 use_filtered_torque_sensor: true
 use_filtered_acceleration: true

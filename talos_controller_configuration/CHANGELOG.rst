@@ -22,6 +22,19 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'more_params' into 'erbium-devel'
+  filter factory
+  See merge request robots/talos_robot!51
+* filter factory
+* Merge branch 'more_params' into 'erbium-devel'
+  cleanup
+  See merge request robots/talos_robot!49
+* increased friction compensantion gains
+* cleanup
+* Contributors: Hilario Tome
+
 1.0.30 (2018-09-06)
 -------------------
 * Merge branch 'as_torso_torque_control' into 'erbium-devel'

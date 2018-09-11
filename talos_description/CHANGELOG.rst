@@ -23,6 +23,9 @@ Changelog for package talos_description
 1.0.28 (2018-09-03)
 -------------------
 
+Forthcoming
+-----------
+
 1.0.30 (2018-09-06)
 -------------------
 

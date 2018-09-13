@@ -51,6 +51,14 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
   </group>
 
+  <group if="$(eval arg('robot') == 'upper_arm_left')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
+  </group>
+
+  <group if="$(eval arg('robot') == 'wrist_left')" >
+    <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_left.launch" pass_all_args="true" />
+  </group>
+
   <group if="$(eval arg('robot') == 'gripper_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
   </group>

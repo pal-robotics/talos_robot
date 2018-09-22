@@ -1,4 +1,4 @@
-motor_inertia: 0.000195461
+motor_inertia: 8.60398e-05
 acceleration_differentiator_parameters:
   initial_value: 0.
   order: 5
@@ -9,7 +9,7 @@ acceleration_differentiator_parameters:
 observer_filter_type: ButterworthFilterd
 observer_filter_parameters:
   filter_parameters:
-    - order: 3
+    - order: 5
       type: LowPass
       composition_type: Sequence
       
@@ -19,7 +19,7 @@ observer_filter_parameters:
 torque_filter_type: ButterworthFilterd
 torque_filter_parameters:
   filter_parameters:
-    - order: 3
+    - order: 5
       type: LowPass
       composition_type: Sequence
       
@@ -29,7 +29,7 @@ torque_filter_parameters:
 feedback_acceleration_filter_type: ButterworthFilterd
 feedback_acceleration_filter_parameters:
   filter_parameters:
-    - order: 3
+    - order: 5
       type: LowPass
       composition_type: Sequence
       
@@ -39,7 +39,7 @@ feedback_acceleration_filter_parameters:
 torque_derivative_filter_type: ButterworthFilterd
 torque_derivative_filter_parameters:
   filter_parameters:
-    - order: 3
+    - order: 5
       type: LowPass
       composition_type: Sequence
       
@@ -48,6 +48,6 @@ torque_derivative_filter_parameters:
 
 feedback_acceleration_compensation_gain: 0.0
 feedforward_acceleration_gain: 0.0
-torque_feedback_gain: 2.0
+torque_feedback_gain: 0.5
 torque_derivative_feedback_gain: 0.02
-observer_feedback_gain: 0.9
+observer_feedback_gain: 1.0

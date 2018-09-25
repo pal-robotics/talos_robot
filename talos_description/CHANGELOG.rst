@@ -23,6 +23,11 @@ Changelog for package talos_description
 1.0.28 (2018-09-03)
 -------------------
 
+Forthcoming
+-----------
+* Add default rviz config file for talos
+* Contributors: Luca Marchionni
+
 1.0.31 (2018-09-12)
 -------------------
 

@@ -10,7 +10,7 @@ actuators:
     absolute_encoder_position_port: act_abs_position
     torque_sensor_port: act_torque
     temperature_sensor_port: act_temperature
-
+    current_limit_cmd_port: ref_limit_current
 
 e_stop:
   raw_data:

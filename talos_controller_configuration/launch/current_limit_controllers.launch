@@ -1,0 +1,15 @@
+<launch>
+  <rosparam command="load" file="$(find talos_controller_configuration)/config/current_limit_controllers.yaml" />
+
+  <node name="current_limit_controllers_spawner"
+        pkg="controller_manager" type="spawner" output="screen"
+        args="torso_current_limit_controller
+              head_current_limit_controller
+              left_arm_current_limit_controller
+              right_arm_current_limit_controller
+              left_gripper_current_limit_controller
+              right_gripper_current_limit_controller
+              left_leg_current_limit_controller
+              right_leg_current_limit_controller" />
+</launch>
+

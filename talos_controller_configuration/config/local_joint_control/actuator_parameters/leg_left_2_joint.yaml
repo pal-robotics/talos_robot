@@ -1,5 +1,5 @@
 motor_torque_constant: 0.1031
-torque_sensor_offset: 16.0
+torque_sensor_offset: 12.0
 reduction_ratio: 101
 actuator_names:
   - leg_left_2_motor

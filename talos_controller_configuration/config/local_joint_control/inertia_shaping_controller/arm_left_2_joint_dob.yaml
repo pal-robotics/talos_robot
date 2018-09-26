@@ -1,0 +1,6 @@
+bias_evolution_covariance: 0.01
+oscilator_evolution_covariance: 0.01
+measurement_covariance: 10.0
+dob_bias_gain: 0.9
+dob_oscilator_gain: 0.0
+filter_type: ekf

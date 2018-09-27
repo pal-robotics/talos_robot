@@ -22,8 +22,8 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
-Forthcoming
------------
+1.0.33 (2018-09-27)
+-------------------
 * Merge branch 'arm_torque_control' into 'erbium-devel'
   Arm torque control
   See merge request robots/talos_robot!53

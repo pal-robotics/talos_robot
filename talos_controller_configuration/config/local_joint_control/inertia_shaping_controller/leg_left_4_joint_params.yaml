@@ -5,6 +5,7 @@ global_friction_gain: 1.0
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0
 velocity_friction_compensation_tolerance: 1e-2
+feed_forward_acceleration_gain: 1.0
 
 ripple_phase_offset: 0.0
 ripple_amplitude: 0.0
@@ -13,7 +14,7 @@ ripple_compensation_gain: 0.0
 acceleration_differentiator:
   initial_value: 0.
   order: 11
-  dt: 0.001
+  
   differentiator_type: OneSide
   differentiator_order: FirstOrder
 
@@ -23,7 +24,7 @@ acceleration_filter:
     - order: 5
       type: LowPass
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 30.0
       cutoff2: 0.0
 
@@ -33,7 +34,7 @@ torque_sensor_filter:
     - order: 5
       type: LowPass
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 30.0
       cutoff2: 0.0
 
@@ -43,19 +44,19 @@ command_filter:
     - order: 5
       type: LowPass
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 50.0
       cutoff2: 0.0
     - order: 5
       type: BandReject
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 17.0
       cutoff2: 20.0
     - order: 5
       type: BandReject
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 36.0
       cutoff2: 38.0
 

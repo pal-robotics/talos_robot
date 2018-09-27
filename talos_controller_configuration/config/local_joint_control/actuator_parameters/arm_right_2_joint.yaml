@@ -4,4 +4,4 @@ reduction_ratio: 100
 actuator_names:
   - arm_right_2_motor
 check_mode: false
-dt: 0.001
+

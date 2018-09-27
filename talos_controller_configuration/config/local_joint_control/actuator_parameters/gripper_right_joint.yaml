@@ -4,4 +4,4 @@ reduction_ratio: 144
 actuator_names:
   - gripper_right_motor
 check_mode: false
-dt: 0.001
+

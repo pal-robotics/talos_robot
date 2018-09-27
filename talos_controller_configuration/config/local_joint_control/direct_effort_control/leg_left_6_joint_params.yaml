@@ -7,7 +7,7 @@ velocity_filter:
     - order: 5
       type: LowPass
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 50.0
       cutoff2: 0.0
 
@@ -16,6 +16,6 @@ command_filter:
     - order: 5
       type: LowPass
       composition_type: Sequence
-      freq: 1000.0
+      
       cutoff1: 50.0
       cutoff2: 0.0

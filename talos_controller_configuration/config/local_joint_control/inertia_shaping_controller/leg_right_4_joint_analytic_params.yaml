@@ -1,0 +1,53 @@
+motor_inertia: 0.000195461
+acceleration_differentiator_parameters:
+  initial_value: 0.
+  order: 5
+  
+  differentiator_type: OneSide
+  differentiator_order: FirstOrder
+
+observer_filter_type: ButterworthFilterd
+observer_filter_parameters:
+  filter_parameters:
+    - order: 3
+      type: LowPass
+      composition_type: Sequence
+      
+      cutoff1: 30.0
+      cutoff2: 0.0
+
+torque_filter_type: ButterworthFilterd
+torque_filter_parameters:
+  filter_parameters:
+    - order: 3
+      type: LowPass
+      composition_type: Sequence
+      
+      cutoff1: 30.0
+      cutoff2: 0.0
+
+feedback_acceleration_filter_type: ButterworthFilterd
+feedback_acceleration_filter_parameters:
+  filter_parameters:
+    - order: 3
+      type: LowPass
+      composition_type: Sequence
+      
+      cutoff1: 30.0
+      cutoff2: 0.0
+
+torque_derivative_filter_type: ButterworthFilterd
+torque_derivative_filter_parameters:
+  filter_parameters:
+    - order: 3
+      type: LowPass
+      composition_type: Sequence
+      
+      cutoff1: 200.0
+      cutoff2: 0.0
+
+feedback_acceleration_compensation_gain: 0.0
+feedforward_acceleration_gain: 0.0
+torque_feedback_gain: 1.0
+torque_derivative_feedback_gain: 0.02
+observer_feedback_gain: 0.9

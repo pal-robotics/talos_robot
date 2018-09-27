@@ -17,6 +17,9 @@ Changelog for package talos_bringup
 1.0.28 (2018-09-03)
 -------------------
 
+Forthcoming
+-----------
+
 1.0.32 (2018-09-25)
 -------------------
 * Merge branch 'current_limit_controller' into 'erbium-devel'

@@ -22,8 +22,8 @@ Changelog for package talos_controller_configuration
 * Add new PlanningModelParameters field
 * Contributors: Victor Lopez, alexandersherikov
 
-Forthcoming
------------
+1.0.34 (2018-09-28)
+-------------------
 
 1.0.33 (2018-09-27)
 -------------------

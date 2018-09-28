@@ -23,8 +23,8 @@ Changelog for package talos_description
 1.0.28 (2018-09-03)
 -------------------
 
-Forthcoming
------------
+1.0.34 (2018-09-28)
+-------------------
 * Merge branch 'current_limit_controller' into 'erbium-devel'
   Add cfg files for rviz and plotjuggler
   See merge request robots/talos_robot!54

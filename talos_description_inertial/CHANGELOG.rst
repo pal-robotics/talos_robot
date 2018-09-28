@@ -8,6 +8,9 @@ Changelog for package talos_description_inertial
 1.0.28 (2018-09-03)
 -------------------
 
+Forthcoming
+-----------
+
 1.0.33 (2018-09-27)
 -------------------
 

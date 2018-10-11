@@ -10,6 +10,6 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:macro name="arm_1_joint_limits" params="reflect">
-    <limit lower="${(-60.0 - 30.0*reflect)* deg_to_rad}" upper="${(60.0 - 30.0*reflect)* deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
+    <limit lower="${(-55.0 - 30.0*reflect)* deg_to_rad}" upper="${(55.0 - 30.0*reflect)* deg_to_rad}" effort="${arm_1_max_effort}" velocity="${arm_1_max_vel}" />
   </xacro:macro>
 </robot>

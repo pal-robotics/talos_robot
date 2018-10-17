@@ -2,8 +2,8 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.35 (2018-10-17)
+-------------------
 * deleted changelogs
 * Contributors: Hilario Tome
 

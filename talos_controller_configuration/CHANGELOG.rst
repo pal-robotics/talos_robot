@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.35 (2018-10-17)
+-------------------
 * deleted changelogs
 * Merge branch 'head' into 'erbium-devel'
   added open loop parameters

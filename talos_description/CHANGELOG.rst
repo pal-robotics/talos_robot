@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.35 (2018-10-17)
 -------------------
 * deleted changelogs

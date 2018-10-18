@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.36 (2018-10-18)
+-------------------
 * Merge branch 'type_current_limit' into 'erbium-devel'
   fixed type current limit controllers
   See merge request robots/talos_robot!58

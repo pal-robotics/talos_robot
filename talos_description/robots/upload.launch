@@ -21,4 +21,5 @@
       />
 
   <rosparam command="load" file="$(find talos_description)/config/default_configuration_$(arg default_configuration_type).yaml" />
+  <rosparam command="load" file="$(find talos_description)/config/collision_parameters.yaml" />
 </launch>

@@ -2,6 +2,18 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_self_coll_merge_test' into 'erbium-devel'
+  As self coll merge test
+  See merge request robots/talos_robot!61
+* Temporary revert changes in configuration_initializer.yaml
+  This should allow to merge changes without breaking tests.
+* Merge branch 'as_self_coll_merge_test' into as_sim_self_collisions
+* Update collision model parameters.
+* Update collision model parameters.
+* Contributors: alexandersherikov
+
 1.0.36 (2018-10-18)
 -------------------
 * Merge branch 'type_current_limit' into 'erbium-devel'

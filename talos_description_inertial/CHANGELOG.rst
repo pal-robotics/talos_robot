@@ -2,6 +2,11 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_self_coll_merge_test' into as_sim_self_collisions
+* Contributors: alexandersherikov
+
 1.0.36 (2018-10-18)
 -------------------
 

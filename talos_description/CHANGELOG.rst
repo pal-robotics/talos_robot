@@ -2,6 +2,21 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_self_coll_merge_test' into 'erbium-devel'
+  As self coll merge test
+  See merge request robots/talos_robot!61
+* Temporary revert changes in configuration_initializer.yaml
+  This should allow to merge changes without breaking tests.
+* Merge branch 'as_self_coll_merge_test' into as_sim_self_collisions
+* Change format of collision blacklist
+* Update collision model parameters.
+* Added loading of collision parameters.
+* Update collision model parameters.
+* Added loading of collision parameters.
+* Contributors: alexandersherikov
+
 1.0.36 (2018-10-18)
 -------------------
 

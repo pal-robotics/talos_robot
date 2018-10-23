@@ -6,7 +6,7 @@
   <arg name="ns" default=""/>
   <arg name="controller_pkg_name" default="talos_controller_configuration"/>
   <arg name="robot" default="full_v2" />
-
+  <arg name="open_loop" default="false" />
 
   <group if="$(eval arg('robot') == 'full_v2')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />

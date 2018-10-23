@@ -16,6 +16,6 @@
               temperature_sensor_controller
               mode_state_controller" />
 
-  <include file="$(find talos_controller_configuration)/launch/current_limit_controller.launch" />
+  <include file="$(find talos_controller_configuration)/launch/current_limit_controllers.launch" />
 
 </launch>

@@ -2186,4 +2186,3 @@ collision_model_parameters:
         second: wrist_left_ft_tool_link
       - first: wrist_right_ft_tool_link
         second: wrist_right_ft_link
->>>>>>> as_self_coll_merge_test

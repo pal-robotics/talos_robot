@@ -14,6 +14,34 @@ ConfigurationInitializerParameters:
     ignore_controller_failure: false
     wait_joint_not_found: 5.0
 
+# Should be deleted
+CollisionModelParameters:
+  padding: 0
+  links_with_padding: []
+  blacklist:
+    - first: crane_link
+      second: rgbd_link
+    - first: crane_link
+      second: head_2_link
+    - first: crane_link
+      second: head_1_link
+    - first: crane_link
+      second: arm_right_1_link
+    - first: crane_link
+      second: arm_left_1_link
+    - first: crane_link
+      second: arm_right_2_link
+    - first: crane_link
+      second: arm_left_2_link
+    - first: arm_left_5_link
+      second: wrist_left_ft_link
+    - first: arm_right_5_link
+      second: wrist_right_ft_link
+    - first: gripper_right_inner_double_link
+      second: gripper_right_inner_single_link
+    - first: gripper_left_inner_double_link
+      second: gripper_left_inner_single_link
+
 URDFModelParameters:
   default_configuration_paramserver_prefix: "/zeros"
   robot_description_parameter: "robot_description"

@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_extend_blacklist' into 'erbium-devel'
+  Collision blacklisting: wrists, sensors, grippers
+  See merge request robots/talos_robot!62
+* Collision blacklisting: wrists, sensors, grippers
+* Contributors: alexandersherikov
+
 1.0.37 (2018-10-23)
 -------------------
 * Merge branch 'as_self_coll_merge_test' into 'erbium-devel'

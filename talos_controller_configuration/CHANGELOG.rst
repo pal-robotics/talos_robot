@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.37 (2018-10-23)
 -------------------
 * Merge branch 'as_self_coll_merge_test' into 'erbium-devel'

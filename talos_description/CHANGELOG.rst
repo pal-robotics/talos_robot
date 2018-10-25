@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.38 (2018-10-24)
 -------------------
 * Merge branch 'as_extend_blacklist' into 'erbium-devel'

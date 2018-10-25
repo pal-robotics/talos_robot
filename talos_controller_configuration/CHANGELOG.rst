@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_drop_deprecated_cfg' into 'erbium-devel'
+  Drop deprecated CollisionModelParameters
+  See merge request robots/talos_robot!63
+* Drop deprecated CollisionModelParameters
+* Contributors: alexandersherikov
+
 1.0.38 (2018-10-24)
 -------------------
 

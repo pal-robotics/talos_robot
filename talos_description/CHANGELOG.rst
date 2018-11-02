@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.40 (2018-11-02)
+-------------------
 * Merge branch 'as_arm_base_rename' into 'erbium-devel'
   Rename base link of detached arm
   See merge request robots/talos_robot!64

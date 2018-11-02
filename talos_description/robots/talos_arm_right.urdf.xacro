@@ -23,7 +23,7 @@
   <!--************************-->
   <!--     FAKE BASE_LINK     -->
   <!--************************-->
-  <link name="base_link">
+  <link name="arm_base_link">
     <inertial>
       <origin xyz="0.0 0.0 0.0" rpy="0.00000 0.00000 0.00000"/>
       <mass value="1000.0"/>
@@ -55,7 +55,7 @@
   </material>
 
 
-  <xacro:talos_arm name="arm" parent="base_link" side="right" reflect="-1" />
+  <xacro:talos_arm name="arm" parent="arm_base_link" side="right" reflect="-1" />
   <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1"  />
   <xacro:talos_gripper name="gripper_right" parent="wrist_right_ft_tool_link" reflect="-1" />
 

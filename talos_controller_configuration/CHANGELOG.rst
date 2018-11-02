@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.39 (2018-10-25)
 -------------------
 * Merge branch 'as_drop_deprecated_cfg' into 'erbium-devel'

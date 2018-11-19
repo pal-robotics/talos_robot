@@ -18,6 +18,7 @@ URDFModelParameters:
   default_configuration_paramserver_prefix: "/zeros"
   robot_description_parameter: "robot_description"
   robot_description_parameter_override: "urdf_xml_model"
+  exclusive_tips: []
   omit_links: []
   fix_joints: []
   fix_links_recursive: []

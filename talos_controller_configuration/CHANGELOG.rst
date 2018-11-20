@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.41 (2018-11-20)
+-------------------
 * Merge branch 'as_param_fix' into 'erbium-devel'
   Update PlanningModelParameters in configuration_initializer.yaml
   See merge request robots/talos_robot!67

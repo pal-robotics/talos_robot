@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'as_partial_tree' into 'erbium-devel'
+  Update URDFModelParameters (configuration_initializer.yaml)
+  See merge request robots/talos_robot!66
+* Update URDFModelParameters (configuration_initializer.yaml)
+* Contributors: alexandersherikov
+
 1.0.41 (2018-11-20)
 -------------------
 * Merge branch 'as_param_fix' into 'erbium-devel'

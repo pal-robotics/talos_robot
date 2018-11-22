@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.43 (2018-11-22)
+-------------------
 * Load params for v1 too
 * Contributors: Jordan Palacios
 

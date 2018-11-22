@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Load params for v1 too
+* Contributors: Jordan Palacios
+
 1.0.42 (2018-11-21)
 -------------------
 * Merge branch 'as_partial_tree' into 'erbium-devel'

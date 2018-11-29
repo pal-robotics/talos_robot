@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.44 (2018-11-29)
+-------------------
 * Merge branch 'as_safety' into 'erbium-devel'
   Add default_safety_parameters.yaml
   See merge request robots/talos_robot!65

@@ -1,5 +1,0 @@
-max_position: 0.7
-min_position: -1.5
-max_velocity: 6.0
-max_torque: 100.0
-enable_safety: true

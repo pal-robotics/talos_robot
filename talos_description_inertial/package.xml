@@ -2,7 +2,7 @@
 <package format="2">
 
   <name>talos_description_inertial</name>
-  <version>1.0.44</version>
+  <version>1.0.45</version>
   <description>Inertial parameters of talos</description>
   <maintainer email="alexander.sherikov@pal-robotics.com">Alexander Sherikov</maintainer>
   <license>Creative Commons BY-NC-ND 3.0</license>

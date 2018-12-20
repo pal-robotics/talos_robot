@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>talos_robot</name>
-  <version>1.0.44</version>
+  <version>1.0.45</version>
   <description>Description and launch files for the TOR robot</description>
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>
   <license>Propietary</license>

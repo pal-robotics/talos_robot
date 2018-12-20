@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>talos_description</name>
-  <version>1.0.44</version>
+  <version>1.0.45</version>
   <description>The talos_description package</description>
 
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>

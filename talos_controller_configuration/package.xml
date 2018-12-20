@@ -18,11 +18,6 @@
   <run_depend>walking_controller</run_depend>
   <run_depend>walking_utils</run_depend>
   <run_depend>head_action</run_depend>
-  <run_depend>pal_transmissions</run_depend>
-  <run_depend>reemc_init_offset_controller</run_depend>
-  <run_depend>joint_torque_sensor_state_controller</run_depend>
-  <run_depend>temperature_sensor_controller</run_depend>
-  <run_depend>mode_state_controller</run_depend>
   <run_depend>current_limit_controller</run_depend>
 
   <export>

@@ -13,14 +13,13 @@
   <run_depend>talos_controller_configuration</run_depend>
   <run_depend>talos_description</run_depend>
   <run_depend>robot_state_publisher</run_depend>
-  <run_depend>tf_lookup</run_depend>
   <run_depend>twist_mux</run_depend>
   <run_depend>joy</run_depend>
   <run_depend>joy_teleop</run_depend>
   <run_depend>play_motion</run_depend>
   <run_depend>talos_moveit_config</run_depend>
-  
+
   <export>
   </export>
-  
+
 </package>

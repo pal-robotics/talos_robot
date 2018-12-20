@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'move-dependencies' into 'erbium-devel'
+  Move dependencies to other packages for public packages
+  See merge request robots/talos_robot!68
+* Move dependencies to other packages for public packages
+* Contributors: Victor Lopez
+
 1.0.44 (2018-11-29)
 -------------------
 * Merge branch 'as_safety' into 'erbium-devel'

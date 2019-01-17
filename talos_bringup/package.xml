@@ -6,7 +6,7 @@
 
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
 
-  <license>Proprietary</license>
+  <license>LGPL-3.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

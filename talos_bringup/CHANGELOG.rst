@@ -2,6 +2,11 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Change license to LGPL-3.0
+* Contributors: Victor Lopez
+
 1.0.45 (2018-12-20)
 -------------------
 * Merge branch 'move-dependencies' into 'erbium-devel'

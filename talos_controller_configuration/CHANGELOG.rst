@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'walk_pose' into 'erbium-devel'
+  Update walk pose params format
+  See merge request robots/talos_robot!69
+* Update walk pose params format
+* Change license to LGPL-3.0
+* Contributors: Adrià Roig, Hilario Tome, Victor Lopez
+
 1.0.45 (2018-12-20)
 -------------------
 * Merge branch 'move-dependencies' into 'erbium-devel'

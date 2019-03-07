@@ -1,7 +1,11 @@
+motor_inertia: 0.000207288
 motor_torque_constant: 0.1031
 torque_sensor_offset: 0.0
 reduction_ratio: 100
 actuator_names:
   - torso_2_motor
 check_mode: false
-
+static_friction: 0.1
+viscous_friction: 0.5
+joint_elasticity: 10000.0
+joint_elasticity_damping: -20.

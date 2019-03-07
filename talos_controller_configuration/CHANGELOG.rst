@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.46 (2019-03-07)
+-------------------
 * Merge branch 'walk_pose' into 'erbium-devel'
   Update walk pose params format
   See merge request robots/talos_robot!69

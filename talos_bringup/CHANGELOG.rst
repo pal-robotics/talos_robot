@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.46 (2019-03-07)
+-------------------
 * Change license to LGPL-3.0
 * Contributors: Victor Lopez
 

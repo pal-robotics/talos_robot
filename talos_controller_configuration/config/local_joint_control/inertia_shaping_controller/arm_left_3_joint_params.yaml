@@ -1,3 +1,5 @@
+static_friction_gain: 0.0 # 0.5
+viscous_friction_gain: 0.2 # 0.27
 global_friction_gain: 1.0
 inertia_compensation_gain: 0.0
 torque_derivative_feedback_gain: 0.0

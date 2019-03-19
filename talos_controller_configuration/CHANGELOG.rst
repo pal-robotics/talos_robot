@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.47 (2019-03-19)
+-------------------
 * Merge branch 'actuator_simulation' into 'erbium-devel'
   working simulator with actuators and torque control on the lower body of talos
   See merge request robots/talos_robot!70

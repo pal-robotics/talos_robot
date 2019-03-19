@@ -2,6 +2,16 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'actuator_simulation' into 'erbium-devel'
+  working simulator with actuators and torque control on the lower body of talos
+  See merge request robots/talos_robot!70
+* added missing gripper actuator parameters
+* added missing actuator parameters:
+* working simulator with actuators and torque control on the lower body of talos
+* Contributors: Hilario Tome
+
 1.0.46 (2019-03-07)
 -------------------
 * Merge branch 'walk_pose' into 'erbium-devel'

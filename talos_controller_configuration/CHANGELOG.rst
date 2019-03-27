@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'reenabled_safety' into 'erbium-devel'
+  reenabled safety
+  See merge request robots/talos_robot!71
+* reenabled safety
+* Contributors: Hilario Tome
+
 1.0.47 (2019-03-19)
 -------------------
 * Merge branch 'actuator_simulation' into 'erbium-devel'

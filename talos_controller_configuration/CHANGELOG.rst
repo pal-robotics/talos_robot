@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added head
+* Merge branch 'head_hal_differential' into 'erbium-devel'
+  added head config files
+  See merge request robots/talos_robot!72
+* added head config files
+* Contributors: Hilario Tome
+
 1.0.48 (2019-03-27)
 -------------------
 * Merge branch 'reenabled_safety' into 'erbium-devel'

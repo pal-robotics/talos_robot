@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.49 (2019-05-30)
+-------------------
 * added head
 * Merge branch 'head_hal_differential' into 'erbium-devel'
   added head config files

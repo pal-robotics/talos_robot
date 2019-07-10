@@ -7,11 +7,13 @@
   <arg name="controller_pkg_name" default="talos_controller_configuration"/>
   <arg name="robot" default=""/>
   <arg name="open_loop" default="false" />
+  <arg name="enable_safety_override" default="false" />
 
   <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="gripper_right_joint"/>
+    <arg name="enable_safety_override" value="$(arg enable_safety_override)"/>
   </include> 
 
 </launch>

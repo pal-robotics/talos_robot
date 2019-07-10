@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'stance_actuators_test' into 'erbium-devel'
+  Stance actuators test
+  See merge request robots/talos_robot!74
+* standing test launches
+* Contributors: Hilario Tome
+
 1.0.49 (2019-05-30)
 -------------------
 * added head

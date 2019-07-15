@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.51 (2019-07-15)
+-------------------
 * Merge branch 'stance_actuators_test' into 'erbium-devel'
   changed definitiion of safety override
   See merge request robots/talos_robot!75

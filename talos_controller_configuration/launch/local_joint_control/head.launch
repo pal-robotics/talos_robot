@@ -7,14 +7,14 @@
   <arg name="controller_pkg_name" default="talos_controller_configuration"/>
   <arg name="robot" default=""/>
   <arg name="open_loop" default="false" />
-  <arg name="enable_safety_override" default="false" />
+  <arg name="safety_override" default="" />
 
   <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="head_1_joint"/>
     <arg name="open_loop" value="$(arg open_loop)"/>
-    <arg name="enable_safety_override" value="$(arg enable_safety_override)"/>
+    <arg name="safety_override" value="$(arg safety_override)"/>
   </include> 
 
   <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
@@ -22,7 +22,7 @@
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="head_2_joint"/>
     <arg name="open_loop" value="$(arg open_loop)"/>
-    <arg name="enable_safety_override" value="$(arg enable_safety_override)"/>
+    <arg name="safety_override" value="$(arg safety_override)"/>
   </include> 
 
 </launch>

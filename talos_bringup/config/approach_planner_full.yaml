@@ -4,6 +4,9 @@ approach_planner:
     - right_arm
     - torso
     - both_arms_torso
+    - left_leg
+    - right_leg
+    - both_legs
 
   exclude_from_planning_joints:
     - head_1_joint

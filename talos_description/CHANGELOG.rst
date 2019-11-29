@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'new_effort' into 'erbium-devel'
+  Increase max effort for the knees
+  See merge request robots/talos_robot!80
+* Increase max effort for the knees
+* Contributors: Adria Roig, Jordan Palacios
+
 1.0.51 (2019-07-15)
 -------------------
 

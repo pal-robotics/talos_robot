@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_legs_to_play_motion' into 'erbium-devel'
+  add move groups for legs
+  See merge request robots/talos_robot!78
+* add move groups for legs
+* Contributors: Luca Marchionni
+
 1.0.51 (2019-07-15)
 -------------------
 

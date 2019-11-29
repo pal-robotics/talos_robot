@@ -135,7 +135,7 @@
       <origin xyz="0.00000 0.00000 -0.38000"
               rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
       <axis xyz="0 1 0" />
-      <limit lower="0" upper="2.618" effort="300" velocity="7" />
+      <limit lower="0" upper="2.618" effort="400" velocity="7" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
 

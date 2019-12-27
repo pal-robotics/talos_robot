@@ -2,6 +2,7 @@
 
   <!-- Walking controller configuration -->
   <rosparam command="load" file="$(find talos_controller_configuration)/config/walking_params.yaml" ns="walking_controller" />
+  <rosparam command="load" file="$(find talos_controller_configuration)/config/walking_specific_params.yaml" />
   <rosparam command="load" file="$(find talos_controller_configuration)/config/walking_controller.yaml" />
   <rosparam command="load" file="$(find talos_controller_configuration)/config/offsets.yaml" ns="walking_controller/offsets" />
   

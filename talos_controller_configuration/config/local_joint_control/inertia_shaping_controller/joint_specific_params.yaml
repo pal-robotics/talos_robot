@@ -1,0 +1,11 @@
+## Follow the following format to set the robot specific parameters to each joint
+
+# leg_right_5_joint:
+#   controller_params:
+#     ripple_phase_offset: 0.0
+#     ripple_amplitude: 0.0
+#     ripple_compensation_gain: 0.0
+
+#     acceleration_differentiator:
+#       initial_value: 0.
+#       order: 11

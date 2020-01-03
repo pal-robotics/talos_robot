@@ -27,7 +27,7 @@
   <xacro:include filename="$(find talos_description)/urdf/sensors/orbbec_astra_pro.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="orbbec_astra_pro" params="name parent *origin *optical_origin">
+  <xacro:macro name="orbbec_astra_pro" params="name parent *origin *optical_origin disable_gazebo:=false">
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
@@ -102,8 +102,10 @@
 
     <link name="${name}_rgb_optical_frame"/>
 
-    <!-- extensions -->
-    <xacro:orbbec_astra_pro_rgbd_camera_gazebo name="${name}" />
+    <xacro:unless value="${disable_gazebo}">
+      <!-- extensions -->
+      <xacro:orbbec_astra_pro_rgbd_camera_gazebo name="${name}" />
+    </xacro:unless>
 
   </xacro:macro>
 

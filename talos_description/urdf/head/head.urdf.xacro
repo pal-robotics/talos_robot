@@ -130,10 +130,10 @@
 
   </xacro:macro>
 
-  <xacro:macro name="talos_head" params="name parent">
+  <xacro:macro name="talos_head" params="name parent disable_gazebo_camera:=false">
     <xacro:talos_head_1 name="${name}_1" parent="${parent}" />
     <xacro:talos_head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2">
+    <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2" disable_gazebo="${disable_gazebo_camera}">
       <!-- Pose of sensor frame wrt to base -->
       <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
       <!-- Pose of optical frame wrt to sensor -->

@@ -113,6 +113,8 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
   </group>
 
-  <rosparam command="load" ns="$(eval arg('robot_joint_specific_ns'))" file="$(eval find(arg('controller_pkg_name')) + '/config/local_joint_control/actuator_parameters/actuator_parameters_specific_params.yaml')" />
+  <!-- specifics configuration -->
+  <arg name="specific_file_path" value="$(eval optenv(arg('controller_pkg_name') + '_specifics_path', find(arg('controller_pkg_name'))))"/>
+  <rosparam command="load" ns="$(eval arg('robot_joint_specific_ns'))" file="$(eval arg('specific_file_path') + '/config/local_joint_control/actuator_parameters/actuator_parameters_specific_params.yaml')" />
 
 </launch>

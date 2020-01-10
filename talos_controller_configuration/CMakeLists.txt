@@ -10,6 +10,10 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
+install(PROGRAMS scripts/joints_to_control.sh
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
 foreach(dir config launch utils)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})

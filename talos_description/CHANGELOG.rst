@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'disable_gazebo_camera' into 'erbium-devel'
+  added option to disable the gazebo camera plugin
+  See merge request robots/talos_robot!83
+* added option to disable the gazebo camera plugin
+* Contributors: Sai Kishor Kothakota, Victor Lopez
+
 1.0.52 (2019-11-29)
 -------------------
 * Merge branch 'new_effort' into 'erbium-devel'

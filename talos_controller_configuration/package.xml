@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>talos_controller_configuration</name>
-  <version>1.0.52</version>
+  <version>1.1.0</version>
   <description>The talos_controller_configuration package</description>
 
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>

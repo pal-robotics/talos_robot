@@ -32,7 +32,7 @@
     <xacro:crane parent="torso_2_link"/>
   </xacro:if>
 
-  <xacro:talos_head name="head" parent="torso_2_link"/>
+  <xacro:talos_head name="head" parent="torso_2_link" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
 
   <xacro:talos_arm name="arm" parent="torso_2_link" side="left" reflect="1"/>
   <xacro:talos_arm name="arm" parent="torso_2_link" side="right" reflect="-1"/>

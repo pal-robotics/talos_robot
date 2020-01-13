@@ -21,15 +21,11 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_left wrist_left arm_right wrist_right gripper_left gripper_right leg_left leg_right head torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'grippers')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) gripper_left gripper_right"/>
   </group>
 
   <group if="$(eval arg('robot') == 'full_no_grippers')" >
@@ -41,46 +37,32 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_left wrist_left arm_right wrist_right leg_left leg_right head torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'arm_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_right wrist_right gripper_right"/>
   </group>
 
   <group if="$(eval arg('robot') == 'upper_arm_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_right"/>
   </group>
 
   <group if="$(eval arg('robot') == 'wrist_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) wrist_right "/>
   </group>
 
   <group if="$(eval arg('robot') == 'upper_arm_left')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_left"/>
   </group>
 
   <group if="$(eval arg('robot') == 'wrist_left')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/wrist_left.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) wrist_left"/>
   </group>
 
   <group if="$(eval arg('robot') == 'gripper_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) gripper_right"/>
   </group>
 
 
@@ -88,8 +70,6 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) leg_left leg_right torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'lower_body_torso_head')" >
@@ -97,41 +77,29 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) leg_left leg_right head torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'lower_body')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) leg_left leg_right"/>
   </group>
 
   <group if="$(eval arg('robot') == 'head')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) head"/>
   </group>
 
   <group if="$(eval arg('robot') == 'torso')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'torso_leg_right')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) leg_right torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'torso_leg_left')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/leg_left.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) leg_left torso"/>
   </group>
 
   <group if="$(eval arg('robot') == 'upper_body')" >
@@ -143,8 +111,6 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/gripper_right.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
-    <node name="talos_joints_to_control_$(arg robot)" pkg="talos_controller_configuration" type="joints_to_control.sh" output="screen" 
-      args="$(arg ns) arm_left wrist_left arm_right wrist_right gripper_left gripper_right head torso"/>
   </group>
 
   <!-- specifics configuration -->

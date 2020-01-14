@@ -8,6 +8,7 @@
   <arg name="robot" default="full_v2" />
   <arg name="open_loop" default="false" />
   <arg name="safety_override" default="false" />
+  <arg name="robot_joint_specific_ns" value="$(eval arg('ns') + '/joints/')"/>
 
   <group if="$(eval arg('robot') == 'full_v2')" >
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/arm_left.launch" pass_all_args="true" />
@@ -111,5 +112,9 @@
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/head.launch" pass_all_args="true" />
     <include file="$(find talos_controller_configuration)/launch/local_joint_control/torso.launch" pass_all_args="true" />
   </group>
+
+  <!-- specifics configuration -->
+  <arg name="specific_file_path" value="$(eval optenv(arg('controller_pkg_name') + '_specifics_path', find(arg('controller_pkg_name'))))"/>
+  <rosparam command="load" ns="$(eval arg('robot_joint_specific_ns'))" file="$(eval arg('specific_file_path') + '/config/local_joint_control/actuator_parameters/actuator_parameters_specific_params.yaml')" />
 
 </launch>

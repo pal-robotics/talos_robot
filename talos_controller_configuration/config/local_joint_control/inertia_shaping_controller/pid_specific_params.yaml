@@ -1,0 +1,6 @@
+## Follow the following format to set the robot specific parameters to each joint
+
+# leg_right_5_joint:
+#   pid:
+#     p: 0.0
+#     i: 0.0

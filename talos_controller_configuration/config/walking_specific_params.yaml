@@ -1,0 +1,8 @@
+# walking_controller:
+#    biped_controller:
+#       z_lipm: 1.05
+
+#    com_stabilizer:
+#       ds_x_p: 0.5
+#       ds_y_p: 0.5
+#       foot_offset_clamp: 0.03

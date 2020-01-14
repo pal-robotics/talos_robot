@@ -1,0 +1,8 @@
+## Follow the following format to set the robot specific parameters to each joint
+
+# leg_right_5_joint:
+#   controller_params:
+#     acceleration_differentiator_parameters:
+#       initial_value: 0.
+#       order: 5
+#       differentiator_type: OneSide

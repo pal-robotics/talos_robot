@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'more_refactor' into 'erbium-devel'
+  remove default safety info from specifics params
+  See merge request robots/talos_robot!84
+* remove default safety info from specifics params
+* Contributors: Sai Kishor Kothakota
+
 1.1.1 (2020-01-14)
 ------------------
 * Merge branch 'specifics_refactor' into 'erbium-devel'

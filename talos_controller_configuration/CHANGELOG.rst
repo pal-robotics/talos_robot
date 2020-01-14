@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.1 (2020-01-14)
+------------------
 * Merge branch 'specifics_refactor' into 'erbium-devel'
   added changes to choose the specifics yamls
   See merge request robots/talos_robot!82

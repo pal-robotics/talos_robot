@@ -2,6 +2,21 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'specifics_refactor' into 'erbium-devel'
+  added changes to choose the specifics yamls
+  See merge request robots/talos_robot!82
+* Revert "added joints to control script"
+  This reverts commit a73220e081a42dcb94a5742feab0fba07c9944cc.
+* added joints to control script
+* renamed walking offsets yaml to walking_specific_params.yaml
+* added optenv based specific_file_path argument
+* added actuator_safety_specific_params file
+* added specific configuration of inertia shaping control
+* added changes to choose the specifics yamls
+* Contributors: Jordan Palacios, Sai Kishor Kothakota
+
 1.1.0 (2020-01-10)
 ------------------
 

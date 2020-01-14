@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.0 (2020-01-10)
 ------------------
 * Merge branch 'disable_gazebo_camera' into 'erbium-devel'

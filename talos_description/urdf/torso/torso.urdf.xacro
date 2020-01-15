@@ -30,15 +30,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_2.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/torso_2.dae" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_2_collision.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/torso_2_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -53,15 +52,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_1.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/torso_1.dae" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_1.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/torso_1.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -92,15 +90,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/base_link.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/base_link.dae" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/torso/base_link_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -130,14 +127,17 @@
     <gazebo reference="${name}_1_link">
         <mu1>0.9</mu1>
         <mu2>0.9</mu2>
+        <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="${name}_2_link">
         <mu1>0.9</mu1>
         <mu2>0.9</mu2>
+        <material>Gazebo/White</material>
     </gazebo>
     <gazebo reference="base_link">
         <mu1>0.9</mu1>
         <mu2>0.9</mu2>
+        <material>Gazebo/White</material>
     </gazebo>
 
     <gazebo reference="${name}_1_joint">

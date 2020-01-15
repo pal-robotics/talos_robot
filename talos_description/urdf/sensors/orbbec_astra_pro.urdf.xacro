@@ -44,11 +44,8 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/sensors/orbbec/orbbec.STL" />
+          <mesh filename="package://talos_description/meshes/sensors/orbbec/orbbec.dae" />
         </geometry>
-        <material name="DarkGrey">
-          <color rgba="0.5 0.5 0.5 1"/>
-        </material>
       </visual>
       <collision>
         <origin xyz="-0.01 0.0025 0" rpy="0 0 0"/>

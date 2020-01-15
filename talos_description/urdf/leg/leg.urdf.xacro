@@ -21,15 +21,15 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Black" />
       </visual>
 
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-           <mesh filename="package://talos_description/meshes/v2/hip_z_collision.stl" scale="1 ${reflect*1} 1"/>
+           <mesh filename="package://talos_description/meshes/v2/hip_z_collision.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>
     </link>
@@ -53,15 +53,15 @@
       <visual>
         <origin xyz="0 0 0.0" rpy="0  0  0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Black" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0.0" rpy="0  0  0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_x_collision.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_x_collision.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>
     </link>
@@ -84,15 +84,15 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Black" />
       </visual>
 
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-           <mesh filename="package://talos_description/meshes/v2/hip_y_collision.stl" scale="1 ${reflect*1} 1"/>
+           <mesh filename="package://talos_description/meshes/v2/hip_y_collision.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>
     </link>
@@ -115,15 +115,15 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/knee_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/knee_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Black" />
       </visual>
 
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-           <mesh filename="package://talos_description/meshes/v2/knee_collision.stl" scale="1 ${reflect*1} 1"/>
+           <mesh filename="package://talos_description/meshes/v2/knee_collision.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>
     </link>
@@ -148,15 +148,15 @@
       <visual>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="Grey" />
+        <material name="White" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
       </collision>
     </link>
@@ -179,9 +179,9 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.dae" scale="1 ${reflect*1} 1"/>
         </geometry>
-        <material name="Grey" />
+        <material name="White" />
       </visual>
 
       <xacro:talos_foot_collision />

@@ -32,15 +32,15 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_1.stl" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/head/head_1.dae" scale="1 1 1"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="Black" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_1_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/head/head_1_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -86,15 +86,15 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_2.stl" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/head/head_2.dae" scale="1 1 1"/>
         </geometry>
-        <material name="LightGrey" />
+        <material name="White" />
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_2_collision.stl" scale="1 1 1"/>
+          <mesh filename="package://talos_description/meshes/head/head_2_collision.dae" scale="1 1 1"/>
         </geometry>
       </collision>
     </link>
@@ -116,17 +116,11 @@
     <gazebo reference="${name}_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
+      <material>Gazebo/White</material>
     </gazebo>
-
     <gazebo reference="${name}_joint">
        <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
-
-
-    <gazebo reference="${name}_link">
-      <material>Gazebo/White</material>
-    </gazebo>
-
 
   </xacro:macro>
 

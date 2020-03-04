@@ -21,4 +21,6 @@
     <!-- Pre-recorded motions executor -->
   <include file="$(find talos_bringup)/launch/play_motion.launch" />
 
+  <include file="$(find talos_bringup)/launch/talos_bringup_addons.launch" />
+
 </launch>

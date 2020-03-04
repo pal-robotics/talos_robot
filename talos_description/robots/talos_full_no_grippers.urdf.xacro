@@ -43,6 +43,9 @@
   <xacro:talos_leg prefix="left"  reflect="1" />
   <xacro:talos_leg prefix="right" reflect="-1" />
 
+  <!-- Macro to have the add-on links specific to each TALOS -->
+  <xacro:talos_addons />
+
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find talos_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->

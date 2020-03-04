@@ -23,6 +23,7 @@
   <xacro:include filename="$(find talos_description_inertial)/urdf/inertial.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/torso/torso.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/head/head.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/extras/add_ons.urdf.xacro" />
 
   <!--************************-->
   <!--        BASE_LINK       -->
@@ -38,6 +39,9 @@
   <xacro:if value="$(arg enable_crane)">
     <xacro:crane parent="torso_2_link"/>
   </xacro:if>
+
+  <!-- Macro to have the add-on links specific to each TALOS -->
+  <xacro:talos_addons />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find talos_description)/gazebo/gazebo.urdf.xacro" />

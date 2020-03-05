@@ -23,7 +23,7 @@
   <xacro:include filename="$(find talos_description_inertial)/urdf/inertial.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/torso/torso.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/head/head.urdf.xacro" />
-  <xacro:include filename="$(find talos_description)/urdf/extras/add_ons.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/extras/addons.urdf.xacro" />
 
   <!--************************-->
   <!--        BASE_LINK       -->

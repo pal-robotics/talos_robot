@@ -17,6 +17,7 @@
   <xacro:include filename="$(find talos_description)/urdf/leg/leg.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/foot_collision_$(arg foot_collision).urdf.xacro" />
   <xacro:include filename="$(find talos_description_inertial)/urdf/inertial.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/extras/addons.urdf.xacro" />
 
     <!--************************-->
     <!--        BASE_LINK       -->
@@ -49,6 +50,9 @@
 
   <xacro:talos_leg prefix="left"  reflect="1" />
   <xacro:talos_leg prefix="right" reflect="-1" />
+
+  <!-- Macro to have the add-on links specific to each TALOS -->
+  <xacro:talos_addons />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find talos_description)/gazebo/gazebo.urdf.xacro" />

@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'talos_specific_addons' into 'erbium-devel'
+  Talos specific addons
+  See merge request robots/talos_robot!86
+* add new bringup_addons launch for talos specific
+* Contributors: Sai Kishor Kothakota, jordanpalacios
+
 1.1.2 (2020-01-14)
 ------------------
 

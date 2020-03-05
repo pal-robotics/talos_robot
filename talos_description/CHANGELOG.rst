@@ -2,6 +2,15 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'talos_specific_addons' into 'erbium-devel'
+  Talos specific addons
+  See merge request robots/talos_robot!86
+* change add_ons by addons
+* added talos_addons macro to add talos specific transformations
+* Contributors: Sai Kishor Kothakota, jordanpalacios
+
 1.1.2 (2020-01-14)
 ------------------
 

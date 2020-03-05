@@ -8,12 +8,13 @@
   <arg name="robot" default=""/>
   <arg name="open_loop" default="false" />
   <arg name="safety_override" default="" />
+  <arg name="disable_safety_for_joints" default=""/>
 
   <include file="$(eval find(arg('local_joint_control_pkg')) + '/launch/' + arg('local_joint_control_type') + '.launch')" >
     <arg name="controller_pkg_name" value="$(arg controller_pkg_name)"/>
     <arg name="ns" value="$(arg ns)"/>
     <arg name="joint_name" value="gripper_left_joint"/>
-    <arg name="safety_override" value="$(arg safety_override)"/>
+    <arg name="safety_override" value="$(eval ('' if not 'gripper_left_joint' in arg('disable_safety_for_joints') else (arg('safety_override') if arg('safety_override') != '' else 'false')))"/>
   </include>
 
 </launch>

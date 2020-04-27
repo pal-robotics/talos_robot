@@ -23,4 +23,7 @@
 
   <include file="$(find talos_bringup)/launch/talos_bringup_addons.launch" />
 
+  <!-- introspection controller -->
+  <include file="$(find introspection_controller)/introspection_controller.launch" />
+
 </launch>

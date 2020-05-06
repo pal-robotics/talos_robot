@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.3 (2020-03-05)
 ------------------
 * Merge branch 'talos_specific_addons' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'introspection_controller' into 'erbium-devel'
+  added introspection_controller launch to bringup
+  See merge request robots/talos_robot!89
+* added introspection_controller launch to bringup
+* Contributors: Sai Kishor Kothakota, victor
+
 1.1.3 (2020-03-05)
 ------------------
 * Merge branch 'talos_specific_addons' into 'erbium-devel'

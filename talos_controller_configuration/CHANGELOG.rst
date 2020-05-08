@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.4 (2020-05-06)
 ------------------
 

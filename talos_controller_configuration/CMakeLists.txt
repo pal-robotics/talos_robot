@@ -3,16 +3,15 @@ project(talos_controller_configuration)
 
 find_package(catkin REQUIRED)
 
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES talos_controller_configuration
-#  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
-)
+catkin_package()
 
 foreach(dir config launch utils)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
 
-
+install(
+    PROGRAMS
+        scripts/talos_initialisation.py
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)

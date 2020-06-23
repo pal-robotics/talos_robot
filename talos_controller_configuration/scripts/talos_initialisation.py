@@ -42,8 +42,8 @@ class TalosInitialisation:
     def check_floating(self):
         if not self.is_robot_floating:
             # wait for robot in air confirmation
-            print("Initialisation must be performed with the robot in "
-                  "the air. Is TALOS suspended above the ground? y/n")
+            rospy.loginfo("Initialisation must be performed with the robot in "
+                          "the air. Is TALOS suspended above the ground? y/n")
             name = raw_input()
             if name is not "y":
                 return False
@@ -51,34 +51,35 @@ class TalosInitialisation:
 
     def launch_default_controllers(self):
         # start, wait and stop default controllers
-        print("Launching default controllers")
+        rospy.loginfo("Launching default controllers")
         shell = ShellCmd(self.dflt_ctrls_cmd, stdin=None,
                          stdout=None, stderr=None)
         time.sleep(DFLT_CTRLS_TIME)
-        print("Stopping default controllers")
+        rospy.loginfo("Stopping default controllers")
         if not shell.nice_kill(
                 retry_time=DFLT_CTRLS_RETRY_TIME, max_retries=2):
-            print("Could not kill default controllers nicely, terminating")
+            rospy.logwarn(
+                "Could not kill default controllers nicely, terminating")
             shell.kill()
         return True
 
     def reset_ft_ankles_offset(self):
         # run ankles ati ft reset script
         if not self.is_simulation:
-            print("Resetting ankles ATI FT offsets")
+            rospy.loginfo("Resetting ankles ATI FT offsets")
             shell = ShellCmd(self.reset_ft_ankles_cmd,
                              stdin=None, stdout=None, stderr=None)
             time.sleep(20)
             result = False
             if shell.is_done():
-                print("Resetting ankles ATI FT finished")
+                rospy.loginfo("Resetting ankles ATI FT finished")
                 result = shell.get_retcode()
                 if result:
-                    print("Resetting ankles ATI FT successfull")
+                    rospy.loginfo("Resetting ankles ATI FT successfull")
                 else:
-                    print("Resetting ankles ATI FT failed")
+                    rospy.logerr("Resetting ankles ATI FT failed")
             else:
-                print("Resetting ankles ATI FT hanged")
+                rospy.logerr("Resetting ankles ATI FT hanged")
                 shell.kill()
             return result
         else:
@@ -86,30 +87,30 @@ class TalosInitialisation:
 
     def launch_robot_status_check(self):
         # launch robot_status_check and check result
-        print("Launching robot status check")
+        rospy.loginfo("Launching robot status check")
         shell = ShellCmd(self.rbt_status_check_cmd, stdin=None,
                          stdout=None, stderr=None)
         time.sleep(20)
         result = False
         if shell.is_done():
-            print("Robot status check finished")
+            rospy.loginfo("Robot status check finished")
             result = rospy.get_param(RBT_STATUS_CHECK_RESULT_PARAM)
             if result:
-                print("Robot status check successfull")
+                rospy.loginfo("Robot status check successfull")
             else:
-                print("Robot status check failed")
+                rospy.logerr("Robot status check failed")
         else:
-            print("Robot status check hanged")
+            rospy.logerr("Robot status check hanged")
             shell.kill()
         return result
 
     def set_result(self, result):
         # set initialisation param with the result
         if result:
-            print("Initialisation finished successfully")
+            rospy.loginfo("Initialisation finished successfully")
             rospy.set_param(INIT_RESULT_PARAM, True)
         else:
-            print("Initialisation failed")
+            rospy.logerr("Initialisation failed")
             rospy.set_param(INIT_RESULT_PARAM, False)
 
     def do_initialisation(self):

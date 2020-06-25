@@ -18,7 +18,7 @@ RBT_STATUS_CHECK_PKG = "robot_status_check"
 RBT_STATUS_CHECK_LAUNCH = "robot_status_check.launch"
 RBT_STATUS_CHECK_RESULT_PARAM = "/talos_status_check/result"
 
-INIT_RESULT_PARAM = "/robot_initialisation"
+INIT_RESULT_PARAM = "/talos_initialisation/result"
 
 class TalosInitialisation:
 

@@ -16,10 +16,12 @@ INTR_CTRL_TIME = 5
 
 RESET_FT_ANKLES_PKG = "zero_set_calibration"
 RESET_FT_ANKLES_EXEC = "reset_ankles_fts.sh"
+RESET_FT_ANKLES_TIME = 10
 
 RBT_STATUS_CHECK_PKG = "robot_status_check"
 RBT_STATUS_CHECK_LAUNCH = "robot_status_check.launch"
 RBT_STATUS_CHECK_RESULT_PARAM = "/talos_status_check/result"
+RBT_STATUS_CHECK_TIME = 10
 
 INIT_RESULT_PARAM = "/talos_initialisation/result"
 
@@ -86,9 +88,8 @@ class TalosInitialisation:
         if not self.is_simulation:
             rospy.loginfo("Resetting ankles ATI FT offsets")
             shell = ShellCmd(self.reset_ft_ankles_cmd)
-            time.sleep(20)
             result = False
-            if shell.is_done():
+            if shell.wait(RESET_FT_ANKLES_TIME):
                 rospy.loginfo("Resetting ankles ATI FT finished")
                 result = shell.get_retcode() == 0
                 if result:
@@ -106,9 +107,8 @@ class TalosInitialisation:
         # launch robot_status_check and check result
         rospy.loginfo("Launching robot status check")
         shell = ShellCmd(self.rbt_status_check_cmd)
-        time.sleep(20)
         result = False
-        if shell.is_done():
+        if shell.wait(RBT_STATUS_CHECK_TIME):
             rospy.loginfo("Robot status check finished")
             result = rospy.get_param(RBT_STATUS_CHECK_RESULT_PARAM)
             if result:

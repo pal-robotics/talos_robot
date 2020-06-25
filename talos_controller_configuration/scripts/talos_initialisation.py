@@ -11,6 +11,10 @@ DFLT_CTRLS_LAUNCH = "default_controllers.launch"
 DFLT_CTRLS_TIME = 20
 DFLT_CTRLS_RETRY_TIME = 10
 
+INTR_CTRL_PKG = "introspection_controller"
+INTR_CTRL_LAUNCH = "introspection_controller.launch"
+INTR_CTRL_TIME = 5
+
 RESET_FT_ANKLES_PKG = "zero_set_calibration"
 RESET_FT_ANKLES_EXEC = "reset_ankles_fts.sh"
 
@@ -32,6 +36,9 @@ class TalosInitialisation:
         else:
             self.dflt_ctrls_cmd = "roslaunch {} {}".format(
                 DFLT_CTRLS_SIM_PKG, DFLT_CTRLS_LAUNCH)
+
+        self.intr_ctrl_cmd = "roslaunch {} {}".format(
+            INTR_CTRL_PKG, INTR_CTRL_LAUNCH)
 
         self.reset_ft_ankles_cmd = "rosrun {} {}".format(
             RESET_FT_ANKLES_PKG, RESET_FT_ANKLES_EXEC)
@@ -61,6 +68,19 @@ class TalosInitialisation:
                 "Could not kill default controllers nicely, terminating")
             shell.kill()
         return True
+
+    def launch_intr_controller(self):
+        # start and wait for introspection controller
+        rospy.loginfo("Launching introspection controller")
+        self.intr_ctrl_shell = ShellCmd(self.intr_ctrl_cmd)
+        time.sleep(INTR_CTRL_TIME)
+        # don't stop it, killed on destruction
+        result = not self.intr_ctrl_shell.is_done()
+        if result:
+            rospy.loginfo("Introspection controller launched successfully")
+        else:
+            rospy.logerr("Introspection controller finished prematurely")
+        return result
 
     def reset_ft_ankles_offset(self):
         # run ankles ati ft reset script
@@ -111,8 +131,11 @@ class TalosInitialisation:
             rospy.set_param(INIT_RESULT_PARAM, False)
 
     def do_initialisation(self):
-        result = self.check_floating() and self.launch_default_controllers() \
-            and self.reset_ft_ankles_offset() and self.launch_robot_status_check()
+        result = self.check_floating() \
+            and self.launch_default_controllers() \
+            and self.launch_intr_controller() \
+            and self.reset_ft_ankles_offset() \
+            and self.launch_robot_status_check()
 
         self.set_result(result)
 

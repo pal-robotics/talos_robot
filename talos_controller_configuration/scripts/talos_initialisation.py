@@ -73,7 +73,7 @@ class TalosInitialisation:
             result = False
             if shell.is_done():
                 rospy.loginfo("Resetting ankles ATI FT finished")
-                result = shell.get_retcode()
+                result = shell.get_retcode() == 0
                 if result:
                     rospy.loginfo("Resetting ankles ATI FT successfull")
                 else:

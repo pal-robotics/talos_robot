@@ -9,7 +9,6 @@ DFLT_CTRLS_RBT_PKG = "talos_controller_configuration"
 DFLT_CTRLS_SIM_PKG = "talos_controller_configuration_gazebo"
 DFLT_CTRLS_LAUNCH = "default_controllers.launch"
 DFLT_CTRLS_TIME = 20
-DFLT_CTRLS_RETRY_TIME = 10
 
 INTR_CTRL_PKG = "introspection_controller"
 INTR_CTRL_LAUNCH = "introspection_controller.launch"
@@ -57,17 +56,17 @@ class TalosInitialisation:
         return True
 
     def launch_default_controllers(self):
-        # start, wait and stop default controllers
+        # start and wait for default controllers
         rospy.loginfo("Launching default controllers")
-        shell = ShellCmd(self.dflt_ctrls_cmd)
+        self.dflt_ctrl_shell = ShellCmd(self.dflt_ctrls_cmd)
         time.sleep(DFLT_CTRLS_TIME)
-        rospy.loginfo("Stopping default controllers")
-        if not shell.nice_kill(
-                retry_time=DFLT_CTRLS_RETRY_TIME, max_retries=2):
-            rospy.logwarn(
-                "Could not kill default controllers nicely, terminating")
-            shell.kill()
-        return True
+        # don't stop it, killed on destruction
+        result = not self.dflt_ctrl_shell.is_done()
+        if result:
+            rospy.loginfo("Default controllers launched successfully")
+        else:
+            rospy.logerr("Default controllers finished prematurely")
+        return result
 
     def launch_intr_controller(self):
         # start and wait for introspection controller

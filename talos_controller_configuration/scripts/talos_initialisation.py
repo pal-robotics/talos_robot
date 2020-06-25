@@ -52,8 +52,7 @@ class TalosInitialisation:
     def launch_default_controllers(self):
         # start, wait and stop default controllers
         rospy.loginfo("Launching default controllers")
-        shell = ShellCmd(self.dflt_ctrls_cmd, stdin=None,
-                         stdout=None, stderr=None)
+        shell = ShellCmd(self.dflt_ctrls_cmd)
         time.sleep(DFLT_CTRLS_TIME)
         rospy.loginfo("Stopping default controllers")
         if not shell.nice_kill(
@@ -67,8 +66,7 @@ class TalosInitialisation:
         # run ankles ati ft reset script
         if not self.is_simulation:
             rospy.loginfo("Resetting ankles ATI FT offsets")
-            shell = ShellCmd(self.reset_ft_ankles_cmd,
-                             stdin=None, stdout=None, stderr=None)
+            shell = ShellCmd(self.reset_ft_ankles_cmd)
             time.sleep(20)
             result = False
             if shell.is_done():
@@ -88,8 +86,7 @@ class TalosInitialisation:
     def launch_robot_status_check(self):
         # launch robot_status_check and check result
         rospy.loginfo("Launching robot status check")
-        shell = ShellCmd(self.rbt_status_check_cmd, stdin=None,
-                         stdout=None, stderr=None)
+        shell = ShellCmd(self.rbt_status_check_cmd)
         time.sleep(20)
         result = False
         if shell.is_done():

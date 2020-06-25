@@ -25,6 +25,8 @@ RBT_STATUS_CHECK_TIME = 10
 
 INIT_RESULT_PARAM = "/talos_initialisation/result"
 
+INIT_LOG_FILE = "/home/pal/.ros/log/talos_initialisation.log"
+
 class TalosInitialisation:
 
     def __init__(self, is_simulation=False, is_robot_floating=False):
@@ -47,6 +49,11 @@ class TalosInitialisation:
         self.rbt_status_check_cmd = "roslaunch {} {}".format(
             RBT_STATUS_CHECK_PKG, RBT_STATUS_CHECK_LAUNCH)
 
+        self.log_fd = open(INIT_LOG_FILE, "w+")
+
+    def __del__(self):
+        self.log_fd.close()
+
     def check_floating(self):
         if not self.is_robot_floating:
             # wait for robot in air confirmation
@@ -60,7 +67,8 @@ class TalosInitialisation:
     def launch_default_controllers(self):
         # start and wait for default controllers
         rospy.loginfo("Launching default controllers")
-        self.dflt_ctrl_shell = ShellCmd(self.dflt_ctrls_cmd)
+        self.dflt_ctrl_shell = ShellCmd(self.dflt_ctrls_cmd,
+                                        stdout=self.log_fd, stderr=self.log_fd)
         time.sleep(DFLT_CTRLS_TIME)
         # don't stop it, killed on destruction
         result = not self.dflt_ctrl_shell.is_done()
@@ -73,7 +81,8 @@ class TalosInitialisation:
     def launch_intr_controller(self):
         # start and wait for introspection controller
         rospy.loginfo("Launching introspection controller")
-        self.intr_ctrl_shell = ShellCmd(self.intr_ctrl_cmd)
+        self.intr_ctrl_shell = ShellCmd(self.intr_ctrl_cmd,
+                                        stdout=self.log_fd, stderr=self.log_fd)
         time.sleep(INTR_CTRL_TIME)
         # don't stop it, killed on destruction
         result = not self.intr_ctrl_shell.is_done()
@@ -87,7 +96,8 @@ class TalosInitialisation:
         # run ankles ati ft reset script
         if not self.is_simulation:
             rospy.loginfo("Resetting ankles ATI FT offsets")
-            shell = ShellCmd(self.reset_ft_ankles_cmd)
+            shell = ShellCmd(self.reset_ft_ankles_cmd,
+                             stdout=self.log_fd, stderr=self.log_fd)
             result = False
             if shell.wait(RESET_FT_ANKLES_TIME):
                 rospy.loginfo("Resetting ankles ATI FT finished")
@@ -106,7 +116,8 @@ class TalosInitialisation:
     def launch_robot_status_check(self):
         # launch robot_status_check and check result
         rospy.loginfo("Launching robot status check")
-        shell = ShellCmd(self.rbt_status_check_cmd)
+        shell = ShellCmd(self.rbt_status_check_cmd,
+                         stdout=self.log_fd, stderr=self.log_fd)
         result = False
         if shell.wait(RBT_STATUS_CHECK_TIME):
             rospy.loginfo("Robot status check finished")
@@ -126,7 +137,8 @@ class TalosInitialisation:
             rospy.loginfo("Initialisation finished successfully")
             rospy.set_param(INIT_RESULT_PARAM, True)
         else:
-            rospy.logerr("Initialisation failed")
+            rospy.logerr(
+                "Initialisation failed. Check {} for errors".format(INIT_LOG_FILE))
             rospy.set_param(INIT_RESULT_PARAM, False)
 
     def do_initialisation(self):

@@ -2,6 +2,9 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.5 (2020-05-08)
 ------------------
 * Merge branch 'revert_introspection' into 'erbium-devel'

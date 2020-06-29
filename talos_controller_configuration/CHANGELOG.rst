@@ -2,6 +2,22 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'init_script' into 'erbium-devel'
+  Initialisation script
+  See merge request robots/talos_robot!93
+* Redirect applications output to a log file
+* Use wait() for shell commands
+* Don't stop default controllers after starting them
+* Launch introspection controller too
+* Shell command stdin, stdout and stderr are None by default
+* Renamed result parameter
+* Fixed ati reset retcode usage
+* Using ros logging instead
+* Initialisation script
+* Contributors: Jordan Palacios, jordanpalacios
+
 1.1.5 (2020-05-08)
 ------------------
 

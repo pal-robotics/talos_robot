@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.6 (2020-06-29)
+------------------
 * Merge branch 'init_script' into 'erbium-devel'
   Initialisation script
   See merge request robots/talos_robot!93

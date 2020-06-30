@@ -2,7 +2,7 @@ loop_counter_factor: -1
 debug_backdoor: true
 
 odometry:
-   enabled        : false
+   enabled        : true
    vel_window_size: 10
    use_imu_yaw    : false
    publish_rate   : 100.0

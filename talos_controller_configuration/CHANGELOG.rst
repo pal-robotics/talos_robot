@@ -2,6 +2,18 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch '2KHz' into 'erbium-devel'
+  2 k hz
+  See merge request robots/talos_robot!94
+* Tune default safety_parameters
+* Set walking controller at 2KHz
+* added a way to disable safety for only a set of joints
+* Update default_safety_parameters.yaml
+* Reduce max impulse
+* Contributors: Adria Roig, Adrià Roig, Sai Kishor Kothakota, victor
+
 1.1.6 (2020-06-29)
 ------------------
 * Merge branch 'init_script' into 'erbium-devel'

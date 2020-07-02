@@ -2,6 +2,16 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch '2KHz' into 'erbium-devel'
+  2 k hz
+  See merge request robots/talos_robot!94
+* Don't increase y foot collision mesh so much
+* increase the size of the foot collision model
+* increase the size of the foot collision model
+* Contributors: Sai Kishor Kothakota, Victor Lopez, victor
+
 1.1.6 (2020-06-29)
 ------------------
 

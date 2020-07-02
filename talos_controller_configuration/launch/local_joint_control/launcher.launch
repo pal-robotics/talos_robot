@@ -8,6 +8,7 @@
   <arg name="robot" default="full_v2" />
   <arg name="open_loop" default="false" />
   <arg name="safety_override" default="false" />
+  <arg name="disable_safety_for_joints" default=""/>
   <arg name="robot_joint_specific_ns" value="$(eval arg('ns') + '/joints/')"/>
 
   <group if="$(eval arg('robot') == 'full_v2')" >

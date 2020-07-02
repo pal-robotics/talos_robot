@@ -5,7 +5,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://talos_description/meshes/v2/ankle_X_collision.stl" scale="1 ${reflect*1} 1"/>
+                <mesh filename="package://talos_description/meshes/v2/ankle_X_collision.stl" scale="1.15 ${reflect*1.05} 1"/>
             </geometry>
         </collision>
     </xacro:macro>

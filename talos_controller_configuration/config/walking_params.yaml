@@ -2,7 +2,7 @@ loop_counter_factor: -1
 debug_backdoor: true
 
 odometry:
-   enabled        : false
+   enabled        : true
    vel_window_size: 10
    use_imu_yaw    : false
    publish_rate   : 100.0
@@ -11,7 +11,7 @@ odometry:
    twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 0.1, 0.1, 0.1]
 
 biped_controller:
-   delta_T: 0.001
+   delta_T: 0.0005
    ft_sensor_z: 0.02
    variable_joint_offset_hip: -0.7
    variable_joint_offset_ankle: -0.7

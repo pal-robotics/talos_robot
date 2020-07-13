@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set temporal result so we can launch default controllers
+* Contributors: Jordan Palacios
+
 1.1.7 (2020-07-02)
 ------------------
 * Merge branch '2KHz' into 'erbium-devel'

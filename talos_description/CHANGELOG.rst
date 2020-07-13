@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.7 (2020-07-02)
 ------------------
 * Merge branch '2KHz' into 'erbium-devel'

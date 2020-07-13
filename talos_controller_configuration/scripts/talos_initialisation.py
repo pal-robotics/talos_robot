@@ -65,6 +65,10 @@ class TalosInitialisation:
         return True
 
     def launch_default_controllers(self):
+        # set result so default controllers, that include the
+        # walking controller, do not fail to start
+        rospy.set_param(INIT_RESULT_PARAM, True)
+
         # start and wait for default controllers
         rospy.loginfo("Launching default controllers")
         self.dflt_ctrl_shell = ShellCmd(self.dflt_ctrls_cmd,
@@ -76,6 +80,9 @@ class TalosInitialisation:
             rospy.loginfo("Default controllers launched successfully")
         else:
             rospy.logerr("Default controllers finished prematurely")
+
+        # unset result once default controllers are launched
+        rospy.set_param(INIT_RESULT_PARAM, False)
         return result
 
     def launch_intr_controller(self):

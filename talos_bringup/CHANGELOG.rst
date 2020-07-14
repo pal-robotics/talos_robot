@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.9 (2020-07-14)
+------------------
 * Merge branch 'squat' into 'erbium-devel'
   Add squat motion for UAT
   See merge request robots/talos_robot!95

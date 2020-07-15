@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'max_impulse_tests' into 'erbium-devel'
+  Increase max_impulse_dist for some joints
+  See merge request robots/talos_robot!96
+* Increase max_impulse_dist for some joints
+* Contributors: Adria Roig, victor
+
 1.1.9 (2020-07-14)
 ------------------
 

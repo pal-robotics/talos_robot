@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 from pal_python.shell_cmd import ShellCmd
+from pal_interaction_msgs.msg import TtsAction, TtsGoal
+from actionlib import SimpleActionClient, GoalStatus
 import argparse
 import rospy
 import time
@@ -49,17 +51,27 @@ class TalosInitialisation:
         self.rbt_status_check_cmd = "roslaunch {} {}".format(
             RBT_STATUS_CHECK_PKG, RBT_STATUS_CHECK_LAUNCH)
 
+        self.tts_client = SimpleActionClient("/tts", TtsAction)
+        if not self.tts_client.wait_for_server(rospy.Duration(5.0)):
+            rospy.logerr("No TTS server running. So, I won't be able to warn anything")
+
         self.log_fd = open(INIT_LOG_FILE, "w+")
 
     def __del__(self):
         self.log_fd.close()
 
+    def speak_status(self, sentence, lang_id="en_GB"):
+        tts_goal = TtsGoal()
+        tts_goal.rawtext.text = sentence
+        tts_goal.rawtext.lang_id = lang_id
+        self.tts_client.send_goal(tts_goal)
+        self.tts_client.wait_for_result()
+
     def check_floating(self):
         if not self.is_robot_floating:
             # wait for robot in air confirmation
-            rospy.loginfo("Initialisation must be performed with the robot in "
-                          "the air. Is TALOS suspended above the ground? y/n")
-            name = raw_input()
+            name = raw_input("Initialisation must be performed with the robot in "
+                          "the air. Is TALOS suspended above the ground? [y/N]: ")
             if name is not "y":
                 return False
         return True
@@ -143,10 +155,12 @@ class TalosInitialisation:
         if result:
             rospy.loginfo("Initialisation finished successfully")
             rospy.set_param(INIT_RESULT_PARAM, True)
+            self.speak_status("Initialisation finished successfully!")
         else:
             rospy.logerr(
                 "Initialisation failed. Check {} for errors".format(INIT_LOG_FILE))
             rospy.set_param(INIT_RESULT_PARAM, False)
+            self.speak_status("Initialisation failed!")
 
     def do_initialisation(self):
         result = self.check_floating() \

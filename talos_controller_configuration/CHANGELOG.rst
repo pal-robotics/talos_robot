@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'initialisation_improvement' into 'erbium-devel'
+  Initialisation improvement
+  See merge request robots/talos_robot!99
+* fix the raw input message in talos initialization script
+* Added tts client to state the status of initialization
+* Contributors: Sai Kishor Kothakota, saikishor
+
 1.1.11 (2020-07-21)
 -------------------
 * Merge branch 'default_torques' into 'erbium-devel'

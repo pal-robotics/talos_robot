@@ -2,6 +2,9 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.11 (2020-07-21)
 -------------------
 * Merge branch 'talos_6' into 'erbium-devel'

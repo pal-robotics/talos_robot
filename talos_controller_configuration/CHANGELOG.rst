@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.11 (2020-07-21)
+-------------------
 * Merge branch 'default_torques' into 'erbium-devel'
   Default torques
   See merge request robots/talos_robot!98

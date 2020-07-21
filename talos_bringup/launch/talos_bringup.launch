@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
+  <arg name="simulation"  default="false"/>
+
   <!-- Load default controllers -->
   <include file="$(find talos_controller_configuration)/launch/bringup_controllers.launch" />
 
@@ -21,6 +23,8 @@
     <!-- Pre-recorded motions executor -->
   <include file="$(find talos_bringup)/launch/play_motion.launch" />
 
-  <include file="$(find talos_bringup)/launch/talos_bringup_addons.launch" />
+  <group unless="$(arg simulation)">
+    <include file="$(find talos_bringup)/launch/talos_bringup_addons.launch"/>
+  </group>
 
 </launch>

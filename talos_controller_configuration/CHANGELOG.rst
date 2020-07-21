@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'default_torques' into 'erbium-devel'
+  Default torques
+  See merge request robots/talos_robot!98
+* added the torque offsets that need to be overriden
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.1.10 (2020-07-15)
 -------------------
 * Merge branch 'max_impulse_tests' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'talos_6' into 'erbium-devel'
+  Add simulation arg for bringup
+  See merge request robots/talos_robot!97
+* Add simulation arg for bringup
+* Contributors: Adria Roig
+
 1.1.10 (2020-07-15)
 -------------------
 

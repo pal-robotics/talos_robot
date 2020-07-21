@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.10 (2020-07-15)
 -------------------
 

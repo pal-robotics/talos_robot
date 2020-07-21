@@ -70,9 +70,8 @@ class TalosInitialisation:
     def check_floating(self):
         if not self.is_robot_floating:
             # wait for robot in air confirmation
-            rospy.loginfo("Initialisation must be performed with the robot in "
-                          "the air. Is TALOS suspended above the ground? y/n")
-            name = raw_input()
+            name = raw_input("Initialisation must be performed with the robot in "
+                          "the air. Is TALOS suspended above the ground? [y/N]: ")
             if name is not "y":
                 return False
         return True

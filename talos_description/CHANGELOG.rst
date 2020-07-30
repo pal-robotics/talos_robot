@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.14 (2020-07-30)
+-------------------
 * Merge branch 'configurable-imu-offsets' into 'erbium-devel'
   Configurable imu offsets
   See merge request robots/talos_robot!101

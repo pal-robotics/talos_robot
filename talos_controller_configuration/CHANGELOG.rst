@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.13 (2020-07-30)
+-------------------
 * Merge branch 'covers' into 'erbium-devel'
   Increase safety after testing with covers
   See merge request robots/talos_robot!102

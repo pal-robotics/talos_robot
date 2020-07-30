@@ -37,4 +37,9 @@
   <xacro:property name="head_1_joint_offset" value="0.0" />
   <xacro:property name="head_2_joint_offset" value="0.0" />
 
+  <!-- Torso rpy offsets in degrees -->
+  <xacro:property name="torso_imu_roll_offset" value="0.0" />
+  <xacro:property name="torso_imu_pitch_offset" value="0.0" />
+  <xacro:property name="torso_imu_yaw_offset" value="0.0" />
+
 </robot>

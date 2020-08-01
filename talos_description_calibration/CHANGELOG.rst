@@ -2,6 +2,9 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.14 (2020-07-30)
 -------------------
 * Merge branch 'configurable-imu-offsets' into 'erbium-devel'

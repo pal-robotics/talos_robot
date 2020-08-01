@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'talos6_final' into 'erbium-devel'
+  Talos6 final
+  See merge request robots/talos_robot!103
+* Update the new max_distance_impulse for elbow joints
+* update the max distance impulse after testing on TALOS-6 with full_v2
+* Contributors: Sai Kishor Kothakota, saikishor
+
 1.1.14 (2020-07-30)
 -------------------
 

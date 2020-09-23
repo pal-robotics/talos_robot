@@ -72,8 +72,8 @@
       <parent link="base_link"/>
       <child link="${name}_1_link"/>
       <!-- XXX AS: The kinematic chain order for the torso was reversed manually. This value does not match the CAD model. XXX -->
-      <origin xyz="0.0 0.0 0.0722"
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <origin xyz="${0.0 + torso_1_joint_x_offset} ${0.0 + torso_1_joint_y_offset} ${0.0722 + torso_1_joint_z_offset}"
+              rpy="${0.00000 * deg_to_rad + torso_1_joint_roll_offset} ${0.00000 * deg_to_rad + torso_1_joint_pitch_offset} ${0.00000 * deg_to_rad + torso_1_joint_yaw_offset}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-72.00000 * deg_to_rad}" upper="${72.00000 * deg_to_rad}"
              effort="${torso_max_effort}" velocity="${torso_max_vel}" />
@@ -110,8 +110,8 @@
     <joint name="${name}_2_joint" type="revolute">
       <parent link="${name}_1_link"/>
       <child link="${name}_2_link"/>
-      <origin xyz="0.0 0.0 0.0"
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <origin xyz="${0.0 + torso_1_joint_x_offset} ${0.0 + torso_1_joint_y_offset} ${0.0 + torso_1_joint_z_offset}"
+              rpy="${0.00000 * deg_to_rad + torso_1_joint_roll_offset} ${0.00000 * deg_to_rad + torso_1_joint_pitch_offset} ${0.00000 * deg_to_rad + torso_1_joint_yaw_offset}"/>
       <axis xyz="0 1 0" />
       <limit lower="${-13.0 * deg_to_rad}" upper="${42.0 * deg_to_rad}"
              effort="${torso_max_effort}" velocity="${torso_max_vel}"/>

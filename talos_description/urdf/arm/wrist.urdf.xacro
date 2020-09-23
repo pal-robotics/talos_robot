@@ -27,6 +27,7 @@
 
 
   <xacro:macro name="talos_wrist" params="name parent side reflect">
+    <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/arm_${side}.xacro" />
 
     <!--************************-->
     <!--        WRIST           -->
@@ -53,8 +54,8 @@
     <joint name="${name}_${side}_5_joint" type="revolute">
       <parent link="${parent}" />
       <child link="${name}_${side}_5_link" />
-      <origin xyz="-0.02000 0.00000 -0.26430"
-                rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <origin xyz="${-0.02000 + arm_5_joint_x_offset} ${0.00000 + arm_5_joint_y_offset} ${-0.26430 + arm_5_joint_z_offset}"
+              rpy="${0.00000 * deg_to_rad + arm_5_joint_roll_offset} ${0.00000 * deg_to_rad + arm_5_joint_pitch_offset} ${0.00000 * deg_to_rad + arm_5_joint_yaw_offset}"/>
       <axis xyz="0 0 1" />
       <limit lower="${-144.0 * deg_to_rad}" upper="${144.0 * deg_to_rad}" effort="${wrist_1_max_effort}" velocity="${wrist_1_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -87,8 +88,8 @@
     <joint name="${name}_${side}_6_joint" type="revolute">
       <parent link="${name}_${side}_5_link" />
       <child link="${name}_${side}_6_link" />
-      <origin xyz="0.00000 0.00000 0.00000"
-              rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
+      <origin xyz="${0.00000 + arm_6_joint_x_offset} ${0.00000 + arm_6_joint_y_offset} ${0.00000 + arm_6_joint_z_offset}"
+              rpy="${0.00000 * deg_to_rad + arm_6_joint_roll_offset} ${0.00000 * deg_to_rad + arm_6_joint_pitch_offset} ${0.00000 * deg_to_rad + arm_6_joint_yaw_offset}"/>
       <axis xyz="1 0 0" />
       <limit lower="${-78.5 * deg_to_rad}" upper="${78.5 * deg_to_rad}" effort="${wrist_2_max_effort}" velocity="${wrist_2_max_vel}" />
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>
@@ -121,8 +122,8 @@
     <joint name="${name}_${side}_7_joint" type="revolute">
       <parent link="${name}_${side}_6_link" />
       <child link="${name}_${side}_7_link" />
-      <origin xyz="0.0 0.0 0.0"
-                rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
+      <origin xyz="${0.00000 + arm_7_joint_x_offset} ${0.00000 + arm_7_joint_y_offset} ${0.00000 + arm_7_joint_z_offset}"
+              rpy="${0.00000 * deg_to_rad + arm_7_joint_roll_offset} ${0.00000 * deg_to_rad + arm_7_joint_pitch_offset} ${0.00000 * deg_to_rad + arm_7_joint_yaw_offset}"/>
       <axis xyz="0 1 0" />
       <limit lower="${-39.0 * deg_to_rad}" upper="${39.0 * deg_to_rad}" effort="${wrist_3_max_effort}" velocity="${wrist_3_max_vel}"/>
       <dynamics friction="${wrist_friction}" damping="${wrist_damping}"/>

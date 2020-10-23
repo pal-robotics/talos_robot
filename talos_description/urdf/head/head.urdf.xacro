@@ -21,6 +21,7 @@
   <xacro:property name="head_damping"  value="0.5" />
   <xacro:property name="head_max_vel"  value="3.0" />
   <xacro:property name="head_eps"      value="0.02" />
+  <xacro:property name="head_version"  default="default" />
 
   <!--************************-->
   <!--     HEAD_1 (TILT)      -->
@@ -133,12 +134,14 @@
   <xacro:macro name="talos_head" params="name parent disable_gazebo_camera:=false">
     <xacro:talos_head_1 name="${name}_1" parent="${parent}" />
     <xacro:talos_head_2 name="${name}_2" parent="${name}_1_link"/>
-    <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2" disable_gazebo="${disable_gazebo_camera}">
-      <!-- Pose of sensor frame wrt to base -->
-      <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
-      <!-- Pose of optical frame wrt to sensor -->
-      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-    </xacro:orbbec_astra_pro>
+    <xacro:if value="${head_version == 'default'}">
+      <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2" disable_gazebo="${disable_gazebo_camera}">
+        <!-- Pose of sensor frame wrt to base -->
+        <origin xyz="${camera_position_x} ${camera_position_y} ${camera_position_z}" rpy="${camera_orientation_r} ${camera_orientation_p} ${camera_orientation_y}" />
+        <!-- Pose of optical frame wrt to sensor -->
+        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
+      </xacro:orbbec_astra_pro>
+    </xacro:if>
     <xacro:talos_head_differential_transmission name="${name}" number1="1" number2="2"
                                                 act_reduction1="1.0" act_reduction2="1.0"
                                                 jnt_reduction1="1.0" jnt_reduction2="2.0"

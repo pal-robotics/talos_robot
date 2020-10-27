@@ -142,6 +142,33 @@
         <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
       </xacro:orbbec_astra_pro>
     </xacro:if>
+    <xacro:if value="${head_version == 'lidar'}">
+      <!--File includes-->
+      <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+      <xacro:include filename="$(find realsense2_description)/urdf/_t265.urdf.xacro" />
+      <xacro:include filename="$(find talos_description)/urdf/sensors/OS1-64.urdf.xacro"/>
+
+      <!-- Intel D435 Camera -->
+      <sensor_d435 parent="${name}_2_link" name="${name}_d435_camera" topics_ns="${name}_d435_camera">
+        <origin xyz="0.074 0.0 0.135"
+                rpy="0.0 ${45.0 * deg_to_rad} 0.0"/>
+      </sensor_d435>
+
+      <!-- Intel T265 Camera -->
+      <sensor_t265 parent="${name}_2_link" name="${name}_t265_camera" topics_ns="${name}_t265_camera">
+        <origin xyz="0.109 0.0 0.196"
+                rpy="0.0 ${5.0 * deg_to_rad} 0.0"/>
+      </sensor_t265>
+
+      <!-- Ouster Lidar -->
+      <OS1-64 parent="${name}_2_link" name="${name}_os1_sensor" hz="10" samples="220">
+        <origin xyz="0.015 0.0 0.285"
+                rpy="0 0 0" />
+      </OS1-64>
+
+    </xacro:if>
+
+    <!-- Transmission -->
     <xacro:talos_head_differential_transmission name="${name}" number1="1" number2="2"
                                                 act_reduction1="1.0" act_reduction2="1.0"
                                                 jnt_reduction1="1.0" jnt_reduction2="2.0"

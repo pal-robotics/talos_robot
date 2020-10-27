@@ -19,13 +19,13 @@
       <collision name="base_collision">
          <origin xyz="0 0 0.0365" rpy="0 0 0" />
          <geometry>
- 	        <cylinder radius="0.04" length="0.073"/>
+          <cylinder radius="0.04" length="0.073"/>
          </geometry>
       </collision>
       <visual name="base_visual">
          <origin xyz="0 0 0.0" rpy="0 0 1.5707" />
          <geometry>
-	         <mesh filename="package://talos_description/meshes/sensors/ouster/os1_64.dae" /> 
+           <mesh filename="package://talos_description/meshes/sensors/ouster/os1_64.dae" /> 
            <!-- <cylinder length="0.073" radius="0.04" /> -->
          </geometry>
       </visual>

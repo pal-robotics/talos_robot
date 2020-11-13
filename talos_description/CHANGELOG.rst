@@ -2,6 +2,21 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'lidar_head' into 'erbium-devel'
+  Lidar head
+  See merge request robots/talos_robot!104
+* added lidar head_2 meshes
+* use the default suffix to the old meshes
+* Update head xacro to use the new meshes
+* Pass head type as an argument to the urdf
+* Fix the argument to the TALOS head macro
+* added the conditions for the new lidar head version with intel t265, d435, and ouster lidar
+* added the ouster sensor mesh and initial URDF commit
+* added head version argument in the head urdf xacro
+* Contributors: Sai Kishor Kothakota, victor
+
 1.1.15 (2020-08-01)
 -------------------
 

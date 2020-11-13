@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.16 (2020-11-13)
+-------------------
 * Merge branch 'lidar_head' into 'erbium-devel'
   Lidar head
   See merge request robots/talos_robot!104

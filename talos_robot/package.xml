@@ -11,6 +11,7 @@
 
   <run_depend>talos_description</run_depend>
   <run_depend>talos_bringup</run_depend>
+  <run_depend>talos_description_calibration</run_depend>
   <run_depend>talos_controller_configuration</run_depend>
 
   <export>

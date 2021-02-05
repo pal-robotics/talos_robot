@@ -171,7 +171,7 @@
     <xacro:talos_head_differential_transmission name="${name}" number1="1" number2="2"
                                                 act_reduction1="1.0" act_reduction2="1.0"
                                                 jnt_reduction1="1.0" jnt_reduction2="2.0"
-                                                offset_value_1="${head_1_joint_offset}" offset_value_2="${head_2_joint_offset}"/>
+                                                offset_value_1="${head_1_joint_pitch_offset}" offset_value_2="${head_2_joint_yaw_offset}"/>
   </xacro:macro>
 
 </robot>

@@ -35,8 +35,6 @@
   <xacro:property name="arm_right_5_joint_offset" value="0.0" />
   <xacro:property name="arm_right_6_joint_offset" value="0.0" />
   <xacro:property name="arm_right_7_joint_offset" value="0.0" />
-  <xacro:property name="head_1_joint_offset" value="0.0" />
-  <xacro:property name="head_2_joint_offset" value="0.0" />
 
   <xacro:property name="head_1_joint_x_offset"     value="0.0" />
   <xacro:property name="head_1_joint_y_offset"     value="0.0" />

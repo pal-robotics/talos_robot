@@ -2,8 +2,8 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.17 (2021-03-05)
+-------------------
 * Merge branch 'lower_body_calibration' into 'erbium-devel'
   Lower body calibration
   See merge request robots/talos_robot!106

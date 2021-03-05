@@ -2,8 +2,8 @@
 Changelog for package talos_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.17 (2021-03-05)
+-------------------
 * Merge branch 'calib_offsets' into 'erbium-devel'
   Calib offsets
   See merge request robots/talos_robot!105

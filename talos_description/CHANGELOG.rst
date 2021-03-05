@@ -2,6 +2,19 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'lower_body_calibration' into 'erbium-devel'
+  Lower body calibration
+  See merge request robots/talos_robot!106
+* Lower body calibration
+* Merge branch 'calib_offsets' into 'erbium-devel'
+  Calib offsets
+  See merge request robots/talos_robot!105
+* Fix head and torso calibration
+* Enable 6D calibration of arm, head and torso joints.
+* Contributors: Adria Roig, Joseph Mirabel, narcismiguel, victor
+
 1.1.16 (2020-11-13)
 -------------------
 * Merge branch 'lidar_head' into 'erbium-devel'

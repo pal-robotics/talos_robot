@@ -2,6 +2,14 @@
 Changelog for package talos_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'calib_offsets' into 'erbium-devel'
+  Calib offsets
+  See merge request robots/talos_robot!105
+* Add changes for jmirabel to include 6d offsets per joint
+* Contributors: Adria Roig, victor
+
 1.1.16 (2020-11-13)
 -------------------
 

@@ -8,6 +8,7 @@
   <arg name="head_type" default="default"/> <!-- default type with orbbec pro cam, lidar type with (OS-1 64 + T265 + D435i)-->
   <arg name="parameter_name" default="robot_description"/>
   <arg name="disable_gazebo_camera" default="false"/>
+  <arg name="test" default="false"/>
 
   <!-- TODO AS: zeros should not be the default (self-colliding), but it is currently required for tests -->
   <arg name="default_configuration_type" default="zeros"/>
@@ -21,7 +22,8 @@
                 foot_collision:=$(arg foot_collision)
                 enable_crane:=$(arg enable_crane)
                 disable_gazebo_camera:=$(arg disable_gazebo_camera)
-                head_type:=$(arg head_type)"
+                head_type:=$(arg head_type)
+                test:=$(arg test)"
       />
 
   <rosparam command="load" file="$(find talos_description)/config/default_configuration_$(arg default_configuration_type).yaml" />

@@ -14,7 +14,13 @@
   <xacro:include filename="$(find talos_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/torso/torso.transmission.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/sensors/imu.urdf.xacro" />
-  <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
+  <xacro:unless value="$(arg test)">
+    <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
+  </xacro:unless>
+  <xacro:if value="$(arg test)">
+    <xacro:include filename="$(find talos_description)/test/calibration/calibration_constants.urdf.xacro" />
+  </xacro:if>
+
 
 
  <!--Constant parameters-->

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <test test-name="calibration_parameters_test" pkg="talos_description" type="calibration_parameters-test" />
+</launch>
+

@@ -30,7 +30,12 @@
 
 
   <xacro:macro name="talos_arm" params="name parent side reflect">
-    <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/arm_${side}.xacro" />
+    <xacro:unless value="$(arg test)">
+      <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/arm_${side}.xacro" />
+    </xacro:unless>
+    <xacro:if value="$(arg test)">
+      <xacro:include filename="$(find talos_description)/test/calibration/arm_${side}.xacro" />
+    </xacro:if>
 
     <!--************************-->
     <!--        SHOULDER        -->

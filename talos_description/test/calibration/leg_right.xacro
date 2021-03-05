@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2021, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="leg_1_joint_x_offset"     value="-0.7088704816" />
+  <xacro:property name="leg_1_joint_y_offset"     value="0.6711808083" />
+  <xacro:property name="leg_1_joint_z_offset"     value="-0.4148797465" />
+  <xacro:property name="leg_1_joint_roll_offset"  value="2.3514490981" />
+  <xacro:property name="leg_1_joint_pitch_offset" value="2.8714328976" />
+  <xacro:property name="leg_1_joint_yaw_offset"   value="2.8575705257" />
+
+  <xacro:property name="leg_2_joint_x_offset"     value="0.2119996809" />
+  <xacro:property name="leg_2_joint_y_offset"     value="-0.2254379975" />
+  <xacro:property name="leg_2_joint_z_offset"     value="0.1365457629" />
+  <xacro:property name="leg_2_joint_roll_offset"  value="1.3916582694" />
+  <xacro:property name="leg_2_joint_pitch_offset" value="-1.0417672368" />
+  <xacro:property name="leg_2_joint_yaw_offset"   value="-0.0688112353" />
+
+  <xacro:property name="leg_3_joint_x_offset"     value="-0.1153566801" />
+  <xacro:property name="leg_3_joint_y_offset"     value="-0.8897196431" />
+  <xacro:property name="leg_3_joint_z_offset"     value="-0.4518526157" />
+  <xacro:property name="leg_3_joint_roll_offset"  value="2.4575082919" />
+  <xacro:property name="leg_3_joint_pitch_offset" value="0.8946254354" />
+  <xacro:property name="leg_3_joint_yaw_offset"   value="2.5829236269" />
+
+  <xacro:property name="leg_4_joint_x_offset"     value="-0.2834681213" />
+  <xacro:property name="leg_4_joint_y_offset"     value="0.7163324960" />
+  <xacro:property name="leg_4_joint_z_offset"     value="0.1857682039" />
+  <xacro:property name="leg_4_joint_roll_offset"  value="2.7765463193" />
+  <xacro:property name="leg_4_joint_pitch_offset" value="2.0727623203" />
+  <xacro:property name="leg_4_joint_yaw_offset"   value="2.2225194520" />
+
+  <xacro:property name="leg_5_joint_x_offset"     value="-0.3337184360" />
+  <xacro:property name="leg_5_joint_y_offset"     value="-0.3774806589" />
+  <xacro:property name="leg_5_joint_z_offset"     value="0.0994316363" />
+  <xacro:property name="leg_5_joint_roll_offset"  value="-0.0619127310" />
+  <xacro:property name="leg_5_joint_pitch_offset" value="-1.0805131459" />
+  <xacro:property name="leg_5_joint_yaw_offset"   value="-1.6260539238" />
+
+  <xacro:property name="leg_6_joint_x_offset"     value="-0.5168536573" />
+  <xacro:property name="leg_6_joint_y_offset"     value="-0.9565137294" />
+  <xacro:property name="leg_6_joint_z_offset"     value="-0.7532682166" />
+  <xacro:property name="leg_6_joint_roll_offset"  value="1.5747850322" />
+  <xacro:property name="leg_6_joint_pitch_offset" value="1.0974948921" />
+  <xacro:property name="leg_6_joint_yaw_offset"   value="0.7357922194" />
+
+
+</robot>
+

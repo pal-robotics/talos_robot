@@ -10,11 +10,18 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+
   <exec_depend>talos_description_calibration</exec_depend>
   <exec_depend>talos_description_inertial</exec_depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
+
+  <test_depend>rbdl</test_depend>
+  <test_depend>roscpp</test_depend>
+  <test_depend>pal_ros_utils</test_depend>
+  <test_depend>eigen_checks</test_depend>
+  <test_depend>math_utils</test_depend>
 
   <export>
   </export>

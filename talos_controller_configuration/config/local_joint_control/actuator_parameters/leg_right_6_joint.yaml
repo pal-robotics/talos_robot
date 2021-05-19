@@ -1,3 +1,5 @@
+ball_screw_efficiency: 0.0
+ball_screw_lead: 0.0
 motor_inertia: 8.60398e-05
 motor_torque_constant: 0.106
 torque_sensor_offset: 2.5

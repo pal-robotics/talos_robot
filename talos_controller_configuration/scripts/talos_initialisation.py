@@ -163,7 +163,11 @@ class TalosInitialisation:
             self.speak_status("Initialisation failed!")
 
     def do_initialisation(self):
+        # We rest the FTs twice inorder to avoid the situations where the the default controllers
+        # positioning is effected due to a pre-existing offsets in the FTs, doing it twice will
+        # ensure that the robot is in proper walking pose and also FTs are set to zero finally
         result = self.check_floating() \
+            and self.reset_ft_ankles_offset() \
             and self.launch_default_controllers() \
             and self.launch_intr_controller() \
             and self.reset_ft_ankles_offset() \

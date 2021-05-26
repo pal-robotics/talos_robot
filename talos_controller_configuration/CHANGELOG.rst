@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.18 (2021-05-26)
+-------------------
 * Merge branch 'reset_ft_twice' into 'erbium-devel'
   reset FTs twice before and after launching the default controllers
   See merge request robots/talos_robot!107

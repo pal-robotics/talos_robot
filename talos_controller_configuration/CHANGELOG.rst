@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.19 (2021-08-26)
+-------------------
 * Merge branch 'kangaroo_wbc' into 'erbium-devel'
   Add ballscrew parameters in actuators params
   See merge request robots/talos_robot!108

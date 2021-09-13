@@ -13,14 +13,65 @@
   <xacro:property name="leg_damping"      value="0.0" />
 
 
-  <xacro:macro name="talos_leg" params="prefix reflect">
+  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/leg_${prefix}.xacro" />
     </xacro:unless>
     <xacro:if value="$(arg test)">
       <xacro:include filename="$(find talos_description)/test/calibration/leg_${prefix}.xacro" />
     </xacro:if>
-    <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
+
+
+    <xacro:if value="${flexibility}">
+  <!-- Joint flex_hip_y (mesh link) : child link flex_hip_x -> parent link base_link -->
+    <link name="leg_${prefix}_flex_1_link">
+    <inertial>
+      <origin rpy="0. 0. 0." xyz="0. 0. 0."/>
+      <mass value="0.0000"/>
+      <inertia ixx="0." ixy="0." ixz="-0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.001" radius="0.1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="leg_${prefix}_flex_1_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="leg_${prefix}_flex_1_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.02 ${reflect*0.085} -0.18105"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="-0.349065850399" upper="1.57079632679" velocity="3.87"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+
+  <!-- Joint flex_hip_x (mesh link) : child link hip_z -> parent link flex_hip_y -->
+  <link name="leg_${prefix}_flex_2_link">
+    <inertial>
+      <origin rpy="0. 0. 0." xyz="0. 0. 0."/>
+      <mass value="0."/>
+      <inertia ixx="0." ixy="0." ixz="-0." iyy="0." iyz="0." izz="0."/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.001" radius="0.1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="leg_${prefix}_flex_2_joint" type="revolute">
+    <parent link="leg_${prefix}_flex_1_link"/>
+    <child link="leg_${prefix}_flex_2_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.000 0.000 -0.0000"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="100" lower="-0.349065850399" upper="1.57079632679" velocity="3.87"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+
+    </xacro:if>
 
     <link name="leg_${prefix}_1_link">
       <xacro:call macro="leg_${prefix}_1_link_inertial" />
@@ -41,8 +92,14 @@
       </collision>
     </link>
 
+    <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
     <joint name="leg_${prefix}_1_joint" type="revolute">
-      <parent link="base_link"/>
+      <xacro:if value="${flexibility}">
+      	<parent link="leg_${prefix}_flex_2_link"/>
+      </xacro:if>
+      <xacro:unless value="${flexibility}">
+      	<parent link="base_link"/>
+      </xacro:unless>
       <child link="leg_${prefix}_1_link"/>
       <origin xyz="${-0.02 + leg_1_joint_x_offset} ${reflect*0.08500 + leg_1_joint_y_offset} ${-0.27105 + leg_1_joint_z_offset}"
               rpy="${0.00000 * deg_to_rad + leg_1_joint_roll_offset} ${0.00000 * deg_to_rad + leg_1_joint_pitch_offset} ${0.00000 * deg_to_rad + leg_1_joint_yaw_offset}"/>

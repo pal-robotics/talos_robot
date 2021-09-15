@@ -3,12 +3,14 @@
     <arg name="robot" default="full_v2"/>
     <arg name="foot_collision" default="default"/>
     <arg name="enable_crane" default="false"/>
-    <arg name="head_type" default="default"/> <!-- default type with orbbec pro cam, lidar type with (OS-1 64 + T265 + D435i)-->
+    <arg name="head_type" default="default"/><!-- default type with orbbec pro cam, lidar type with (OS-1 64 + T265 + D435i)-->
+    <arg name="flexibility" default="false"/> 
 
     <include file="$(find talos_description)/robots/upload.launch">
         <arg name="robot" value="$(arg robot)"/>
         <arg name="foot_collision" value="$(arg foot_collision)"/>
         <arg name="enable_crane" value="$(arg enable_crane)"/>
         <arg name="head_type" value="$(arg head_type)"/>
+        <arg name="flexibility" default="$(arg flexibility)"/> 
     </include>
 </launch>

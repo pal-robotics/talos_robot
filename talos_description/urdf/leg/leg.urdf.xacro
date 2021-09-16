@@ -363,6 +363,10 @@
   </gazebo>
 
   <xacro:if value="${flexibility}">
+   <xacro:talos_leg_simple_transmission side="${prefix}" number="flex_1" reduction="${leg_reduction}" />
+   <xacro:talos_leg_simple_transmission side="${prefix}" number="flex_2" reduction="${leg_reduction}" />
+
+
    <gazebo reference="leg_${prefix}_flex_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>

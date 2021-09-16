@@ -43,7 +43,7 @@
     <child link="leg_${prefix}_flex_1_link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.02 ${reflect*0.085} -0.18105"/>
     <axis xyz="0 1 0"/>
-    <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
+    <limit effort="500" lower="-1.57" upper="1.57" velocity="100"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
 
@@ -67,7 +67,7 @@
     <child link="leg_${prefix}_flex_2_link"/>
     <origin rpy="0.0 0.0 0.0" xyz="-0.000 0.000 -0.0000"/>
     <axis xyz="1 0 0"/>
-    <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
+    <limit effort="500" lower="-1.57" upper="1.57" velocity="100"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
 

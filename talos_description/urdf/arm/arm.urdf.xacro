@@ -169,7 +169,7 @@
     <joint name="${name}_${side}_4_joint" type="revolute">
       <parent link="${name}_${side}_3_link" />
       <child link="${name}_${side}_4_link" />
-      <origin xyz="${0.02000 + arm_4_joint_x_offset} ${0.00000 + arm_4_joint_y_offset} ${-0.27300 + arm_4_joint_z_offset}"
+      <origin xyz="${0.02000 + arm_4_joint_x_offset} ${0.00000 + arm_4_joint_y_offset} ${-0.2782 + arm_4_joint_z_offset}"
               rpy="${0.00000 * deg_to_rad + arm_4_joint_roll_offset} ${0.00000 * deg_to_rad + arm_4_joint_pitch_offset} ${0.00000 * deg_to_rad + arm_4_joint_yaw_offset}"/>
       <axis xyz="0 1 0" />
       <limit lower="${-128.0 * deg_to_rad}" upper="${-0.2 * deg_to_rad}" effort="${arm_4_max_effort}" velocity="${arm_4_max_vel}" />

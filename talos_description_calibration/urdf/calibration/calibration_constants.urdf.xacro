@@ -14,9 +14,9 @@
   <xacro:include filename="$(find talos_description_calibration)/urdf/deg_to_rad.xacro" />
 
   <!--Constant parameters-->
-  <xacro:property name="camera_position_x" value="0.066" />
-  <xacro:property name="camera_position_y" value="0.0" />
-  <xacro:property name="camera_position_z" value="0.1982" />
+  <xacro:property name="camera_position_x" value="0.0621" />
+  <xacro:property name="camera_position_y" value="0.0375" />
+  <xacro:property name="camera_position_z" value="0.1832" />
   <xacro:property name="camera_orientation_r" value="0.0" />
   <xacro:property name="camera_orientation_p" value="0.0" />
   <xacro:property name="camera_orientation_y" value="0.0" />

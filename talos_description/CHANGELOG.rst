@@ -2,6 +2,20 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'uedin_markers' into 'erbium-devel'
+  Make modifications for the UEDIN markers
+  See merge request robots/talos_robot!111
+* Set the zero calibration constants in the arms for the tests
+* Merge branch 'pal_physics_simulator_fix' into 'erbium-devel'
+  talos zero configuration fix for pal_physics_simulator
+  See merge request robots/talos_robot!110
+* Fix wrong transformations / meshes in the camera
+* Make modifications for the UEDIN markers
+* talos zero configuration fix for pal_physics_simulator
+* Contributors: Adria Roig, saikishor
+
 1.1.19 (2021-08-26)
 -------------------
 

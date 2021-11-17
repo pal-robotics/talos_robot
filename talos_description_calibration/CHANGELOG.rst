@@ -2,6 +2,14 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'uedin_markers' into 'erbium-devel'
+  Make modifications for the UEDIN markers
+  See merge request robots/talos_robot!111
+* Make modifications for the UEDIN markers
+* Contributors: Adria Roig
+
 1.1.19 (2021-08-26)
 -------------------
 

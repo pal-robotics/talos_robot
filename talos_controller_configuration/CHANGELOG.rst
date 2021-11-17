@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'impedance_param_files' into 'erbium-devel'
+  Impedance param files
+  See merge request robots/talos_robot!109
+* added default parameters and specifics params file
+* added empty impedance parameter files
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.1.19 (2021-08-26)
 -------------------
 * Merge branch 'kangaroo_wbc' into 'erbium-devel'

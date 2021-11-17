@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.20 (2021-11-17)
+-------------------
 * Merge branch 'uedin_markers' into 'erbium-devel'
   Make modifications for the UEDIN markers
   See merge request robots/talos_robot!111

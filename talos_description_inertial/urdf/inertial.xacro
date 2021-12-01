@@ -227,16 +227,16 @@
   </xacro:macro>
   <xacro:macro name="head_1_link_inertial">
     <inertial>
-      <mass value="0.645847"/>
-      <inertia ixx="0.00162283" ixy="0.00000775" ixz="-0.00007338" iyy="0.00101072" iyz="-0.0001584" izz="0.00155812" />
-      <origin rpy="0 0 0" xyz="-0.00170599 0.00951995 0.02791276"/>
+      <mass value="0.73746"/>
+      <inertia ixx="0.00224878584" ixy="4.69375e-06" ixz="8.55557e-05" iyy="0.00111158492" iyz="-4.132536e-05" izz="0.00205225921" />
+      <origin rpy="0 0 0" xyz="-0.00157211 -0.00157919 0.02175767"/>
     </inertial>
   </xacro:macro>
   <xacro:macro name="head_2_link_inertial">
     <inertial>
-      <mass value="1.297575"/>
-      <inertia ixx="0.01045038" ixy="0.00011521" ixz="-0.00021127" iyy="0.0099128" iyz="0.00107457" izz="0.0057925" />
-      <origin rpy="0 0 0" xyz="0.01425088 -0.00602046 0.13890363"/>
+      <mass value="1.443954"/>
+      <inertia ixx="0.01084624339" ixy="1.050889e-05" ixz="0.00041594252" iyy="0.0109569176" iyz="2.367831e-05" izz="0.00571698895" />
+      <origin rpy="0 0 0" xyz="0.01002657 5.218e-05 0.14136068"/>
     </inertial>
   </xacro:macro>
   <xacro:macro name="imu_link_inertial">

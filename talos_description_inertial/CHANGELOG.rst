@@ -2,6 +2,11 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* revert the changes of the inertias in the head
+* Contributors: Sai Kishor Kothakota
+
 1.1.20 (2021-11-17)
 -------------------
 * Merge branch 'uedin_markers' into 'erbium-devel'

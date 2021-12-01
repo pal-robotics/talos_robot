@@ -2,8 +2,8 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.21 (2021-12-01)
+-------------------
 * revert the changes of the inertias in the head
 * Contributors: Sai Kishor Kothakota
 

@@ -20,6 +20,13 @@ RESET_FT_ANKLES_PKG = "zero_set_calibration"
 RESET_FT_ANKLES_EXEC = "reset_ankles_fts.sh"
 RESET_FT_ANKLES_TIME = 10
 
+RESET_FT_WRISTS_PKG = "zero_set_calibration"
+RESET_FT_WRISTS_EXEC = "reset_wrists_fts.sh"
+RESET_FT_WRISTS_TIME = 10
+WRISTS_MOTION_NAME = "arms_down"
+WRISTS_MOTION_TIME = 10
+WRISTS_WAIT_TIME = 3
+
 RBT_STATUS_CHECK_PKG = "robot_status_check"
 RBT_STATUS_CHECK_LAUNCH = "robot_status_check.launch"
 RBT_STATUS_CHECK_RESULT_PARAM = "/talos_status_check/result"
@@ -31,9 +38,10 @@ INIT_LOG_FILE = "/home/pal/.ros/log/talos_initialisation.log"
 
 class TalosInitialisation:
 
-    def __init__(self, is_simulation=False, is_robot_floating=False):
+    def __init__(self, is_simulation=False, is_robot_floating=False, reset_wrists=False):
         self.is_simulation = is_simulation
         self.is_robot_floating = is_robot_floating
+        self.reset_wrists = reset_wrists
 
         if not self.is_simulation:
             self.dflt_ctrls_cmd = "roslaunch {} {}".format(
@@ -47,6 +55,11 @@ class TalosInitialisation:
 
         self.reset_ft_ankles_cmd = "rosrun {} {}".format(
             RESET_FT_ANKLES_PKG, RESET_FT_ANKLES_EXEC)
+
+        self.reset_ft_wrists_cmd = "rosrun {} {}".format(
+            RESET_FT_WRISTS_PKG, RESET_FT_WRISTS_EXEC)
+
+        self.reset_ft_wrists_motion_cmd =  "rosrun play_motion run_motion {}".format(WRISTS_MOTION_NAME)
 
         self.rbt_status_check_cmd = "roslaunch {} {}".format(
             RBT_STATUS_CHECK_PKG, RBT_STATUS_CHECK_LAUNCH)
@@ -111,6 +124,38 @@ class TalosInitialisation:
             rospy.logerr("Introspection controller finished prematurely")
         return result
 
+    def launch_reset_wrists_pose(self):
+        rospy.loginfo("Move arms with wrists aligned with gravity")
+        shell = ShellCmd(self.reset_ft_wrists_motion_cmd,
+                         stdout=self.log_fd, stderr=self.log_fd)
+        result = False
+        if shell.wait(WRISTS_MOTION_TIME):
+            rospy.loginfo("Moving arms finished")
+            result = shell.get_retcode() == 0
+            if result:
+                rospy.loginfo("Moving arms successfull")
+            else:
+                rospy.logerr("Moving arms failed")
+        else:
+            rospy.logerr("Moving arms hanged")
+            shell.kill()
+        time.sleep(WRISTS_WAIT_TIME)# wait a little that the oscillations from the motion stop 
+        return result
+
+    def launch_walk_pose(self):
+        rospy.loginfo("Move arms to walk pose")
+        shell = ShellCmd("roslaunch talos_controller_configuration walk_pose.launch",
+                         stdout=self.log_fd, stderr=self.log_fd)
+        result = False
+        time.sleep(DFLT_CTRLS_TIME)
+        result = not shell.is_done()
+        if result:
+            rospy.loginfo("Moving arms successfull")
+        else:
+            rospy.logerr("Moving arms failed")
+        return result
+
+
     def reset_ft_ankles_offset(self):
         # run ankles ati ft reset script
         if not self.is_simulation:
@@ -131,6 +176,31 @@ class TalosInitialisation:
             return result
         else:
             return True
+
+    def reset_ft_wrists_offset(self):
+        # run wrists ati ft reset script
+        if not self.is_simulation and self.reset_wrists:
+            result_motion = self.launch_reset_wrists_pose()
+
+            rospy.loginfo("Resetting wrists ATI FT offsets")
+            shell = ShellCmd(self.reset_ft_wrists_cmd,
+                             stdout=self.log_fd, stderr=self.log_fd)
+            result = False
+            if shell.wait(RESET_FT_WRISTS_TIME):
+                rospy.loginfo("Resetting wrists ATI FT finished")
+                result = shell.get_retcode() == 0
+                if result:
+                    rospy.loginfo("Resetting wrists ATI FT successfull")
+                else:
+                    rospy.logerr("Resetting wrists ATI FT failed")
+            else:
+                rospy.logerr("Resetting wrists ATI FT hanged")
+                shell.kill()
+            result_walk_pose = self.launch_walk_pose()
+            return result and result_motion
+        else:
+            return True
+
 
     def launch_robot_status_check(self):
         # launch robot_status_check and check result
@@ -170,6 +240,7 @@ class TalosInitialisation:
             and self.reset_ft_ankles_offset() \
             and self.launch_default_controllers() \
             and self.launch_intr_controller() \
+            and self.reset_ft_wrists_offset() \
             and self.reset_ft_ankles_offset() \
             and self.launch_robot_status_check()
 
@@ -183,13 +254,16 @@ if __name__ == '__main__':
                         help="Run initialisation in simulation")
     parser.add_argument('-y', '--yes', action="store_true",
                         help="Robot is already in the air")
+    parser.add_argument('-w', '--wrists', action="store_true",
+                        help="Add intermediate pose with the arms down and reset the wrists FT sensors")
     args = parser.parse_args()
 
     is_simulation = args.simulation
     is_robot_floating = args.yes
-
+    reset_wrists = args.wrists
     rospy.init_node("talos_initialisation")
 
     talos_initialisation = TalosInitialisation(
-        is_simulation, is_robot_floating)
+        is_simulation, is_robot_floating, reset_wrists)
     talos_initialisation.do_initialisation()
+

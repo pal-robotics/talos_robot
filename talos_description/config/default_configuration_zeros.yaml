@@ -31,12 +31,16 @@ zeros:
   gripper_right_motor_single_joint:   0.0
   gripper_right_inner_single_joint:   0.0
   gripper_right_fingertip_3_joint:    0.0
+  leg_left_flex_1_joint:              0.0
+  leg_left_flex_2_joint:              0.0
   leg_left_1_joint:                   0.0
   leg_left_2_joint:                   0.0
   leg_left_3_joint:                   0.0
   leg_left_4_joint:                   0.0
   leg_left_5_joint:                   0.0
   leg_left_6_joint:                   0.0
+  leg_right_flex_1_joint:             0.0
+  leg_right_flex_2_joint:             0.0
   leg_right_1_joint:                  0.0
   leg_right_2_joint:                  0.0
   leg_right_3_joint:                  0.0

@@ -5,7 +5,7 @@ motor_torque_constant: 0.106
 torque_sensor_offset: 0.0
 reduction_ratio: 100
 actuator_names:
-  - leg_left_3_motor
+  - arm_left_3_motor
 check_mode: false
 static_friction: 0.5
 viscous_friction: 0.27

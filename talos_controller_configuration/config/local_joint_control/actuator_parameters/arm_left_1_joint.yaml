@@ -7,7 +7,6 @@ reduction_ratio: 100
 actuator_names:
   - arm_left_1_motor
 check_mode: false
-
 static_friction: 0.152436
 viscous_friction: 0.635302
 joint_elasticity: 10000.0

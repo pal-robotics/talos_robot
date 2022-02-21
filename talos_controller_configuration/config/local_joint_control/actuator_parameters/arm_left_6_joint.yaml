@@ -1,6 +1,6 @@
 ball_screw_efficiency: 0.0
 ball_screw_lead: 0.0
-motor_torque_constant: 0.106
+motor_torque_constant: 0.034
 torque_sensor_offset: 0.0
 reduction_ratio: 100
 actuator_names:

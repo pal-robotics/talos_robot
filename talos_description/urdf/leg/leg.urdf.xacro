@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="talos">
-
+  
+  <xacro:include filename="$(find talos_description)/urdf/leg/foot_frames.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/leg.transmission.xacro" />
 
   <xacro:property name="deg_to_rad"       value="0.01745329251994329577" />
@@ -216,6 +217,8 @@
       <axis xyz="1 0 0" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
+
+    <xacro:talos_foot_frames side="${prefix}" parent="${prefix}_sole_link" offset_x="0.00" offset_y="0.00"/>
 
     <xacro:talos_leg_simple_transmission side="${prefix}" number="1" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="2" reduction="${leg_reduction}" />

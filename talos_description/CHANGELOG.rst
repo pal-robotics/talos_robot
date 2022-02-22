@@ -2,6 +2,18 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'centroidal_mpc' into 'erbium-devel'
+  Centroidal mpc
+  See merge request robots/talos_robot!114
+* Added offset_y=0.00 as suggested in comment for MR
+* Add rviz in talos_joint_command_rviz.launch
+* Added model with fake grippers to take into account weight of grippers when not present in model
+* fixed talos_joint_command_rviz
+* Add foot contact frames
+* Contributors: Adria Roig, enricomingo, narcismiguel
+
 1.1.21 (2021-12-01)
 -------------------
 

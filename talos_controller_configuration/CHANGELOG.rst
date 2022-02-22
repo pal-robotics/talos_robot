@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix wrong actuator parameters
+* Merge branch 'wrist_zero' into 'erbium-devel'
+  Add procedure to make to zero of the wrist FT sensors
+  See merge request robots/talos_robot!113
+* Add option to talos_initialisation script to make the zero set of the wrist FT
+* Contributors: Adria Roig, Jordan Palacios, Pierre Fernbach
+
 1.1.21 (2021-12-01)
 -------------------
 

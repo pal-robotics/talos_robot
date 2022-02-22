@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'wrist_zero' into 'erbium-devel'
+  Add procedure to make to zero of the wrist FT sensors
+  See merge request robots/talos_robot!113
+* Add motion to put the arms down with wrist aligned to -z axis in talos_motion.yaml
+* Contributors: Jordan Palacios, Pierre Fernbach
+
 1.1.21 (2021-12-01)
 -------------------
 

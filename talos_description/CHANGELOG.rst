@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.22 (2022-02-22)
+-------------------
 * Merge branch 'centroidal_mpc' into 'erbium-devel'
   Centroidal mpc
   See merge request robots/talos_robot!114

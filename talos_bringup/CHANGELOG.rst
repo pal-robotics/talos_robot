@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.22 (2022-02-22)
+-------------------
 * Merge branch 'wrist_zero' into 'erbium-devel'
   Add procedure to make to zero of the wrist FT sensors
   See merge request robots/talos_robot!113

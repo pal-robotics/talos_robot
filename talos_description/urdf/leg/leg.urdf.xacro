@@ -218,7 +218,7 @@
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
 
-    <xacro:talos_foot_frames side="${prefix}" parent="${prefix}_sole_link" offset_x="0.00"/>
+    <xacro:talos_foot_frames side="${prefix}" parent="${prefix}_sole_link" offset_x="0.00" offset_y="0.00"/>
 
     <xacro:talos_leg_simple_transmission side="${prefix}" number="1" reduction="${leg_reduction}" />
     <xacro:talos_leg_simple_transmission side="${prefix}" number="2" reduction="${leg_reduction}" />

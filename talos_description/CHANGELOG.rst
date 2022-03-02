@@ -2,6 +2,21 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_flexibility' into 'erbium-devel'
+  Add flexibility
+  See merge request robots/talos_robot!112
+* Add very small mass and inertia to flexibility links (because of issue in pybullet with null values for inertia)
+* Add zero config value for flexibility joints
+* Forward parameter name from upload_talos to upload
+* Add transmission for the flexibility
+* increase torque limit of the flexibility
+* Fix xacro for flexibility
+* Add argument to launch file to use flexibility
+* Add hip flexibility option in xacro file
+* Contributors: Pierre Fernbach, saikishor
+
 1.1.22 (2022-02-22)
 -------------------
 * Merge branch 'centroidal_mpc' into 'erbium-devel'

@@ -2,6 +2,13 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove actuator parameters for flexibility joints from this package
+* Update stiffness value of hip flexibility to 4000 Nm
+* Add actuator params yaml files for the flexibility
+* Contributors: Pierre Fernbach
+
 1.1.22 (2022-02-22)
 -------------------
 * Fix wrong actuator parameters

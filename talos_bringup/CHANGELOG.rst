@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_flexibility' into 'erbium-devel'
+  Add flexibility
+  See merge request robots/talos_robot!112
+* Add robot_description argument to talos_bringup and follow it to moveit launch file
+* Contributors: Pierre Fernbach, saikishor
+
 1.1.22 (2022-02-22)
 -------------------
 * Merge branch 'wrist_zero' into 'erbium-devel'

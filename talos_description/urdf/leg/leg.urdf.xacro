@@ -13,18 +13,68 @@
   <xacro:property name="leg_damping"      value="0.0" />
 
 
-  <xacro:macro name="talos_leg" params="prefix reflect">
+  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/leg_${prefix}.xacro" />
     </xacro:unless>
     <xacro:if value="$(arg test)">
       <xacro:include filename="$(find talos_description)/test/calibration/leg_${prefix}.xacro" />
     </xacro:if>
-    <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
+
+
+    <xacro:if value="${flexibility}">
+  <!-- Joint flex_hip_y (mesh link) : child link flex_hip_x -> parent link base_link -->
+    <link name="leg_${prefix}_flex_1_link">
+    <inertial>
+      <origin rpy="0. 0. 0." xyz="0. 0. 0."/>
+      <mass value="1.0E-6"/>
+      <inertia ixx="1.0E-6" ixy="0." ixz="-0." iyy="1.0E-6" iyz="0." izz="1.0E-6"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.001" radius="0.1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="leg_${prefix}_flex_1_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="leg_${prefix}_flex_1_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.02 ${reflect*0.085} -0.18105"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="500" lower="-1.57" upper="1.57" velocity="100"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+
+  <!-- Joint flex_hip_x (mesh link) : child link hip_z -> parent link flex_hip_y -->
+  <link name="leg_${prefix}_flex_2_link">
+    <inertial>
+      <origin rpy="0. 0. 0." xyz="0. 0. 0."/>
+      <mass value="1.0E-6"/>
+      <inertia ixx="1.0E-6" ixy="0." ixz="-0." iyy="1.0E-6" iyz="0." izz="1.0E-6"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.001" radius="0.1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+  </link>
+  <joint name="leg_${prefix}_flex_2_joint" type="revolute">
+    <parent link="leg_${prefix}_flex_1_link"/>
+    <child link="leg_${prefix}_flex_2_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.000 0.000 -0.0000"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="500" lower="-1.57" upper="1.57" velocity="100"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+
+    </xacro:if>
 
     <link name="leg_${prefix}_1_link">
       <xacro:call macro="leg_${prefix}_1_link_inertial" />
-
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
@@ -41,6 +91,8 @@
       </collision>
     </link>
 
+    <!-- Joint hip_z (mesh link) : child link hip_x -> parent link base_link -->
+    <xacro:unless value="${flexibility}">
     <joint name="leg_${prefix}_1_joint" type="revolute">
       <parent link="base_link"/>
       <child link="leg_${prefix}_1_link"/>
@@ -50,6 +102,17 @@
       <limit lower="${(-55.0 + 35.0*reflect)*deg_to_rad}" upper="${(55.0 + 35.0*reflect)*deg_to_rad}" effort="100" velocity="3.87" />
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
+    </xacro:unless>
+    <xacro:if value="${flexibility}">
+    <joint name="leg_${prefix}_1_joint" type="revolute">
+      <parent link="leg_${prefix}_flex_2_link"/>
+      <child link="leg_${prefix}_1_link"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.00 0.000 -0.090"/>
+      <axis xyz="0 0 1" />
+      <limit lower="${(-55.0 + 35.0*reflect)*deg_to_rad}" upper="${(55.0 + 35.0*reflect)*deg_to_rad}" effort="100" velocity="3.87" />
+      <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
+    </joint>
+    </xacro:if>
 
 
     <!-- Joint hip_x (mesh link) : child link hip_y -> parent link hip_z -->
@@ -299,6 +362,35 @@
     <material>Gazebo/White</material>
   </gazebo>
 
+  <xacro:if value="${flexibility}">
+   <xacro:talos_leg_simple_transmission side="${prefix}" number="flex_1" reduction="${leg_reduction}" />
+   <xacro:talos_leg_simple_transmission side="${prefix}" number="flex_2" reduction="${leg_reduction}" />
+
+
+   <gazebo reference="leg_${prefix}_flex_1_link">
+     <mu1>0.9</mu1>
+     <mu2>0.9</mu2>
+   </gazebo>
+   <gazebo reference="leg_${prefix}_flex_2_link">
+     <mu1>0.9</mu1>
+     <mu2>0.9</mu2>
+   </gazebo>
+
+   <gazebo reference="leg_${prefix}_flex_1_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+   </gazebo>
+   <gazebo reference="leg_${prefix}_flex_2_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+   </gazebo>
+
+  <gazebo reference="leg_${prefix}_flex_1_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="leg_${prefix}_flex_2_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  </xacro:if>
   </xacro:macro>
 
 </robot>

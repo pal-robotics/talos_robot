@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.23 (2022-03-02)
+-------------------
 * Merge branch 'add_flexibility' into 'erbium-devel'
   Add flexibility
   See merge request robots/talos_robot!112

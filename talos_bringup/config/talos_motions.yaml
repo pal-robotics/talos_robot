@@ -707,4 +707,124 @@ play_motion:
         name: Arms down
         usage: posture
         description: Both arms on the side and wrist down aligned with -z axis
+    picture_pose_high:
+      joints: [torso_1_joint, torso_2_joint,
+        arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint,
+        arm_left_5_joint, arm_left_6_joint, arm_left_7_joint,
+        arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint,
+        arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
+        gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0., 0.05,
+        0.4, 1.4, -0.7, -1.45,
+        0., 0., 0.,
+        -0.4, -1.4, 0.7, -1.45,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0., 0.05,
+        0.5, 2.0, 0.35, -1.0,
+        0., 0., 0.,
+        -0.5, -2.0, -0.35, -1.,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 8.0
+      - positions: [0., 0.05,
+        0.5, 2.0, 0.35, -1.0,
+        0.65, -1.0, -0.2,
+        -0.5, -2.0, -0.35, -1.,
+        -0.65, 1.0, -0.2,
+         0.0, 0.0]
+        time_from_start: 10.0
+      - positions: [0., 0.05,
+        0.5, 2.0, 0.35, -1.0,
+        0.65, -1.0, -0.2,
+        -0.5, -2.0, -0.35, -1.,
+        -0.65, 1.0, -0.2,
+         0.9, 0.9]
+        time_from_start: 12.0
+      meta:
+        name: Picture pose High
+        usage: Entertainment
+        description: Arms open on the side to lay on someone's shoulders (for tall people)
+    picture_pose_low:
+      joints: [torso_1_joint, torso_2_joint,
+        arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint,
+        arm_left_5_joint, arm_left_6_joint, arm_left_7_joint,
+        arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint,
+        arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
+        gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0., 0.05,
+        0.4, 1., -0.7, -1.45,
+        0., 0., 0.,
+        -0.4, -1., 0.7, -1.45,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0., 0., 0.,
+        -0.5, -1.45, -0.4, -1.,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 8.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0.3, -1.0, -0.5,
+        -0.5, -1.45, -0.4, -1.,
+        -0.3, 1.0, -0.5,
+         0.0, 0.0]
+        time_from_start: 10.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0.3, -1.0, -0.5,
+        -0.5, -1.45, -0.4, -1.,
+        -0.3, 1.0, -0.5,
+         0.9, 0.9]
+        time_from_start: 12.0
+      meta:
+        name: Picture pose low
+        usage: Entertainment
+        description: Arms open on the side to lay on someone's shoulders (for short people)
+    picture_pose_both:
+      joints: [torso_1_joint, torso_2_joint,
+        arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint,
+        arm_left_5_joint, arm_left_6_joint, arm_left_7_joint,
+        arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint,
+        arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
+        gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0., 0.05,
+        0.4, 1., -0.7, -1.45,
+        0., 0., 0.,
+        -0.4, -1., 0.7, -1.45,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 3.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0., 0., 0.,
+        -0.5, -2.0, -0.35, -1.,
+        0, 0., 0.,
+        0.0, 0.0]
+        time_from_start: 8.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0.3, -1.0, -0.5,
+        -0.5, -2.0, -0.35, -1.,
+        -0.65, 1.0, -0.2,
+         0.0, 0.0]
+        time_from_start: 10.0
+      - positions: [0., 0.05,
+        0.5, 1.45, 0.4, -1.0,
+        0.3, -1.0, -0.5,
+        -0.5, -2.0, -0.35, -1.,
+        -0.65, 1.0, -0.2,
+         0.9, 0.9]
+        time_from_start: 12.0
+      meta:
+        name: Picture pose both
+        usage: Entertainment
+        description: Arms open on the side to lay on someone's shoulders (for one short and one tall person)
 

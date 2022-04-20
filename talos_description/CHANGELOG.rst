@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_camera_frame' into 'erbium-devel'
+  Fix wrong optical frame
+  See merge request robots/talos_robot!118
+* Fix wrong optical frame
+* Contributors: Adria Roig
+
 1.1.23 (2022-03-02)
 -------------------
 * Merge branch 'add_flexibility' into 'erbium-devel'

@@ -2,6 +2,9 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.23 (2022-03-02)
 -------------------
 * Merge branch 'add_flexibility' into 'erbium-devel'

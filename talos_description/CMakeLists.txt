@@ -10,7 +10,8 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-foreach(dir config gazebo meshes robots urdf)
+
+foreach(dir config gazebo meshes robots urdf srdf)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)

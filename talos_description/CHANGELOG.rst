@@ -2,6 +2,9 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.24 (2022-04-20)
 -------------------
 * Merge branch 'fix_camera_frame' into 'erbium-devel'

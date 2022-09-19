@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.25 (2022-09-19)
+-------------------
 * Merge branch 'pierre.fernbach-erbium-devel-patch-78692' into 'erbium-devel'
   Add new play_motion: picture poses
   See merge request robots/talos_robot!116

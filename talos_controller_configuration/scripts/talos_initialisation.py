@@ -16,12 +16,16 @@ INTR_CTRL_PKG = "introspection_controller"
 INTR_CTRL_LAUNCH = "introspection_controller.launch"
 INTR_CTRL_TIME = 5
 
+RESET_FT_ETHERCAT_PKG = "zero_set_calibration"
+RESET_FT_ETHERCAT_EXEC = "reset_ft_sensors.py --with_ankle --with_wrist --zero_ethercat --filter 32Hz"
+RESET_FT_ETHERCAT_TIME = 5
+
 RESET_FT_ANKLES_PKG = "zero_set_calibration"
-RESET_FT_ANKLES_EXEC = "reset_ankles_fts.sh"
+RESET_FT_ANKLES_EXEC = "reset_ft_sensors.py --with_ankle --reset_ft"
 RESET_FT_ANKLES_TIME = 10
 
 RESET_FT_WRISTS_PKG = "zero_set_calibration"
-RESET_FT_WRISTS_EXEC = "reset_wrists_fts.sh"
+RESET_FT_WRISTS_EXEC = "reset_ft_sensors.py --with_wrist --reset_ft"
 RESET_FT_WRISTS_TIME = 10
 WRISTS_MOTION_NAME = "arms_down"
 WRISTS_MOTION_TIME = 10
@@ -52,6 +56,9 @@ class TalosInitialisation:
 
         self.intr_ctrl_cmd = "roslaunch {} {}".format(
             INTR_CTRL_PKG, INTR_CTRL_LAUNCH)
+
+        self.reset_ft_ethercat_cmd = "rosrun {} {}".format(
+            RESET_FT_ETHERCAT_PKG, RESET_FT_ETHERCAT_EXEC)
 
         self.reset_ft_ankles_cmd = "rosrun {} {}".format(
             RESET_FT_ANKLES_PKG, RESET_FT_ANKLES_EXEC)
@@ -156,6 +163,28 @@ class TalosInitialisation:
         return result
 
 
+    def reset_ft_ethercat(self):
+        # reset all force sensors control codes to 0, set the filter and reset the value.
+        if not self.is_simulation:
+            rospy.loginfo("Send initial ethercat configuration for ankles FT")
+            shell = ShellCmd(self.reset_ft_ethercat_cmd,
+                             stdout=self.log_fd, stderr=self.log_fd)
+            result = False
+            if shell.wait(RESET_FT_ETHERCAT_TIME):
+                rospy.loginfo("Resetting ankles FT ethercat configuration finished")
+                result = shell.get_retcode() == 0
+                if result:
+                    rospy.loginfo("Resetting ankles FT ethercat configuration successfull")
+                else:
+                    rospy.logerr("Resetting ankles FT ethercat configuration failed")
+            else:
+                rospy.logerr("Resetting ankles FT ethercat configuration hanged")
+                shell.kill()
+            return result
+        else:
+            return True
+
+
     def reset_ft_ankles_offset(self):
         # run ankles ati ft reset script
         if not self.is_simulation:
@@ -237,7 +266,7 @@ class TalosInitialisation:
         # positioning is effected due to a pre-existing offsets in the FTs, doing it twice will
         # ensure that the robot is in proper walking pose and also FTs are set to zero finally
         result = self.check_floating() \
-            and self.reset_ft_ankles_offset() \
+            and self.reset_ft_ethercat() \
             and self.launch_default_controllers() \
             and self.launch_intr_controller() \
             and self.reset_ft_wrists_offset() \

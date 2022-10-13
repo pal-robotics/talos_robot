@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.26 (2022-10-13)
+-------------------
 * Merge branch 'urdf_srdf' into 'erbium-devel'
   Add URDF and srdf file in talos_description
   See merge request robots/talos_robot!120

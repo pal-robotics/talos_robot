@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'ft_zero_calibration' into 'erbium-devel'
+  Ft zero calibration
+  See merge request robots/talos_robot!117
+* Ft zero calibration
+* Contributors: Jordan Palacios, maximiliennaveau
+
 1.1.25 (2022-09-19)
 -------------------
 

@@ -2,6 +2,15 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'urdf_srdf' into 'erbium-devel'
+  Add URDF and srdf file in talos_description
+  See merge request robots/talos_robot!120
+* Install an urdf for talos in talos_description compiled from the xacro
+* Add srdf file for Talos
+* Contributors: Pierre Fernbach, saikishor
+
 1.1.25 (2022-09-19)
 -------------------
 

@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.26 (2022-10-13)
 -------------------
 * Merge branch 'ft_zero_calibration' into 'erbium-devel'

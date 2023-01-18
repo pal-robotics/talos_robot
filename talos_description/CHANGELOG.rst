@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.27 (2023-01-18)
+-------------------
 * Merge branch 'add_realsense_dependencies' into 'erbium-devel'
   :heavy_plus_sign: Added missing realsense description and gazebo plugin dependency
   See merge request robots/talos_robot!121

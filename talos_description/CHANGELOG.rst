@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.28 (2023-02-07)
+-------------------
 * Merge branch 'mlu/fix/xacro' into 'erbium-devel'
   xacro is used in the build of talos_description
   See merge request robots/talos_robot!122

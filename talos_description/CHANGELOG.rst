@@ -2,6 +2,14 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'mlu/fix/xacro' into 'erbium-devel'
+  xacro is used in the build of talos_description
+  See merge request robots/talos_robot!122
+* xacro is used in the build of talos_description
+* Contributors: Adria Roig, Mathias Lüdtke
+
 1.1.27 (2023-01-18)
 -------------------
 * Merge branch 'add_realsense_dependencies' into 'erbium-devel'

@@ -3,8 +3,8 @@
   <name>talos_robot</name>
   <version>1.1.28</version>
   <description>Description and launch files for the TOR robot</description>
-  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tomé</maintainer>
-  <license>Propietary</license>
+  <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
+  <license>Apache License 2.0</license>
   <author email="hilario.tome@pal-robotics.com">Hilario Tomé</author>
 
   <buildtool_depend>catkin</buildtool_depend>

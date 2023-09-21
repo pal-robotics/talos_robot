@@ -4,9 +4,9 @@
   <version>1.1.28</version>
   <description>The talos_bringup package</description>
 
-  <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
+  <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
 
-  <license>LGPL-3.0</license>
+  <license>Apache License 2.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 

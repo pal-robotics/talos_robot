@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.29 (2023-10-24)
+-------------------
 * Merge branch 'reset_ft_offset' into 'erbium-devel'
   Reset ankle FT offset also *before* starting default controller
   See merge request robots/talos_robot!124

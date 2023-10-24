@@ -2,8 +2,8 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.29 (2023-10-24)
+-------------------
 * Merge branch 'change_license_to_apache' into 'erbium-devel'
   change public license to Apache License 2.0
   See merge request robots/talos_robot!126

@@ -267,6 +267,7 @@ class TalosInitialisation:
         # ensure that the robot is in proper walking pose and also FTs are set to zero finally
         result = self.check_floating() \
             and self.reset_ft_ethercat() \
+            and self.reset_ft_ankles_offset() \
             and self.launch_default_controllers() \
             and self.launch_intr_controller() \
             and self.reset_ft_wrists_offset() \

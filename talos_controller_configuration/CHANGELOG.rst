@@ -2,6 +2,18 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'reset_ft_offset' into 'erbium-devel'
+  Reset ankle FT offset also *before* starting default controller
+  See merge request robots/talos_robot!124
+* Merge branch 'change_license_to_apache' into 'erbium-devel'
+  change public license to Apache License 2.0
+  See merge request robots/talos_robot!126
+* change public license to Apache License 2.0
+* Reset ankle FT offset also *before* starting default controller
+* Contributors: Jordan Palacios, Pierre Fernbach, Sai Kishor Kothakota
+
 1.1.28 (2023-02-07)
 -------------------
 

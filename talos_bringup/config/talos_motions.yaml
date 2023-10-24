@@ -827,4 +827,60 @@ play_motion:
         name: Picture pose both
         usage: Entertainment
         description: Arms open on the side to lay on someone's shoulders (for one short and one tall person)
+    offer_left_gripper:
+      joints: [arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint]
+      points:
+        - time_from_start: 0
+          positions: [-0.3, 0.24, 0., -1.62, 0.2, 0, 0]
+      meta:
+        name: Offer left gripper
+        usage: grasping
+        description: extend left arm 
+    offer_right_gripper:
+      joints: [arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+      points:
+        - time_from_start: 0
+          positions: [0.3, -0.24, 0., -1.62, -0.2, 0, 0]
+      meta:
+        name: Offer right gripper
+        usage: grasping
+        description: extend right arm 
+    present_arms:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,  arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,  arm_left_7_joint]      
+      points:
+        - time_from_start: 0
+          positions: [0., 0., 0.8, -0.1, -0.9, -1.58, -0.1, -0.4, 0, -0.8, 0.1, 0.9, -1.58, 0.1, 0.4, 0]
+      meta:
+        name: Present arms
+        usage: grasping
+        description: Extend the arms to the front to be ready to grasp a large box
+    close_arms:
+      joints: [torso_1_joint, torso_2_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,  arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,  arm_left_7_joint]      
+      points:
+        - time_from_start: 0
+          positions: [0., 0., 1.1, -0.1, -0.98, -1.58, -0.1, -0.33, 0, -1.1, 0.1, 0.98, -1.58, 0.1, 0.33, 0]
+      meta:
+        name: Close arms
+        usage: grasping
+        description: close the arms around a large bow at the torso level
+    carry_weight:
+      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint,
+        gripper_left_joint, gripper_right_joint]
+      points:
+      - positions: [0.0, 0.0, 0.0, 0.0, -0.2, 0.25, -0.1, -0.6109, 0.0, 0.0, 0.0, 0.2,
+          -0.25, 0.1, -0.6109, 0.0, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 0.
+      - positions: [0.0, 0.05, 0.0, 0.0, 0., 1.1, -1.57, -1.1, 1.57, 0.0, 0.0,
+                                        0., -1.1, 1.57, -1.1, -1.57, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 3.
+      - positions: [0.0, 0.05, 0.0, 0.0, 0., 0.7, -1.57, -0.7, 1.57, 0.0, 0.0,
+                                        0., -0.7, 1.57, -0.7, -1.57, 0.0, 0.0, 0.0, 0.0]
+        time_from_start: 6.
+      meta:
+        name: Carry Weight
+        usage: grasping
+        description: Both arms down on the side, with grippers vertical
 

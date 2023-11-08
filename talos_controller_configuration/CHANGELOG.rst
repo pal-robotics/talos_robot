@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.30 (2023-11-08)
+-------------------
 * Merge branch 'smooth_position_control' into 'erbium-devel'
   Add parameters for direct_position_control
   See merge request robots/talos_robot!125

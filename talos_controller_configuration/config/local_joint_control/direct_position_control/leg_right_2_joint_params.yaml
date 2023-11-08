@@ -1,0 +1,2 @@
+circular_buffer_capacity: 20
+limiter_max_rate: 1

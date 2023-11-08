@@ -2,6 +2,9 @@
 Changelog for package talos_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.29 (2023-10-24)
 -------------------
 * Merge branch 'change_license_to_apache' into 'erbium-devel'

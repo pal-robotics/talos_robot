@@ -2,6 +2,15 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'smooth_position_control' into 'erbium-devel'
+  Add parameters for direct_position_control
+  See merge request robots/talos_robot!125
+* Update limiter_max_rate parameters in direct position control
+* Add parameters for direct_position_control
+* Contributors: Adria Roig, Adrià Roig, Sai Kishor Kothakota
+
 1.1.29 (2023-10-24)
 -------------------
 * Merge branch 'reset_ft_offset' into 'erbium-devel'

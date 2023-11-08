@@ -2,6 +2,14 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'play_motion_carry' into 'erbium-devel'
+  Add play motions related to carrying weight and boxes
+  See merge request robots/talos_robot!127
+* Add play motions related to carrying weight and boxes
+* Contributors: Adria Roig, Pierre Fernbach
+
 1.1.29 (2023-10-24)
 -------------------
 * Merge branch 'change_license_to_apache' into 'erbium-devel'

@@ -1,9 +1,0 @@
-force_torque:
-  right_ankle_ft:
-    frame: leg_right_6_link
-    transformation:
-      force: [x,-y,-z]
-      torque: [x,-y,-z]
-    raw_data:
-      force_port: force_ankle_right
-      torque_port: torque_ankle_right

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<launch>
-  <!-- execute upperbody  motions while walking -->
-  <rosparam command="load" file="$(find talos_controller_configuration)/config/walk_poses.yaml" />
-  <node name="walk_pose" pkg="walking_utils" type="walk_pose" />
-</launch>

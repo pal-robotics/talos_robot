@@ -1,7 +1,0 @@
-<launch deprecated="Use 'position_controllers.launch' directly as below.">
-
-  <include file="$(find talos_controller_configuration)/launch/position_controllers.launch">
-      <arg name="robot" value="upper_body" />
-  </include>
-
-</launch>

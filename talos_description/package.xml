@@ -1,32 +1,30 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>talos_description</name>
   <version>1.1.30</version>
   <description>The talos_description package</description>
 
   <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
+  <maintainer email="ilenia.perrella@pal-robotics.com">Ilenia Perrella</maintainer>
 
   <license>Apache License 2.0</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
   <buildtool_depend>xacro</buildtool_depend>
-
 
   <exec_depend>talos_description_calibration</exec_depend>
   <exec_depend>talos_description_inertial</exec_depend>
-  <exec_depend>realsense2_description</exec_depend>
-  <exec_depend>realsense_gazebo_plugin</exec_depend>
-
+  
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>
 
-  <test_depend>rbdl</test_depend>
-  <test_depend>roscpp</test_depend>
-  <test_depend>pal_ros_utils</test_depend>
-  <test_depend>eigen_checks</test_depend>
-  <test_depend>math_utils</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+  <test_depend>urdf_test</test_depend>
 
   <export>
+    <build_type>ament_cmake</build_type>
   </export>
 
 </package>

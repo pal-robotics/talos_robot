@@ -1,11 +1,8 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(talos_description_calibration)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake_auto REQUIRED)
 
-catkin_package()
+ament_auto_find_build_dependencies()
 
-foreach(dir urdf)
-    install(DIRECTORY ${dir}/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
-endforeach(dir)
+ament_auto_package(INSTALL_TO_SHARE)

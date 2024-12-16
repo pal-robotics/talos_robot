@@ -10,11 +10,13 @@
 
   <xacro:macro name="talos_gripper" params="name parent reflect">
 
+            <xacro:property name="gripper_visual_offset_y"       value="0.007" />
+
             <link name="${name}_base_link">
               <xacro:call macro="${name}_base_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/base_link.STL" scale="1 1 1"/>
                 </geometry>
@@ -22,7 +24,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/base_link_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -32,7 +34,7 @@
             <joint name="${name}_base_link_joint" type="fixed">
               <parent link="${parent}"/>
               <child link="${name}_base_link"/>
-              <origin xyz="0.00000 0.00000 -0.02875"
+              <origin xyz="0.00000 0.0 -0.02875"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="0 0 0" />
             </joint>
@@ -42,7 +44,7 @@
               <xacro:call macro="${name}_motor_double_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double.STL" scale="1 1 1"/>
                 </geometry>
@@ -50,7 +52,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -72,7 +74,7 @@
               <xacro:call macro="${name}_inner_double_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/inner_double.STL" scale="1 1 1"/>
                 </geometry>
@@ -80,7 +82,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/inner_double_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -103,7 +105,7 @@
               <xacro:call macro="${name}_fingertip_1_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
                 </geometry>
@@ -111,7 +113,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -134,7 +136,7 @@
               <xacro:call macro="${name}_fingertip_2_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
                 </geometry>
@@ -142,7 +144,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -164,7 +166,7 @@
               <xacro:call macro="${name}_motor_single_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/gripper_motor_single.STL" scale="1 1 1"/>
                 </geometry>
@@ -172,7 +174,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/gripper_motor_single_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -195,7 +197,7 @@
               <xacro:call macro="${name}_inner_single_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/inner_single.STL" scale="1 1 1"/>
                 </geometry>
@@ -203,7 +205,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/inner_single_collision.STL" scale="1 1 1"/>
                 </geometry>
@@ -225,7 +227,7 @@
               <xacro:call macro="${name}_fingertip_3_link_inertial" />
 
               <visual>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
                 </geometry>
@@ -233,7 +235,7 @@
               </visual>
 
               <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="0 ${gripper_visual_offset_y} 0" rpy="0 0 0" />
                 <geometry>
                   <mesh filename="package://talos_description/meshes/gripper/fingertip_collision.STL" scale="1 1 1"/>
                 </geometry>

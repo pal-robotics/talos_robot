@@ -218,7 +218,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-     <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" />
+     <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" gripper_type="detachable"/>
 
     <!-- extensions -->
     <xacro:include filename="$(find talos_description)/urdf/arm/${side}_arm.transmissions.urdf.xacro" />

@@ -60,9 +60,9 @@
     </xacro:if>
     <xacro:if value="${gripper_type == 'detachable'}">
       <inertial>
-        <mass value="0.31314"/>
-        <origin xyz="-0.0029817 -0.00046512 -0.052845" rpy="0 0 0" />
-        <inertia ixx="0.00030716" ixy="2.8257E-06" ixz="-7.0302E-06" iyy="0.00023544" iyz="-5.7534E-06" izz="0.00028541" />
+        <origin xyz="-0.002117 -0.000722 -0.066129" rpy="0 0 0" />
+        <mass value="0.656327" />
+        <inertia ixx="0.003723" ixy="-0.000004" ixz="0.000111" iyy="0.003611" iyz="-0.000049" izz="0.000536" />
       </inertial>
     </xacro:if>
   </xacro:macro>
@@ -118,9 +118,9 @@
     </xacro:if>
     <xacro:if value="${gripper_type == 'detachable'}">
       <inertial>
-        <mass value="0.31314"/>
-        <origin xyz="-0.0029817 0.00046512 -0.052845" rpy="0 0 0" />
-        <inertia ixx="0.00030716" ixy="-2.8257E-06" ixz="-7.0302E-06" iyy="0.00023544" iyz="5.7534E-06" izz="0.00028541" />
+        <origin xyz="-0.002117 0.000722 -0.066129" rpy="0 0 0" />
+        <mass value="0.656327" />
+        <inertia ixx="0.003723" ixy="0.000004" ixz="0.000111" iyy="0.003611" iyz="0.000049" izz="0.000536" />
       </inertial>
     </xacro:if>
   </xacro:macro>

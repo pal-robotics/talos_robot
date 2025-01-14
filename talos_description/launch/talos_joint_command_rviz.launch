@@ -9,6 +9,8 @@
   <arg name="parameter_name" default="robot_description"/>
   <arg name="disable_gazebo_camera" default="false"/>
   <arg name="test" default="false"/>
+  <arg name="gripper_mount_type" default="classic"/>
+  <arg name="gripper_camera" default="false"/>
 
   <!-- TODO AS: zeros should not be the default (self-colliding), but it is currently required for tests -->
   <arg name="default_configuration_type" default="zeros"/>
@@ -23,7 +25,9 @@
                 enable_crane:=$(arg enable_crane)
                 disable_gazebo_camera:=$(arg disable_gazebo_camera)
                 head_type:=$(arg head_type)
-                test:=$(arg test)"
+                gripper_mount_type:=$(arg gripper_mount_type)
+                gripper_camera:=$(arg gripper_camera)
+                test:=$(arg test) flexibility:=false"
       />
       
   <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />

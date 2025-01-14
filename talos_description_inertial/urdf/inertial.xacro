@@ -50,15 +50,15 @@
       <origin rpy="0 0 0" xyz="2.1e-05 -0.001965 -0.000591"/>
     </inertial>
   </xacro:macro>
-  <xacro:macro name="arm_left_7_link_inertial" params="gripper_type">
-    <xacro:if value="${gripper_type == 'classic'}">
+  <xacro:macro name="arm_left_7_link_inertial" params="gripper_mount_type">
+    <xacro:if value="${gripper_mount_type == 'classic'}">
       <inertial>
         <mass value="0.308441"/>
         <inertia ixx="0.00030894317" ixy="-1.58687e-06" ixz="1.73418e-06" iyy="0.00021886181" iyz="-1.221167e-05" izz="0.00017519492" />
         <origin rpy="0 0 0" xyz="0.007525 0.001378 -0.02463"/>
       </inertial>
     </xacro:if>
-    <xacro:if value="${gripper_type == 'detachable'}">
+    <xacro:if value="${gripper_mount_type == 'detachable'}">
       <inertial>
         <origin xyz="0.0020157 -0.00071287 -0.064959" rpy="0 0 0" />
         <mass value="0.58111" />
@@ -108,15 +108,15 @@
       <origin rpy="0 0 0" xyz="2.1e-05 0.001965 -0.000591"/>
     </inertial>
   </xacro:macro>
-  <xacro:macro name="arm_right_7_link_inertial" params="gripper_type">
-    <xacro:if value="${gripper_type == 'classic'}">
+  <xacro:macro name="arm_right_7_link_inertial" params="gripper_mount_type">
+    <xacro:if value="${gripper_mount_type == 'classic'}">
       <inertial>
         <mass value="0.308441"/>
         <inertia ixx="0.00030894317" ixy="1.58687e-06" ixz="1.73418e-06" iyy="0.00021886181" iyz="1.221167e-05" izz="0.00017519492" />
         <origin rpy="0 0 0" xyz="0.007525 -0.001378 -0.02463"/>
       </inertial>
     </xacro:if>
-    <xacro:if value="${gripper_type == 'detachable'}">
+    <xacro:if value="${gripper_mount_type == 'detachable'}">
       <inertial>
         <origin xyz="0.0020157 0.00071287 -0.064959" rpy="0 0 0" />
         <mass value="0.58111" />

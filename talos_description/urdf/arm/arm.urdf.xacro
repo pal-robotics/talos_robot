@@ -29,7 +29,7 @@
   <xacro:property name="arm_eps"            value="0.02" />
 
 
-  <xacro:macro name="talos_arm" params="name parent side reflect">
+  <xacro:macro name="talos_arm" params="name parent side reflect gripper_mount_type">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/arm_${side}.xacro" />
     </xacro:unless>
@@ -218,7 +218,7 @@
     <!--************************-->
     <!--        WRIST           -->
     <!--************************-->
-     <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" gripper_type="detachable" gripper_camera="true"/>
+     <xacro:talos_wrist name="arm" parent="${name}_${side}_4_link" side="${side}" reflect="${reflect}" gripper_mount_type="$(arg gripper_mount_type)"/>
 
     <!-- extensions -->
     <xacro:include filename="$(find talos_description)/urdf/arm/${side}_arm.transmissions.urdf.xacro" />

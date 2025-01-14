@@ -10,7 +10,7 @@
 
   <xacro:macro name="talos_gripper" params="name parent reflect">
 
-            <xacro:property name="gripper_visual_offset_y"       value="0.007" />
+            <xacro:property name="gripper_visual_offset_y"       value="0.00" />
 
             <link name="${name}_base_link">
               <xacro:call macro="${name}_base_link_inertial" />

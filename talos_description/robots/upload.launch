@@ -7,6 +7,7 @@
   <arg name="enable_crane" default="false"/> <!-- crude adhoc approximation of the crane for collision avoidance -->
   <arg name="head_type" default="default"/> <!-- default type with orbbec pro cam, lidar type with (OS-1 64 + T265 + D435i)-->
   <arg name="parameter_name" default="robot_description"/>
+  <arg name="leg_camera" default="false"/>
   <arg name="disable_gazebo_camera" default="false"/>
   <arg name="test" default="false"/>
   <arg name="flexibility" default="false"/> 
@@ -23,6 +24,7 @@
                 '$(find talos_description)/robots/talos_$(arg robot).urdf.xacro'
                 foot_collision:=$(arg foot_collision)
                 enable_crane:=$(arg enable_crane)
+                leg_camera:=$(arg leg_camera)
                 disable_gazebo_camera:=$(arg disable_gazebo_camera)
                 head_type:=$(arg head_type)
                 test:=$(arg test)

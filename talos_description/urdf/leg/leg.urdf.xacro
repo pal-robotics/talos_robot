@@ -4,6 +4,7 @@
   
   <xacro:include filename="$(find talos_description)/urdf/leg/foot_frames.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/leg.transmission.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
 
   <xacro:property name="deg_to_rad"       value="0.01745329251994329577" />
   <xacro:property name="eps_radians"      value="0.008" /> <!-- 0.45deg -->
@@ -13,7 +14,7 @@
   <xacro:property name="leg_damping"      value="0.0" />
 
 
-  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false">
+  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false leg_camera:=false disable_gazebo_camera:=false">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/leg_${prefix}.xacro" />
     </xacro:unless>
@@ -248,9 +249,15 @@
 
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
+
+          <geometry>
+          <xacro:if value="${leg_camera}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res_camera.stl" scale="1 ${reflect*1} 1"/>
+          </xacro:if>
+          <xacro:unless value="${leg_camera}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          </xacro:unless>
+          </geometry>
         <material name="Grey" />
       </visual>
 
@@ -267,6 +274,51 @@
       <dynamics friction="${leg_friction}" damping="${leg_damping}"/>
     </joint>
 
+    <xacro:if value="${leg_camera}">
+      <link name="foot_front_${prefix}_link">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+      </link>
+
+      <joint name="foot_front_${prefix}_joint" type="fixed">
+        <parent link="leg_${prefix}_5_link"/>
+        <child link="foot_front_${prefix}_link"/>
+        <origin xyz="0.1125 0 -0.064"
+                rpy="0.0 0.0 0.0"/>
+        <axis xyz="1 0 0" />
+      </joint>
+
+      <link name="foot_rear_${prefix}_link">
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+      </link>
+
+      <joint name="foot_rear_${prefix}_joint" type="fixed">
+        <parent link="leg_${prefix}_5_link"/>
+        <child link="foot_rear_${prefix}_link"/>
+        <origin xyz="-0.1313 0 -0.064"
+                rpy="0.0 0.0 3.14"/>
+        <axis xyz="1 0 0" />
+      </joint>
+
+      <xacro:unless value="${disable_gazebo_camera}">
+        <xacro:sensor_d435
+          name="foot_front_${prefix}_camera"
+          parent="foot_front_${prefix}_link"
+          topics_ns="foot_front_${prefix}_camera_rgbd">
+          <origin
+            xyz="0.0 0.0 0.0"
+            rpy="0.0 0.0 0.0"/>
+        </xacro:sensor_d435>
+
+        <xacro:sensor_d435
+          name="foot_rer_${prefix}_camera"
+          parent="foot_rear_${prefix}_link"
+          topics_ns="foot_rear_${prefix}_camera_rgbd">
+          <origin
+            xyz="0.0 0.0 0.0"
+            rpy="0.0 0.0 0.0"/>
+        </xacro:sensor_d435>
+      </xacro:unless>
+    </xacro:if>
   <!-- from here is copy paste -->
 
     <link name="${prefix}_sole_link">

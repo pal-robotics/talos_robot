@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/andrea/Workspaces/ws_release_talos_gripper_camera/devel/lib/python2.7/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/andrea/Workspaces/ws_release_talos_gripper_camera/devel/lib/python2.7/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

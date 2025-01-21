@@ -11,7 +11,7 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-xacro_add_xacro_file(robots/talos_full_v2.urdf.xacro REMAP enable_crane:=false foot_collision:=default head_type:=default test:=false disable_gazebo_camera:=true flexibility:=false)
+xacro_add_xacro_file(robots/talos_full_v2.urdf.xacro REMAP enable_crane:=false foot_collision:=default head_type:=default test:=false disable_gazebo_camera:=true flexibility:=false gripper_mount_type:=classic gripper_camera:=false)
 xacro_install(xacro_target ${XACRO_OUTPUT_FILE} DESTINATION robots)
 
 foreach(dir config gazebo meshes robots urdf srdf)

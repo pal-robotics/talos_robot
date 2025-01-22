@@ -1,8 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
 
   <arg name="robot" default="full_v2"/> <!--full_v1, full_v2, lower_body-->
   <arg name="foot_collision" default="default"/>
   <arg name="default_configuration_type" default="zeros"/>
+  <arg name="gripper_mount_type" default="classic"/>
+  <arg name="gripper_camera" default="false"/>
 
   <!-- Hardware configuration -->
   <rosparam command="load" file="$(find talos_bringup)/config/talos_common_hardware.yaml" />
@@ -15,6 +19,8 @@
     <arg name="robot" value="$(arg robot)"/>
     <arg name="foot_collision" default="$(arg foot_collision)"/>
     <arg name="default_configuration_type" default="$(arg default_configuration_type)"/>
+    <arg name="gripper_mount_type" value="$(arg gripper_mount_type)"/>
+    <arg name="gripper_camera" value="$(arg gripper_camera)"/>
   </include>
 
   <include file="$(find talos_bringup)/launch/talos_bringup.launch" />

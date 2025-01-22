@@ -14,7 +14,7 @@
   <xacro:property name="leg_damping"      value="0.0" />
 
 
-  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false leg_camera:=false disable_gazebo_camera:=false">
+  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false leg_camera:=false disable_gazebo_camera:=false simulation:=false">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/leg_${prefix}.xacro" />
     </xacro:unless>
@@ -275,25 +275,25 @@
     </joint>
 
     <xacro:if value="${leg_camera}">
-      <link name="foot_front_${prefix}_link">
+      <link name="support_front_${prefix}_camera_link">
         <origin rpy="0 0 0" xyz="0 0 0"/>
       </link>
 
-      <joint name="foot_front_${prefix}_joint" type="fixed">
+      <joint name="support_front_${prefix}_joint" type="fixed">
         <parent link="leg_${prefix}_5_link"/>
-        <child link="foot_front_${prefix}_link"/>
+        <child link="support_front_${prefix}_camera_link"/>
         <origin xyz="0.1125 0 -0.064"
                 rpy="0.0 0.0 0.0"/>
         <axis xyz="1 0 0" />
       </joint>
 
-      <link name="foot_rear_${prefix}_link">
+      <link name="support_rear_${prefix}_camera_link">
         <origin rpy="0 0 0" xyz="0 0 0"/>
       </link>
 
-      <joint name="foot_rear_${prefix}_joint" type="fixed">
+      <joint name="support_rear_${prefix}_joint" type="fixed">
         <parent link="leg_${prefix}_5_link"/>
-        <child link="foot_rear_${prefix}_link"/>
+        <child link="support_rear_${prefix}_camera_link"/>
         <origin xyz="-0.1313 0 -0.064"
                 rpy="0.0 0.0 3.14"/>
         <axis xyz="1 0 0" />
@@ -301,18 +301,20 @@
 
       <xacro:unless value="${disable_gazebo_camera}">
         <xacro:sensor_d435
-          name="foot_front_${prefix}_camera"
-          parent="foot_front_${prefix}_link"
-          topics_ns="foot_front_${prefix}_rgbd_camera">
+          name="foot_front_${prefix}_rgbd_camera"
+          parent="support_front_${prefix}_camera_link"
+          topics_ns="foot_front_${prefix}_rgbd_camera"
+          use_nominal_extrinsics="${simulation}">
           <origin
             xyz="0.0 0.0 0.0"
             rpy="0.0 0.0 0.0"/>
         </xacro:sensor_d435>
 
         <xacro:sensor_d435
-          name="foot_rear_${prefix}_camera"
-          parent="foot_rear_${prefix}_link"
-          topics_ns="foot_rear_${prefix}_rgbd_camera">
+          name="foot_rear_${prefix}_rgbd_camera"
+          parent="support_rear_${prefix}_camera_link"
+          topics_ns="foot_rear_${prefix}_rgbd_camera"
+          use_nominal_extrinsics="${simulation}">
           <origin
             xyz="0.0 0.0 0.0"
             rpy="0.0 0.0 0.0"/>

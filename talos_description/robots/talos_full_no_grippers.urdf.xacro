@@ -41,8 +41,8 @@
   <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1" gripper_mount_type="$(arg gripper_mount_type)"/>
   <xacro:ft_sensor name="wrist" parent="arm_left_7_link"  side="left"  reflect="-1" gripper_mount_type="$(arg gripper_mount_type)"/>
 
-  <xacro:talos_leg prefix="left"  reflect="1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
-  <xacro:talos_leg prefix="right" reflect="-1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
+  <xacro:talos_leg prefix="left"  reflect="1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
+  <xacro:talos_leg prefix="right" reflect="-1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
 
   <!-- Macro to have the add-on links specific to each TALOS -->
   <xacro:talos_addons />

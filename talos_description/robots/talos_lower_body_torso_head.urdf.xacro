@@ -33,8 +33,8 @@
 
   <xacro:talos_head name="head" parent="torso_2_link" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
 
-  <xacro:talos_leg prefix="left"  reflect="1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
-  <xacro:talos_leg prefix="right" reflect="-1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
+  <xacro:talos_leg prefix="left"  reflect="1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
+  <xacro:talos_leg prefix="right" reflect="-1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
 
   <xacro:if value="$(arg enable_crane)">
     <xacro:crane parent="torso_2_link"/>

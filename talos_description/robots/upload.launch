@@ -15,6 +15,7 @@
   <arg name="default_configuration_type" default="zeros"/>
   <arg name="gripper_mount_type" default="classic"/>
   <arg name="gripper_camera" default="false"/>
+  <arg name="simulation" default="false"/>
 
 
   <!-- Robot description -->
@@ -30,7 +31,8 @@
                 test:=$(arg test)
                 flexibility:=$(arg flexibility)
                 gripper_mount_type:=$(arg gripper_mount_type)
-                gripper_camera:=$(arg gripper_camera)"
+                gripper_camera:=$(arg gripper_camera)
+                simulation:=$(arg simulation)"
       />
 
   <rosparam command="load" file="$(find talos_description)/config/default_configuration_$(arg default_configuration_type).yaml" />

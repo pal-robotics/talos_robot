@@ -310,7 +310,7 @@
         </xacro:sensor_d435>
 
         <xacro:sensor_d435
-          name="foot_rer_${prefix}_camera"
+          name="foot_rear_${prefix}_camera"
           parent="foot_rear_${prefix}_link"
           topics_ns="foot_rear_${prefix}_camera_rgbd">
           <origin

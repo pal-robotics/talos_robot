@@ -283,8 +283,8 @@
 
 
 
-        <xacro:virtual_joints name="${name}" />
-        <xacro:gripper_transmission name="${name}" reduction="1.0" />
+        <xacro:virtual_joints name="${name}_${side}" />
+        <xacro:gripper_transmission name="${name}_${side}" reduction="1.0" />
 
         <!-- virtual mimic joints -->
 <!--         <xacro:gripper_virtual_transmission name="${name}_${side}_inner_double" reduction="1.0"/>

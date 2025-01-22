@@ -303,7 +303,7 @@
         <xacro:sensor_d435
           name="foot_front_${prefix}_camera"
           parent="foot_front_${prefix}_link"
-          topics_ns="foot_front_${prefix}_camera_rgbd">
+          topics_ns="foot_front_${prefix}_rgbd_camera">
           <origin
             xyz="0.0 0.0 0.0"
             rpy="0.0 0.0 0.0"/>
@@ -312,7 +312,7 @@
         <xacro:sensor_d435
           name="foot_rear_${prefix}_camera"
           parent="foot_rear_${prefix}_link"
-          topics_ns="foot_rear_${prefix}_camera_rgbd">
+          topics_ns="foot_rear_${prefix}_rgbd_camera">
           <origin
             xyz="0.0 0.0 0.0"
             rpy="0.0 0.0 0.0"/>

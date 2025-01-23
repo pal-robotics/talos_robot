@@ -6,12 +6,13 @@
   <xacro:include filename="$(find talos_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.transmission.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.gazebo.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_d405.urdf.xacro" />
 
 
-  <xacro:macro name="talos_gripper" params="name side parent reflect gripper_camera">
+  <xacro:macro name="talos_gripper" params="name side parent reflect gripper_camera simulation">
 
             <xacro:if value="${gripper_camera}">
-              <link name="${name}_${side}_gripper_camera_link">
+              <link name="support_${name}_${side}_camera_link">
                 <inertial>
                   <origin xyz="0.01021 -0.00042075 -0.00034305" rpy="0 0 0" />
                   <mass value="0.030268" />
@@ -33,12 +34,24 @@
                   </geometry>
                 </collision>
               </link>
-              <joint name="${name}_${side}_wrist_left_camera_joint" type="fixed">
+              <joint name="support_${name}_${side}_wrist_camera_joint" type="fixed">
                 <origin xyz="0.11239 0 -0.12048" rpy="-3.1415925371051 1.0472025163988 -3.14159251909337" />
                 <parent link="arm_${side}_7_link"/>
-                <child link="${name}_${side}_gripper_camera_link" />
+                <child link="support_${name}_${side}_camera_link" />
                 <axis xyz="0 0 0" />
               </joint>
+
+              <xacro:sensor_d405
+                name="${name}_${side}_rgbd_camera_"
+                parent="support_${name}_${side}_camera_link"
+                topics_ns="${name}_${side}_rgbd_camera"
+                use_nominal_extrinsics="${simulation}">
+                <origin
+                  xyz="0.0 0.0 0.0"
+                  rpy="0.0 0.0 0.0"/>
+              </xacro:sensor_d405>
+
+
             </xacro:if>
 
             <link name="${name}_${side}_base_link">

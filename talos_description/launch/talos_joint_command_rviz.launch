@@ -12,6 +12,7 @@
   <arg name="test" default="false"/>
   <arg name="gripper_mount_type" default="classic"/>
   <arg name="gripper_camera" default="false"/>
+  <arg name="simulation" default="false"/>
 
   <!-- TODO AS: zeros should not be the default (self-colliding), but it is currently required for tests -->
   <arg name="default_configuration_type" default="zeros"/>
@@ -28,6 +29,8 @@
                 head_type:=$(arg head_type)
                 gripper_mount_type:=$(arg gripper_mount_type)
                 gripper_camera:=$(arg gripper_camera)
+                leg_camera=$(arg leg_camera)
+                simulation:=$(arg simulation)
                 test:=$(arg test) flexibility:=false"
       />
       

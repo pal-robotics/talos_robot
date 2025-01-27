@@ -48,8 +48,8 @@
     </link>
 
 
-  <xacro:talos_leg prefix="left"  reflect="1" />
-  <xacro:talos_leg prefix="right" reflect="-1" />
+  <xacro:talos_leg prefix="left"  reflect="1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
+  <xacro:talos_leg prefix="right" reflect="-1" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
 
   <!-- Macro to have the add-on links specific to each TALOS -->
   <xacro:talos_addons />

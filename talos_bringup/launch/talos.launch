@@ -7,6 +7,7 @@
   <arg name="default_configuration_type" default="zeros"/>
   <arg name="gripper_mount_type" default="classic"/>
   <arg name="gripper_camera" default="false"/>
+  <arg name="leg_camera" default="false" />
 
   <!-- Hardware configuration -->
   <rosparam command="load" file="$(find talos_bringup)/config/talos_common_hardware.yaml" />
@@ -21,6 +22,7 @@
     <arg name="default_configuration_type" default="$(arg default_configuration_type)"/>
     <arg name="gripper_mount_type" value="$(arg gripper_mount_type)"/>
     <arg name="gripper_camera" value="$(arg gripper_camera)"/>
+    <arg name="leg_camera" value="$(arg leg_camera)"/>
   </include>
 
   <include file="$(find talos_bringup)/launch/talos_bringup.launch" />

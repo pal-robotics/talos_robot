@@ -6,10 +6,10 @@
   <xacro:include filename="$(find talos_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.transmission.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.gazebo.xacro" />
-  <xacro:include filename="$(find realsense2_description)/urdf/_d405.urdf.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/sensors/realsense_d405_urdf.xacro" />
 
 
-  <xacro:macro name="talos_gripper" params="name side parent reflect gripper_camera simulation">
+  <xacro:macro name="talos_gripper" params="name side parent reflect gripper_camera simulation disable_gazebo_camera">
 
             <xacro:if value="${gripper_camera}">
               <link name="support_${name}_${side}_camera_link">
@@ -45,7 +45,8 @@
                 name="${name}_${side}_rgbd_camera_"
                 parent="support_${name}_${side}_camera_link"
                 topics_ns="${name}_${side}_rgbd_camera"
-                use_nominal_extrinsics="${simulation}">
+                use_nominal_extrinsics="${simulation}"
+                disable_gazebo_camera="${disable_gazebo_camera}">
                 <origin
                   xyz="0.0 0.0 0.0"
                   rpy="0.0 0.0 0.0"/>

@@ -41,8 +41,8 @@
   <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1" gripper_mount_type="$(arg gripper_mount_type)" />
   <xacro:ft_sensor name="wrist" parent="arm_left_7_link"  side="left"  reflect="-1" gripper_mount_type="$(arg gripper_mount_type)" />
 
-  <xacro:talos_gripper name="gripper" side="left" parent="wrist_left_ft_tool_link" reflect="1"  gripper_camera="$(arg gripper_camera)" simulation="$(arg simulation)" />
-  <xacro:talos_gripper name="gripper" side="right" parent="wrist_right_ft_tool_link" reflect="-1"  gripper_camera="$(arg gripper_camera)" simulation="$(arg simulation)" />
+  <xacro:talos_gripper name="gripper" side="left" parent="wrist_left_ft_tool_link" reflect="1"  gripper_camera="$(arg gripper_camera)" simulation="$(arg simulation)" disable_gazebo_camera="$(arg disable_gazebo_camera)" />
+  <xacro:talos_gripper name="gripper" side="right" parent="wrist_right_ft_tool_link" reflect="-1"  gripper_camera="$(arg gripper_camera)" simulation="$(arg simulation)" disable_gazebo_camera="$(arg disable_gazebo_camera)" />
 
   <xacro:talos_leg prefix="left"  reflect="1" flexibility="$(arg flexibility)" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>
   <xacro:talos_leg prefix="right" reflect="-1" flexibility="$(arg flexibility)" leg_camera="$(arg leg_camera)" disable_gazebo_camera="$(arg disable_gazebo_camera)" simulation="$(arg simulation)"/>

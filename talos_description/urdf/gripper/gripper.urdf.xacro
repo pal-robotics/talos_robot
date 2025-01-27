@@ -42,7 +42,7 @@
               </joint>
 
               <xacro:sensor_d405
-                name="${name}_${side}_rgbd_camera_"
+                name="${name}_${side}_rgbd_camera"
                 parent="support_${name}_${side}_camera_link"
                 topics_ns="${name}_${side}_rgbd_camera"
                 use_nominal_extrinsics="${simulation}"

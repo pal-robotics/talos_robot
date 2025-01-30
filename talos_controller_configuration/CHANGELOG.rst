@@ -2,6 +2,14 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add/detachable/gripper' into 'erbium-devel'
+  Update detachable gripper mount
+  See merge request robots/talos_robot!135
+* remove zeros upon default controllers
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.1.32 (2024-07-05)
 -------------------
 

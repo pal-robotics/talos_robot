@@ -2,6 +2,17 @@
 Changelog for package talos_description_inertial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add/detachable/gripper' into 'erbium-devel'
+  Update detachable gripper mount
+  See merge request robots/talos_robot!135
+* Add gripper_mount_type and gripper_camera arguments and properties
+* update new detachable gripper link information
+* update the inertia of the detachable gripper with most elements from solidworks
+* Add detachable gripper base link to the arm_7_link
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 1.1.32 (2024-07-05)
 -------------------
 

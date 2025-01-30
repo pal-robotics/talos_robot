@@ -2,6 +2,37 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add/detachable/gripper' into 'erbium-devel'
+  Update detachable gripper mount
+  See merge request robots/talos_robot!135
+* Merge branch 'fix/dep' into 'add/detachable/gripper'
+  fix dep
+  See merge request robots/talos_robot!137
+* fix dep
+* remove the _ in the gripper camera naming
+* Merge branch 'feat/aca/camera-leg-integration' into 'add/detachable/gripper'
+  camera leg integration
+  See merge request robots/talos_robot!136
+* update disable_gazebo camera strategy and created realsense xacro
+* fixed talos_joint_command rviz args
+* added simulaton arg for use nominal extrinsic and renamed link of the support of cameras
+* uniform camera topics name
+* typo
+* camera leg integrationç
+* fix tests
+* added d405, simulation arg for use nominal extrinsic and renamed link
+* Fix the missing gripper links naming convention change
+* added missing args CMakeLists
+* Add gripper_mount_type and gripper_camera arguments and properties
+* Add gripper top and bottom camera links
+* Remove gripper_visual_offset_y fix to meshes as fixed with new 180º rotated meshes
+* update new detachable gripper link information
+* Add visual offset of 7mm to the meshes
+* Add detachable gripper base link to the arm_7_link
+* Contributors: Adria Roig, Sai Kishor Kothakota, andreacapodacqua
+
 1.1.32 (2024-07-05)
 -------------------
 * Fix build_depends for talos_description

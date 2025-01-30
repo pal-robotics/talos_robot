@@ -2,6 +2,18 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add/detachable/gripper' into 'erbium-devel'
+  Update detachable gripper mount
+  See merge request robots/talos_robot!135
+* Merge branch 'feat/aca/camera-leg-integration' into 'add/detachable/gripper'
+  camera leg integration
+  See merge request robots/talos_robot!136
+* added leg_camera arg to bringup
+* Add new gripper args to the talos.launch
+* Contributors: Adria Roig, Sai Kishor Kothakota, andreacapodacqua
+
 1.1.32 (2024-07-05)
 -------------------
 

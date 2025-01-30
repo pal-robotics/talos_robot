@@ -2,8 +2,8 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.33 (2025-01-30)
+-------------------
 * Merge branch 'add/detachable/gripper' into 'erbium-devel'
   Update detachable gripper mount
   See merge request robots/talos_robot!135

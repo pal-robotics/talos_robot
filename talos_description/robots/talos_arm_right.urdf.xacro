@@ -55,9 +55,9 @@
   </material>
 
 
-  <xacro:talos_arm name="arm" parent="arm_base_link" side="right" reflect="-1" />
-  <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1"  />
-  <xacro:talos_gripper name="gripper_right" parent="wrist_right_ft_tool_link" reflect="-1" />
+  <xacro:talos_arm name="arm" parent="arm_base_link" side="right" reflect="-1" gripper_mount_type="$(arg gripper_mount_type)"/>
+  <xacro:ft_sensor name="wrist" parent="arm_right_7_link" side="right" reflect="1" gripper_mount_type="$(arg gripper_mount_type)"/>
+  <xacro:talos_gripper name="gripper" side="right" parent="wrist_right_ft_tool_link" reflect="-1" gripper_camera="$(arg gripper_camera)" simulation="$(arg simulation)" disable_gazebo_camera="$(arg disable_gazebo_camera)"/>
 
 
   <!-- Generic simulator_gazebo plugins -->

@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="ft_sensor" params="name parent side reflect">
+  <xacro:macro name="ft_sensor" params="name parent side reflect gripper_mount_type">
     <!--************************-->
     <!--        ft sensor       -->
     <!--************************-->
@@ -35,7 +35,12 @@
     <joint name="${name}_${side}_ft_joint" type="fixed">
       <parent link="${parent}" />
       <child link="${name}_${side}_ft_link" />
-      <origin xyz="0 0 -0.051" rpy="${0.0 * deg_to_rad} 0 ${(-180.0 + 90.0*reflect)* deg_to_rad}" />
+      <xacro:if value="${gripper_mount_type == 'detachable'}">
+        <origin xyz="0 0 -0.086" rpy="${0.0 * deg_to_rad} 0 ${(-180.0 + 90.0*reflect)* deg_to_rad}" />
+      </xacro:if>
+      <xacro:if value="${gripper_mount_type == 'classic'}">
+        <origin xyz="0 0 -0.051" rpy="${0.0 * deg_to_rad} 0 ${(-180.0 + 90.0*reflect)* deg_to_rad}" />
+      </xacro:if>
     </joint>
 
     <!--***********************-->

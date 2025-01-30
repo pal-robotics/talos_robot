@@ -6,12 +6,57 @@
   <xacro:include filename="$(find talos_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.transmission.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.gazebo.xacro" />
+  <xacro:include filename="$(find talos_description)/urdf/sensors/realsense_d405_urdf.xacro" />
 
 
-  <xacro:macro name="talos_gripper" params="name parent reflect">
+  <xacro:macro name="talos_gripper" params="name side parent reflect gripper_camera simulation disable_gazebo_camera">
 
-            <link name="${name}_base_link">
-              <xacro:call macro="${name}_base_link_inertial" />
+            <xacro:if value="${gripper_camera}">
+              <link name="support_${name}_${side}_camera_link">
+                <inertial>
+                  <origin xyz="0.01021 -0.00042075 -0.00034305" rpy="0 0 0" />
+                  <mass value="0.030268" />
+                  <inertia ixx="4.4282E-05" ixy="-1.6339E-07" ixz="7.9036E-06" iyy="3.4321E-05" iyz="3.6964E-07" izz="1.7371E-05" />
+                </inertial>
+                <visual>
+                  <origin xyz="0 0 0" rpy="0 0 0" />
+                  <geometry>
+                    <mesh filename="package://talos_description/meshes/gripper/gripper_camera_mount_link.STL" />
+                  </geometry>
+                  <material name="">
+                    <color rgba="0.29804 0.29804 0.29804 1" />
+                  </material>
+                </visual>
+                <collision>
+                  <origin xyz="0 0 0" rpy="0 0 0" />
+                  <geometry>
+                    <mesh filename="package://talos_description/meshes/gripper/gripper_camera_mount_link.STL" />
+                  </geometry>
+                </collision>
+              </link>
+              <joint name="support_${name}_${side}_wrist_camera_joint" type="fixed">
+                <origin xyz="0.11239 0 -0.12048" rpy="-3.1415925371051 1.0472025163988 -3.14159251909337" />
+                <parent link="arm_${side}_7_link"/>
+                <child link="support_${name}_${side}_camera_link" />
+                <axis xyz="0 0 0" />
+              </joint>
+
+              <xacro:sensor_d405
+                name="${name}_${side}_rgbd_camera"
+                parent="support_${name}_${side}_camera_link"
+                topics_ns="${name}_${side}_rgbd_camera"
+                use_nominal_extrinsics="${simulation}"
+                disable_gazebo_camera="${disable_gazebo_camera}">
+                <origin
+                  xyz="0.0 0.0 0.0"
+                  rpy="0.0 0.0 0.0"/>
+              </xacro:sensor_d405>
+
+
+            </xacro:if>
+
+            <link name="${name}_${side}_base_link">
+              <xacro:call macro="${name}_${side}_base_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -29,17 +74,17 @@
               </collision>
             </link>
 
-            <joint name="${name}_base_link_joint" type="fixed">
+            <joint name="${name}_${side}_base_link_joint" type="fixed">
               <parent link="${parent}"/>
-              <child link="${name}_base_link"/>
-              <origin xyz="0.00000 0.00000 -0.02875"
+              <child link="${name}_${side}_base_link"/>
+              <origin xyz="0.00000 0.0 -0.02875"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="0 0 0" />
             </joint>
 
 
-            <link name="${name}_motor_double_link">
-              <xacro:call macro="${name}_motor_double_link_inertial" />
+            <link name="${name}_${side}_motor_double_link">
+              <xacro:call macro="${name}_${side}_motor_double_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -57,9 +102,9 @@
               </collision>
             </link>
 
-            <joint name="${name}_joint" type="revolute">
-              <parent link="${name}_base_link"/>
-              <child link="${name}_motor_double_link"/>
+            <joint name="${name}_${side}_joint" type="revolute">
+              <parent link="${name}_${side}_base_link"/>
+              <child link="${name}_${side}_motor_double_link"/>
               <origin xyz="0.0 0.02025 -0.03"
                       rpy="${0.0 * deg_to_rad} ${0.0 * deg_to_rad} ${0.0 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
@@ -68,8 +113,8 @@
             </joint>
 
 
-            <link name="${name}_inner_double_link">
-              <xacro:call macro="${name}_inner_double_link_inertial" />
+            <link name="${name}_${side}_inner_double_link">
+              <xacro:call macro="${name}_${side}_inner_double_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -87,20 +132,20 @@
               </collision>
             </link>
 
-            <joint name="${name}_inner_double_joint" type="revolute">
-              <parent link="${name}_base_link"/>
-              <child link="${name}_inner_double_link"/>
+            <joint name="${name}_${side}_inner_double_joint" type="revolute">
+              <parent link="${name}_${side}_base_link"/>
+              <child link="${name}_${side}_inner_double_link"/>
               <origin xyz="0.00000 0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${-60.0 * deg_to_rad}" upper="${0.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${1.0}" offset="0.0" />
             </joint>
 
 
 
-            <link name="${name}_fingertip_1_link">
-              <xacro:call macro="${name}_fingertip_1_link_inertial" />
+            <link name="${name}_${side}_fingertip_1_link">
+              <xacro:call macro="${name}_${side}_fingertip_1_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -119,19 +164,19 @@
             </link>
 
 
-            <joint name="${name}_fingertip_1_joint" type="revolute">
-              <parent link="${name}_inner_double_link"/>
-              <child link="${name}_fingertip_1_link"/>
+            <joint name="${name}_${side}_fingertip_1_joint" type="revolute">
+              <parent link="${name}_${side}_inner_double_link"/>
+              <child link="${name}_${side}_fingertip_1_link"/>
               <origin xyz="0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${-1.0}" offset="0.0" />
             </joint>
 
 
-            <link name="${name}_fingertip_2_link">
-              <xacro:call macro="${name}_fingertip_2_link_inertial" />
+            <link name="${name}_${side}_fingertip_2_link">
+              <xacro:call macro="${name}_${side}_fingertip_2_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -149,19 +194,19 @@
               </collision>
             </link>
 
-            <joint name="${name}_fingertip_2_joint" type="revolute">
-              <parent link="${name}_inner_double_link"/>
-              <child link="${name}_fingertip_2_link"/>
+            <joint name="${name}_${side}_fingertip_2_joint" type="revolute">
+              <parent link="${name}_${side}_inner_double_link"/>
+              <child link="${name}_${side}_fingertip_2_link"/>
               <origin xyz="-0.03200 0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${-1.0}" offset="0.0" />
             </joint>
 
 
-            <link name="${name}_motor_single_link">
-              <xacro:call macro="${name}_motor_single_link_inertial" />
+            <link name="${name}_${side}_motor_single_link">
+              <xacro:call macro="${name}_${side}_motor_single_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -179,20 +224,20 @@
               </collision>
             </link>
 
-            <joint name="${name}_motor_single_joint" type="revolute">
-              <parent link="${name}_base_link"/>
-              <child link="${name}_motor_single_link"/>
+            <joint name="${name}_${side}_motor_single_joint" type="revolute">
+              <parent link="${name}_${side}_base_link"/>
+              <child link="${name}_${side}_motor_single_link"/>
               <origin xyz="0.00000 -0.02025 -0.03000"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${-1.0}" offset="0.0" />
             </joint>
 
 
 
-            <link name="${name}_inner_single_link">
-              <xacro:call macro="${name}_inner_single_link_inertial" />
+            <link name="${name}_${side}_inner_single_link">
+              <xacro:call macro="${name}_${side}_inner_single_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -210,19 +255,19 @@
               </collision>
             </link>
 
-            <joint name="${name}_inner_single_joint" type="revolute">
-              <parent link="${name}_base_link"/>
-              <child link="${name}_inner_single_link"/>
+            <joint name="${name}_${side}_inner_single_joint" type="revolute">
+              <parent link="${name}_${side}_base_link"/>
+              <child link="${name}_${side}_inner_single_link"/>
               <origin xyz="0.00000 -0.00525 -0.05598"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${-1.0}" offset="0.0" />
             </joint>
 
 
-            <link name="${name}_fingertip_3_link">
-              <xacro:call macro="${name}_fingertip_3_link_inertial" />
+            <link name="${name}_${side}_fingertip_3_link">
+              <xacro:call macro="${name}_${side}_fingertip_3_link_inertial" />
 
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
@@ -240,28 +285,28 @@
               </collision>
             </link>
 
-            <joint name="${name}_fingertip_3_joint" type="revolute">
-              <parent link="${name}_inner_single_link"/>
-              <child link="${name}_fingertip_3_link"/>
+            <joint name="${name}_${side}_fingertip_3_joint" type="revolute">
+              <parent link="${name}_${side}_inner_single_link"/>
+              <child link="${name}_${side}_fingertip_3_link"/>
               <origin xyz="0.00000 -0.04589 -0.06553"
                       rpy="${0.00000 * deg_to_rad} ${0.00000 * deg_to_rad} ${180.00000 * deg_to_rad}"/>
               <axis xyz="1 0 0" />
               <limit lower="${0.0 * deg_to_rad}" upper="${60.0 * deg_to_rad}" effort="100.0" velocity="1.0" />
-              <mimic joint="${name}_joint" multiplier="${-1.0}" offset="0.0" />
+              <mimic joint="${name}_${side}_joint" multiplier="${-1.0}" offset="0.0" />
             </joint>
 
 
 
-        <xacro:virtual_joints name="${name}" />
-        <xacro:gripper_transmission name="${name}" reduction="1.0" />
+        <xacro:virtual_joints name="${name}_${side}" />
+        <xacro:gripper_transmission name="${name}_${side}" reduction="1.0" />
 
         <!-- virtual mimic joints -->
-<!--         <xacro:gripper_virtual_transmission name="${name}_inner_double" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_1" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_2" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_inner_single" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_motor_single" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/> -->
+<!--         <xacro:gripper_virtual_transmission name="${name}_${side}_inner_double" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_${side}_fingertip_1" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_${side}_fingertip_2" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_${side}_inner_single" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_${side}_motor_single" reduction="1.0"/>
+        <xacro:gripper_virtual_transmission name="${name}_${side}_fingertip_3" reduction="1.0"/> -->
 
   </xacro:macro>
 

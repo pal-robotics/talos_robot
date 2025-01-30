@@ -16,8 +16,9 @@
 
   <exec_depend>talos_description_calibration</exec_depend>
   <exec_depend>talos_description_inertial</exec_depend>
-  <exec_depend>realsense2_description</exec_depend>
   <exec_depend>realsense_gazebo_plugin</exec_depend>
+  <exec_depend>realsense_simulation</exec_depend>
+  <depend>realsense2_description</depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>urdf_test</test_depend>

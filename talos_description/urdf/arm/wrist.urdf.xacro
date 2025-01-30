@@ -26,7 +26,7 @@
   <xacro:property name="wrist_eps"          value="0.02" />
 
 
-  <xacro:macro name="talos_wrist" params="name parent side reflect">
+  <xacro:macro name="talos_wrist" params="name parent side reflect gripper_mount_type ">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/arm_${side}.xacro" />
     </xacro:unless>
@@ -106,12 +106,11 @@
     </joint>
 
     <link name="${name}_${side}_7_link">
-      <xacro:call macro="${name}_${side}_7_link_inertial" />
-
+      <xacro:call macro="${name}_${side}_7_link_inertial" gripper_mount_type="${gripper_mount_type}"/>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_7.STL" scale="1 ${reflect} 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_7_${gripper_mount_type}.STL" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -136,8 +135,6 @@
                           k_velocity="20"
                           soft_lower_limit="${-40.00000 * deg_to_rad + eps_radians}"
                           soft_upper_limit="${40.00000 * deg_to_rad - eps_radians}" /> -->
-
-
     </joint>
 
     <gazebo reference="${name}_${side}_5_link">

@@ -2,6 +2,9 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.33 (2025-01-30)
 -------------------
 * Merge branch 'add/detachable/gripper' into 'erbium-devel'

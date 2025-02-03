@@ -5,6 +5,16 @@ Changelog for package talos_bringup
 1.1.34 (2025-02-03)
 -------------------
 
+Forthcoming
+-----------
+* Merge branch 'upperbody-motions' into 'erbium-devel'
+  Added Dab, Contentration, Running, and stumbling motions
+  See merge request robots/talos_robot!138
+* Added Dab, Contentration, Running, and stumbling motions
+* 1.1.34
+* Update Changelog
+* Contributors: Adria Roig, Sai Kishor Kothakota, sergiacosta
+
 1.1.33 (2025-01-30)
 -------------------
 * Merge branch 'add/detachable/gripper' into 'erbium-devel'

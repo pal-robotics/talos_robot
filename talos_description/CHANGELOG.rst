@@ -7,6 +7,13 @@ Changelog for package talos_description
 * change the leg cameras parent link to leg_6_joint
 * Contributors: Sai Kishor Kothakota
 
+Forthcoming
+-----------
+* 1.1.34
+* Update Changelog
+* change the leg cameras parent link to leg_6_joint
+* Contributors: Sai Kishor Kothakota
+
 1.1.33 (2025-01-30)
 -------------------
 * Merge branch 'add/detachable/gripper' into 'erbium-devel'

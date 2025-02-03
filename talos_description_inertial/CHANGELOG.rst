@@ -5,6 +5,12 @@ Changelog for package talos_description_inertial
 1.1.34 (2025-02-03)
 -------------------
 
+Forthcoming
+-----------
+* 1.1.34
+* Update Changelog
+* Contributors: Sai Kishor Kothakota
+
 1.1.33 (2025-01-30)
 -------------------
 * Merge branch 'add/detachable/gripper' into 'erbium-devel'

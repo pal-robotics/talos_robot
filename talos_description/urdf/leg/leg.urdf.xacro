@@ -280,7 +280,7 @@
       </link>
 
       <joint name="support_front_${prefix}_joint" type="fixed">
-        <parent link="leg_${prefix}_5_link"/>
+        <parent link="leg_${prefix}_6_link"/>
         <child link="support_front_${prefix}_camera_link"/>
         <origin xyz="0.1125 0 -0.064"
                 rpy="0.0 0.0 0.0"/>
@@ -292,7 +292,7 @@
       </link>
 
       <joint name="support_rear_${prefix}_joint" type="fixed">
-        <parent link="leg_${prefix}_5_link"/>
+        <parent link="leg_${prefix}_6_link"/>
         <child link="support_rear_${prefix}_camera_link"/>
         <origin xyz="-0.1313 0 -0.064"
                 rpy="0.0 0.0 3.14"/>

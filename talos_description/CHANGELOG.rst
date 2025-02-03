@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.34 (2025-02-03)
+-------------------
 * change the leg cameras parent link to leg_6_joint
 * Contributors: Sai Kishor Kothakota
 

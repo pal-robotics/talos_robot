@@ -5,8 +5,8 @@ Changelog for package talos_description_calibration
 1.1.34 (2025-02-03)
 -------------------
 
-Forthcoming
------------
+1.1.35 (2025-02-03)
+-------------------
 * 1.1.34
 * Update Changelog
 * Contributors: Sai Kishor Kothakota

@@ -5,6 +5,9 @@ Changelog for package talos_controller_configuration
 1.1.34 (2025-02-03)
 -------------------
 
+Forthcoming
+-----------
+
 1.1.35 (2025-02-03)
 -------------------
 * 1.1.34

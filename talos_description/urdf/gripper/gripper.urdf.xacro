@@ -35,7 +35,7 @@
                 </collision>
               </link>
               <joint name="support_${name}_${side}_wrist_camera_joint" type="fixed">
-                <origin xyz="0.11239 0 -0.12048" rpy="-3.1415925371051 1.0472025163988 -3.14159251909337" />
+                <origin xyz="0.11239 0 -0.12048" rpy="${-180.0 * deg_to_rad} ${60.0 * deg_to_rad} ${-180.0 * deg_to_rad}" />
                 <parent link="arm_${side}_7_link"/>
                 <child link="support_${name}_${side}_camera_link" />
                 <axis xyz="0 0 0" />
@@ -47,9 +47,14 @@
                 topics_ns="${name}_${side}_rgbd_camera"
                 use_nominal_extrinsics="${simulation}"
                 disable_gazebo_camera="${disable_gazebo_camera}">
-                <origin
-                  xyz="0.0 0.0 0.0"
-                  rpy="0.0 0.0 0.0"/>
+                <xacro:if value="${reflect == 1}">
+                  <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                </xacro:if>
+                <xacro:if value="${reflect == -1}">
+                  <!-- there is a difference of 0.042 m due to the fact that the screw hole is on different direction
+                  the screw hole to the center of camera is 0.021 m  -->
+                  <origin xyz="0.0 0.0 0.042" rpy="${180.0 * deg_to_rad} 0.0 0.0"/>
+                </xacro:if>
               </xacro:sensor_d405>
 
 

@@ -282,8 +282,14 @@
       <joint name="support_front_${prefix}_joint" type="fixed">
         <parent link="leg_${prefix}_6_link"/>
         <child link="support_front_${prefix}_camera_link"/>
-        <origin xyz="0.1125 0 -0.064"
-                rpy="0.0 0.0 0.0"/>
+        <xacro:if value="${reflect == 1}">
+          <!-- there is a difference of 0.025 m due to the fact that the screw hole is on different direction
+          the screw hole to the center of camera is 0.0125 m  -->
+          <origin xyz="0.1125 0.0 -0.039" rpy="${180.0 * deg_to_rad} 0.0 0.0"/>
+        </xacro:if>
+        <xacro:if value="${reflect == -1}">
+          <origin xyz="0.1125 0.0 -0.064" rpy="0.0 0.0 0.0"/>
+        </xacro:if>
         <axis xyz="1 0 0" />
       </joint>
 
@@ -294,8 +300,14 @@
       <joint name="support_rear_${prefix}_joint" type="fixed">
         <parent link="leg_${prefix}_6_link"/>
         <child link="support_rear_${prefix}_camera_link"/>
-        <origin xyz="-0.1313 0 -0.064"
-                rpy="0.0 0.0 3.14"/>
+        <xacro:if value="${reflect == 1}">
+          <origin xyz="-0.1313 0 -0.064" rpy="0.0 0.0 ${180.0 * deg_to_rad}"/>
+        </xacro:if>
+        <xacro:if value="${reflect == -1}">
+          <!-- there is a difference of 0.025 m due to the fact that the screw hole is on different direction
+          the screw hole to the center of camera is 0.0125 m  -->
+          <origin xyz="-0.1313 0 -0.039" rpy="${180.0 * deg_to_rad} 0.0 ${180.0 * deg_to_rad}"/>
+        </xacro:if>
         <axis xyz="1 0 0" />
       </joint>
 

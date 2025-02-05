@@ -7,11 +7,11 @@
   <arg name="enable_crane" default="false"/> <!-- crude adhoc approximation of the crane for collision avoidance -->
   <arg name="head_type" default="default"/> <!-- default type with orbbec pro cam, lidar type with (OS-1 64 + T265 + D435i)-->
   <arg name="parameter_name" default="robot_description"/>
-  <arg name="leg_camera" default="true"/>
+  <arg name="leg_camera" default="false"/>
   <arg name="disable_gazebo_camera" default="false"/>
   <arg name="test" default="false"/>
-  <arg name="gripper_mount_type" default="detachable"/>
-  <arg name="gripper_camera" default="true"/>
+  <arg name="gripper_mount_type" default="classic"/>
+  <arg name="gripper_camera" default="false"/>
   <arg name="simulation" default="false"/>
   <arg name="flexibility" default="false"/> 
 

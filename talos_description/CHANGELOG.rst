@@ -7,8 +7,8 @@ Changelog for package talos_description
 * change the leg cameras parent link to leg_6_joint
 * Contributors: Sai Kishor Kothakota
 
-Forthcoming
------------
+1.1.36 (2025-02-05)
+-------------------
 * Merge branch 'fix/camera/orientation' into 'erbium-devel'
   change the camera orientation to have the USB ports exterior
   See merge request robots/talos_robot!139

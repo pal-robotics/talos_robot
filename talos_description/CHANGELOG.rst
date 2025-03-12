@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.2 (2025-03-12)
+------------------
 * Merge branch 'collision' into 'humble-devel'
   Collision
   See merge request robots/talos_robot!140

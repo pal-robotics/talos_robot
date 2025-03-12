@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>talos_description_inertial</name>
-  <version>2.0.1</version>
+  <version>2.0.2</version>
   <description>Inertial parameters of talos</description>
   <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
   <maintainer email="ilenia.perrella@pal-robotics.com">Ilenia Perrella</maintainer>

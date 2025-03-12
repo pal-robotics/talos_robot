@@ -1,2204 +1,1105 @@
-collision_model_parameters:
-  padding: 0
+collision_model:
   links_with_padding: []
-  blacklist:
-    manual:
-      - first:    gripper_left_fingertip_2_link
-        second:   gripper_left_motor_double_link
-      - first:    gripper_left_motor_double_link
-        second:   gripper_left_motor_single_link
-      - first:    gripper_left_inner_double_link
-        second:   gripper_left_inner_single_link
-      - first:    gripper_left_fingertip_1_link
-        second:   gripper_left_motor_double_link
-      - first:    gripper_left_inner_single_link
-        second:   gripper_left_motor_double_link
-      - first: arm_left_5_link
-        second: wrist_left_ft_link
-      - first: arm_left_6_link
-        second: wrist_left_ft_link
+  padding: 0.0
 
-      - first:    gripper_right_fingertip_2_link
-        second:   gripper_right_motor_double_link
-      - first:    gripper_right_motor_double_link
-        second:   gripper_right_motor_single_link
-      - first:    gripper_right_inner_double_link
-        second:   gripper_right_inner_single_link
-      - first:    gripper_right_fingertip_1_link
-        second:   gripper_right_motor_double_link
-      - first:    gripper_right_inner_single_link
-        second:   gripper_right_motor_double_link
-      - first: arm_right_5_link
-        second: wrist_right_ft_link
-      - first: arm_right_6_link
-        second: wrist_right_ft_link
-
-    auto:
-      - first: arm_left_2_link
-        second: arm_left_1_link
-      - first: arm_left_3_link
-        second: arm_left_1_link
-      - first: arm_left_3_link
-        second: arm_left_2_link
-      - first: arm_left_4_link
-        second: arm_left_1_link
-      - first: arm_left_4_link
-        second: arm_left_2_link
-      - first: arm_left_4_link
-        second: arm_left_3_link
-      - first: arm_left_5_link
-        second: arm_left_1_link
-      - first: arm_left_5_link
-        second: arm_left_2_link
-      - first: arm_left_5_link
-        second: arm_left_3_link
-      - first: arm_left_5_link
-        second: arm_left_4_link
-      - first: arm_left_6_link
-        second: arm_left_1_link
-      - first: arm_left_6_link
-        second: arm_left_2_link
-      - first: arm_left_6_link
-        second: arm_left_3_link
-      - first: arm_left_6_link
-        second: arm_left_4_link
-      - first: arm_left_6_link
-        second: arm_left_5_link
-      - first: arm_left_7_link
-        second: arm_left_1_link
-      - first: arm_left_7_link
-        second: arm_left_2_link
-      - first: arm_left_7_link
-        second: arm_left_3_link
-      - first: arm_left_7_link
-        second: arm_left_4_link
-      - first: arm_left_7_link
-        second: arm_left_5_link
-      - first: arm_left_7_link
-        second: arm_left_6_link
-      - first: arm_right_1_link
-        second: arm_left_1_link
-      - first: arm_right_1_link
-        second: arm_left_2_link
-      - first: arm_right_1_link
-        second: arm_left_3_link
-      - first: arm_right_1_link
-        second: arm_left_4_link
-      - first: arm_right_1_link
-        second: arm_left_5_link
-      - first: arm_right_1_link
-        second: arm_left_6_link
-      - first: arm_right_1_link
-        second: arm_left_7_link
-      - first: arm_right_2_link
-        second: arm_left_1_link
-      - first: arm_right_2_link
-        second: arm_left_2_link
-      - first: arm_right_2_link
-        second: arm_left_3_link
-      - first: arm_right_2_link
-        second: arm_left_4_link
-      - first: arm_right_2_link
-        second: arm_left_5_link
-      - first: arm_right_2_link
-        second: arm_left_6_link
-      - first: arm_right_2_link
-        second: arm_right_1_link
-      - first: arm_right_3_link
-        second: arm_left_1_link
-      - first: arm_right_3_link
-        second: arm_left_2_link
-      - first: arm_right_3_link
-        second: arm_left_3_link
-      - first: arm_right_3_link
-        second: arm_left_4_link
-      - first: arm_right_3_link
-        second: arm_left_5_link
-      - first: arm_right_3_link
-        second: arm_left_6_link
-      - first: arm_right_3_link
-        second: arm_right_1_link
-      - first: arm_right_3_link
-        second: arm_right_2_link
-      - first: arm_right_4_link
-        second: arm_left_1_link
-      - first: arm_right_4_link
-        second: arm_left_2_link
-      - first: arm_right_4_link
-        second: arm_left_3_link
-      - first: arm_right_4_link
-        second: arm_left_4_link
-      - first: arm_right_4_link
-        second: arm_right_1_link
-      - first: arm_right_4_link
-        second: arm_right_2_link
-      - first: arm_right_4_link
-        second: arm_right_3_link
-      - first: arm_right_5_link
-        second: arm_left_1_link
-      - first: arm_right_5_link
-        second: arm_left_2_link
-      - first: arm_right_5_link
-        second: arm_left_3_link
-      - first: arm_right_5_link
-        second: arm_left_4_link
-      - first: arm_right_5_link
-        second: arm_right_1_link
-      - first: arm_right_5_link
-        second: arm_right_2_link
-      - first: arm_right_5_link
-        second: arm_right_3_link
-      - first: arm_right_5_link
-        second: arm_right_4_link
-      - first: arm_right_6_link
-        second: arm_left_1_link
-      - first: arm_right_6_link
-        second: arm_left_2_link
-      - first: arm_right_6_link
-        second: arm_left_3_link
-      - first: arm_right_6_link
-        second: arm_left_4_link
-      - first: arm_right_6_link
-        second: arm_right_1_link
-      - first: arm_right_6_link
-        second: arm_right_2_link
-      - first: arm_right_6_link
-        second: arm_right_3_link
-      - first: arm_right_6_link
-        second: arm_right_4_link
-      - first: arm_right_6_link
-        second: arm_right_5_link
-      - first: arm_right_7_link
-        second: arm_left_1_link
-      - first: arm_right_7_link
-        second: arm_left_3_link
-      - first: arm_right_7_link
-        second: arm_left_4_link
-      - first: arm_right_7_link
-        second: arm_right_1_link
-      - first: arm_right_7_link
-        second: arm_right_2_link
-      - first: arm_right_7_link
-        second: arm_right_3_link
-      - first: arm_right_7_link
-        second: arm_right_4_link
-      - first: arm_right_7_link
-        second: arm_right_5_link
-      - first: arm_right_7_link
-        second: arm_right_6_link
-      - first: base_link
-        second: arm_left_1_link
-      - first: base_link
-        second: arm_left_2_link
-      - first: base_link
-        second: arm_right_1_link
-      - first: base_link
-        second: arm_right_2_link
-      - first: crane_link
-        second: arm_left_1_link
-      - first: crane_link
-        second: arm_left_2_link
-      - first: crane_link
-        second: arm_right_1_link
-      - first: crane_link
-        second: arm_right_2_link
-      - first: crane_link
-        second: base_link
-      - first: gripper_left_base_link
-        second: arm_left_1_link
-      - first: gripper_left_base_link
-        second: arm_left_2_link
-      - first: gripper_left_base_link
-        second: arm_left_3_link
-      - first: gripper_left_base_link
-        second: arm_left_4_link
-      - first: gripper_left_base_link
-        second: arm_left_5_link
-      - first: gripper_left_base_link
-        second: arm_left_6_link
-      - first: gripper_left_base_link
-        second: arm_left_7_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_2_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_3_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_4_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_5_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_6_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_left_7_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_right_6_link
-      - first: gripper_left_fingertip_1_link
-        second: arm_right_7_link
-      - first: gripper_left_fingertip_1_link
-        second: gripper_left_base_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_2_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_3_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_4_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_5_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_6_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_left_7_link
-      - first: gripper_left_fingertip_2_link
-        second: arm_right_6_link
-      - first: gripper_left_fingertip_2_link
-        second: gripper_left_base_link
-      - first: gripper_left_fingertip_2_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_2_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_3_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_4_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_5_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_6_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_left_7_link
-      - first: gripper_left_fingertip_3_link
-        second: arm_right_6_link
-      - first: gripper_left_fingertip_3_link
-        second: gripper_left_base_link
-      - first: gripper_left_fingertip_3_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_left_fingertip_3_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_2_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_3_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_4_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_5_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_6_link
-      - first: gripper_left_inner_double_link
-        second: arm_left_7_link
-      - first: gripper_left_inner_double_link
-        second: arm_right_6_link
-      - first: gripper_left_inner_double_link
-        second: arm_right_7_link
-      - first: gripper_left_inner_double_link
-        second: gripper_left_base_link
-      - first: gripper_left_inner_double_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_left_inner_double_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_left_inner_double_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_2_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_3_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_4_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_5_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_6_link
-      - first: gripper_left_inner_single_link
-        second: arm_left_7_link
-      - first: gripper_left_inner_single_link
-        second: arm_right_6_link
-      - first: gripper_left_inner_single_link
-        second: gripper_left_base_link
-      - first: gripper_left_inner_single_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_left_inner_single_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_left_inner_single_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_2_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_3_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_4_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_5_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_6_link
-      - first: gripper_left_motor_double_link
-        second: arm_left_7_link
-      - first: gripper_left_motor_double_link
-        second: gripper_left_base_link
-      - first: gripper_left_motor_double_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_left_motor_double_link
-        second: gripper_left_inner_double_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_2_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_3_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_4_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_5_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_6_link
-      - first: gripper_left_motor_single_link
-        second: arm_left_7_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_base_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_inner_double_link
-      - first: gripper_left_motor_single_link
-        second: gripper_left_inner_single_link
-      - first: gripper_right_base_link
-        second: arm_left_1_link
-      - first: gripper_right_base_link
-        second: arm_right_1_link
-      - first: gripper_right_base_link
-        second: arm_right_2_link
-      - first: gripper_right_base_link
-        second: arm_right_3_link
-      - first: gripper_right_base_link
-        second: arm_right_4_link
-      - first: gripper_right_base_link
-        second: arm_right_5_link
-      - first: gripper_right_base_link
-        second: arm_right_6_link
-      - first: gripper_right_base_link
-        second: arm_right_7_link
-      - first: gripper_right_base_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_left_6_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_left_7_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_2_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_3_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_4_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_5_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_6_link
-      - first: gripper_right_fingertip_1_link
-        second: arm_right_7_link
-      - first: gripper_right_fingertip_1_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_right_fingertip_1_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_right_fingertip_1_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_fingertip_1_link
-        second: gripper_right_base_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_left_6_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_2_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_3_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_4_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_5_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_6_link
-      - first: gripper_right_fingertip_2_link
-        second: arm_right_7_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_left_inner_single_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_left_motor_single_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_right_base_link
-      - first: gripper_right_fingertip_2_link
-        second: gripper_right_fingertip_1_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_2_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_3_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_4_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_5_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_6_link
-      - first: gripper_right_fingertip_3_link
-        second: arm_right_7_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_left_base_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_left_motor_double_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_right_base_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_right_fingertip_1_link
-      - first: gripper_right_fingertip_3_link
-        second: gripper_right_fingertip_2_link
-      - first: gripper_right_inner_double_link
-        second: arm_left_6_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_2_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_3_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_4_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_5_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_6_link
-      - first: gripper_right_inner_double_link
-        second: arm_right_7_link
-      - first: gripper_right_inner_double_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_inner_double_link
-        second: gripper_left_inner_single_link
-      - first: gripper_right_inner_double_link
-        second: gripper_right_base_link
-      - first: gripper_right_inner_double_link
-        second: gripper_right_fingertip_1_link
-      - first: gripper_right_inner_double_link
-        second: gripper_right_fingertip_2_link
-      - first: gripper_right_inner_double_link
-        second: gripper_right_fingertip_3_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_2_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_3_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_4_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_5_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_6_link
-      - first: gripper_right_inner_single_link
-        second: arm_right_7_link
-      - first: gripper_right_inner_single_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_right_inner_single_link
-        second: gripper_right_base_link
-      - first: gripper_right_inner_single_link
-        second: gripper_right_fingertip_1_link
-      - first: gripper_right_inner_single_link
-        second: gripper_right_fingertip_2_link
-      - first: gripper_right_inner_single_link
-        second: gripper_right_fingertip_3_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_2_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_3_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_4_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_5_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_6_link
-      - first: gripper_right_motor_double_link
-        second: arm_right_7_link
-      - first: gripper_right_motor_double_link
-        second: gripper_left_fingertip_3_link
-      - first: gripper_right_motor_double_link
-        second: gripper_left_inner_single_link
-      - first: gripper_right_motor_double_link
-        second: gripper_right_base_link
-      - first: gripper_right_motor_double_link
-        second: gripper_right_fingertip_3_link
-      - first: gripper_right_motor_double_link
-        second: gripper_right_inner_double_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_2_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_3_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_4_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_5_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_6_link
-      - first: gripper_right_motor_single_link
-        second: arm_right_7_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_base_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_fingertip_1_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_fingertip_2_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_inner_double_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_motor_double_link
-      - first: gripper_right_motor_single_link
-        second: gripper_left_motor_single_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_base_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_fingertip_1_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_fingertip_2_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_fingertip_3_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_inner_double_link
-      - first: gripper_right_motor_single_link
-        second: gripper_right_inner_single_link
-      - first: head_1_link
-        second: arm_left_1_link
-      - first: head_1_link
-        second: arm_left_2_link
-      - first: head_1_link
-        second: arm_left_3_link
-      - first: head_1_link
-        second: arm_left_4_link
-      - first: head_1_link
-        second: arm_right_1_link
-      - first: head_1_link
-        second: arm_right_2_link
-      - first: head_1_link
-        second: arm_right_3_link
-      - first: head_1_link
-        second: arm_right_4_link
-      - first: head_1_link
-        second: base_link
-      - first: head_1_link
-        second: crane_link
-      - first: head_2_link
-        second: arm_left_1_link
-      - first: head_2_link
-        second: arm_left_4_link
-      - first: head_2_link
-        second: arm_right_1_link
-      - first: head_2_link
-        second: base_link
-      - first: head_2_link
-        second: crane_link
-      - first: head_2_link
-        second: head_1_link
-      - first: imu_link
-        second: arm_left_1_link
-      - first: imu_link
-        second: arm_left_2_link
-      - first: imu_link
-        second: arm_left_3_link
-      - first: imu_link
-        second: arm_left_4_link
-      - first: imu_link
-        second: arm_left_5_link
-      - first: imu_link
-        second: arm_left_6_link
-      - first: imu_link
-        second: arm_left_7_link
-      - first: imu_link
-        second: arm_right_1_link
-      - first: imu_link
-        second: arm_right_2_link
-      - first: imu_link
-        second: arm_right_3_link
-      - first: imu_link
-        second: arm_right_4_link
-      - first: imu_link
-        second: arm_right_5_link
-      - first: imu_link
-        second: arm_right_6_link
-      - first: imu_link
-        second: arm_right_7_link
-      - first: imu_link
-        second: base_link
-      - first: imu_link
-        second: crane_link
-      - first: imu_link
-        second: gripper_left_base_link
-      - first: imu_link
-        second: gripper_left_fingertip_1_link
-      - first: imu_link
-        second: gripper_left_fingertip_2_link
-      - first: imu_link
-        second: gripper_left_fingertip_3_link
-      - first: imu_link
-        second: gripper_left_inner_double_link
-      - first: imu_link
-        second: gripper_left_inner_single_link
-      - first: imu_link
-        second: gripper_left_motor_double_link
-      - first: imu_link
-        second: gripper_left_motor_single_link
-      - first: imu_link
-        second: gripper_right_base_link
-      - first: imu_link
-        second: gripper_right_fingertip_1_link
-      - first: imu_link
-        second: gripper_right_fingertip_2_link
-      - first: imu_link
-        second: gripper_right_fingertip_3_link
-      - first: imu_link
-        second: gripper_right_inner_double_link
-      - first: imu_link
-        second: gripper_right_inner_single_link
-      - first: imu_link
-        second: gripper_right_motor_double_link
-      - first: imu_link
-        second: gripper_right_motor_single_link
-      - first: imu_link
-        second: head_1_link
-      - first: imu_link
-        second: head_2_link
-      - first: left_sole_link
-        second: arm_left_1_link
-      - first: left_sole_link
-        second: arm_left_2_link
-      - first: left_sole_link
-        second: arm_left_3_link
-      - first: left_sole_link
-        second: arm_left_4_link
-      - first: left_sole_link
-        second: arm_left_5_link
-      - first: left_sole_link
-        second: arm_left_6_link
-      - first: left_sole_link
-        second: arm_left_7_link
-      - first: left_sole_link
-        second: arm_right_1_link
-      - first: left_sole_link
-        second: arm_right_2_link
-      - first: left_sole_link
-        second: arm_right_3_link
-      - first: left_sole_link
-        second: arm_right_4_link
-      - first: left_sole_link
-        second: arm_right_5_link
-      - first: left_sole_link
-        second: arm_right_6_link
-      - first: left_sole_link
-        second: arm_right_7_link
-      - first: left_sole_link
-        second: base_link
-      - first: left_sole_link
-        second: crane_link
-      - first: left_sole_link
-        second: gripper_left_base_link
-      - first: left_sole_link
-        second: gripper_left_fingertip_1_link
-      - first: left_sole_link
-        second: gripper_left_fingertip_2_link
-      - first: left_sole_link
-        second: gripper_left_fingertip_3_link
-      - first: left_sole_link
-        second: gripper_left_inner_double_link
-      - first: left_sole_link
-        second: gripper_left_inner_single_link
-      - first: left_sole_link
-        second: gripper_left_motor_double_link
-      - first: left_sole_link
-        second: gripper_left_motor_single_link
-      - first: left_sole_link
-        second: gripper_right_base_link
-      - first: left_sole_link
-        second: gripper_right_fingertip_1_link
-      - first: left_sole_link
-        second: gripper_right_fingertip_2_link
-      - first: left_sole_link
-        second: gripper_right_fingertip_3_link
-      - first: left_sole_link
-        second: gripper_right_inner_double_link
-      - first: left_sole_link
-        second: gripper_right_inner_single_link
-      - first: left_sole_link
-        second: gripper_right_motor_double_link
-      - first: left_sole_link
-        second: gripper_right_motor_single_link
-      - first: left_sole_link
-        second: head_1_link
-      - first: left_sole_link
-        second: head_2_link
-      - first: left_sole_link
-        second: imu_link
-      - first: leg_left_1_link
-        second: arm_left_1_link
-      - first: leg_left_1_link
-        second: arm_left_2_link
-      - first: leg_left_1_link
-        second: arm_left_3_link
-      - first: leg_left_1_link
-        second: arm_left_4_link
-      - first: leg_left_1_link
-        second: arm_right_1_link
-      - first: leg_left_1_link
-        second: arm_right_2_link
-      - first: leg_left_1_link
-        second: arm_right_3_link
-      - first: leg_left_1_link
-        second: arm_right_4_link
-      - first: leg_left_1_link
-        second: base_link
-      - first: leg_left_1_link
-        second: crane_link
-      - first: leg_left_1_link
-        second: head_1_link
-      - first: leg_left_1_link
-        second: head_2_link
-      - first: leg_left_1_link
-        second: imu_link
-      - first: leg_left_1_link
-        second: left_sole_link
-      - first: leg_left_2_link
-        second: arm_left_1_link
-      - first: leg_left_2_link
-        second: arm_left_2_link
-      - first: leg_left_2_link
-        second: arm_left_3_link
-      - first: leg_left_2_link
-        second: arm_left_4_link
-      - first: leg_left_2_link
-        second: arm_right_1_link
-      - first: leg_left_2_link
-        second: arm_right_2_link
-      - first: leg_left_2_link
-        second: arm_right_3_link
-      - first: leg_left_2_link
-        second: arm_right_4_link
-      - first: leg_left_2_link
-        second: arm_right_5_link
-      - first: leg_left_2_link
-        second: arm_right_6_link
-      - first: leg_left_2_link
-        second: base_link
-      - first: leg_left_2_link
-        second: crane_link
-      - first: leg_left_2_link
-        second: head_1_link
-      - first: leg_left_2_link
-        second: head_2_link
-      - first: leg_left_2_link
-        second: imu_link
-      - first: leg_left_2_link
-        second: left_sole_link
-      - first: leg_left_2_link
-        second: leg_left_1_link
-      - first: leg_left_3_link
-        second: arm_left_1_link
-      - first: leg_left_3_link
-        second: arm_left_2_link
-      - first: leg_left_3_link
-        second: arm_right_1_link
-      - first: leg_left_3_link
-        second: arm_right_2_link
-      - first: leg_left_3_link
-        second: arm_right_3_link
-      - first: leg_left_3_link
-        second: crane_link
-      - first: leg_left_3_link
-        second: head_1_link
-      - first: leg_left_3_link
-        second: head_2_link
-      - first: leg_left_3_link
-        second: imu_link
-      - first: leg_left_3_link
-        second: left_sole_link
-      - first: leg_left_3_link
-        second: leg_left_1_link
-      - first: leg_left_3_link
-        second: leg_left_2_link
-      - first: leg_left_4_link
-        second: arm_left_1_link
-      - first: leg_left_4_link
-        second: arm_left_2_link
-      - first: leg_left_4_link
-        second: arm_right_1_link
-      - first: leg_left_4_link
-        second: arm_right_2_link
-      - first: leg_left_4_link
-        second: arm_right_3_link
-      - first: leg_left_4_link
-        second: arm_right_4_link
-      - first: leg_left_4_link
-        second: crane_link
-      - first: leg_left_4_link
-        second: head_1_link
-      - first: leg_left_4_link
-        second: head_2_link
-      - first: leg_left_4_link
-        second: imu_link
-      - first: leg_left_4_link
-        second: left_sole_link
-      - first: leg_left_4_link
-        second: leg_left_1_link
-      - first: leg_left_4_link
-        second: leg_left_2_link
-      - first: leg_left_4_link
-        second: leg_left_3_link
-      - first: leg_left_5_link
-        second: arm_left_1_link
-      - first: leg_left_5_link
-        second: arm_left_2_link
-      - first: leg_left_5_link
-        second: arm_left_3_link
-      - first: leg_left_5_link
-        second: arm_left_4_link
-      - first: leg_left_5_link
-        second: arm_left_6_link
-      - first: leg_left_5_link
-        second: arm_right_1_link
-      - first: leg_left_5_link
-        second: arm_right_2_link
-      - first: leg_left_5_link
-        second: arm_right_3_link
-      - first: leg_left_5_link
-        second: arm_right_4_link
-      - first: leg_left_5_link
-        second: arm_right_5_link
-      - first: leg_left_5_link
-        second: arm_right_6_link
-      - first: leg_left_5_link
-        second: arm_right_7_link
-      - first: leg_left_5_link
-        second: crane_link
-      - first: leg_left_5_link
-        second: gripper_right_fingertip_2_link
-      - first: leg_left_5_link
-        second: head_1_link
-      - first: leg_left_5_link
-        second: head_2_link
-      - first: leg_left_5_link
-        second: imu_link
-      - first: leg_left_5_link
-        second: left_sole_link
-      - first: leg_left_5_link
-        second: leg_left_1_link
-      - first: leg_left_5_link
-        second: leg_left_2_link
-      - first: leg_left_5_link
-        second: leg_left_3_link
-      - first: leg_left_5_link
-        second: leg_left_4_link
-      - first: leg_left_6_link
-        second: arm_left_1_link
-      - first: leg_left_6_link
-        second: arm_left_2_link
-      - first: leg_left_6_link
-        second: arm_left_3_link
-      - first: leg_left_6_link
-        second: arm_left_4_link
-      - first: leg_left_6_link
-        second: arm_left_6_link
-      - first: leg_left_6_link
-        second: arm_right_1_link
-      - first: leg_left_6_link
-        second: arm_right_2_link
-      - first: leg_left_6_link
-        second: arm_right_3_link
-      - first: leg_left_6_link
-        second: arm_right_4_link
-      - first: leg_left_6_link
-        second: crane_link
-      - first: leg_left_6_link
-        second: head_1_link
-      - first: leg_left_6_link
-        second: head_2_link
-      - first: leg_left_6_link
-        second: imu_link
-      - first: leg_left_6_link
-        second: left_sole_link
-      - first: leg_left_6_link
-        second: leg_left_4_link
-      - first: leg_left_6_link
-        second: leg_left_5_link
-      - first: leg_right_1_link
-        second: arm_left_1_link
-      - first: leg_right_1_link
-        second: arm_left_2_link
-      - first: leg_right_1_link
-        second: arm_left_3_link
-      - first: leg_right_1_link
-        second: arm_left_4_link
-      - first: leg_right_1_link
-        second: arm_right_1_link
-      - first: leg_right_1_link
-        second: arm_right_2_link
-      - first: leg_right_1_link
-        second: arm_right_3_link
-      - first: leg_right_1_link
-        second: arm_right_4_link
-      - first: leg_right_1_link
-        second: base_link
-      - first: leg_right_1_link
-        second: crane_link
-      - first: leg_right_1_link
-        second: head_1_link
-      - first: leg_right_1_link
-        second: head_2_link
-      - first: leg_right_1_link
-        second: imu_link
-      - first: leg_right_1_link
-        second: left_sole_link
-      - first: leg_right_1_link
-        second: leg_left_2_link
-      - first: leg_right_2_link
-        second: arm_left_1_link
-      - first: leg_right_2_link
-        second: arm_left_2_link
-      - first: leg_right_2_link
-        second: arm_left_3_link
-      - first: leg_right_2_link
-        second: arm_left_4_link
-      - first: leg_right_2_link
-        second: arm_left_5_link
-      - first: leg_right_2_link
-        second: arm_left_6_link
-      - first: leg_right_2_link
-        second: arm_right_1_link
-      - first: leg_right_2_link
-        second: arm_right_2_link
-      - first: leg_right_2_link
-        second: arm_right_3_link
-      - first: leg_right_2_link
-        second: arm_right_4_link
-      - first: leg_right_2_link
-        second: crane_link
-      - first: leg_right_2_link
-        second: head_1_link
-      - first: leg_right_2_link
-        second: head_2_link
-      - first: leg_right_2_link
-        second: imu_link
-      - first: leg_right_2_link
-        second: left_sole_link
-      - first: leg_right_2_link
-        second: leg_left_1_link
-      - first: leg_right_2_link
-        second: leg_left_2_link
-      - first: leg_right_2_link
-        second: leg_right_1_link
-      - first: leg_right_3_link
-        second: arm_left_1_link
-      - first: leg_right_3_link
-        second: arm_left_2_link
-      - first: leg_right_3_link
-        second: arm_right_1_link
-      - first: leg_right_3_link
-        second: arm_right_2_link
-      - first: leg_right_3_link
-        second: head_1_link
-      - first: leg_right_3_link
-        second: head_2_link
-      - first: leg_right_3_link
-        second: imu_link
-      - first: leg_right_3_link
-        second: left_sole_link
-      - first: leg_right_3_link
-        second: leg_right_1_link
-      - first: leg_right_3_link
-        second: leg_right_2_link
-      - first: leg_right_4_link
-        second: arm_left_1_link
-      - first: leg_right_4_link
-        second: arm_left_2_link
-      - first: leg_right_4_link
-        second: arm_right_1_link
-      - first: leg_right_4_link
-        second: arm_right_2_link
-      - first: leg_right_4_link
-        second: base_link
-      - first: leg_right_4_link
-        second: head_1_link
-      - first: leg_right_4_link
-        second: head_2_link
-      - first: leg_right_4_link
-        second: imu_link
-      - first: leg_right_4_link
-        second: left_sole_link
-      - first: leg_right_4_link
-        second: leg_right_1_link
-      - first: leg_right_4_link
-        second: leg_right_2_link
-      - first: leg_right_4_link
-        second: leg_right_3_link
-      - first: leg_right_5_link
-        second: arm_left_1_link
-      - first: leg_right_5_link
-        second: arm_left_2_link
-      - first: leg_right_5_link
-        second: arm_left_3_link
-      - first: leg_right_5_link
-        second: arm_left_4_link
-      - first: leg_right_5_link
-        second: arm_left_6_link
-      - first: leg_right_5_link
-        second: arm_right_1_link
-      - first: leg_right_5_link
-        second: arm_right_2_link
-      - first: leg_right_5_link
-        second: arm_right_3_link
-      - first: leg_right_5_link
-        second: arm_right_4_link
-      - first: leg_right_5_link
-        second: crane_link
-      - first: leg_right_5_link
-        second: gripper_left_base_link
-      - first: leg_right_5_link
-        second: gripper_left_inner_double_link
-      - first: leg_right_5_link
-        second: gripper_left_motor_double_link
-      - first: leg_right_5_link
-        second: head_1_link
-      - first: leg_right_5_link
-        second: head_2_link
-      - first: leg_right_5_link
-        second: imu_link
-      - first: leg_right_5_link
-        second: left_sole_link
-      - first: leg_right_5_link
-        second: leg_right_1_link
-      - first: leg_right_5_link
-        second: leg_right_2_link
-      - first: leg_right_5_link
-        second: leg_right_3_link
-      - first: leg_right_5_link
-        second: leg_right_4_link
-      - first: leg_right_6_link
-        second: arm_left_1_link
-      - first: leg_right_6_link
-        second: arm_left_2_link
-      - first: leg_right_6_link
-        second: arm_right_1_link
-      - first: leg_right_6_link
-        second: arm_right_2_link
-      - first: leg_right_6_link
-        second: arm_right_3_link
-      - first: leg_right_6_link
-        second: crane_link
-      - first: leg_right_6_link
-        second: head_1_link
-      - first: leg_right_6_link
-        second: head_2_link
-      - first: leg_right_6_link
-        second: imu_link
-      - first: leg_right_6_link
-        second: left_sole_link
-      - first: leg_right_6_link
-        second: leg_right_4_link
-      - first: leg_right_6_link
-        second: leg_right_5_link
-      - first: rgbd_depth_frame
-        second: arm_left_1_link
-      - first: rgbd_depth_frame
-        second: arm_left_2_link
-      - first: rgbd_depth_frame
-        second: arm_left_3_link
-      - first: rgbd_depth_frame
-        second: arm_left_4_link
-      - first: rgbd_depth_frame
-        second: arm_left_5_link
-      - first: rgbd_depth_frame
-        second: arm_left_6_link
-      - first: rgbd_depth_frame
-        second: arm_left_7_link
-      - first: rgbd_depth_frame
-        second: arm_right_1_link
-      - first: rgbd_depth_frame
-        second: arm_right_2_link
-      - first: rgbd_depth_frame
-        second: arm_right_3_link
-      - first: rgbd_depth_frame
-        second: arm_right_4_link
-      - first: rgbd_depth_frame
-        second: arm_right_5_link
-      - first: rgbd_depth_frame
-        second: arm_right_6_link
-      - first: rgbd_depth_frame
-        second: arm_right_7_link
-      - first: rgbd_depth_frame
-        second: base_link
-      - first: rgbd_depth_frame
-        second: crane_link
-      - first: rgbd_depth_frame
-        second: gripper_left_base_link
-      - first: rgbd_depth_frame
-        second: gripper_left_fingertip_1_link
-      - first: rgbd_depth_frame
-        second: gripper_left_fingertip_2_link
-      - first: rgbd_depth_frame
-        second: gripper_left_fingertip_3_link
-      - first: rgbd_depth_frame
-        second: gripper_left_inner_double_link
-      - first: rgbd_depth_frame
-        second: gripper_left_inner_single_link
-      - first: rgbd_depth_frame
-        second: gripper_left_motor_double_link
-      - first: rgbd_depth_frame
-        second: gripper_left_motor_single_link
-      - first: rgbd_depth_frame
-        second: gripper_right_base_link
-      - first: rgbd_depth_frame
-        second: gripper_right_fingertip_1_link
-      - first: rgbd_depth_frame
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_depth_frame
-        second: gripper_right_fingertip_3_link
-      - first: rgbd_depth_frame
-        second: gripper_right_inner_double_link
-      - first: rgbd_depth_frame
-        second: gripper_right_inner_single_link
-      - first: rgbd_depth_frame
-        second: gripper_right_motor_double_link
-      - first: rgbd_depth_frame
-        second: gripper_right_motor_single_link
-      - first: rgbd_depth_frame
-        second: head_1_link
-      - first: rgbd_depth_frame
-        second: head_2_link
-      - first: rgbd_depth_frame
-        second: imu_link
-      - first: rgbd_depth_frame
-        second: left_sole_link
-      - first: rgbd_depth_frame
-        second: leg_left_1_link
-      - first: rgbd_depth_frame
-        second: leg_left_2_link
-      - first: rgbd_depth_frame
-        second: leg_left_3_link
-      - first: rgbd_depth_frame
-        second: leg_left_4_link
-      - first: rgbd_depth_frame
-        second: leg_left_5_link
-      - first: rgbd_depth_frame
-        second: leg_left_6_link
-      - first: rgbd_depth_frame
-        second: leg_right_1_link
-      - first: rgbd_depth_frame
-        second: leg_right_2_link
-      - first: rgbd_depth_frame
-        second: leg_right_3_link
-      - first: rgbd_depth_frame
-        second: leg_right_4_link
-      - first: rgbd_depth_frame
-        second: leg_right_5_link
-      - first: rgbd_depth_frame
-        second: leg_right_6_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_1_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_2_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_3_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_4_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_5_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_6_link
-      - first: rgbd_depth_optical_frame
-        second: arm_left_7_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_1_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_2_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_3_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_4_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_5_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_6_link
-      - first: rgbd_depth_optical_frame
-        second: arm_right_7_link
-      - first: rgbd_depth_optical_frame
-        second: base_link
-      - first: rgbd_depth_optical_frame
-        second: crane_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_base_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_fingertip_1_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_fingertip_2_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_fingertip_3_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_inner_double_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_inner_single_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_motor_double_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_left_motor_single_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_base_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_fingertip_1_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_fingertip_3_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_inner_double_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_inner_single_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_motor_double_link
-      - first: rgbd_depth_optical_frame
-        second: gripper_right_motor_single_link
-      - first: rgbd_depth_optical_frame
-        second: head_1_link
-      - first: rgbd_depth_optical_frame
-        second: head_2_link
-      - first: rgbd_depth_optical_frame
-        second: imu_link
-      - first: rgbd_depth_optical_frame
-        second: left_sole_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_1_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_2_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_3_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_4_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_5_link
-      - first: rgbd_depth_optical_frame
-        second: leg_left_6_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_1_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_2_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_3_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_4_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_5_link
-      - first: rgbd_depth_optical_frame
-        second: leg_right_6_link
-      - first: rgbd_depth_optical_frame
-        second: rgbd_depth_frame
-      - first: rgbd_link
-        second: arm_left_1_link
-      - first: rgbd_link
-        second: arm_left_4_link
-      - first: rgbd_link
-        second: arm_right_1_link
-      - first: rgbd_link
-        second: arm_right_4_link
-      - first: rgbd_link
-        second: base_link
-      - first: rgbd_link
-        second: crane_link
-      - first: rgbd_link
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_link
-        second: head_1_link
-      - first: rgbd_link
-        second: head_2_link
-      - first: rgbd_link
-        second: imu_link
-      - first: rgbd_link
-        second: left_sole_link
-      - first: rgbd_link
-        second: leg_left_1_link
-      - first: rgbd_link
-        second: leg_left_2_link
-      - first: rgbd_link
-        second: leg_left_3_link
-      - first: rgbd_link
-        second: leg_left_4_link
-      - first: rgbd_link
-        second: leg_left_5_link
-      - first: rgbd_link
-        second: leg_left_6_link
-      - first: rgbd_link
-        second: leg_right_1_link
-      - first: rgbd_link
-        second: leg_right_2_link
-      - first: rgbd_link
-        second: leg_right_3_link
-      - first: rgbd_link
-        second: leg_right_4_link
-      - first: rgbd_link
-        second: leg_right_5_link
-      - first: rgbd_link
-        second: leg_right_6_link
-      - first: rgbd_link
-        second: rgbd_depth_frame
-      - first: rgbd_link
-        second: rgbd_depth_optical_frame
-      - first: rgbd_optical_frame
-        second: arm_left_1_link
-      - first: rgbd_optical_frame
-        second: arm_left_2_link
-      - first: rgbd_optical_frame
-        second: arm_left_3_link
-      - first: rgbd_optical_frame
-        second: arm_left_4_link
-      - first: rgbd_optical_frame
-        second: arm_left_5_link
-      - first: rgbd_optical_frame
-        second: arm_left_6_link
-      - first: rgbd_optical_frame
-        second: arm_left_7_link
-      - first: rgbd_optical_frame
-        second: arm_right_1_link
-      - first: rgbd_optical_frame
-        second: arm_right_2_link
-      - first: rgbd_optical_frame
-        second: arm_right_3_link
-      - first: rgbd_optical_frame
-        second: arm_right_4_link
-      - first: rgbd_optical_frame
-        second: arm_right_5_link
-      - first: rgbd_optical_frame
-        second: arm_right_6_link
-      - first: rgbd_optical_frame
-        second: arm_right_7_link
-      - first: rgbd_optical_frame
-        second: base_link
-      - first: rgbd_optical_frame
-        second: crane_link
-      - first: rgbd_optical_frame
-        second: gripper_left_base_link
-      - first: rgbd_optical_frame
-        second: gripper_left_fingertip_1_link
-      - first: rgbd_optical_frame
-        second: gripper_left_fingertip_2_link
-      - first: rgbd_optical_frame
-        second: gripper_left_fingertip_3_link
-      - first: rgbd_optical_frame
-        second: gripper_left_inner_double_link
-      - first: rgbd_optical_frame
-        second: gripper_left_inner_single_link
-      - first: rgbd_optical_frame
-        second: gripper_left_motor_double_link
-      - first: rgbd_optical_frame
-        second: gripper_left_motor_single_link
-      - first: rgbd_optical_frame
-        second: gripper_right_base_link
-      - first: rgbd_optical_frame
-        second: gripper_right_fingertip_1_link
-      - first: rgbd_optical_frame
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_optical_frame
-        second: gripper_right_fingertip_3_link
-      - first: rgbd_optical_frame
-        second: gripper_right_inner_double_link
-      - first: rgbd_optical_frame
-        second: gripper_right_inner_single_link
-      - first: rgbd_optical_frame
-        second: gripper_right_motor_double_link
-      - first: rgbd_optical_frame
-        second: gripper_right_motor_single_link
-      - first: rgbd_optical_frame
-        second: head_1_link
-      - first: rgbd_optical_frame
-        second: head_2_link
-      - first: rgbd_optical_frame
-        second: imu_link
-      - first: rgbd_optical_frame
-        second: left_sole_link
-      - first: rgbd_optical_frame
-        second: leg_left_1_link
-      - first: rgbd_optical_frame
-        second: leg_left_2_link
-      - first: rgbd_optical_frame
-        second: leg_left_3_link
-      - first: rgbd_optical_frame
-        second: leg_left_4_link
-      - first: rgbd_optical_frame
-        second: leg_left_5_link
-      - first: rgbd_optical_frame
-        second: leg_left_6_link
-      - first: rgbd_optical_frame
-        second: leg_right_1_link
-      - first: rgbd_optical_frame
-        second: leg_right_2_link
-      - first: rgbd_optical_frame
-        second: leg_right_3_link
-      - first: rgbd_optical_frame
-        second: leg_right_4_link
-      - first: rgbd_optical_frame
-        second: leg_right_5_link
-      - first: rgbd_optical_frame
-        second: leg_right_6_link
-      - first: rgbd_optical_frame
-        second: rgbd_depth_frame
-      - first: rgbd_optical_frame
-        second: rgbd_depth_optical_frame
-      - first: rgbd_optical_frame
-        second: rgbd_link
-      - first: rgbd_rgb_frame
-        second: arm_left_1_link
-      - first: rgbd_rgb_frame
-        second: arm_left_2_link
-      - first: rgbd_rgb_frame
-        second: arm_left_3_link
-      - first: rgbd_rgb_frame
-        second: arm_left_4_link
-      - first: rgbd_rgb_frame
-        second: arm_left_5_link
-      - first: rgbd_rgb_frame
-        second: arm_left_6_link
-      - first: rgbd_rgb_frame
-        second: arm_left_7_link
-      - first: rgbd_rgb_frame
-        second: arm_right_1_link
-      - first: rgbd_rgb_frame
-        second: arm_right_2_link
-      - first: rgbd_rgb_frame
-        second: arm_right_3_link
-      - first: rgbd_rgb_frame
-        second: arm_right_4_link
-      - first: rgbd_rgb_frame
-        second: arm_right_5_link
-      - first: rgbd_rgb_frame
-        second: arm_right_6_link
-      - first: rgbd_rgb_frame
-        second: arm_right_7_link
-      - first: rgbd_rgb_frame
-        second: base_link
-      - first: rgbd_rgb_frame
-        second: crane_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_base_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_fingertip_1_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_fingertip_2_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_fingertip_3_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_inner_double_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_inner_single_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_motor_double_link
-      - first: rgbd_rgb_frame
-        second: gripper_left_motor_single_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_base_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_fingertip_1_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_fingertip_3_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_inner_double_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_inner_single_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_motor_double_link
-      - first: rgbd_rgb_frame
-        second: gripper_right_motor_single_link
-      - first: rgbd_rgb_frame
-        second: head_1_link
-      - first: rgbd_rgb_frame
-        second: head_2_link
-      - first: rgbd_rgb_frame
-        second: imu_link
-      - first: rgbd_rgb_frame
-        second: left_sole_link
-      - first: rgbd_rgb_frame
-        second: leg_left_1_link
-      - first: rgbd_rgb_frame
-        second: leg_left_2_link
-      - first: rgbd_rgb_frame
-        second: leg_left_3_link
-      - first: rgbd_rgb_frame
-        second: leg_left_4_link
-      - first: rgbd_rgb_frame
-        second: leg_left_5_link
-      - first: rgbd_rgb_frame
-        second: leg_left_6_link
-      - first: rgbd_rgb_frame
-        second: leg_right_1_link
-      - first: rgbd_rgb_frame
-        second: leg_right_2_link
-      - first: rgbd_rgb_frame
-        second: leg_right_3_link
-      - first: rgbd_rgb_frame
-        second: leg_right_4_link
-      - first: rgbd_rgb_frame
-        second: leg_right_5_link
-      - first: rgbd_rgb_frame
-        second: leg_right_6_link
-      - first: rgbd_rgb_frame
-        second: rgbd_depth_frame
-      - first: rgbd_rgb_frame
-        second: rgbd_depth_optical_frame
-      - first: rgbd_rgb_frame
-        second: rgbd_link
-      - first: rgbd_rgb_frame
-        second: rgbd_optical_frame
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_1_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_2_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_3_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_4_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_5_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_6_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_left_7_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_1_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_2_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_3_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_4_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_5_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_6_link
-      - first: rgbd_rgb_optical_frame
-        second: arm_right_7_link
-      - first: rgbd_rgb_optical_frame
-        second: base_link
-      - first: rgbd_rgb_optical_frame
-        second: crane_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_base_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_fingertip_1_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_fingertip_2_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_fingertip_3_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_inner_double_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_inner_single_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_motor_double_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_left_motor_single_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_base_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_fingertip_1_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_fingertip_2_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_fingertip_3_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_inner_double_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_inner_single_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_motor_double_link
-      - first: rgbd_rgb_optical_frame
-        second: gripper_right_motor_single_link
-      - first: rgbd_rgb_optical_frame
-        second: head_1_link
-      - first: rgbd_rgb_optical_frame
-        second: head_2_link
-      - first: rgbd_rgb_optical_frame
-        second: imu_link
-      - first: rgbd_rgb_optical_frame
-        second: left_sole_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_1_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_2_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_3_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_4_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_5_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_left_6_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_1_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_2_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_3_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_4_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_5_link
-      - first: rgbd_rgb_optical_frame
-        second: leg_right_6_link
-      - first: rgbd_rgb_optical_frame
-        second: rgbd_depth_frame
-      - first: rgbd_rgb_optical_frame
-        second: rgbd_depth_optical_frame
-      - first: rgbd_rgb_optical_frame
-        second: rgbd_link
-      - first: rgbd_rgb_optical_frame
-        second: rgbd_optical_frame
-      - first: rgbd_rgb_optical_frame
-        second: rgbd_rgb_frame
-      - first: right_sole_link
-        second: arm_left_1_link
-      - first: right_sole_link
-        second: arm_left_2_link
-      - first: right_sole_link
-        second: arm_left_3_link
-      - first: right_sole_link
-        second: arm_left_4_link
-      - first: right_sole_link
-        second: arm_left_5_link
-      - first: right_sole_link
-        second: arm_left_6_link
-      - first: right_sole_link
-        second: arm_left_7_link
-      - first: right_sole_link
-        second: arm_right_1_link
-      - first: right_sole_link
-        second: arm_right_2_link
-      - first: right_sole_link
-        second: arm_right_3_link
-      - first: right_sole_link
-        second: arm_right_4_link
-      - first: right_sole_link
-        second: arm_right_5_link
-      - first: right_sole_link
-        second: arm_right_6_link
-      - first: right_sole_link
-        second: arm_right_7_link
-      - first: right_sole_link
-        second: base_link
-      - first: right_sole_link
-        second: crane_link
-      - first: right_sole_link
-        second: gripper_left_base_link
-      - first: right_sole_link
-        second: gripper_left_fingertip_1_link
-      - first: right_sole_link
-        second: gripper_left_fingertip_2_link
-      - first: right_sole_link
-        second: gripper_left_fingertip_3_link
-      - first: right_sole_link
-        second: gripper_left_inner_double_link
-      - first: right_sole_link
-        second: gripper_left_inner_single_link
-      - first: right_sole_link
-        second: gripper_left_motor_double_link
-      - first: right_sole_link
-        second: gripper_left_motor_single_link
-      - first: right_sole_link
-        second: gripper_right_base_link
-      - first: right_sole_link
-        second: gripper_right_fingertip_1_link
-      - first: right_sole_link
-        second: gripper_right_fingertip_2_link
-      - first: right_sole_link
-        second: gripper_right_fingertip_3_link
-      - first: right_sole_link
-        second: gripper_right_inner_double_link
-      - first: right_sole_link
-        second: gripper_right_inner_single_link
-      - first: right_sole_link
-        second: gripper_right_motor_double_link
-      - first: right_sole_link
-        second: gripper_right_motor_single_link
-      - first: right_sole_link
-        second: head_1_link
-      - first: right_sole_link
-        second: head_2_link
-      - first: right_sole_link
-        second: imu_link
-      - first: right_sole_link
-        second: left_sole_link
-      - first: right_sole_link
-        second: leg_left_1_link
-      - first: right_sole_link
-        second: leg_left_2_link
-      - first: right_sole_link
-        second: leg_left_3_link
-      - first: right_sole_link
-        second: leg_left_4_link
-      - first: right_sole_link
-        second: leg_left_5_link
-      - first: right_sole_link
-        second: leg_left_6_link
-      - first: right_sole_link
-        second: leg_right_1_link
-      - first: right_sole_link
-        second: leg_right_2_link
-      - first: right_sole_link
-        second: leg_right_3_link
-      - first: right_sole_link
-        second: leg_right_4_link
-      - first: right_sole_link
-        second: leg_right_5_link
-      - first: right_sole_link
-        second: leg_right_6_link
-      - first: right_sole_link
-        second: rgbd_depth_frame
-      - first: right_sole_link
-        second: rgbd_depth_optical_frame
-      - first: right_sole_link
-        second: rgbd_link
-      - first: right_sole_link
-        second: rgbd_optical_frame
-      - first: right_sole_link
-        second: rgbd_rgb_frame
-      - first: right_sole_link
-        second: rgbd_rgb_optical_frame
-      - first: torso_1_link
-        second: arm_left_1_link
-      - first: torso_1_link
-        second: arm_left_2_link
-      - first: torso_1_link
-        second: arm_left_3_link
-      - first: torso_1_link
-        second: arm_left_4_link
-      - first: torso_1_link
-        second: arm_right_1_link
-      - first: torso_1_link
-        second: arm_right_2_link
-      - first: torso_1_link
-        second: arm_right_3_link
-      - first: torso_1_link
-        second: arm_right_4_link
-      - first: torso_1_link
-        second: base_link
-      - first: torso_1_link
-        second: crane_link
-      - first: torso_1_link
-        second: head_1_link
-      - first: torso_1_link
-        second: head_2_link
-      - first: torso_1_link
-        second: imu_link
-      - first: torso_1_link
-        second: left_sole_link
-      - first: torso_1_link
-        second: leg_left_1_link
-      - first: torso_1_link
-        second: leg_left_2_link
-      - first: torso_1_link
-        second: leg_left_3_link
-      - first: torso_1_link
-        second: leg_left_4_link
-      - first: torso_1_link
-        second: leg_left_5_link
-      - first: torso_1_link
-        second: leg_left_6_link
-      - first: torso_1_link
-        second: leg_right_1_link
-      - first: torso_1_link
-        second: leg_right_2_link
-      - first: torso_1_link
-        second: leg_right_3_link
-      - first: torso_1_link
-        second: leg_right_4_link
-      - first: torso_1_link
-        second: leg_right_5_link
-      - first: torso_1_link
-        second: leg_right_6_link
-      - first: torso_1_link
-        second: rgbd_depth_frame
-      - first: torso_1_link
-        second: rgbd_depth_optical_frame
-      - first: torso_1_link
-        second: rgbd_link
-      - first: torso_1_link
-        second: rgbd_optical_frame
-      - first: torso_1_link
-        second: rgbd_rgb_frame
-      - first: torso_1_link
-        second: rgbd_rgb_optical_frame
-      - first: torso_1_link
-        second: right_sole_link
-      - first: torso_2_link
-        second: arm_left_1_link
-      - first: torso_2_link
-        second: arm_right_1_link
-      - first: torso_2_link
-        second: base_link
-      - first: torso_2_link
-        second: crane_link
-      - first: torso_2_link
-        second: head_1_link
-      - first: torso_2_link
-        second: head_2_link
-      - first: torso_2_link
-        second: imu_link
-      - first: torso_2_link
-        second: left_sole_link
-      - first: torso_2_link
-        second: leg_left_1_link
-      - first: torso_2_link
-        second: leg_left_2_link
-      - first: torso_2_link
-        second: leg_left_3_link
-      - first: torso_2_link
-        second: leg_left_4_link
-      - first: torso_2_link
-        second: leg_left_5_link
-      - first: torso_2_link
-        second: leg_left_6_link
-      - first: torso_2_link
-        second: leg_right_1_link
-      - first: torso_2_link
-        second: leg_right_2_link
-      - first: torso_2_link
-        second: leg_right_3_link
-      - first: torso_2_link
-        second: leg_right_4_link
-      - first: torso_2_link
-        second: leg_right_5_link
-      - first: torso_2_link
-        second: leg_right_6_link
-      - first: torso_2_link
-        second: rgbd_depth_frame
-      - first: torso_2_link
-        second: rgbd_depth_optical_frame
-      - first: torso_2_link
-        second: rgbd_link
-      - first: torso_2_link
-        second: rgbd_optical_frame
-      - first: torso_2_link
-        second: rgbd_rgb_frame
-      - first: torso_2_link
-        second: rgbd_rgb_optical_frame
-      - first: torso_2_link
-        second: right_sole_link
-      - first: torso_2_link
-        second: torso_1_link
-      - first: wrist_left_ft_link
-        second: arm_left_1_link
-      - first: wrist_left_ft_link
-        second: arm_left_2_link
-      - first: wrist_left_ft_link
-        second: arm_left_3_link
-      - first: wrist_left_ft_link
-        second: arm_left_4_link
-      - first: wrist_left_ft_link
-        second: arm_left_7_link
-      - first: wrist_left_ft_link
-        second: arm_right_1_link
-      - first: wrist_left_ft_link
-        second: arm_right_2_link
-      - first: wrist_left_ft_link
-        second: arm_right_3_link
-      - first: wrist_left_ft_link
-        second: arm_right_4_link
-      - first: wrist_left_ft_link
-        second: gripper_left_base_link
-      - first: wrist_left_ft_link
-        second: gripper_left_fingertip_1_link
-      - first: wrist_left_ft_link
-        second: gripper_left_fingertip_2_link
-      - first: wrist_left_ft_link
-        second: gripper_left_fingertip_3_link
-      - first: wrist_left_ft_link
-        second: gripper_left_inner_double_link
-      - first: wrist_left_ft_link
-        second: gripper_left_inner_single_link
-      - first: wrist_left_ft_link
-        second: gripper_left_motor_double_link
-      - first: wrist_left_ft_link
-        second: gripper_left_motor_single_link
-      - first: wrist_left_ft_link
-        second: gripper_right_base_link
-      - first: wrist_left_ft_link
-        second: gripper_right_fingertip_1_link
-      - first: wrist_left_ft_link
-        second: gripper_right_fingertip_2_link
-      - first: wrist_left_ft_link
-        second: gripper_right_inner_double_link
-      - first: wrist_left_ft_link
-        second: gripper_right_inner_single_link
-      - first: wrist_left_ft_link
-        second: gripper_right_motor_double_link
-      - first: wrist_left_ft_link
-        second: gripper_right_motor_single_link
-      - first: wrist_left_ft_link
-        second: imu_link
-      - first: wrist_left_ft_link
-        second: left_sole_link
-      - first: wrist_left_ft_link
-        second: leg_left_5_link
-      - first: wrist_left_ft_link
-        second: leg_left_6_link
-      - first: wrist_left_ft_link
-        second: leg_right_2_link
-      - first: wrist_left_ft_link
-        second: leg_right_5_link
-      - first: wrist_left_ft_link
-        second: rgbd_depth_frame
-      - first: wrist_left_ft_link
-        second: rgbd_depth_optical_frame
-      - first: wrist_left_ft_link
-        second: rgbd_optical_frame
-      - first: wrist_left_ft_link
-        second: rgbd_rgb_frame
-      - first: wrist_left_ft_link
-        second: rgbd_rgb_optical_frame
-      - first: wrist_left_ft_link
-        second: right_sole_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_1_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_2_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_3_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_4_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_5_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_6_link
-      - first: wrist_left_ft_tool_link
-        second: arm_left_7_link
-      - first: wrist_left_ft_tool_link
-        second: arm_right_1_link
-      - first: wrist_left_ft_tool_link
-        second: arm_right_2_link
-      - first: wrist_left_ft_tool_link
-        second: arm_right_3_link
-      - first: wrist_left_ft_tool_link
-        second: arm_right_4_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_base_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_fingertip_1_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_fingertip_2_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_fingertip_3_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_inner_double_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_inner_single_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_motor_double_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_left_motor_single_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_base_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_fingertip_1_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_fingertip_2_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_fingertip_3_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_inner_single_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_motor_double_link
-      - first: wrist_left_ft_tool_link
-        second: gripper_right_motor_single_link
-      - first: wrist_left_ft_tool_link
-        second: imu_link
-      - first: wrist_left_ft_tool_link
-        second: left_sole_link
-      - first: wrist_left_ft_tool_link
-        second: leg_left_5_link
-      - first: wrist_left_ft_tool_link
-        second: leg_left_6_link
-      - first: wrist_left_ft_tool_link
-        second: leg_right_2_link
-      - first: wrist_left_ft_tool_link
-        second: leg_right_5_link
-      - first: wrist_left_ft_tool_link
-        second: rgbd_depth_frame
-      - first: wrist_left_ft_tool_link
-        second: rgbd_depth_optical_frame
-      - first: wrist_left_ft_tool_link
-        second: rgbd_optical_frame
-      - first: wrist_left_ft_tool_link
-        second: rgbd_rgb_frame
-      - first: wrist_left_ft_tool_link
-        second: rgbd_rgb_optical_frame
-      - first: wrist_left_ft_tool_link
-        second: right_sole_link
-      - first: wrist_left_ft_tool_link
-        second: wrist_left_ft_link
-      - first: wrist_right_ft_link
-        second: arm_left_1_link
-      - first: wrist_right_ft_link
-        second: arm_left_2_link
-      - first: wrist_right_ft_link
-        second: arm_left_3_link
-      - first: wrist_right_ft_link
-        second: arm_left_4_link
-      - first: wrist_right_ft_link
-        second: arm_left_6_link
-      - first: wrist_right_ft_link
-        second: arm_right_1_link
-      - first: wrist_right_ft_link
-        second: arm_right_2_link
-      - first: wrist_right_ft_link
-        second: arm_right_3_link
-      - first: wrist_right_ft_link
-        second: arm_right_4_link
-      - first: wrist_right_ft_link
-        second: arm_right_7_link
-      - first: wrist_right_ft_link
-        second: gripper_left_fingertip_1_link
-      - first: wrist_right_ft_link
-        second: gripper_left_fingertip_2_link
-      - first: wrist_right_ft_link
-        second: gripper_left_fingertip_3_link
-      - first: wrist_right_ft_link
-        second: gripper_left_inner_double_link
-      - first: wrist_right_ft_link
-        second: gripper_left_inner_single_link
-      - first: wrist_right_ft_link
-        second: gripper_left_motor_double_link
-      - first: wrist_right_ft_link
-        second: gripper_right_base_link
-      - first: wrist_right_ft_link
-        second: gripper_right_fingertip_1_link
-      - first: wrist_right_ft_link
-        second: gripper_right_fingertip_2_link
-      - first: wrist_right_ft_link
-        second: gripper_right_fingertip_3_link
-      - first: wrist_right_ft_link
-        second: gripper_right_inner_double_link
-      - first: wrist_right_ft_link
-        second: gripper_right_inner_single_link
-      - first: wrist_right_ft_link
-        second: gripper_right_motor_double_link
-      - first: wrist_right_ft_link
-        second: gripper_right_motor_single_link
-      - first: wrist_right_ft_link
-        second: head_1_link
-      - first: wrist_right_ft_link
-        second: imu_link
-      - first: wrist_right_ft_link
-        second: left_sole_link
-      - first: wrist_right_ft_link
-        second: leg_left_5_link
-      - first: wrist_right_ft_link
-        second: leg_left_6_link
-      - first: wrist_right_ft_link
-        second: leg_right_5_link
-      - first: wrist_right_ft_link
-        second: leg_right_6_link
-      - first: wrist_right_ft_link
-        second: rgbd_depth_frame
-      - first: wrist_right_ft_link
-        second: rgbd_depth_optical_frame
-      - first: wrist_right_ft_link
-        second: rgbd_optical_frame
-      - first: wrist_right_ft_link
-        second: rgbd_rgb_frame
-      - first: wrist_right_ft_link
-        second: rgbd_rgb_optical_frame
-      - first: wrist_right_ft_link
-        second: right_sole_link
-      - first: wrist_right_ft_link
-        second: wrist_left_ft_link
-      - first: wrist_right_ft_link
-        second: wrist_left_ft_tool_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_1_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_2_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_3_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_4_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_6_link
-      - first: wrist_right_ft_tool_link
-        second: arm_left_7_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_1_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_2_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_3_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_4_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_5_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_6_link
-      - first: wrist_right_ft_tool_link
-        second: arm_right_7_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_base_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_fingertip_1_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_fingertip_2_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_fingertip_3_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_inner_double_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_inner_single_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_left_motor_double_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_base_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_fingertip_1_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_fingertip_2_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_fingertip_3_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_inner_double_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_inner_single_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_motor_double_link
-      - first: wrist_right_ft_tool_link
-        second: gripper_right_motor_single_link
-      - first: wrist_right_ft_tool_link
-        second: head_1_link
-      - first: wrist_right_ft_tool_link
-        second: imu_link
-      - first: wrist_right_ft_tool_link
-        second: left_sole_link
-      - first: wrist_right_ft_tool_link
-        second: leg_left_5_link
-      - first: wrist_right_ft_tool_link
-        second: leg_left_6_link
-      - first: wrist_right_ft_tool_link
-        second: leg_right_5_link
-      - first: wrist_right_ft_tool_link
-        second: leg_right_6_link
-      - first: wrist_right_ft_tool_link
-        second: rgbd_depth_frame
-      - first: wrist_right_ft_tool_link
-        second: rgbd_depth_optical_frame
-      - first: wrist_right_ft_tool_link
-        second: rgbd_optical_frame
-      - first: wrist_right_ft_tool_link
-        second: rgbd_rgb_frame
-      - first: wrist_right_ft_tool_link
-        second: rgbd_rgb_optical_frame
-      - first: wrist_right_ft_tool_link
-        second: right_sole_link
-      - first: wrist_right_ft_tool_link
-        second: wrist_left_ft_link
-      - first: wrist_right_ft_tool_link
-        second: wrist_left_ft_tool_link
-      - first: wrist_right_ft_tool_link
-        second: wrist_right_ft_link
+  blacklist_objects: []
+  
+  blacklist_operations:
+    - "gripper_left_fingertip_2_link": "gripper_left_motor_double_link"
+    - "gripper_left_motor_double_link": "gripper_left_motor_single_link"
+    - "gripper_left_inner_double_link": "gripper_left_inner_single_link"
+    - "gripper_left_fingertip_1_link": "gripper_left_motor_double_link"
+    - "gripper_left_inner_single_link": "gripper_left_motor_double_link"
+    - "arm_left_5_link": "wrist_left_ft_link"
+    - "arm_left_6_link": "wrist_left_ft_link"
+    - "gripper_right_fingertip_2_link": "gripper_right_motor_double_link"
+    - "gripper_right_motor_double_link": "gripper_right_motor_single_link"
+    - "gripper_right_inner_double_link": "gripper_right_inner_single_link"
+    - "gripper_right_fingertip_1_link": "gripper_right_motor_double_link"
+    - "gripper_right_inner_single_link": "gripper_right_motor_double_link"
+    - "arm_right_5_link": "wrist_right_ft_link"
+    - "arm_right_6_link": "wrist_right_ft_link"
+    - "arm_left_2_link": "arm_left_1_link"
+    - "arm_left_3_link": "arm_left_1_link"
+    - "arm_left_3_link": "arm_left_2_link"
+    - "arm_left_4_link": "arm_left_1_link"
+    - "arm_left_4_link": "arm_left_2_link"
+    - "arm_left_4_link": "arm_left_3_link"
+    - "arm_left_5_link": "arm_left_1_link"
+    - "arm_left_5_link": "arm_left_2_link"
+    - "arm_left_5_link": "arm_left_3_link"
+    - "arm_left_5_link": "arm_left_4_link"
+    - "arm_left_6_link": "arm_left_1_link"
+    - "arm_left_6_link": "arm_left_2_link"
+    - "arm_left_6_link": "arm_left_3_link"
+    - "arm_left_6_link": "arm_left_4_link"
+    - "arm_left_6_link": "arm_left_5_link"
+    - "arm_left_7_link": "arm_left_1_link"
+    - "arm_left_7_link": "arm_left_2_link"
+    - "arm_left_7_link": "arm_left_3_link"
+    - "arm_left_7_link": "arm_left_4_link"
+    - "arm_left_7_link": "arm_left_5_link"
+    - "arm_left_7_link": "arm_left_6_link"
+    - "arm_right_1_link": "arm_left_1_link"
+    - "arm_right_1_link": "arm_left_2_link"
+    - "arm_right_1_link": "arm_left_3_link"
+    - "arm_right_1_link": "arm_left_4_link"
+    - "arm_right_1_link": "arm_left_5_link"
+    - "arm_right_1_link": "arm_left_6_link"
+    - "arm_right_1_link": "arm_left_7_link"
+    - "arm_right_2_link": "arm_left_1_link"
+    - "arm_right_2_link": "arm_left_2_link"
+    - "arm_right_2_link": "arm_left_3_link"
+    - "arm_right_2_link": "arm_left_4_link"
+    - "arm_right_2_link": "arm_left_5_link"
+    - "arm_right_2_link": "arm_left_6_link"
+    - "arm_right_2_link": "arm_right_1_link"
+    - "arm_right_3_link": "arm_left_1_link"
+    - "arm_right_3_link": "arm_left_2_link"
+    - "arm_right_3_link": "arm_left_3_link"
+    - "arm_right_3_link": "arm_left_4_link"
+    - "arm_right_3_link": "arm_left_5_link"
+    - "arm_right_3_link": "arm_left_6_link"
+    - "arm_right_3_link": "arm_right_1_link"
+    - "arm_right_3_link": "arm_right_2_link"
+    - "arm_right_4_link": "arm_left_1_link"
+    - "arm_right_4_link": "arm_left_2_link"
+    - "arm_right_4_link": "arm_left_3_link"
+    - "arm_right_4_link": "arm_left_4_link"
+    - "arm_right_4_link": "arm_right_1_link"
+    - "arm_right_4_link": "arm_right_2_link"
+    - "arm_right_4_link": "arm_right_3_link"
+    - "arm_right_5_link": "arm_left_1_link"
+    - "arm_right_5_link": "arm_left_2_link"
+    - "arm_right_5_link": "arm_left_3_link"
+    - "arm_right_5_link": "arm_left_4_link"
+    - "arm_right_5_link": "arm_right_1_link"
+    - "arm_right_5_link": "arm_right_2_link"
+    - "arm_right_5_link": "arm_right_3_link"
+    - "arm_right_5_link": "arm_right_4_link"
+    - "arm_right_6_link": "arm_left_1_link"
+    - "arm_right_6_link": "arm_left_2_link"
+    - "arm_right_6_link": "arm_left_3_link"
+    - "arm_right_6_link": "arm_left_4_link"
+    - "arm_right_6_link": "arm_right_1_link"
+    - "arm_right_6_link": "arm_right_2_link"
+    - "arm_right_6_link": "arm_right_3_link"
+    - "arm_right_6_link": "arm_right_4_link"
+    - "arm_right_6_link": "arm_right_5_link"
+    - "arm_right_7_link": "arm_left_1_link"
+    - "arm_right_7_link": "arm_left_3_link"
+    - "arm_right_7_link": "arm_left_4_link"
+    - "arm_right_7_link": "arm_right_1_link"
+    - "arm_right_7_link": "arm_right_2_link"
+    - "arm_right_7_link": "arm_right_3_link"
+    - "arm_right_7_link": "arm_right_4_link"
+    - "arm_right_7_link": "arm_right_5_link"
+    - "arm_right_7_link": "arm_right_6_link"
+    - "base_link": "arm_left_1_link"
+    - "base_link": "arm_left_2_link"
+    - "base_link": "arm_right_1_link"
+    - "base_link": "arm_right_2_link"
+    - "crane_link": "arm_left_1_link"
+    - "crane_link": "arm_left_2_link"
+    - "crane_link": "arm_right_1_link"
+    - "crane_link": "arm_right_2_link"
+    - "crane_link": "base_link"
+    - "gripper_left_base_link": "arm_left_1_link"
+    - "gripper_left_base_link": "arm_left_2_link"
+    - "gripper_left_base_link": "arm_left_3_link"
+    - "gripper_left_base_link": "arm_left_4_link"
+    - "gripper_left_base_link": "arm_left_5_link"
+    - "gripper_left_base_link": "arm_left_6_link"
+    - "gripper_left_base_link": "arm_left_7_link"
+    - "gripper_left_fingertip_1_link": "arm_left_2_link"
+    - "gripper_left_fingertip_1_link": "arm_left_3_link"
+    - "gripper_left_fingertip_1_link": "arm_left_4_link"
+    - "gripper_left_fingertip_1_link": "arm_left_5_link"
+    - "gripper_left_fingertip_1_link": "arm_left_6_link"
+    - "gripper_left_fingertip_1_link": "arm_left_7_link"
+    - "gripper_left_fingertip_1_link": "arm_right_6_link"
+    - "gripper_left_fingertip_1_link": "arm_right_7_link"
+    - "gripper_left_fingertip_1_link": "gripper_left_base_link"
+    - "gripper_left_fingertip_2_link": "arm_left_2_link"
+    - "gripper_left_fingertip_2_link": "arm_left_3_link"
+    - "gripper_left_fingertip_2_link": "arm_left_4_link"
+    - "gripper_left_fingertip_2_link": "arm_left_5_link"
+    - "gripper_left_fingertip_2_link": "arm_left_6_link"
+    - "gripper_left_fingertip_2_link": "arm_left_7_link"
+    - "gripper_left_fingertip_2_link": "arm_right_6_link"
+    - "gripper_left_fingertip_2_link": "gripper_left_base_link"
+    - "gripper_left_fingertip_2_link": "gripper_left_fingertip_1_link"
+    - "gripper_left_fingertip_3_link": "arm_left_2_link"
+    - "gripper_left_fingertip_3_link": "arm_left_3_link"
+    - "gripper_left_fingertip_3_link": "arm_left_4_link"
+    - "gripper_left_fingertip_3_link": "arm_left_5_link"
+    - "gripper_left_fingertip_3_link": "arm_left_6_link"
+    - "gripper_left_fingertip_3_link": "arm_left_7_link"
+    - "gripper_left_fingertip_3_link": "arm_right_6_link"
+    - "gripper_left_fingertip_3_link": "gripper_left_base_link"
+    - "gripper_left_fingertip_3_link": "gripper_left_fingertip_1_link"
+    - "gripper_left_fingertip_3_link": "gripper_left_fingertip_2_link"
+    - "gripper_left_inner_double_link": "arm_left_2_link"
+    - "gripper_left_inner_double_link": "arm_left_3_link"
+    - "gripper_left_inner_double_link": "arm_left_4_link"
+    - "gripper_left_inner_double_link": "arm_left_5_link"
+    - "gripper_left_inner_double_link": "arm_left_6_link"
+    - "gripper_left_inner_double_link": "arm_left_7_link"
+    - "gripper_left_inner_double_link": "arm_right_6_link"
+    - "gripper_left_inner_double_link": "arm_right_7_link"
+    - "gripper_left_inner_double_link": "gripper_left_base_link"
+    - "gripper_left_inner_double_link": "gripper_left_fingertip_1_link"
+    - "gripper_left_inner_double_link": "gripper_left_fingertip_2_link"
+    - "gripper_left_inner_double_link": "gripper_left_fingertip_3_link"
+    - "gripper_left_inner_single_link": "arm_left_2_link"
+    - "gripper_left_inner_single_link": "arm_left_3_link"
+    - "gripper_left_inner_single_link": "arm_left_4_link"
+    - "gripper_left_inner_single_link": "arm_left_5_link"
+    - "gripper_left_inner_single_link": "arm_left_6_link"
+    - "gripper_left_inner_single_link": "arm_left_7_link"
+    - "gripper_left_inner_single_link": "arm_right_6_link"
+    - "gripper_left_inner_single_link": "gripper_left_base_link"
+    - "gripper_left_inner_single_link": "gripper_left_fingertip_1_link"
+    - "gripper_left_inner_single_link": "gripper_left_fingertip_2_link"
+    - "gripper_left_inner_single_link": "gripper_left_fingertip_3_link"
+    - "gripper_left_motor_double_link": "arm_left_2_link"
+    - "gripper_left_motor_double_link": "arm_left_3_link"
+    - "gripper_left_motor_double_link": "arm_left_4_link"
+    - "gripper_left_motor_double_link": "arm_left_5_link"
+    - "gripper_left_motor_double_link": "arm_left_6_link"
+    - "gripper_left_motor_double_link": "arm_left_7_link"
+    - "gripper_left_motor_double_link": "gripper_left_base_link"
+    - "gripper_left_motor_double_link": "gripper_left_fingertip_3_link"
+    - "gripper_left_motor_double_link": "gripper_left_inner_double_link"
+    - "gripper_left_motor_single_link": "arm_left_2_link"
+    - "gripper_left_motor_single_link": "arm_left_3_link"
+    - "gripper_left_motor_single_link": "arm_left_4_link"
+    - "gripper_left_motor_single_link": "arm_left_5_link"
+    - "gripper_left_motor_single_link": "arm_left_6_link"
+    - "gripper_left_motor_single_link": "arm_left_7_link"
+    - "gripper_left_motor_single_link": "gripper_left_base_link"
+    - "gripper_left_motor_single_link": "gripper_left_fingertip_1_link"
+    - "gripper_left_motor_single_link": "gripper_left_fingertip_2_link"
+    - "gripper_left_motor_single_link": "gripper_left_fingertip_3_link"
+    - "gripper_left_motor_single_link": "gripper_left_inner_double_link"
+    - "gripper_left_motor_single_link": "gripper_left_inner_single_link"
+    - "gripper_right_base_link": "arm_left_1_link"
+    - "gripper_right_base_link": "arm_right_1_link"
+    - "gripper_right_base_link": "arm_right_2_link"
+    - "gripper_right_base_link": "arm_right_3_link"
+    - "gripper_right_base_link": "arm_right_4_link"
+    - "gripper_right_base_link": "arm_right_5_link"
+    - "gripper_right_base_link": "arm_right_6_link"
+    - "gripper_right_base_link": "arm_right_7_link"
+    - "gripper_right_base_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_fingertip_1_link": "arm_left_6_link"
+    - "gripper_right_fingertip_1_link": "arm_left_7_link"
+    - "gripper_right_fingertip_1_link": "arm_right_2_link"
+    - "gripper_right_fingertip_1_link": "arm_right_3_link"
+    - "gripper_right_fingertip_1_link": "arm_right_4_link"
+    - "gripper_right_fingertip_1_link": "arm_right_5_link"
+    - "gripper_right_fingertip_1_link": "arm_right_6_link"
+    - "gripper_right_fingertip_1_link": "arm_right_7_link"
+    - "gripper_right_fingertip_1_link": "gripper_left_fingertip_1_link"
+    - "gripper_right_fingertip_1_link": "gripper_left_fingertip_2_link"
+    - "gripper_right_fingertip_1_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_fingertip_1_link": "gripper_right_base_link"
+    - "gripper_right_fingertip_2_link": "arm_left_6_link"
+    - "gripper_right_fingertip_2_link": "arm_right_2_link"
+    - "gripper_right_fingertip_2_link": "arm_right_3_link"
+    - "gripper_right_fingertip_2_link": "arm_right_4_link"
+    - "gripper_right_fingertip_2_link": "arm_right_5_link"
+    - "gripper_right_fingertip_2_link": "arm_right_6_link"
+    - "gripper_right_fingertip_2_link": "arm_right_7_link"
+    - "gripper_right_fingertip_2_link": "gripper_left_fingertip_1_link"
+    - "gripper_right_fingertip_2_link": "gripper_left_fingertip_2_link"
+    - "gripper_right_fingertip_2_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_fingertip_2_link": "gripper_left_inner_single_link"
+    - "gripper_right_fingertip_2_link": "gripper_left_motor_single_link"
+    - "gripper_right_fingertip_2_link": "gripper_right_base_link"
+    - "gripper_right_fingertip_2_link": "gripper_right_fingertip_1_link"
+    - "gripper_right_fingertip_3_link": "arm_right_2_link"
+    - "gripper_right_fingertip_3_link": "arm_right_3_link"
+    - "gripper_right_fingertip_3_link": "arm_right_4_link"
+    - "gripper_right_fingertip_3_link": "arm_right_5_link"
+    - "gripper_right_fingertip_3_link": "arm_right_6_link"
+    - "gripper_right_fingertip_3_link": "arm_right_7_link"
+    - "gripper_right_fingertip_3_link": "gripper_left_base_link"
+    - "gripper_right_fingertip_3_link": "gripper_left_fingertip_1_link"
+    - "gripper_right_fingertip_3_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_fingertip_3_link": "gripper_left_motor_double_link"
+    - "gripper_right_fingertip_3_link": "gripper_right_base_link"
+    - "gripper_right_fingertip_3_link": "gripper_right_fingertip_1_link"
+    - "gripper_right_fingertip_3_link": "gripper_right_fingertip_2_link"
+    - "gripper_right_inner_double_link": "arm_left_6_link"
+    - "gripper_right_inner_double_link": "arm_right_2_link"
+    - "gripper_right_inner_double_link": "arm_right_3_link"
+    - "gripper_right_inner_double_link": "arm_right_4_link"
+    - "gripper_right_inner_double_link": "arm_right_5_link"
+    - "gripper_right_inner_double_link": "arm_right_6_link"
+    - "gripper_right_inner_double_link": "arm_right_7_link"
+    - "gripper_right_inner_double_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_inner_double_link": "gripper_left_inner_single_link"
+    - "gripper_right_inner_double_link": "gripper_right_base_link"
+    - "gripper_right_inner_double_link": "gripper_right_fingertip_1_link"
+    - "gripper_right_inner_double_link": "gripper_right_fingertip_2_link"
+    - "gripper_right_inner_double_link": "gripper_right_fingertip_3_link"
+    - "gripper_right_inner_single_link": "arm_right_2_link"
+    - "gripper_right_inner_single_link": "arm_right_3_link"
+    - "gripper_right_inner_single_link": "arm_right_4_link"
+    - "gripper_right_inner_single_link": "arm_right_5_link"
+    - "gripper_right_inner_single_link": "arm_right_6_link"
+    - "gripper_right_inner_single_link": "arm_right_7_link"
+    - "gripper_right_inner_single_link": "gripper_left_fingertip_1_link"
+    - "gripper_right_inner_single_link": "gripper_right_base_link"
+    - "gripper_right_inner_single_link": "gripper_right_fingertip_1_link"
+    - "gripper_right_inner_single_link": "gripper_right_fingertip_2_link"
+    - "gripper_right_inner_single_link": "gripper_right_fingertip_3_link"
+    - "gripper_right_motor_double_link": "arm_right_2_link"
+    - "gripper_right_motor_double_link": "arm_right_3_link"
+    - "gripper_right_motor_double_link": "arm_right_4_link"
+    - "gripper_right_motor_double_link": "arm_right_5_link"
+    - "gripper_right_motor_double_link": "arm_right_6_link"
+    - "gripper_right_motor_double_link": "arm_right_7_link"
+    - "gripper_right_motor_double_link": "gripper_left_fingertip_3_link"
+    - "gripper_right_motor_double_link": "gripper_left_inner_single_link"
+    - "gripper_right_motor_double_link": "gripper_right_base_link"
+    - "gripper_right_motor_double_link": "gripper_right_fingertip_3_link"
+    - "gripper_right_motor_double_link": "gripper_right_inner_double_link"
+    - "gripper_right_motor_single_link": "arm_right_2_link"
+    - "gripper_right_motor_single_link": "arm_right_3_link"
+    - "gripper_right_motor_single_link": "arm_right_4_link"
+    - "gripper_right_motor_single_link": "arm_right_5_link"
+    - "gripper_right_motor_single_link": "arm_right_6_link"
+    - "gripper_right_motor_single_link": "arm_right_7_link"
+    - "gripper_right_motor_single_link": "gripper_left_base_link"
+    - "gripper_right_motor_single_link": "gripper_left_fingertip_1_link"
+    - "gripper_right_motor_single_link": "gripper_left_fingertip_2_link"
+    - "gripper_right_motor_single_link": "gripper_left_inner_double_link"
+    - "gripper_right_motor_single_link": "gripper_left_motor_double_link"
+    - "gripper_right_motor_single_link": "gripper_left_motor_single_link"
+    - "gripper_right_motor_single_link": "gripper_right_base_link"
+    - "gripper_right_motor_single_link": "gripper_right_fingertip_1_link"
+    - "gripper_right_motor_single_link": "gripper_right_fingertip_2_link"
+    - "gripper_right_motor_single_link": "gripper_right_fingertip_3_link"
+    - "gripper_right_motor_single_link": "gripper_right_inner_double_link"
+    - "gripper_right_motor_single_link": "gripper_right_inner_single_link"
+    - "head_1_link": "arm_left_1_link"
+    - "head_1_link": "arm_left_2_link"
+    - "head_1_link": "arm_left_3_link"
+    - "head_1_link": "arm_left_4_link"
+    - "head_1_link": "arm_right_1_link"
+    - "head_1_link": "arm_right_2_link"
+    - "head_1_link": "arm_right_3_link"
+    - "head_1_link": "arm_right_4_link"
+    - "head_1_link": "base_link"
+    - "head_1_link": "crane_link"
+    - "head_2_link": "arm_left_1_link"
+    - "head_2_link": "arm_left_4_link"
+    - "head_2_link": "arm_right_1_link"
+    - "head_2_link": "base_link"
+    - "head_2_link": "crane_link"
+    - "head_2_link": "head_1_link"
+    - "imu_link": "arm_left_1_link"
+    - "imu_link": "arm_left_2_link"
+    - "imu_link": "arm_left_3_link"
+    - "imu_link": "arm_left_4_link"
+    - "imu_link": "arm_left_5_link"
+    - "imu_link": "arm_left_6_link"
+    - "imu_link": "arm_left_7_link"
+    - "imu_link": "arm_right_1_link"
+    - "imu_link": "arm_right_2_link"
+    - "imu_link": "arm_right_3_link"
+    - "imu_link": "arm_right_4_link"
+    - "imu_link": "arm_right_5_link"
+    - "imu_link": "arm_right_6_link"
+    - "imu_link": "arm_right_7_link"
+    - "imu_link": "base_link"
+    - "imu_link": "crane_link"
+    - "imu_link": "gripper_left_base_link"
+    - "imu_link": "gripper_left_fingertip_1_link"
+    - "imu_link": "gripper_left_fingertip_2_link"
+    - "imu_link": "gripper_left_fingertip_3_link"
+    - "imu_link": "gripper_left_inner_double_link"
+    - "imu_link": "gripper_left_inner_single_link"
+    - "imu_link": "gripper_left_motor_double_link"
+    - "imu_link": "gripper_left_motor_single_link"
+    - "imu_link": "gripper_right_base_link"
+    - "imu_link": "gripper_right_fingertip_1_link"
+    - "imu_link": "gripper_right_fingertip_2_link"
+    - "imu_link": "gripper_right_fingertip_3_link"
+    - "imu_link": "gripper_right_inner_double_link"
+    - "imu_link": "gripper_right_inner_single_link"
+    - "imu_link": "gripper_right_motor_double_link"
+    - "imu_link": "gripper_right_motor_single_link"
+    - "imu_link": "head_1_link"
+    - "imu_link": "head_2_link"
+    - "left_sole_link": "arm_left_1_link"
+    - "left_sole_link": "arm_left_2_link"
+    - "left_sole_link": "arm_left_3_link"
+    - "left_sole_link": "arm_left_4_link"
+    - "left_sole_link": "arm_left_5_link"
+    - "left_sole_link": "arm_left_6_link"
+    - "left_sole_link": "arm_left_7_link"
+    - "left_sole_link": "arm_right_1_link"
+    - "left_sole_link": "arm_right_2_link"
+    - "left_sole_link": "arm_right_3_link"
+    - "left_sole_link": "arm_right_4_link"
+    - "left_sole_link": "arm_right_5_link"
+    - "left_sole_link": "arm_right_6_link"
+    - "left_sole_link": "arm_right_7_link"
+    - "left_sole_link": "base_link"
+    - "left_sole_link": "crane_link"
+    - "left_sole_link": "gripper_left_base_link"
+    - "left_sole_link": "gripper_left_fingertip_1_link"
+    - "left_sole_link": "gripper_left_fingertip_2_link"
+    - "left_sole_link": "gripper_left_fingertip_3_link"
+    - "left_sole_link": "gripper_left_inner_double_link"
+    - "left_sole_link": "gripper_left_inner_single_link"
+    - "left_sole_link": "gripper_left_motor_double_link"
+    - "left_sole_link": "gripper_left_motor_single_link"
+    - "left_sole_link": "gripper_right_base_link"
+    - "left_sole_link": "gripper_right_fingertip_1_link"
+    - "left_sole_link": "gripper_right_fingertip_2_link"
+    - "left_sole_link": "gripper_right_fingertip_3_link"
+    - "left_sole_link": "gripper_right_inner_double_link"
+    - "left_sole_link": "gripper_right_inner_single_link"
+    - "left_sole_link": "gripper_right_motor_double_link"
+    - "left_sole_link": "gripper_right_motor_single_link"
+    - "left_sole_link": "head_1_link"
+    - "left_sole_link": "head_2_link"
+    - "left_sole_link": "imu_link"
+    - "leg_left_1_link": "arm_left_1_link"
+    - "leg_left_1_link": "arm_left_2_link"
+    - "leg_left_1_link": "arm_left_3_link"
+    - "leg_left_1_link": "arm_left_4_link"
+    - "leg_left_1_link": "arm_right_1_link"
+    - "leg_left_1_link": "arm_right_2_link"
+    - "leg_left_1_link": "arm_right_3_link"
+    - "leg_left_1_link": "arm_right_4_link"
+    - "leg_left_1_link": "base_link"
+    - "leg_left_1_link": "crane_link"
+    - "leg_left_1_link": "head_1_link"
+    - "leg_left_1_link": "head_2_link"
+    - "leg_left_1_link": "imu_link"
+    - "leg_left_1_link": "left_sole_link"
+    - "leg_left_2_link": "arm_left_1_link"
+    - "leg_left_2_link": "arm_left_2_link"
+    - "leg_left_2_link": "arm_left_3_link"
+    - "leg_left_2_link": "arm_left_4_link"
+    - "leg_left_2_link": "arm_right_1_link"
+    - "leg_left_2_link": "arm_right_2_link"
+    - "leg_left_2_link": "arm_right_3_link"
+    - "leg_left_2_link": "arm_right_4_link"
+    - "leg_left_2_link": "arm_right_5_link"
+    - "leg_left_2_link": "arm_right_6_link"
+    - "leg_left_2_link": "base_link"
+    - "leg_left_2_link": "crane_link"
+    - "leg_left_2_link": "head_1_link"
+    - "leg_left_2_link": "head_2_link"
+    - "leg_left_2_link": "imu_link"
+    - "leg_left_2_link": "left_sole_link"
+    - "leg_left_2_link": "leg_left_1_link"
+    - "leg_left_3_link": "arm_left_1_link"
+    - "leg_left_3_link": "arm_left_2_link"
+    - "leg_left_3_link": "arm_right_1_link"
+    - "leg_left_3_link": "arm_right_2_link"
+    - "leg_left_3_link": "arm_right_3_link"
+    - "leg_left_3_link": "crane_link"
+    - "leg_left_3_link": "head_1_link"
+    - "leg_left_3_link": "head_2_link"
+    - "leg_left_3_link": "imu_link"
+    - "leg_left_3_link": "left_sole_link"
+    - "leg_left_3_link": "leg_left_1_link"
+    - "leg_left_3_link": "leg_left_2_link"
+    - "leg_left_4_link": "arm_left_1_link"
+    - "leg_left_4_link": "arm_left_2_link"
+    - "leg_left_4_link": "arm_right_1_link"
+    - "leg_left_4_link": "arm_right_2_link"
+    - "leg_left_4_link": "arm_right_3_link"
+    - "leg_left_4_link": "arm_right_4_link"
+    - "leg_left_4_link": "crane_link"
+    - "leg_left_4_link": "head_1_link"
+    - "leg_left_4_link": "head_2_link"
+    - "leg_left_4_link": "imu_link"
+    - "leg_left_4_link": "left_sole_link"
+    - "leg_left_4_link": "leg_left_1_link"
+    - "leg_left_4_link": "leg_left_2_link"
+    - "leg_left_4_link": "leg_left_3_link"
+    - "leg_left_5_link": "arm_left_1_link"
+    - "leg_left_5_link": "arm_left_2_link"
+    - "leg_left_5_link": "arm_left_3_link"
+    - "leg_left_5_link": "arm_left_4_link"
+    - "leg_left_5_link": "arm_left_6_link"
+    - "leg_left_5_link": "arm_right_1_link"
+    - "leg_left_5_link": "arm_right_2_link"
+    - "leg_left_5_link": "arm_right_3_link"
+    - "leg_left_5_link": "arm_right_4_link"
+    - "leg_left_5_link": "arm_right_5_link"
+    - "leg_left_5_link": "arm_right_6_link"
+    - "leg_left_5_link": "arm_right_7_link"
+    - "leg_left_5_link": "crane_link"
+    - "leg_left_5_link": "gripper_right_fingertip_2_link"
+    - "leg_left_5_link": "head_1_link"
+    - "leg_left_5_link": "head_2_link"
+    - "leg_left_5_link": "imu_link"
+    - "leg_left_5_link": "left_sole_link"
+    - "leg_left_5_link": "leg_left_1_link"
+    - "leg_left_5_link": "leg_left_2_link"
+    - "leg_left_5_link": "leg_left_3_link"
+    - "leg_left_5_link": "leg_left_4_link"
+    - "leg_left_6_link": "arm_left_1_link"
+    - "leg_left_6_link": "arm_left_2_link"
+    - "leg_left_6_link": "arm_left_3_link"
+    - "leg_left_6_link": "arm_left_4_link"
+    - "leg_left_6_link": "arm_left_6_link"
+    - "leg_left_6_link": "arm_right_1_link"
+    - "leg_left_6_link": "arm_right_2_link"
+    - "leg_left_6_link": "arm_right_3_link"
+    - "leg_left_6_link": "arm_right_4_link"
+    - "leg_left_6_link": "crane_link"
+    - "leg_left_6_link": "head_1_link"
+    - "leg_left_6_link": "head_2_link"
+    - "leg_left_6_link": "imu_link"
+    - "leg_left_6_link": "left_sole_link"
+    - "leg_left_6_link": "leg_left_4_link"
+    - "leg_left_6_link": "leg_left_5_link"
+    - "leg_right_1_link": "arm_left_1_link"
+    - "leg_right_1_link": "arm_left_2_link"
+    - "leg_right_1_link": "arm_left_3_link"
+    - "leg_right_1_link": "arm_left_4_link"
+    - "leg_right_1_link": "arm_right_1_link"
+    - "leg_right_1_link": "arm_right_2_link"
+    - "leg_right_1_link": "arm_right_3_link"
+    - "leg_right_1_link": "arm_right_4_link"
+    - "leg_right_1_link": "base_link"
+    - "leg_right_1_link": "crane_link"
+    - "leg_right_1_link": "head_1_link"
+    - "leg_right_1_link": "head_2_link"
+    - "leg_right_1_link": "imu_link"
+    - "leg_right_1_link": "left_sole_link"
+    - "leg_right_1_link": "leg_left_2_link"
+    - "leg_right_2_link": "arm_left_1_link"
+    - "leg_right_2_link": "arm_left_2_link"
+    - "leg_right_2_link": "arm_left_3_link"
+    - "leg_right_2_link": "arm_left_4_link"
+    - "leg_right_2_link": "arm_left_5_link"
+    - "leg_right_2_link": "arm_left_6_link"
+    - "leg_right_2_link": "arm_right_1_link"
+    - "leg_right_2_link": "arm_right_2_link"
+    - "leg_right_2_link": "arm_right_3_link"
+    - "leg_right_2_link": "arm_right_4_link"
+    - "leg_right_2_link": "crane_link"
+    - "leg_right_2_link": "head_1_link"
+    - "leg_right_2_link": "head_2_link"
+    - "leg_right_2_link": "imu_link"
+    - "leg_right_2_link": "left_sole_link"
+    - "leg_right_2_link": "leg_left_1_link"
+    - "leg_right_2_link": "leg_left_2_link"
+    - "leg_right_2_link": "leg_right_1_link"
+    - "leg_right_3_link": "arm_left_1_link"
+    - "leg_right_3_link": "arm_left_2_link"
+    - "leg_right_3_link": "arm_right_1_link"
+    - "leg_right_3_link": "arm_right_2_link"
+    - "leg_right_3_link": "head_1_link"
+    - "leg_right_3_link": "head_2_link"
+    - "leg_right_3_link": "imu_link"
+    - "leg_right_3_link": "left_sole_link"
+    - "leg_right_3_link": "leg_right_1_link"
+    - "leg_right_3_link": "leg_right_2_link"
+    - "leg_right_4_link": "arm_left_1_link"
+    - "leg_right_4_link": "arm_left_2_link"
+    - "leg_right_4_link": "arm_right_1_link"
+    - "leg_right_4_link": "arm_right_2_link"
+    - "leg_right_4_link": "base_link"
+    - "leg_right_4_link": "head_1_link"
+    - "leg_right_4_link": "head_2_link"
+    - "leg_right_4_link": "imu_link"
+    - "leg_right_4_link": "left_sole_link"
+    - "leg_right_4_link": "leg_right_1_link"
+    - "leg_right_4_link": "leg_right_2_link"
+    - "leg_right_4_link": "leg_right_3_link"
+    - "leg_right_5_link": "arm_left_1_link"
+    - "leg_right_5_link": "arm_left_2_link"
+    - "leg_right_5_link": "arm_left_3_link"
+    - "leg_right_5_link": "arm_left_4_link"
+    - "leg_right_5_link": "arm_left_6_link"
+    - "leg_right_5_link": "arm_right_1_link"
+    - "leg_right_5_link": "arm_right_2_link"
+    - "leg_right_5_link": "arm_right_3_link"
+    - "leg_right_5_link": "arm_right_4_link"
+    - "leg_right_5_link": "crane_link"
+    - "leg_right_5_link": "gripper_left_base_link"
+    - "leg_right_5_link": "gripper_left_inner_double_link"
+    - "leg_right_5_link": "gripper_left_motor_double_link"
+    - "leg_right_5_link": "head_1_link"
+    - "leg_right_5_link": "head_2_link"
+    - "leg_right_5_link": "imu_link"
+    - "leg_right_5_link": "left_sole_link"
+    - "leg_right_5_link": "leg_right_1_link"
+    - "leg_right_5_link": "leg_right_2_link"
+    - "leg_right_5_link": "leg_right_3_link"
+    - "leg_right_5_link": "leg_right_4_link"
+    - "leg_right_6_link": "arm_left_1_link"
+    - "leg_right_6_link": "arm_left_2_link"
+    - "leg_right_6_link": "arm_right_1_link"
+    - "leg_right_6_link": "arm_right_2_link"
+    - "leg_right_6_link": "arm_right_3_link"
+    - "leg_right_6_link": "crane_link"
+    - "leg_right_6_link": "head_1_link"
+    - "leg_right_6_link": "head_2_link"
+    - "leg_right_6_link": "imu_link"
+    - "leg_right_6_link": "left_sole_link"
+    - "leg_right_6_link": "leg_right_4_link"
+    - "leg_right_6_link": "leg_right_5_link"
+    - "rgbd_depth_frame": "arm_left_1_link"
+    - "rgbd_depth_frame": "arm_left_2_link"
+    - "rgbd_depth_frame": "arm_left_3_link"
+    - "rgbd_depth_frame": "arm_left_4_link"
+    - "rgbd_depth_frame": "arm_left_5_link"
+    - "rgbd_depth_frame": "arm_left_6_link"
+    - "rgbd_depth_frame": "arm_left_7_link"
+    - "rgbd_depth_frame": "arm_right_1_link"
+    - "rgbd_depth_frame": "arm_right_2_link"
+    - "rgbd_depth_frame": "arm_right_3_link"
+    - "rgbd_depth_frame": "arm_right_4_link"
+    - "rgbd_depth_frame": "arm_right_5_link"
+    - "rgbd_depth_frame": "arm_right_6_link"
+    - "rgbd_depth_frame": "arm_right_7_link"
+    - "rgbd_depth_frame": "base_link"
+    - "rgbd_depth_frame": "crane_link"
+    - "rgbd_depth_frame": "gripper_left_base_link"
+    - "rgbd_depth_frame": "gripper_left_fingertip_1_link"
+    - "rgbd_depth_frame": "gripper_left_fingertip_2_link"
+    - "rgbd_depth_frame": "gripper_left_fingertip_3_link"
+    - "rgbd_depth_frame": "gripper_left_inner_double_link"
+    - "rgbd_depth_frame": "gripper_left_inner_single_link"
+    - "rgbd_depth_frame": "gripper_left_motor_double_link"
+    - "rgbd_depth_frame": "gripper_left_motor_single_link"
+    - "rgbd_depth_frame": "gripper_right_base_link"
+    - "rgbd_depth_frame": "gripper_right_fingertip_1_link"
+    - "rgbd_depth_frame": "gripper_right_fingertip_2_link"
+    - "rgbd_depth_frame": "gripper_right_fingertip_3_link"
+    - "rgbd_depth_frame": "gripper_right_inner_double_link"
+    - "rgbd_depth_frame": "gripper_right_inner_single_link"
+    - "rgbd_depth_frame": "gripper_right_motor_double_link"
+    - "rgbd_depth_frame": "gripper_right_motor_single_link"
+    - "rgbd_depth_frame": "head_1_link"
+    - "rgbd_depth_frame": "head_2_link"
+    - "rgbd_depth_frame": "imu_link"
+    - "rgbd_depth_frame": "left_sole_link"
+    - "rgbd_depth_frame": "leg_left_1_link"
+    - "rgbd_depth_frame": "leg_left_2_link"
+    - "rgbd_depth_frame": "leg_left_3_link"
+    - "rgbd_depth_frame": "leg_left_4_link"
+    - "rgbd_depth_frame": "leg_left_5_link"
+    - "rgbd_depth_frame": "leg_left_6_link"
+    - "rgbd_depth_frame": "leg_right_1_link"
+    - "rgbd_depth_frame": "leg_right_2_link"
+    - "rgbd_depth_frame": "leg_right_3_link"
+    - "rgbd_depth_frame": "leg_right_4_link"
+    - "rgbd_depth_frame": "leg_right_5_link"
+    - "rgbd_depth_frame": "leg_right_6_link"
+    - "rgbd_depth_optical_frame": "arm_left_1_link"
+    - "rgbd_depth_optical_frame": "arm_left_2_link"
+    - "rgbd_depth_optical_frame": "arm_left_3_link"
+    - "rgbd_depth_optical_frame": "arm_left_4_link"
+    - "rgbd_depth_optical_frame": "arm_left_5_link"
+    - "rgbd_depth_optical_frame": "arm_left_6_link"
+    - "rgbd_depth_optical_frame": "arm_left_7_link"
+    - "rgbd_depth_optical_frame": "arm_right_1_link"
+    - "rgbd_depth_optical_frame": "arm_right_2_link"
+    - "rgbd_depth_optical_frame": "arm_right_3_link"
+    - "rgbd_depth_optical_frame": "arm_right_4_link"
+    - "rgbd_depth_optical_frame": "arm_right_5_link"
+    - "rgbd_depth_optical_frame": "arm_right_6_link"
+    - "rgbd_depth_optical_frame": "arm_right_7_link"
+    - "rgbd_depth_optical_frame": "base_link"
+    - "rgbd_depth_optical_frame": "crane_link"
+    - "rgbd_depth_optical_frame": "gripper_left_base_link"
+    - "rgbd_depth_optical_frame": "gripper_left_fingertip_1_link"
+    - "rgbd_depth_optical_frame": "gripper_left_fingertip_2_link"
+    - "rgbd_depth_optical_frame": "gripper_left_fingertip_3_link"
+    - "rgbd_depth_optical_frame": "gripper_left_inner_double_link"
+    - "rgbd_depth_optical_frame": "gripper_left_inner_single_link"
+    - "rgbd_depth_optical_frame": "gripper_left_motor_double_link"
+    - "rgbd_depth_optical_frame": "gripper_left_motor_single_link"
+    - "rgbd_depth_optical_frame": "gripper_right_base_link"
+    - "rgbd_depth_optical_frame": "gripper_right_fingertip_1_link"
+    - "rgbd_depth_optical_frame": "gripper_right_fingertip_2_link"
+    - "rgbd_depth_optical_frame": "gripper_right_fingertip_3_link"
+    - "rgbd_depth_optical_frame": "gripper_right_inner_double_link"
+    - "rgbd_depth_optical_frame": "gripper_right_inner_single_link"
+    - "rgbd_depth_optical_frame": "gripper_right_motor_double_link"
+    - "rgbd_depth_optical_frame": "gripper_right_motor_single_link"
+    - "rgbd_depth_optical_frame": "head_1_link"
+    - "rgbd_depth_optical_frame": "head_2_link"
+    - "rgbd_depth_optical_frame": "imu_link"
+    - "rgbd_depth_optical_frame": "left_sole_link"
+    - "rgbd_depth_optical_frame": "leg_left_1_link"
+    - "rgbd_depth_optical_frame": "leg_left_2_link"
+    - "rgbd_depth_optical_frame": "leg_left_3_link"
+    - "rgbd_depth_optical_frame": "leg_left_4_link"
+    - "rgbd_depth_optical_frame": "leg_left_5_link"
+    - "rgbd_depth_optical_frame": "leg_left_6_link"
+    - "rgbd_depth_optical_frame": "leg_right_1_link"
+    - "rgbd_depth_optical_frame": "leg_right_2_link"
+    - "rgbd_depth_optical_frame": "leg_right_3_link"
+    - "rgbd_depth_optical_frame": "leg_right_4_link"
+    - "rgbd_depth_optical_frame": "leg_right_5_link"
+    - "rgbd_depth_optical_frame": "leg_right_6_link"
+    - "rgbd_depth_optical_frame": "rgbd_depth_frame"
+    - "rgbd_link": "arm_left_1_link"
+    - "rgbd_link": "arm_left_4_link"
+    - "rgbd_link": "arm_right_1_link"
+    - "rgbd_link": "arm_right_4_link"
+    - "rgbd_link": "base_link"
+    - "rgbd_link": "crane_link"
+    - "rgbd_link": "gripper_right_fingertip_2_link"
+    - "rgbd_link": "head_1_link"
+    - "rgbd_link": "head_2_link"
+    - "rgbd_link": "imu_link"
+    - "rgbd_link": "left_sole_link"
+    - "rgbd_link": "leg_left_1_link"
+    - "rgbd_link": "leg_left_2_link"
+    - "rgbd_link": "leg_left_3_link"
+    - "rgbd_link": "leg_left_4_link"
+    - "rgbd_link": "leg_left_5_link"
+    - "rgbd_link": "leg_left_6_link"
+    - "rgbd_link": "leg_right_1_link"
+    - "rgbd_link": "leg_right_2_link"
+    - "rgbd_link": "leg_right_3_link"
+    - "rgbd_link": "leg_right_4_link"
+    - "rgbd_link": "leg_right_5_link"
+    - "rgbd_link": "leg_right_6_link"
+    - "rgbd_link": "rgbd_depth_frame"
+    - "rgbd_link": "rgbd_depth_optical_frame"
+    - "rgbd_optical_frame": "arm_left_1_link"
+    - "rgbd_optical_frame": "arm_left_2_link"
+    - "rgbd_optical_frame": "arm_left_3_link"
+    - "rgbd_optical_frame": "arm_left_4_link"
+    - "rgbd_optical_frame": "arm_left_5_link"
+    - "rgbd_optical_frame": "arm_left_6_link"
+    - "rgbd_optical_frame": "arm_left_7_link"
+    - "rgbd_optical_frame": "arm_right_1_link"
+    - "rgbd_optical_frame": "arm_right_2_link"
+    - "rgbd_optical_frame": "arm_right_3_link"
+    - "rgbd_optical_frame": "arm_right_4_link"
+    - "rgbd_optical_frame": "arm_right_5_link"
+    - "rgbd_optical_frame": "arm_right_6_link"
+    - "rgbd_optical_frame": "arm_right_7_link"
+    - "rgbd_optical_frame": "base_link"
+    - "rgbd_optical_frame": "crane_link"
+    - "rgbd_optical_frame": "gripper_left_base_link"
+    - "rgbd_optical_frame": "gripper_left_fingertip_1_link"
+    - "rgbd_optical_frame": "gripper_left_fingertip_2_link"
+    - "rgbd_optical_frame": "gripper_left_fingertip_3_link"
+    - "rgbd_optical_frame": "gripper_left_inner_double_link"
+    - "rgbd_optical_frame": "gripper_left_inner_single_link"
+    - "rgbd_optical_frame": "gripper_left_motor_double_link"
+    - "rgbd_optical_frame": "gripper_left_motor_single_link"
+    - "rgbd_optical_frame": "gripper_right_base_link"
+    - "rgbd_optical_frame": "gripper_right_fingertip_1_link"
+    - "rgbd_optical_frame": "gripper_right_fingertip_2_link"
+    - "rgbd_optical_frame": "gripper_right_fingertip_3_link"
+    - "rgbd_optical_frame": "gripper_right_inner_double_link"
+    - "rgbd_optical_frame": "gripper_right_inner_single_link"
+    - "rgbd_optical_frame": "gripper_right_motor_double_link"
+    - "rgbd_optical_frame": "gripper_right_motor_single_link"
+    - "rgbd_optical_frame": "head_1_link"
+    - "rgbd_optical_frame": "head_2_link"
+    - "rgbd_optical_frame": "imu_link"
+    - "rgbd_optical_frame": "left_sole_link"
+    - "rgbd_optical_frame": "leg_left_1_link"
+    - "rgbd_optical_frame": "leg_left_2_link"
+    - "rgbd_optical_frame": "leg_left_3_link"
+    - "rgbd_optical_frame": "leg_left_4_link"
+    - "rgbd_optical_frame": "leg_left_5_link"
+    - "rgbd_optical_frame": "leg_left_6_link"
+    - "rgbd_optical_frame": "leg_right_1_link"
+    - "rgbd_optical_frame": "leg_right_2_link"
+    - "rgbd_optical_frame": "leg_right_3_link"
+    - "rgbd_optical_frame": "leg_right_4_link"
+    - "rgbd_optical_frame": "leg_right_5_link"
+    - "rgbd_optical_frame": "leg_right_6_link"
+    - "rgbd_optical_frame": "rgbd_depth_frame"
+    - "rgbd_optical_frame": "rgbd_depth_optical_frame"
+    - "rgbd_optical_frame": "rgbd_link"
+    - "rgbd_rgb_frame": "arm_left_1_link"
+    - "rgbd_rgb_frame": "arm_left_2_link"
+    - "rgbd_rgb_frame": "arm_left_3_link"
+    - "rgbd_rgb_frame": "arm_left_4_link"
+    - "rgbd_rgb_frame": "arm_left_5_link"
+    - "rgbd_rgb_frame": "arm_left_6_link"
+    - "rgbd_rgb_frame": "arm_left_7_link"
+    - "rgbd_rgb_frame": "arm_right_1_link"
+    - "rgbd_rgb_frame": "arm_right_2_link"
+    - "rgbd_rgb_frame": "arm_right_3_link"
+    - "rgbd_rgb_frame": "arm_right_4_link"
+    - "rgbd_rgb_frame": "arm_right_5_link"
+    - "rgbd_rgb_frame": "arm_right_6_link"
+    - "rgbd_rgb_frame": "arm_right_7_link"
+    - "rgbd_rgb_frame": "base_link"
+    - "rgbd_rgb_frame": "crane_link"
+    - "rgbd_rgb_frame": "gripper_left_base_link"
+    - "rgbd_rgb_frame": "gripper_left_fingertip_1_link"
+    - "rgbd_rgb_frame": "gripper_left_fingertip_2_link"
+    - "rgbd_rgb_frame": "gripper_left_fingertip_3_link"
+    - "rgbd_rgb_frame": "gripper_left_inner_double_link"
+    - "rgbd_rgb_frame": "gripper_left_inner_single_link"
+    - "rgbd_rgb_frame": "gripper_left_motor_double_link"
+    - "rgbd_rgb_frame": "gripper_left_motor_single_link"
+    - "rgbd_rgb_frame": "gripper_right_base_link"
+    - "rgbd_rgb_frame": "gripper_right_fingertip_1_link"
+    - "rgbd_rgb_frame": "gripper_right_fingertip_2_link"
+    - "rgbd_rgb_frame": "gripper_right_fingertip_3_link"
+    - "rgbd_rgb_frame": "gripper_right_inner_double_link"
+    - "rgbd_rgb_frame": "gripper_right_inner_single_link"
+    - "rgbd_rgb_frame": "gripper_right_motor_double_link"
+    - "rgbd_rgb_frame": "gripper_right_motor_single_link"
+    - "rgbd_rgb_frame": "head_1_link"
+    - "rgbd_rgb_frame": "head_2_link"
+    - "rgbd_rgb_frame": "imu_link"
+    - "rgbd_rgb_frame": "left_sole_link"
+    - "rgbd_rgb_frame": "leg_left_1_link"
+    - "rgbd_rgb_frame": "leg_left_2_link"
+    - "rgbd_rgb_frame": "leg_left_3_link"
+    - "rgbd_rgb_frame": "leg_left_4_link"
+    - "rgbd_rgb_frame": "leg_left_5_link"
+    - "rgbd_rgb_frame": "leg_left_6_link"
+    - "rgbd_rgb_frame": "leg_right_1_link"
+    - "rgbd_rgb_frame": "leg_right_2_link"
+    - "rgbd_rgb_frame": "leg_right_3_link"
+    - "rgbd_rgb_frame": "leg_right_4_link"
+    - "rgbd_rgb_frame": "leg_right_5_link"
+    - "rgbd_rgb_frame": "leg_right_6_link"
+    - "rgbd_rgb_frame": "rgbd_depth_frame"
+    - "rgbd_rgb_frame": "rgbd_depth_optical_frame"
+    - "rgbd_rgb_frame": "rgbd_link"
+    - "rgbd_rgb_frame": "rgbd_optical_frame"
+    - "rgbd_rgb_optical_frame": "arm_left_1_link"
+    - "rgbd_rgb_optical_frame": "arm_left_2_link"
+    - "rgbd_rgb_optical_frame": "arm_left_3_link"
+    - "rgbd_rgb_optical_frame": "arm_left_4_link"
+    - "rgbd_rgb_optical_frame": "arm_left_5_link"
+    - "rgbd_rgb_optical_frame": "arm_left_6_link"
+    - "rgbd_rgb_optical_frame": "arm_left_7_link"
+    - "rgbd_rgb_optical_frame": "arm_right_1_link"
+    - "rgbd_rgb_optical_frame": "arm_right_2_link"
+    - "rgbd_rgb_optical_frame": "arm_right_3_link"
+    - "rgbd_rgb_optical_frame": "arm_right_4_link"
+    - "rgbd_rgb_optical_frame": "arm_right_5_link"
+    - "rgbd_rgb_optical_frame": "arm_right_6_link"
+    - "rgbd_rgb_optical_frame": "arm_right_7_link"
+    - "rgbd_rgb_optical_frame": "base_link"
+    - "rgbd_rgb_optical_frame": "crane_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_base_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_fingertip_1_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_fingertip_2_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_fingertip_3_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_inner_double_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_inner_single_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_motor_double_link"
+    - "rgbd_rgb_optical_frame": "gripper_left_motor_single_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_base_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_fingertip_1_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_fingertip_2_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_fingertip_3_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_inner_double_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_inner_single_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_motor_double_link"
+    - "rgbd_rgb_optical_frame": "gripper_right_motor_single_link"
+    - "rgbd_rgb_optical_frame": "head_1_link"
+    - "rgbd_rgb_optical_frame": "head_2_link"
+    - "rgbd_rgb_optical_frame": "imu_link"
+    - "rgbd_rgb_optical_frame": "left_sole_link"
+    - "rgbd_rgb_optical_frame": "leg_left_1_link"
+    - "rgbd_rgb_optical_frame": "leg_left_2_link"
+    - "rgbd_rgb_optical_frame": "leg_left_3_link"
+    - "rgbd_rgb_optical_frame": "leg_left_4_link"
+    - "rgbd_rgb_optical_frame": "leg_left_5_link"
+    - "rgbd_rgb_optical_frame": "leg_left_6_link"
+    - "rgbd_rgb_optical_frame": "leg_right_1_link"
+    - "rgbd_rgb_optical_frame": "leg_right_2_link"
+    - "rgbd_rgb_optical_frame": "leg_right_3_link"
+    - "rgbd_rgb_optical_frame": "leg_right_4_link"
+    - "rgbd_rgb_optical_frame": "leg_right_5_link"
+    - "rgbd_rgb_optical_frame": "leg_right_6_link"
+    - "rgbd_rgb_optical_frame": "rgbd_depth_frame"
+    - "rgbd_rgb_optical_frame": "rgbd_depth_optical_frame"
+    - "rgbd_rgb_optical_frame": "rgbd_link"
+    - "rgbd_rgb_optical_frame": "rgbd_optical_frame"
+    - "rgbd_rgb_optical_frame": "rgbd_rgb_frame"
+    - "right_sole_link": "arm_left_1_link"
+    - "right_sole_link": "arm_left_2_link"
+    - "right_sole_link": "arm_left_3_link"
+    - "right_sole_link": "arm_left_4_link"
+    - "right_sole_link": "arm_left_5_link"
+    - "right_sole_link": "arm_left_6_link"
+    - "right_sole_link": "arm_left_7_link"
+    - "right_sole_link": "arm_right_1_link"
+    - "right_sole_link": "arm_right_2_link"
+    - "right_sole_link": "arm_right_3_link"
+    - "right_sole_link": "arm_right_4_link"
+    - "right_sole_link": "arm_right_5_link"
+    - "right_sole_link": "arm_right_6_link"
+    - "right_sole_link": "arm_right_7_link"
+    - "right_sole_link": "base_link"
+    - "right_sole_link": "crane_link"
+    - "right_sole_link": "gripper_left_base_link"
+    - "right_sole_link": "gripper_left_fingertip_1_link"
+    - "right_sole_link": "gripper_left_fingertip_2_link"
+    - "right_sole_link": "gripper_left_fingertip_3_link"
+    - "right_sole_link": "gripper_left_inner_double_link"
+    - "right_sole_link": "gripper_left_inner_single_link"
+    - "right_sole_link": "gripper_left_motor_double_link"
+    - "right_sole_link": "gripper_left_motor_single_link"
+    - "right_sole_link": "gripper_right_base_link"
+    - "right_sole_link": "gripper_right_fingertip_1_link"
+    - "right_sole_link": "gripper_right_fingertip_2_link"
+    - "right_sole_link": "gripper_right_fingertip_3_link"
+    - "right_sole_link": "gripper_right_inner_double_link"
+    - "right_sole_link": "gripper_right_inner_single_link"
+    - "right_sole_link": "gripper_right_motor_double_link"
+    - "right_sole_link": "gripper_right_motor_single_link"
+    - "right_sole_link": "head_1_link"
+    - "right_sole_link": "head_2_link"
+    - "right_sole_link": "imu_link"
+    - "right_sole_link": "left_sole_link"
+    - "right_sole_link": "leg_left_1_link"
+    - "right_sole_link": "leg_left_2_link"
+    - "right_sole_link": "leg_left_3_link"
+    - "right_sole_link": "leg_left_4_link"
+    - "right_sole_link": "leg_left_5_link"
+    - "right_sole_link": "leg_left_6_link"
+    - "right_sole_link": "leg_right_1_link"
+    - "right_sole_link": "leg_right_2_link"
+    - "right_sole_link": "leg_right_3_link"
+    - "right_sole_link": "leg_right_4_link"
+    - "right_sole_link": "leg_right_5_link"
+    - "right_sole_link": "leg_right_6_link"
+    - "right_sole_link": "rgbd_depth_frame"
+    - "right_sole_link": "rgbd_depth_optical_frame"
+    - "right_sole_link": "rgbd_link"
+    - "right_sole_link": "rgbd_optical_frame"
+    - "right_sole_link": "rgbd_rgb_frame"
+    - "right_sole_link": "rgbd_rgb_optical_frame"
+    - "torso_1_link": "arm_left_1_link"
+    - "torso_1_link": "arm_left_2_link"
+    - "torso_1_link": "arm_left_3_link"
+    - "torso_1_link": "arm_left_4_link"
+    - "torso_1_link": "arm_right_1_link"
+    - "torso_1_link": "arm_right_2_link"
+    - "torso_1_link": "arm_right_3_link"
+    - "torso_1_link": "arm_right_4_link"
+    - "torso_1_link": "base_link"
+    - "torso_1_link": "crane_link"
+    - "torso_1_link": "head_1_link"
+    - "torso_1_link": "head_2_link"
+    - "torso_1_link": "imu_link"
+    - "torso_1_link": "left_sole_link"
+    - "torso_1_link": "leg_left_1_link"
+    - "torso_1_link": "leg_left_2_link"
+    - "torso_1_link": "leg_left_3_link"
+    - "torso_1_link": "leg_left_4_link"
+    - "torso_1_link": "leg_left_5_link"
+    - "torso_1_link": "leg_left_6_link"
+    - "torso_1_link": "leg_right_1_link"
+    - "torso_1_link": "leg_right_2_link"
+    - "torso_1_link": "leg_right_3_link"
+    - "torso_1_link": "leg_right_4_link"
+    - "torso_1_link": "leg_right_5_link"
+    - "torso_1_link": "leg_right_6_link"
+    - "torso_1_link": "rgbd_depth_frame"
+    - "torso_1_link": "rgbd_depth_optical_frame"
+    - "torso_1_link": "rgbd_link"
+    - "torso_1_link": "rgbd_optical_frame"
+    - "torso_1_link": "rgbd_rgb_frame"
+    - "torso_1_link": "rgbd_rgb_optical_frame"
+    - "torso_1_link": "right_sole_link"
+    - "torso_2_link": "arm_left_1_link"
+    - "torso_2_link": "arm_right_1_link"
+    - "torso_2_link": "base_link"
+    - "torso_2_link": "crane_link"
+    - "torso_2_link": "head_1_link"
+    - "torso_2_link": "head_2_link"
+    - "torso_2_link": "imu_link"
+    - "torso_2_link": "left_sole_link"
+    - "torso_2_link": "leg_left_1_link"
+    - "torso_2_link": "leg_left_2_link"
+    - "torso_2_link": "leg_left_3_link"
+    - "torso_2_link": "leg_left_4_link"
+    - "torso_2_link": "leg_left_5_link"
+    - "torso_2_link": "leg_left_6_link"
+    - "torso_2_link": "leg_right_1_link"
+    - "torso_2_link": "leg_right_2_link"
+    - "torso_2_link": "leg_right_3_link"
+    - "torso_2_link": "leg_right_4_link"
+    - "torso_2_link": "leg_right_5_link"
+    - "torso_2_link": "leg_right_6_link"
+    - "torso_2_link": "rgbd_depth_frame"
+    - "torso_2_link": "rgbd_depth_optical_frame"
+    - "torso_2_link": "rgbd_link"
+    - "torso_2_link": "rgbd_optical_frame"
+    - "torso_2_link": "rgbd_rgb_frame"
+    - "torso_2_link": "rgbd_rgb_optical_frame"
+    - "torso_2_link": "right_sole_link"
+    - "torso_2_link": "torso_1_link"
+    - "wrist_left_ft_link": "arm_left_1_link"
+    - "wrist_left_ft_link": "arm_left_2_link"
+    - "wrist_left_ft_link": "arm_left_3_link"
+    - "wrist_left_ft_link": "arm_left_4_link"
+    - "wrist_left_ft_link": "arm_left_7_link"
+    - "wrist_left_ft_link": "arm_right_1_link"
+    - "wrist_left_ft_link": "arm_right_2_link"
+    - "wrist_left_ft_link": "arm_right_3_link"
+    - "wrist_left_ft_link": "arm_right_4_link"
+    - "wrist_left_ft_link": "gripper_left_base_link"
+    - "wrist_left_ft_link": "gripper_left_fingertip_1_link"
+    - "wrist_left_ft_link": "gripper_left_fingertip_2_link"
+    - "wrist_left_ft_link": "gripper_left_fingertip_3_link"
+    - "wrist_left_ft_link": "gripper_left_inner_double_link"
+    - "wrist_left_ft_link": "gripper_left_inner_single_link"
+    - "wrist_left_ft_link": "gripper_left_motor_double_link"
+    - "wrist_left_ft_link": "gripper_left_motor_single_link"
+    - "wrist_left_ft_link": "gripper_right_base_link"
+    - "wrist_left_ft_link": "gripper_right_fingertip_1_link"
+    - "wrist_left_ft_link": "gripper_right_fingertip_2_link"
+    - "wrist_left_ft_link": "gripper_right_inner_double_link"
+    - "wrist_left_ft_link": "gripper_right_inner_single_link"
+    - "wrist_left_ft_link": "gripper_right_motor_double_link"
+    - "wrist_left_ft_link": "gripper_right_motor_single_link"
+    - "wrist_left_ft_link": "imu_link"
+    - "wrist_left_ft_link": "left_sole_link"
+    - "wrist_left_ft_link": "leg_left_5_link"
+    - "wrist_left_ft_link": "leg_left_6_link"
+    - "wrist_left_ft_link": "leg_right_2_link"
+    - "wrist_left_ft_link": "leg_right_5_link"
+    - "wrist_left_ft_link": "rgbd_depth_frame"
+    - "wrist_left_ft_link": "rgbd_depth_optical_frame"
+    - "wrist_left_ft_link": "rgbd_optical_frame"
+    - "wrist_left_ft_link": "rgbd_rgb_frame"
+    - "wrist_left_ft_link": "rgbd_rgb_optical_frame"
+    - "wrist_left_ft_link": "right_sole_link"
+    - "wrist_left_ft_tool_link": "arm_left_1_link"
+    - "wrist_left_ft_tool_link": "arm_left_2_link"
+    - "wrist_left_ft_tool_link": "arm_left_3_link"
+    - "wrist_left_ft_tool_link": "arm_left_4_link"
+    - "wrist_left_ft_tool_link": "arm_left_5_link"
+    - "wrist_left_ft_tool_link": "arm_left_6_link"
+    - "wrist_left_ft_tool_link": "arm_left_7_link"
+    - "wrist_left_ft_tool_link": "arm_right_1_link"
+    - "wrist_left_ft_tool_link": "arm_right_2_link"
+    - "wrist_left_ft_tool_link": "arm_right_3_link"
+    - "wrist_left_ft_tool_link": "arm_right_4_link"
+    - "wrist_left_ft_tool_link": "gripper_left_base_link"
+    - "wrist_left_ft_tool_link": "gripper_left_fingertip_1_link"
+    - "wrist_left_ft_tool_link": "gripper_left_fingertip_2_link"
+    - "wrist_left_ft_tool_link": "gripper_left_fingertip_3_link"
+    - "wrist_left_ft_tool_link": "gripper_left_inner_double_link"
+    - "wrist_left_ft_tool_link": "gripper_left_inner_single_link"
+    - "wrist_left_ft_tool_link": "gripper_left_motor_double_link"
+    - "wrist_left_ft_tool_link": "gripper_left_motor_single_link"
+    - "wrist_left_ft_tool_link": "gripper_right_base_link"
+    - "wrist_left_ft_tool_link": "gripper_right_fingertip_1_link"
+    - "wrist_left_ft_tool_link": "gripper_right_fingertip_2_link"
+    - "wrist_left_ft_tool_link": "gripper_right_fingertip_3_link"
+    - "wrist_left_ft_tool_link": "gripper_right_inner_single_link"
+    - "wrist_left_ft_tool_link": "gripper_right_motor_double_link"
+    - "wrist_left_ft_tool_link": "gripper_right_motor_single_link"
+    - "wrist_left_ft_tool_link": "imu_link"
+    - "wrist_left_ft_tool_link": "left_sole_link"
+    - "wrist_left_ft_tool_link": "leg_left_5_link"
+    - "wrist_left_ft_tool_link": "leg_left_6_link"
+    - "wrist_left_ft_tool_link": "leg_right_2_link"
+    - "wrist_left_ft_tool_link": "leg_right_5_link"
+    - "wrist_left_ft_tool_link": "rgbd_depth_frame"
+    - "wrist_left_ft_tool_link": "rgbd_depth_optical_frame"
+    - "wrist_left_ft_tool_link": "rgbd_optical_frame"
+    - "wrist_left_ft_tool_link": "rgbd_rgb_frame"
+    - "wrist_left_ft_tool_link": "rgbd_rgb_optical_frame"
+    - "wrist_left_ft_tool_link": "right_sole_link"
+    - "wrist_left_ft_tool_link": "wrist_left_ft_link"
+    - "wrist_right_ft_link": "arm_left_1_link"
+    - "wrist_right_ft_link": "arm_left_2_link"
+    - "wrist_right_ft_link": "arm_left_3_link"
+    - "wrist_right_ft_link": "arm_left_4_link"
+    - "wrist_right_ft_link": "arm_left_6_link"
+    - "wrist_right_ft_link": "arm_right_1_link"
+    - "wrist_right_ft_link": "arm_right_2_link"
+    - "wrist_right_ft_link": "arm_right_3_link"
+    - "wrist_right_ft_link": "arm_right_4_link"
+    - "wrist_right_ft_link": "arm_right_7_link"
+    - "wrist_right_ft_link": "gripper_left_fingertip_1_link"
+    - "wrist_right_ft_link": "gripper_left_fingertip_2_link"
+    - "wrist_right_ft_link": "gripper_left_fingertip_3_link"
+    - "wrist_right_ft_link": "gripper_left_inner_double_link"
+    - "wrist_right_ft_link": "gripper_left_inner_single_link"
+    - "wrist_right_ft_link": "gripper_left_motor_double_link"
+    - "wrist_right_ft_link": "gripper_right_base_link"
+    - "wrist_right_ft_link": "gripper_right_fingertip_1_link"
+    - "wrist_right_ft_link": "gripper_right_fingertip_2_link"
+    - "wrist_right_ft_link": "gripper_right_fingertip_3_link"
+    - "wrist_right_ft_link": "gripper_right_inner_double_link"
+    - "wrist_right_ft_link": "gripper_right_inner_single_link"
+    - "wrist_right_ft_link": "gripper_right_motor_double_link"
+    - "wrist_right_ft_link": "gripper_right_motor_single_link"
+    - "wrist_right_ft_link": "head_1_link"
+    - "wrist_right_ft_link": "imu_link"
+    - "wrist_right_ft_link": "left_sole_link"
+    - "wrist_right_ft_link": "leg_left_5_link"
+    - "wrist_right_ft_link": "leg_left_6_link"
+    - "wrist_right_ft_link": "leg_right_5_link"
+    - "wrist_right_ft_link": "leg_right_6_link"
+    - "wrist_right_ft_link": "rgbd_depth_frame"
+    - "wrist_right_ft_link": "rgbd_depth_optical_frame"
+    - "wrist_right_ft_link": "rgbd_optical_frame"
+    - "wrist_right_ft_link": "rgbd_rgb_frame"
+    - "wrist_right_ft_link": "rgbd_rgb_optical_frame"
+    - "wrist_right_ft_link": "right_sole_link"
+    - "wrist_right_ft_link": "wrist_left_ft_link"
+    - "wrist_right_ft_link": "wrist_left_ft_tool_link"
+    - "wrist_right_ft_tool_link": "arm_left_1_link"
+    - "wrist_right_ft_tool_link": "arm_left_2_link"
+    - "wrist_right_ft_tool_link": "arm_left_3_link"
+    - "wrist_right_ft_tool_link": "arm_left_4_link"
+    - "wrist_right_ft_tool_link": "arm_left_6_link"
+    - "wrist_right_ft_tool_link": "arm_left_7_link"
+    - "wrist_right_ft_tool_link": "arm_right_1_link"
+    - "wrist_right_ft_tool_link": "arm_right_2_link"
+    - "wrist_right_ft_tool_link": "arm_right_3_link"
+    - "wrist_right_ft_tool_link": "arm_right_4_link"
+    - "wrist_right_ft_tool_link": "arm_right_5_link"
+    - "wrist_right_ft_tool_link": "arm_right_6_link"
+    - "wrist_right_ft_tool_link": "arm_right_7_link"
+    - "wrist_right_ft_tool_link": "gripper_left_base_link"
+    - "wrist_right_ft_tool_link": "gripper_left_fingertip_1_link"
+    - "wrist_right_ft_tool_link": "gripper_left_fingertip_2_link"
+    - "wrist_right_ft_tool_link": "gripper_left_fingertip_3_link"
+    - "wrist_right_ft_tool_link": "gripper_left_inner_double_link"
+    - "wrist_right_ft_tool_link": "gripper_left_inner_single_link"
+    - "wrist_right_ft_tool_link": "gripper_left_motor_double_link"
+    - "wrist_right_ft_tool_link": "gripper_right_base_link"
+    - "wrist_right_ft_tool_link": "gripper_right_fingertip_1_link"
+    - "wrist_right_ft_tool_link": "gripper_right_fingertip_2_link"
+    - "wrist_right_ft_tool_link": "gripper_right_fingertip_3_link"
+    - "wrist_right_ft_tool_link": "gripper_right_inner_double_link"
+    - "wrist_right_ft_tool_link": "gripper_right_inner_single_link"
+    - "wrist_right_ft_tool_link": "gripper_right_motor_double_link"
+    - "wrist_right_ft_tool_link": "gripper_right_motor_single_link"
+    - "wrist_right_ft_tool_link": "head_1_link"
+    - "wrist_right_ft_tool_link": "imu_link"
+    - "wrist_right_ft_tool_link": "left_sole_link"
+    - "wrist_right_ft_tool_link": "leg_left_5_link"
+    - "wrist_right_ft_tool_link": "leg_left_6_link"
+    - "wrist_right_ft_tool_link": "leg_right_5_link"
+    - "wrist_right_ft_tool_link": "leg_right_6_link"
+    - "wrist_right_ft_tool_link": "rgbd_depth_frame"
+    - "wrist_right_ft_tool_link": "rgbd_depth_optical_frame"
+    - "wrist_right_ft_tool_link": "rgbd_optical_frame"
+    - "wrist_right_ft_tool_link": "rgbd_rgb_frame"
+    - "wrist_right_ft_tool_link": "rgbd_rgb_optical_frame"
+    - "wrist_right_ft_tool_link": "right_sole_link"
+    - "wrist_right_ft_tool_link": "wrist_left_ft_link"
+    - "wrist_right_ft_tool_link": "wrist_left_ft_tool_link"
+    - "wrist_right_ft_tool_link": "wrist_right_ft_link"

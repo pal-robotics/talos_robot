@@ -31,13 +31,14 @@ def declare_args(context, *args, **kwargs):
         "fixed_base", default_value="False", description="Fix the robot in the air."
     )
 
-    sim_time_arg = DeclareLaunchArgument(
-        "sim_time", default_value="False", description="Use simulation time"
+    use_sim_time_arg = DeclareLaunchArgument(
+        "use_sim_time", default_value="False", description="Use simulation time"
     )
 
     robot_model_arg = DeclareLaunchArgument(
         "robot_model", default_value="full_v2", description="Robot model"
     )
+
     flexibility_arg = DeclareLaunchArgument(
         "flexibility", default_value="False", description="Enable the flexibility for the leg")
 
@@ -73,6 +74,7 @@ def declare_args(context, *args, **kwargs):
         default_value="zeros",
         description="configuration of the robot",
     )
+    
     return [
         robot_model_arg,
         foot_collision_arg,
@@ -82,7 +84,7 @@ def declare_args(context, *args, **kwargs):
         disable_gazebo_camera_arg,
         test_arg,
         default_configuration_type_arg,
-        sim_time_arg,
+        use_sim_time_arg,
         flexibility_arg,
         fixed_base_arg,
     ]
@@ -102,7 +104,7 @@ def launch_setup(context, *args, **kwargs):
             ),
             {
                 "use_fixed_base": read_launch_argument("fixed_base", context),
-                "use_sim": read_launch_argument("sim_time", context),
+                "use_sim": read_launch_argument("use_sim_time", context),
                 "test": read_launch_argument("test", context),
                 "robot_model": read_launch_argument("robot_model", context),
                 "enable_crane": read_launch_argument("enable_crane", context),
@@ -123,7 +125,7 @@ def launch_setup(context, *args, **kwargs):
         executable="robot_state_publisher",
         output="both",
         parameters=[
-            {"use_sim_time": LaunchConfiguration("sim_time")},
+            {"use_sim_time": LaunchConfiguration("use_sim_time")},
             {"publish_frequency": 100.0},
             robot_description,
         ],

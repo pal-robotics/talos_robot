@@ -17,9 +17,15 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
-
+from launch.actions import OpaqueFunction, DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
+
+    use_sim_time_arg = DeclareLaunchArgument(
+        "use_sim_time", default_value="False", description="Use simulation time"
+    )
+
     pkg = get_package_share_directory("talos_bringup")
 
     config_locks_file = os.path.join(
@@ -38,9 +44,11 @@ def generate_launch_description():
             "config_locks": config_locks_file,
             "config_topics": config_topics_file,
             "config_joy": joystick_file,
+            "use_sim_time": LaunchConfiguration('use_sim_time'),
         }.items(),
     )
 
     ld = LaunchDescription()
+    ld.add_action(use_sim_time_arg)
     ld.add_action(twist_mux)
     return ld

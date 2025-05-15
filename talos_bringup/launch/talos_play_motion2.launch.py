@@ -15,47 +15,55 @@
 import os
 
 from ament_index_python.packages import get_package_share_directory
-
 from launch import LaunchDescription
-from launch.actions import OpaqueFunction
-
-from launch_pal.include_utils import include_launch_py_description
+from launch.actions import OpaqueFunction, DeclareLaunchArgument
+from launch_pal.include_utils import include_launch_py_description, include_scoped_launch_py_description
+from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
+from launch.substitutions import LaunchConfiguration
 from launch_pal.robot_arguments import CommonArgs
+from dataclasses import dataclass
 
+@dataclass(frozen=True)
+class LaunchArguments(LaunchArgumentsBase):
 
-def launch_setup(context, *args, **kwargs):
+    use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
+
+def generate_launch_description():
+
+    ld = LaunchDescription()
+    launch_arguments = LaunchArguments()
+
+    launch_arguments.add_to_launch_description(ld)
+
+    declare_actions(ld, launch_arguments)
+
+    return ld
+
+def declare_actions(
+    launch_description: LaunchDescription, launch_args: LaunchArguments
+):
 
     motion_planner_file_path = os.path.join(
         get_package_share_directory("talos_bringup"),
         "config", "motion_planner.yaml"
     )
+
     motions_file = 'talos_motions.yaml'
     motions_file_path = os.path.join(
         get_package_share_directory(
             "talos_bringup"), "config", motions_file
     )
 
-    play_motion2 = include_launch_py_description(
-        "play_motion2",
-        ["launch", "play_motion2.launch.py"],
+    play_motion2 = include_scoped_launch_py_description(
+        pkg_name="play_motion2",
+        paths=["launch", "play_motion2.launch.py"],
         launch_arguments={
+            "use_sim_time": LaunchConfiguration("use_sim_time"),
             "motions_file": motions_file_path,
-            "motion_planner_config": motion_planner_file_path
-        }.items(),
+            "motion_planner_config": motion_planner_file_path,
+        },
     )
 
-    return [play_motion2]
+    launch_description.add_action(play_motion2)
 
-
-def generate_launch_description():
-
-    ld = LaunchDescription()
-
-    # Declare arguments
-    # we use OpaqueFunction so the callbacks have access to the context
-    ld.add_action(CommonArgs.robot_name)
-
-    # Launch play_motion2 with the proper config
-    ld.add_action(OpaqueFunction(function=launch_setup))
-
-    return ld
+    return

@@ -15,7 +15,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch_pal.include_utils import include_launch_py_description
+from launch_pal.include_utils import include_launch_py_description, include_scoped_launch_py_description
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
@@ -25,8 +25,8 @@ def generate_launch_description():
         "fixed_base", default_value="False", description="Fix the robot in the air."
     )
 
-    sim_time_arg = DeclareLaunchArgument(
-        "sim_time", default_value="False", description="Use simulation time"
+    use_sim_time_arg = DeclareLaunchArgument(
+        "use_sim_time", default_value="False", description="Use simulation time"
     )
 
     enable_crane_arg = DeclareLaunchArgument(
@@ -60,24 +60,33 @@ def generate_launch_description():
         pkg_name='talos_controller_configuration',
         paths=['launch', 'bringup_controllers.launch.py'])
 
-    play_motion2 = include_launch_py_description(
-        "talos_bringup", ["launch", "talos_play_motion2.launch.py"]
+    play_motion2 = include_scoped_launch_py_description(
+        pkg_name="talos_bringup",
+        paths=["launch", "talos_play_motion2.launch.py"],
+        launch_arguments={
+            "use_sim_time": LaunchConfiguration('use_sim_time'),
+        },
     )
 
-    twist_mux = include_launch_py_description(
-        "talos_bringup", ["launch", "twist_mux.launch.py"]
+    twist_mux = include_scoped_launch_py_description(
+        pkg_name="talos_bringup",
+        paths=["launch", "twist_mux.launch.py"],
+        launch_arguments={
+            "use_sim_time": LaunchConfiguration('use_sim_time'),
+        }
     )
 
-    talos_state_publisher = include_launch_py_description(
-        "talos_description", ["launch", "robot_state_publisher.launch.py"],
+    robot_state_publisher = include_scoped_launch_py_description(
+        pkg_name="talos_description",
+        paths=["launch", "robot_state_publisher.launch.py"],
         launch_arguments={
           'fixed_base': LaunchConfiguration('fixed_base'),
-          'sim_time': LaunchConfiguration('sim_time'),
+          'use_sim_time': LaunchConfiguration('use_sim_time'),
           'enable_crane': LaunchConfiguration('enable_crane'),
           'head_type': LaunchConfiguration('head_type'),
           'disable_gazebo_camera': LaunchConfiguration('disable_gazebo_camera'),
           'default_configuration_type': LaunchConfiguration('default_configuration_type'),
-        }.items()
+        }
     )
 
     bringup_controllers_hardware = include_launch_py_description(
@@ -91,8 +100,8 @@ def generate_launch_description():
     ld.add_action(head_type_arg)
     ld.add_action(disable_gazebo_camera_arg)  
     ld.add_action(default_configuration_type_arg)
-    ld.add_action(sim_time_arg)
-    ld.add_action(talos_state_publisher)
+    ld.add_action(use_sim_time_arg)
+    ld.add_action(robot_state_publisher)
     ld.add_action(bringup_controllers)
     ld.add_action(play_motion2)
     ld.add_action(twist_mux)

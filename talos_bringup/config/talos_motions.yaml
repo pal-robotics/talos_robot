@@ -398,3 +398,11 @@ play_motion2:
           name: Carry Weight
           usage: grasping
           description: Both arms down on the side, with grippers vertical
+      locomotion_pose:
+        joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint, leg_left_1_joint, leg_left_2_joint, leg_left_3_joint, leg_left_4_joint, leg_left_5_joint, leg_left_6_joint, leg_right_1_joint, leg_right_2_joint, leg_right_3_joint, leg_right_4_joint, leg_right_5_joint, leg_right_6_joint]
+        positions: [0.0, 0.0, 0.0, 0.0, 0.3, 0.4, -0.5, -1.5, 0.0, 0.0, 0.0, -0.3, -0.4, 0.5, -1.5, 0.0, 0.0, 0.0, 0.0, 0.0, -0.4, 0.8, -0.4, 0.0, 0.0, 0.0, -0.4, 0.8, -0.4, 0.0]
+        times_from_start: [2.0]
+        meta:
+          name: Locomotion Pose
+          usage: locomotion
+          description: Locomotion Pose

@@ -22,19 +22,7 @@
       <plugin>transmission_interface/SimpleTransmission</plugin>
       <actuator name="${name}_actuator" role="actuator1" />
       <joint name="${name}_joint" role="joint1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-        <offset>0.0</offset>  
-      </joint>
-    </transmission>
-  </xacro:macro>
-
-  <xacro:macro name="gripper_virtual_transmission" params="name reduction" >
-    <transmission name="${name}_trans">
-      <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="${name}_actuator"  role="actuator1"/>
-      <joint name="${name}_joint" role="joint1">
-        <mechanicalReduction>${reduction}</mechanicalReduction>
-        <offset>0.0</offset>  
+        <mechanical_reduction>${reduction}</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>

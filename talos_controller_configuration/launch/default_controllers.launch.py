@@ -20,6 +20,7 @@ from launch_pal.include_utils import include_scoped_launch_py_description
 
 
 def generate_launch_description():
+    
     robot_model = DeclareLaunchArgument(
         'robot_model', default_value='full_v2',
         description='Robot model',

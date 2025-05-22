@@ -2,6 +2,15 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'sim_time' into 'humble-devel'
+  use_sim_time + head transmission  + gripper mimic
+  See merge request robots/talos_robot!142
+* Add locomotion pose motion
+* Fix use_sim_time
+* Contributors: Adrià Roig, Sai Kishor Kothakota
+
 2.0.2 (2025-03-12)
 ------------------
 

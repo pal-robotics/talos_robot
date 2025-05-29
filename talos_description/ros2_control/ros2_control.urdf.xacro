@@ -25,8 +25,8 @@
     <xacro:include filename="$(find talos_description)/urdf/head/head.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/leg/leg.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/torso/torso.ros2_control.xacro" />
-    <xacro:include filename="$(find pal_urdf_utils)/urdf/sensors/imu_sensors.ros2_control.xacro" />
-    <xacro:include filename="$(find pal_urdf_utils)/urdf/sensors/ftsensor.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/interaction_sensors/imu_sensors.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ftsensor.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
     <!-- Calibration offsets -->

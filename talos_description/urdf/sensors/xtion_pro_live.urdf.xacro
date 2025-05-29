@@ -24,7 +24,6 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find reemc)/urdf/sensors/calibration.xacro" />
   <xacro:include filename="$(find reemc)/urdf/sensors/openni.gazebo.xacro" />
 
   <xacro:property name="M_PI" value="3.1415926535897931" />

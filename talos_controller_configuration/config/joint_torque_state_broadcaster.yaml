@@ -1,0 +1,10 @@
+joint_torque_state_broadcaster:
+  ros__parameters:
+    type: joint_state_broadcaster/JointStateBroadcaster
+    update_rate: 50
+    publish_rate: 50
+    map_interface_to_joint_state:
+      effort: torque
+      position: absolute_position
+      velocity: velocity
+    use_local_topics: true

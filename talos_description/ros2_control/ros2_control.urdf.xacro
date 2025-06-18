@@ -40,6 +40,7 @@
         </xacro:if>
         <xacro:unless value="$(arg use_sim)">
           <plugin>robot_control/RobotControl</plugin>
+          <param name="error_protection">true</param>
         </xacro:unless>
       </hardware>
 

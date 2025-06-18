@@ -1,4 +1,4 @@
-play_motion2:
+/**:
   ros__parameters:
     motion_planner:
       disable_motion_planning: false
@@ -16,7 +16,7 @@ play_motion2:
         - gripper_right_joint
         - gripper_left_joint
       joint_tolerance: 0.01
-      
+
       # Parameters for non-planned approach
       approach_velocity: 0.5
       approach_min_duration: 0.5

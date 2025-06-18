@@ -2,6 +2,11 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adapt to changes in play_motion2
+* Contributors: davidfernandez
+
 2.0.3 (2025-05-22)
 ------------------
 * Merge branch 'sim_time' into 'humble-devel'

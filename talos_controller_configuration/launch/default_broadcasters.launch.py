@@ -32,7 +32,7 @@ def generate_launch_description():
             pkg_share_folder, 'joint_state_broadcaster.yaml')
     )
 
-    # Force-torque sensors controller for the wrists
+    # Force-torque sensors broadcasters for the wrists
     wrist_left_ft_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='wrist_left_ft_broadcaster',
         controller_params_file=os.path.join(
@@ -45,7 +45,7 @@ def generate_launch_description():
             pkg_share_folder,
             'wrist_right_ft_broadcaster.yaml'))
 
-    # Force-torque sensors controller for the ankles
+    # Force-torque sensors broadcasters for the ankles
     ankle_left_ft_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='ankle_left_ft_broadcaster',
         controller_params_file=os.path.join(
@@ -58,7 +58,7 @@ def generate_launch_description():
             pkg_share_folder,
             'ankle_right_ft_broadcaster.yaml'))
 
-    # IMU sensors controller
+    # IMU sensor broadcaster
     imu_sensor_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='imu_sensor_broadcaster',
         controller_params_file=os.path.join(

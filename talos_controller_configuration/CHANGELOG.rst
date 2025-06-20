@@ -2,6 +2,13 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added module for starting the default_broadcasters
+* bringup_controllers is now default_broadcasters
+* Removing unnecessary controllers
+* Contributors: Jordan Palacios
+
 2.1.0 (2025-06-18)
 ------------------
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
   Copyright (c) 2023 PAL Robotics S.L. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +27,7 @@
       <state_interface name="position" />
       <state_interface name="velocity" />
       <state_interface name="effort" />
+      <state_interface name="absolute_position" />
     </joint>
     <joint name="${name}_${side}_6_joint">
       <command_interface name="position" />
@@ -36,6 +37,7 @@
       <state_interface name="position" />
       <state_interface name="velocity" />
       <state_interface name="effort" />
+      <state_interface name="absolute_position" />
     </joint>
     <joint name="${name}_${side}_7_joint">
       <command_interface name="position" />
@@ -45,6 +47,7 @@
       <state_interface name="position" />
       <state_interface name="velocity" />
       <state_interface name="effort" />
+      <state_interface name="absolute_position" />
     </joint>
 
     <!-- transmissions -->
@@ -58,4 +61,3 @@
 
   </xacro:macro>
 </robot>
-   

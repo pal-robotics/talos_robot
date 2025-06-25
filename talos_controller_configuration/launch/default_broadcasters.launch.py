@@ -25,14 +25,20 @@ def generate_launch_description():
     pkg_share_folder = os.path.join(
         get_package_share_directory('talos_controller_configuration'), 'config')
 
-    # Joint state controller
+    # Joint state broadcaster
     joint_state_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='joint_state_broadcaster',
         controller_params_file=os.path.join(
             pkg_share_folder, 'joint_state_broadcaster.yaml')
     )
 
-    # Force-torque sensors broadcasters for the wrists
+    # Joint torque state broadcaster
+    joint_state_broadcaster_launch = generate_load_controller_launch_description(
+        controller_name='joint_torque_state_broadcaster',
+        controller_params_file=os.path.join(
+            pkg_share_folder, 'joint_torque_state_broadcaster.yaml')
+    )
+
     wrist_left_ft_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='wrist_left_ft_broadcaster',
         controller_params_file=os.path.join(

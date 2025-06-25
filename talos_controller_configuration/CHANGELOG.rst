@@ -2,6 +2,12 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adding joint_torque_state_broadcaster
+  Publishes torque as effort and absolute position as position
+* Contributors: Jordan Palacios
+
 2.1.1 (2025-06-20)
 ------------------
 * Added module for starting the default_broadcasters

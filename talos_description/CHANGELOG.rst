@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Expose torque and absolute position state interfaces in the ros2 control transmissions
+* Contributors: Jordan Palacios
+
 2.1.1 (2025-06-20)
 ------------------
 

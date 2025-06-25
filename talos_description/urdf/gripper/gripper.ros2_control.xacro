@@ -30,6 +30,7 @@
       <state_interface name="position"/>
       <state_interface name="velocity" />
       <state_interface name="effort" />
+      <state_interface name="absolute_position" />
     </joint>
 
     <xacro:ros2_control_talos_gripper_mimic_joint mimic_joint_name="${name}_inner_double_joint"
@@ -57,7 +58,7 @@
 
     <xacro:ros2_control_talos_gripper_mimic_joint mimic_joint_name="${name}_fingertip_3_joint"
                                                     actuated_joint_name="${name}_joint"
-                                                    multiplier="-1"/> 
+                                                    multiplier="-1"/>
    <!-- transmissions -->
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.transmission.xacro" />
   <xacro:gripper_transmission name="${name}" reduction="1.0" />

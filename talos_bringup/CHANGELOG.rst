@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.1 (2025-06-26)
+------------------
 * Fix the way the default broadcasters are launched
 * Contributors: Maximilien Naveau
 

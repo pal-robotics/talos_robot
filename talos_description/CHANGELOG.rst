@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.3 (2025-06-30)
+------------------
 * Enable idle_mode_on_stop for current, effort and torque
 * Enable error_protection
 * Contributors: Jordan Palacios

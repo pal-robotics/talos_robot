@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix the integration of the imu in the gazebo classic
+* Contributors: Maximilien Naveau
+
 2.2.1 (2025-06-26)
 ------------------
 

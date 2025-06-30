@@ -2,6 +2,11 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix the naming of th torque_broadcaster. Add it to the launch description.
+* Contributors: Maximilien Naveau
+
 2.2.1 (2025-06-26)
 ------------------
 

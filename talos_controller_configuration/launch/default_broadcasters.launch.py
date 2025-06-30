@@ -33,7 +33,7 @@ def generate_launch_description():
     )
 
     # Joint torque state broadcaster
-    joint_state_broadcaster_launch = generate_load_controller_launch_description(
+    joint_torque_broadcaster_launch = generate_load_controller_launch_description(
         controller_name='joint_torque_state_broadcaster',
         controller_params_file=os.path.join(
             pkg_share_folder, 'joint_torque_state_broadcaster.yaml')
@@ -74,6 +74,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(joint_state_broadcaster_launch)
+    ld.add_action(joint_torque_broadcaster_launch)
     ld.add_action(wrist_left_ft_broadcaster_launch)
     ld.add_action(wrist_right_ft_broadcaster_launch)
     ld.add_action(ankle_left_ft_broadcaster_launch)

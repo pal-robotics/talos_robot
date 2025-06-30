@@ -2,6 +2,12 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Enable idle_mode_on_stop for current, effort and torque
+* Enable error_protection
+* Contributors: Jordan Palacios
+
 2.2.2 (2025-06-30)
 ------------------
 * Fix the integration of the imu in the gazebo classic

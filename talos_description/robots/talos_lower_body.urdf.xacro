@@ -13,7 +13,7 @@
         xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
         xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
-  <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ati_talos.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/leg.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/leg/foot_collision_$(arg foot_collision).urdf.xacro" />
   <xacro:include filename="$(find talos_description_inertial)/urdf/inertial.xacro" />

@@ -11,8 +11,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find talos_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find talos_description)/urdf/sensors/orbbec_astra_pro.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/orbbec_astra_pro.urdf.xacro" />
 
   <!--Constant parameters-->
   <xacro:property name="head_friction" value="1.0" />
@@ -143,7 +143,7 @@
       <!--File includes-->
       <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
       <xacro:include filename="$(find realsense2_description)/urdf/_t265.urdf.xacro" />
-      <xacro:include filename="$(find talos_description)/urdf/sensors/OS1-64.urdf.xacro"/>
+      <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/OS1-64.urdf.xacro"/>
 
       <!-- Intel D435 Camera -->
       <sensor_d435 parent="${name}_2_link" name="${name}_d435_camera" topics_ns="${name}_d435_camera">

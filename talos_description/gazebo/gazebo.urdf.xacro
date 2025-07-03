@@ -17,8 +17,8 @@
 
 <robot name="talos" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find talos_description)/urdf/sensors/imu.gazebo.xacro" />
-  <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.gazebo.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/interaction_sensors/imu_talos.gazebo.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ati_talos.gazebo.xacro" />
 
   <xacro:macro name="talos_gazebo">
 

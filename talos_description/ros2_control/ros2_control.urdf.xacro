@@ -25,8 +25,8 @@
     <xacro:include filename="$(find talos_description)/urdf/head/head.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/leg/leg.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description)/urdf/torso/torso.ros2_control.xacro" />
-    <xacro:include filename="$(find talos_description)/urdf/sensors/imu.ros2_control.xacro" />
-    <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/interaction_sensors/imu_sensors.ros2_control.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ftsensor.ros2_control.xacro" />
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
     <!-- Calibration offsets -->
@@ -82,10 +82,10 @@
       <xacro:ros2_control_torso name="torso"/>
 
       <!-- Force Torque sensor-->
-      <xacro:ros2_control_force_torque_sensor name="wrist" side="right"/>
-      <xacro:ros2_control_force_torque_sensor name="wrist" side="left"/>
-      <xacro:ros2_control_force_torque_sensor name="ankle" side="right"/>
-      <xacro:ros2_control_force_torque_sensor name="ankle" side="left"/>
+      <xacro:ros2_control_force_torque_sensor name="wrist_right_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="wrist_left_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="ankle_right_ft_sensor"/>
+      <xacro:ros2_control_force_torque_sensor name="ankle_left_ft_sensor"/>
 
       <!-- Leg left -->
       <xacro:ros2_control_leg side="left" number="1" />

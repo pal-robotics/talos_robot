@@ -24,7 +24,7 @@
   <xacro:include filename="$(find talos_description)/urdf/arm/arm.urdf.xacro" />
   <xacro:include filename="$(find talos_description_inertial)/urdf/inertial.xacro" />
 
-  <xacro:include filename="$(find talos_description)/urdf/sensors/ftsensor.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/ft_sensors/ati_talos.urdf.xacro" />
   <xacro:include filename="$(find talos_description)/urdf/gripper/gripper.urdf.xacro" />
   
   <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />

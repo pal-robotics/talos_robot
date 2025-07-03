@@ -2,6 +2,17 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix camera OS1-64 path
+* Change xtion camera and  ouster camera to urdf_utils
+* Change orbbec camera to urdf_utils
+* Change path for ati, imu and deg_to_grad
+* Move ati sensors to pal_urdf_utils
+* Change path for ft ros2 control urdf
+* Change path for imu ros2 control urdf
+* Contributors: Aina
+
 2.2.3 (2025-06-30)
 ------------------
 * Enable idle_mode_on_stop for current, effort and torque

@@ -2,8 +2,8 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.0 (2025-07-03)
+------------------
 * Change path for ati, imu and deg_to_grad
 * Contributors: Aina
 

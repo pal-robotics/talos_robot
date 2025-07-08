@@ -55,6 +55,17 @@ def generate_launch_description():
         parameters=[os.path.join(pkg_dir, 'config', 'joy_teleop', 'joy_config.yaml'),
                     {'autorepeat_rate': 10}])
 
+    joystick_analyzer = Node(
+        package='diagnostic_aggregator',
+        executable='add_analyzer',
+        namespace='joystick',
+        output='screen',
+        emulate_tty=True,
+        parameters=[
+            os.path.join(pkg_dir, 'config', 'joy_teleop', 'joystick_analyzers.yaml')
+        ],
+    )
+
     torso_incrementer_server = Node(
         package='joy_teleop',
         executable='incrementer_server',
@@ -75,6 +86,7 @@ def generate_launch_description():
     # Launch joy_teleop_node with the proper config
     ld.add_action(OpaqueFunction(function=launch_setup))
     ld.add_action(joy_node)
+    ld.add_action(joystick_analyzer)
 
     ld.add_action(torso_incrementer_server)
     ld.add_action(head_incrementer_server)

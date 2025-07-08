@@ -14,6 +14,8 @@
  <!--
   <run_depend>talos_moveit_config</run_depend>
 --> 
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>diagnostic_aggregator</exec_depend>
   <exec_depend>talos_controller_configuration</exec_depend>
   <exec_depend>talos_description</exec_depend>
   <exec_depend>joy_linux</exec_depend>

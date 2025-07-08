@@ -20,6 +20,9 @@ from launch_pal.include_utils import include_launch_py_description
 from launch.actions import OpaqueFunction, DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
+from launch_ros.actions import Node
+
+
 def generate_launch_description():
 
     use_sim_time_arg = DeclareLaunchArgument(
@@ -48,7 +51,19 @@ def generate_launch_description():
         }.items(),
     )
 
+    twist_mux_analyzer = Node(
+        package='diagnostic_aggregator',
+        executable='add_analyzer',
+        namespace='twist_mux',
+        output='screen',
+        emulate_tty=True,
+        parameters=[
+            os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_analyzers.yaml')
+        ],
+    )
+
     ld = LaunchDescription()
     ld.add_action(use_sim_time_arg)
     ld.add_action(twist_mux)
+    ld.add_action(twist_mux_analyzer)
     return ld

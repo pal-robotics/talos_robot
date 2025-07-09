@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.4.0 (2025-07-09)
+------------------
 * Add diagnostic analyzers
 * Contributors: Noel Jimenez
 

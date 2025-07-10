@@ -1,0 +1,11 @@
+/talos_controller_configuration/add_analyzer_node:
+  ros__parameters:
+    path: Diagnostics
+    hardware:
+      type: 'diagnostic_aggregator/AnalyzerGroup'
+      path: Hardware
+      analyzers:
+        orientus:
+          type: diagnostic_aggregator/GenericAnalyzer
+          path: Orientus
+          contains: ['ros2_control_orientus: IMU status']

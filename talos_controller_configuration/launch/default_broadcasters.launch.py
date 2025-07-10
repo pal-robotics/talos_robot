@@ -14,10 +14,12 @@
 
 
 import os
-from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
+
 from controller_manager.launch_utils import generate_load_controller_launch_description
-from launch_pal.include_utils import include_launch_py_description
+
+from launch import LaunchDescription
+from launch_ros.actions import Node
 
 
 def generate_launch_description():
@@ -71,6 +73,18 @@ def generate_launch_description():
             pkg_share_folder,
             'imu_sensor_broadcaster.yaml'))
 
+    imu_analyzer = Node(
+        package='diagnostic_aggregator',
+        executable='add_analyzer',
+        namespace='talos_controller_configuration',
+        output='screen',
+        emulate_tty=True,
+        parameters=[
+            os.path.join(
+                get_package_share_directory('talos_controller_configuration'),
+                'config', 'imu_analyzers.yaml')],
+    )
+
     ld = LaunchDescription()
 
     ld.add_action(joint_state_broadcaster_launch)
@@ -80,5 +94,6 @@ def generate_launch_description():
     ld.add_action(ankle_left_ft_broadcaster_launch)
     ld.add_action(ankle_right_ft_broadcaster_launch)
     ld.add_action(imu_sensor_broadcaster_launch)
+    ld.add_action(imu_analyzer)
 
     return ld

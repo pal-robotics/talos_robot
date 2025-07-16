@@ -8,4 +8,4 @@
         orientus:
           type: diagnostic_aggregator/GenericAnalyzer
           path: Orientus
-          contains: ['ros2_control_orientus: IMU status']
+          contains: ['imu_sensor: IMU status']

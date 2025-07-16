@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rename imu name and add ENU parameters
+* Contributors: Isaac Acevedo
+
 2.5.0 (2025-07-10)
 ------------------
 

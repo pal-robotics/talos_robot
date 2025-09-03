@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.7.0 (2025-09-03)
+------------------
 * Merge branch 'add/ros2_control/hw_components' into 'alum-devel'
   Add async properties to the ros2_control hardware components
   See merge request robots/talos_robot!156

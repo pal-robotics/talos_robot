@@ -32,8 +32,10 @@
     <!-- Calibration offsets -->
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
-    <ros2_control name="ros2_control_talos_system" type="system">
-
+    <ros2_control name="ros2_control_talos_system" type="system" is_async="true">
+      <properties>
+        <async thread_priority="70" affinity="[4]" scheduling_policy="detached"/>
+      </properties>
       <hardware>
         <xacro:if value="$(arg use_sim)">
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -106,10 +108,11 @@
     </ros2_control>
 
     <xacro:unless value="$(arg use_sim)">
-      <ros2_control name="imu_sensor" type="sensor">
+      <ros2_control name="ros2_control_orientus" type="sensor" rw_rate="1000" is_async="true">
         <hardware>
           <plugin>pal_orientus_sensor/OrientusSensor</plugin>
           <param name="io_device">/dev/ttyS4</param>
+          <param name="sensor_name">base_imu</param>
           <param name="orientation_to_enu_frame">3.14159, 0.0, 1.570796</param>
           <!-- The following parameter is used to enable the ENU transformation for velocity and acceleration -->
           <param name="enable_orientation_to_enu_frame">false</param>

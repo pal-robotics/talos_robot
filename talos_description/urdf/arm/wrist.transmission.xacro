@@ -16,7 +16,7 @@
       <actuator name="${name}_${side}_${number}_actuator" role="actuator1"/>
       <joint name="${name}_${side}_${number}_joint" role="joint1">
         <offset>${offset_value}</offset>
-        <mechanicalReduction>${reduction}</mechanicalReduction>
+        <mechanical_reduction>${reduction}</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>
@@ -25,19 +25,22 @@
                params="name side number_1 number_2 act_reduction_1 act_reduction_2 jnt_reduction_1 jnt_reduction_2 offset_value_1 offset_value_2" >
     <transmission name="wrist_${side}_trans">
       <plugin>transmission_interface/DifferentialTransmission</plugin>
-      <actuator name="${name}_${side}_${number_1}_actuator" role="actuator1"/>
-      <actuator name="${name}_${side}_${number_2}_actuator"  role="actuator2"/>
+      <actuator name="${name}_${side}_${number_1}_actuator" role="actuator1">
+        <mechanical_reduction>${act_reduction_1}</mechanical_reduction>
+      </actuator>
+      <actuator name="${name}_${side}_${number_2}_actuator"  role="actuator2">
+        <mechanical_reduction>${act_reduction_2}</mechanical_reduction>
+      </actuator>
       <joint name="${name}_${side}_${number_1}_joint" role="joint1">
         <offset>${offset_value_1}</offset>
-        <mechanicalReduction>${jnt_reduction_1}</mechanicalReduction>
-        <mechanicalReduction>${act_reduction_1}</mechanicalReduction>
+        <mechanical_reduction>${jnt_reduction_1}</mechanical_reduction>
       </joint>
       <joint name="${name}_${side}_${number_2}_joint" role="joint2">
         <offset>${offset_value_2}</offset>
-        <mechanicalReduction>${jnt_reduction_2}</mechanicalReduction>
-        <mechanicalReduction>${act_reduction_2}</mechanicalReduction>
+        <mechanical_reduction>${jnt_reduction_2}</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>
 
 </robot>
+

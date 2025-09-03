@@ -112,7 +112,7 @@
         <hardware>
           <plugin>pal_orientus_sensor/OrientusSensor</plugin>
           <param name="io_device">/dev/ttyS4</param>
-          <param name="sensor_name">base_imu</param>
+          <param name="sensor_name">imu_sensor</param>
           <param name="orientation_to_enu_frame">3.14159, 0.0, 1.570796</param>
           <!-- The following parameter is used to enable the ENU transformation for velocity and acceleration -->
           <param name="enable_orientation_to_enu_frame">false</param>

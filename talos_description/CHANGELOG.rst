@@ -2,6 +2,24 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add/ros2_control/hw_components' into 'alum-devel'
+  Add async properties to the ros2_control hardware components
+  See merge request robots/talos_robot!156
+* Change the sensor_name to imu_sensor
+* Add async properties to the ros2_control hardware components
+* Merge branch 'add/pal_transmissions/dependency' into 'alum-devel'
+  Add pal_transmissions dependency
+  See merge request robots/talos_robot!157
+* Add pal_transmissions dependency
+* Merge branch 'fix/wrist/transmission' into 'alum-devel'
+  Fix the wrist transmission xacro macro
+  See merge request robots/talos_robot!155
+* Update wrist.transmission.xacro
+* Fix the wrist transmission xacro macro
+* Contributors: Adria Roig, Sai Kishor Kothakota
+
 2.6.0 (2025-07-16)
 ------------------
 * Rename imu name and add ENU parameters

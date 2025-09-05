@@ -33,9 +33,12 @@
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
     <ros2_control name="ros2_control_talos_system" type="system" is_async="true">
-      <properties>
-        <async thread_priority="70" affinity="[4]" scheduling_policy="detached"/>
-      </properties>
+
+      <xacro:unless value="$(arg use_sim)">
+        <properties>
+          <async thread_priority="70" affinity="[4]" scheduling_policy="detached"/>
+        </properties>
+      </xacro:unless>
       <hardware>
         <xacro:if value="$(arg use_sim)">
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>

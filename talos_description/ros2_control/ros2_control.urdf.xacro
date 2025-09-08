@@ -32,7 +32,7 @@
     <!-- Calibration offsets -->
     <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/calibration_constants.urdf.xacro" />
 
-    <ros2_control name="ros2_control_talos_system" type="system" is_async="true">
+    <ros2_control name="ros2_control_talos_system" type="system" is_async="${'false' if use_sim else 'true'}">
 
       <xacro:unless value="$(arg use_sim)">
         <properties>

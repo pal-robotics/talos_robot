@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* set the scheduling policy info only for the real robot
+* Contributors: Sai Kishor Kothakota
+
 2.7.0 (2025-09-03)
 ------------------
 * Merge branch 'add/ros2_control/hw_components' into 'alum-devel'

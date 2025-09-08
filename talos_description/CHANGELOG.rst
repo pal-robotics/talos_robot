@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.8.0 (2025-09-08)
+------------------
 * set the scheduling policy info only for the real robot
 * Contributors: Sai Kishor Kothakota
 

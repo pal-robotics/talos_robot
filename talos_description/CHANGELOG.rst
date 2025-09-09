@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.8.1 (2025-09-09)
+------------------
 * Merge branch 'set/is_async/use_sim' into 'humble-devel'
   Set is_async based on use_sim arg
   See merge request robots/talos_robot!159

@@ -22,6 +22,7 @@
   <exec_depend>joy_teleop</exec_depend>
   <exec_depend>twist_mux</exec_depend>
   <exec_depend>play_motion2</exec_depend>
+  <exec_depend>play_motion2_cli</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add condition for pal_transmissions dependency
+* Contributors: Noel Jimenez
+
 2.9.0 (2025-10-23)
 ------------------
 

@@ -23,7 +23,7 @@
   <!--************************-->
   <!--     HEAD_1 (TILT)      -->
   <!--************************-->
-  <xacro:macro name="talos_head_1" params="name parent">
+  <xacro:macro name="talos_head_1" params="name parent using_capsule_collision">
     <link name="${name}_link">
       <xacro:call macro="${name}_link_inertial" />
 
@@ -35,12 +35,17 @@
         <material name="DarkGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_1_collision.stl" scale="1 1 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+	<xacro:capsule-collision e1="9.25184e-05 -2.39435e-05 -0.000765958" e2="-0.0116532 0.000267479 0.0600432" rad="0.082632032931063207" clen="0.061933815385056032" rpy="-0.00479238 -0.190806 0.000458601" mid="-0.00578036 0.000121768 0.0296386" />
+      </xacro:if>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/head/head_1_collision.stl" scale="1 1 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
     <joint name="${name}_joint" type="revolute">
@@ -77,7 +82,7 @@
   <!--************************-->
   <!--      HEAD_2 (PAN)      -->
   <!--************************-->
-  <xacro:macro name="talos_head_2" params="name parent type:=default">
+  <xacro:macro name="talos_head_2" params="name parent using_capsule_collision=${using_capsule_collision} type:=default">
     <link name="${name}_link">
       <xacro:call macro="${name}_link_inertial" />
 
@@ -89,12 +94,17 @@
         <material name="LightGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/head/head_2_${type}_collision.stl" scale="1 1 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:capsule-collision e1="-0.0136558 6.17209e-05 0.196249" e2="0.0257541 0.000121936 0.169493" rad="0.10582827877003444" clen="0.047634451110799531" rpy="-3.13934 0.974356 -3.13734" mid="0.00604916 9.18284e-05 0.182871" />
+      </xacro:if>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/head/head_2_${type}_collision.stl" scale="1 1 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
     <joint name="${name}_joint" type="revolute">
@@ -128,9 +138,10 @@
 
   </xacro:macro>
 
-  <xacro:macro name="talos_head" params="name parent disable_gazebo_camera:=false head_type:=default">
-    <xacro:talos_head_1 name="${name}_1" parent="${parent}" />
-    <xacro:talos_head_2 name="${name}_2" parent="${name}_1_link" type="${head_type}"/>
+  <xacro:macro name="talos_head" params="name parent using_capsule_collision disable_gazebo_camera:=false head_type:=default">
+    <xacro:talos_head_1 name="${name}_1" parent="${parent}" using_capsule_collision="${using_capsule_collision}"/>
+    <xacro:talos_head_2 name="${name}_2" parent="${name}_1_link" type="${head_type}"
+                        using_capsule_collision="${using_capsule_collision}"/>
     <xacro:if value="${head_type == 'default'}">
       <xacro:orbbec_astra_pro name="rgbd" parent="${name}_2" disable_gazebo="${disable_gazebo_camera}">
         <!-- Pose of sensor frame wrt to base -->

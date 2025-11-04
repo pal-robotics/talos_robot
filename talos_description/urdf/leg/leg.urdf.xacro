@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="talos">
+
   
   <xacro:include filename="$(find talos_description)/urdf/leg/foot_frames.urdf.xacro" />
 
@@ -11,7 +12,7 @@
   <xacro:property name="leg_damping"      value="0.0" />
 
 
-  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false">
+  <xacro:macro name="talos_leg" params="prefix reflect flexibility:=false using_capsule_collision:=false">
     <xacro:unless value="$(arg test)">
       <xacro:include filename="$(find talos_description_calibration)/urdf/calibration/leg_${prefix}.xacro" />
     </xacro:unless>
@@ -80,13 +81,23 @@
         </geometry>
         <material name="DarkGrey" />
       </visual>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:if value="${prefix == 'left'}">
+	  <xacro:capsule-collision e1="0.00653137 -0.00107636 0.0620231" e2="0.0148595 0.000151801 0.00431736" rad="0.10038884516307987" clen="0.058316498699378369" rpy="-3.12031 0.1433 -2.84723" mid="0.0106955 -0.000462282 0.0331702" />
+        </xacro:if>
+        <xacro:if value="${ prefix == 'right'}">
+	  <xacro:capsule-collision e1="0.00653137 0.00107636 0.0620231" e2="0.0148595 -0.000151801 0.00431736" rad="0.10038884516307987" clen="0.058316498699378369" rpy="3.12031 0.1433 2.84723" mid="0.0106955 0.000462282 0.0331702" />
+        </xacro:if>
+      </xacro:if>
 
-      <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-           <mesh filename="package://talos_description/meshes/v2/hip_z_collision.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
-      </collision>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="package://talos_description/meshes/v2/hip_z_collision.stl" scale="1 ${reflect*1} 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
     <!-- Joint hip_z (mesh link) ; child link hip_x -> parent link base_link -->
@@ -126,12 +137,24 @@
         <material name="DarkGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0.0" rpy="0  0  0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_x_collision.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:if value="${prefix == 'left'}">
+	  <xacro:capsule-collision e1="-0.0163525 -0.0136729 0.000327785" e2="-0.0177494 0.072721 0.00192874" rad="0.065228014094609946" clen="0.086420044518244921" rpy="-1.55227 -0.0161651 0.0158683" mid="-0.0170509 0.029524 0.00112826" />
+        </xacro:if>
+        <xacro:if value="${prefix == 'right'}">
+		<xacro:capsule-collision e1="-0.0163525 0.0136729 0.000327785" e2="-0.0177494 -0.072721 0.00192874" rad="0.065228014094609946" clen="0.086420044518244921" rpy="1.55227 -0.0161651 -0.0158683" mid="-0.0170509 -0.029524 0.00112826" />
+        </xacro:if>
+      </xacro:if>
+
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0.0" rpy="0  0  0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/v2/hip_x_collision.stl" scale="1 ${reflect*1} 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
+
     </link>
 
     <joint name="leg_${prefix}_2_joint" type="revolute">
@@ -157,12 +180,24 @@
         <material name="DarkGrey" />
       </visual>
 
-      <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-           <mesh filename="package://talos_description/meshes/v2/hip_y_collision.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:if value="${prefix == 'left'}">
+	  <xacro:capsule-collision e1="0.00475684 0.0387611 -0.305131" e2="0.0048036 0.0612963 -0.0132432" rad="0.14557912147210253" clen="0.29275626620252521" rpy="-0.077052 0.00015972 -6.15642e-06" mid="0.00478022 0.0500287 -0.159187" />
+        </xacro:if>
+        <xacro:if value="${prefix == 'right'}">
+	  <xacro:capsule-collision e1="0.00475684 -0.0387611 -0.305131" e2="0.0048036 -0.0612963 -0.0132432" rad="0.14557912147210253" clen="0.29275626620252521" rpy="0.077052 0.00015972 6.15642e-06" mid="0.00478022 -0.0500287 -0.159187" />
+        </xacro:if>
+      </xacro:if>
+
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="package://talos_description/meshes/v2/hip_y_collision.stl" scale="1 ${reflect*1} 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
+
     </link>
 
     <joint name="leg_${prefix}_3_joint" type="revolute">
@@ -188,12 +223,23 @@
         <material name="DarkGrey" />
       </visual>
 
-      <collision>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <geometry>
-           <mesh filename="package://talos_description/meshes/v2/knee_collision.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:if value="${prefix == 'left'}">
+	  <xacro:capsule-collision e1="0.00163993 0.0368989 -0.301909" e2="5.69681e-05 0.0588976 -0.00805678" rad="0.1184924950609377" clen="0.29467833417874939" rpy="-0.0747239 -0.00537185 0.000200797" mid="0.000848448 0.0478982 -0.154983" />
+        </xacro:if>
+        <xacro:if value="${prefix == 'right'}">
+	  <xacro:capsule-collision e1="0.00163993 -0.0368989 -0.301909" e2="5.69681e-05 -0.0588976 -0.00805678" rad="0.1184924950609377" clen="0.29467833417874939" rpy="0.0747239 -0.00537185 -0.000200797" mid="0.000848448 -0.0478982 -0.154983" />
+        </xacro:if>
+      </xacro:if>
+
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="package://talos_description/meshes/v2/knee_collision.stl" scale="1 ${reflect*1} 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
     <joint name="leg_${prefix}_4_joint" type="revolute">
@@ -221,12 +267,24 @@
         <material name="Grey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0.0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.stl" scale="1 ${reflect*1} 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:if value="${prefix == 'left'}">
+	  <xacro:capsule-collision e1="-0.0304137 0.105995 0.00632637" e2="0.00663845 -0.0117406 -0.00301129" rad="0.056285651716761462" clen="0.12378102303209611" rpy="1.64994 0.303997 0.32863" mid="-0.0118876 0.0471272 0.00165754" />
+        </xacro:if>
+        <xacro:if value="${prefix == 'right'}">
+	  <xacro:capsule-collision e1="-0.0304137 -0.105995 0.00632637" e2="0.00663845 0.0117406 -0.00301129" rad="0.056285651716761462" clen="0.12378102303209611" rpy="-1.64994 0.303997 -0.32863" mid="-0.0118876 -0.0471272 0.00165754" />
+        </xacro:if>
+      </xacro:if>
+
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0.0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/v2/ankle_Y_collision.stl" scale="1 ${reflect*1} 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
+
     </link>
 
     <joint name="leg_${prefix}_5_joint" type="revolute">

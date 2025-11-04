@@ -25,7 +25,7 @@
   <xacro:property name="torso_max_effort"  value="200.0" />
   <xacro:property name="torso_eps"      value="0.02" />
 
-  <xacro:macro name="talos_torso" params="name">
+  <xacro:macro name="talos_torso" params="name using_capsule_collision">
     <!--************************-->
     <!--        TORSO_2  (TILT) -->
     <!--************************-->
@@ -40,12 +40,17 @@
         <material name="LightGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_2_collision.STL" scale="1 1 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:capsule-collision e1="-0.0381908 -4.93875e-05 0.108256" e2="-0.045126 -6.75323e-05 0.298264" rad="0.23584089766240193" clen="0.19013465851723285" rpy="9.54947e-05 -0.0364831 -1.74216e-06" mid="-0.0416584 -5.84599e-05 0.20326" />
+      </xacro:if>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/torso/torso_2_collision.STL" scale="1 1 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
 
@@ -63,12 +68,17 @@
         <material name="LightGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/torso/torso_1.STL" scale="1 1 1"/>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:capsule-collision e1="-0.00232934 -0.0104948 -0.01235" e2="-0.00187524 0.0100705 -0.0118019" rad="0.091952314418329517" clen="0.020577608942189702" rpy="-1.54415 0.0220698 -0.0214895" mid="-0.00210229 -0.000212158 -0.0120759" />
+      </xacro:if>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/torso/torso_1.STL" scale="1 1 1"/>
         </geometry>
-      </collision>
+        </collision>
+      </xacro:unless>
     </link>
 
     <joint name="${name}_1_joint" type="revolute">
@@ -102,12 +112,17 @@
         <material name="LightGrey" />
       </visual>
 
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <mesh filename="package://talos_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
-        </geometry>
-      </collision>
+      <xacro:if value="${using_capsule_collision}">
+        <xacro:capsule-collision e1="-0.0485657 0.111601 -0.05811" e2="-0.0490399 -0.110849 -0.0575714" rad="0.16382936354183916" clen="0.22245096803647357" rpy="1.56838 -0.00213179 -0.00212663" mid="-0.0488028 0.000376009 -0.0578407" />
+      </xacro:if>
+      <xacro:unless value="${using_capsule_collision}">
+        <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+            <mesh filename="package://talos_description/meshes/torso/base_link_collision.STL" scale="1 1 1"/>
+          </geometry>
+        </collision>
+      </xacro:unless>
     </link>
 
     <joint name="${name}_2_joint" type="revolute">
@@ -157,4 +172,3 @@
   </xacro:macro>
 
 </robot>
-

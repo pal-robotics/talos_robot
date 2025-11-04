@@ -1,0 +1,22 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro"> 
+  <xacro:macro name="capsule-collision" params="e1 e2 rad clen rpy mid">
+    <collision>
+      <origin rpy="${rpy}" xyz="${e1}" />
+      <geometry>
+	<sphere radius="${rad}" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="${rpy}" xyz="${mid}" />
+      <geometry>
+	<cylinder length="${clen}" radius="${rad}" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="${rpy}" xyz="${e2}" />
+      <geometry>
+	<sphere radius="${rad}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

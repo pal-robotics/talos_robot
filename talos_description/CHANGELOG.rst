@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.10.0 (2025-12-05)
+-------------------
 * Add gazebo_version xacro argument
 * Contributors: Noel Jimenez
 

@@ -2,8 +2,8 @@
 Changelog for package talos_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.9.2 (2025-12-05)
+------------------
 * Add play_motion2 module
 * Contributors: Noel Jimenez
 

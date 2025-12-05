@@ -17,7 +17,10 @@
   <xacro:arg name="use_fixed_base" default="false"/>
   <xacro:arg name="use_sim" default="false"/>
   <xacro:arg name="multiple" default="false"/>
+  <xacro:arg name="gazebo_version" default="classic"/>
+
   <xacro:property name="is_multiple" value="$(arg multiple)" />
+  <xacro:property name="gazebo_version" value="$(arg gazebo_version)" />
 
   <xacro:if value="$(arg enable_crane)">
     <xacro:include filename="$(find talos_description)/urdf/crane/crane.urdf.xacro" />

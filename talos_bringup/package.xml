@@ -11,6 +11,8 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
+  <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
+
  <!--
   <run_depend>talos_moveit_config</run_depend>
 --> 

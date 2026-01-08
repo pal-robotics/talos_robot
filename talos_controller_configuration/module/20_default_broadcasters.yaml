@@ -1,3 +1,4 @@
 default_broadcasters:
   launch: "talos_controller_configuration default_broadcasters.launch.py"
   finishes: True
+  dependencies: ["Hardware/Controller Manager/Hardware Components Activity"]

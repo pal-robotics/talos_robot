@@ -36,7 +36,7 @@
 
       <xacro:unless value="$(arg use_sim)">
         <properties>
-          <async thread_priority="70" affinity="[4]" scheduling_policy="detached"/>
+          <async thread_priority="70" affinity="[1]" scheduling_policy="detached"/>
         </properties>
       </xacro:unless>
       <hardware>

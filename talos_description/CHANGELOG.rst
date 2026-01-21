@@ -2,8 +2,8 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.10.2 (2026-01-21)
+-------------------
 * Changing robot_control affinity
 * Contributors: Jordan Palacios
 

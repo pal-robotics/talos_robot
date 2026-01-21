@@ -2,6 +2,9 @@
 Changelog for package talos_description_calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.10.1 (2026-01-08)
 -------------------
 

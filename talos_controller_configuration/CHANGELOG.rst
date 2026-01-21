@@ -2,6 +2,9 @@
 Changelog for package talos_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.10.1 (2026-01-08)
 -------------------
 * Add "Hardware Components Activity" module dependency

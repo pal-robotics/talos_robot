@@ -31,6 +31,13 @@ def declare_args(context, *args, **kwargs):
         "fixed_base", default_value="False", description="Fix the robot in the air."
     )
 
+    use_capsule_collision_arg = DeclareLaunchArgument(
+        "use_capsule_collision",
+        default_value="False",
+        choices=["True", "False"],
+        description="Use capsule collision shapes instead of meshes."
+    )
+
     use_sim_time_arg = DeclareLaunchArgument(
         "use_sim_time", default_value="False", description="Use simulation time"
     )
@@ -87,6 +94,7 @@ def declare_args(context, *args, **kwargs):
         use_sim_time_arg,
         flexibility_arg,
         fixed_base_arg,
+        use_capsule_collision_arg,
     ]
 
 
@@ -116,6 +124,8 @@ def launch_setup(context, *args, **kwargs):
                 "flexibility": read_launch_argument("flexibility", context),
                 "default_configuration_type": read_launch_argument(
                     "default_configuration_type", context),
+                'use_capsule_collision': read_launch_argument(
+                    "use_capsule_collision", context),
             },
         )
     }

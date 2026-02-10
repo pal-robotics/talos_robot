@@ -2,6 +2,11 @@
 Changelog for package talos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Expose safety interface for robot_control
+* Contributors: Noel Jimenez
+
 2.10.2 (2026-01-21)
 -------------------
 * Changing robot_control affinity

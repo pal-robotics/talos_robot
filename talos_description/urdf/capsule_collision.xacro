@@ -9,23 +9,30 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro"> 
-  <xacro:macro name="capsule-collision" params="e1 e2 rad clen rpy mid">
+  <xacro:macro name="capsule-collision" params="e1 e2 rad clen rpy mid reflect:=1">
+    <!-- Old API: e1, e2, rpy and mid are space-separated strings ("x y z"), reflect multiplies Y and first/third RPY -->
+    <xacro:property name="e1_list" value="${e1.split()}" />
+    <xacro:property name="e2_list" value="${e2.split()}" />
+    <xacro:property name="rpy_list" value="${rpy.split()}" />
+    <xacro:property name="mid_list" value="${mid.split()}" />
+    <xacro:property name="rf" value="${float(reflect)}" />
+
     <collision>
-      <origin rpy="${rpy}" xyz="${e1}" />
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${e1_list[0]} ${float(e1_list[1])*rf} ${e1_list[2]}" />
       <geometry>
-	<sphere radius="${rad}" />
+    	<sphere radius="${rad}" />
       </geometry>
     </collision>
     <collision>
-      <origin rpy="${rpy}" xyz="${mid}" />
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${mid_list[0]} ${float(mid_list[1])*rf} ${mid_list[2]}" />
       <geometry>
-	<cylinder length="${clen}" radius="${rad}" />
+    	<cylinder length="${clen}" radius="${rad}" />
       </geometry>
     </collision>
     <collision>
-      <origin rpy="${rpy}" xyz="${e2}" />
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${e2_list[0]} ${float(e2_list[1])*rf} ${e2_list[2]}" />
       <geometry>
-	<sphere radius="${rad}" />
+    	<sphere radius="${rad}" />
       </geometry>
     </collision>
   </xacro:macro>

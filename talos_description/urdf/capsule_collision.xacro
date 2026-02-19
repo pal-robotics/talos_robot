@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L., CNRS
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro"> 
+  <!-- 
+    Macro to define a capsule collision geometry.
+
+    A capsule is a cylinder with hemispherical caps on both ends, providing smooth collision
+    detection and reduced computational cost compared to complex mesh collisions.
+    
+    Arguments:
+    - e1: First endpoint of the capsule axis
+    - e2: Second endpoint of the capsule axis
+    - rad: Radius of the capsule
+    - clen: Length of the cylindrical part of the capsule
+    - rpy: Roll, pitch, and yaw orientation angles
+    - mid: Midpoint position of the capsule
+    - reflect: Reflection factor for mirroring in the sagital plane (ZX plane) the capsule geometry (default: 1)
+
+    WARNING: 
+      - The reflect parameter, if present, only mirrors geometry across the SAGITTAL plane (YZ plane).
+        Mirroring is NOT applied to transverse or coronal planes.
+  -->
+  <xacro:macro name="capsule-collision" params="e1 e2 rad clen rpy mid reflect:=1">
+    <xacro:property name="e1_list" value="${e1.split()}" />
+    <xacro:property name="e2_list" value="${e2.split()}" />
+    <xacro:property name="rpy_list" value="${rpy.split()}" />
+    <xacro:property name="mid_list" value="${mid.split()}" />
+    <xacro:property name="rf" value="${float(reflect)}" />
+
+    <collision>
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${e1_list[0]} ${float(e1_list[1])*rf} ${e1_list[2]}" />
+      <geometry>
+    	<sphere radius="${rad}" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${mid_list[0]} ${float(mid_list[1])*rf} ${mid_list[2]}" />
+      <geometry>
+    	<cylinder length="${clen}" radius="${rad}" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin rpy="${float(rpy_list[0])*rf} ${rpy_list[1]} ${float(rpy_list[2])*rf}" xyz="${e2_list[0]} ${float(e2_list[1])*rf} ${e2_list[2]}" />
+      <geometry>
+    	<sphere radius="${rad}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>
